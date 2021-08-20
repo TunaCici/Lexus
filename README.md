@@ -2,7 +2,8 @@
 
 # About
 Project Lexus is an AI powered system for our final entry to Teknofest 2021 in Istanbul.
-This repository contains the software which Project Lexus runs on. It is written in Python.
+This repository contains the software which Project Lexus runs on. It is written in Python 
+and includes many different Machine Learning libraries. 
 
 # Who are we?
 We are a group of four college friends and our group is called Team Crossbones. 
