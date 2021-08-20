@@ -1,5 +1,5 @@
-## Guide for Setting up git
-Setting GIT on Windows is a bit tedious but I will try to explain it as best as I can.
+## Guide for Setting up Git
+Setting Git on Windows is a bit tedious but I will try to explain it as best as I can.
 
 ### Intro
 For proects like these, Git is very useful to have. It tracks the project files for changes and updates. It can follow each version of your code and story it's history. Everyone in the project can see what each of us done during the development. We can all work together on the same project and see our codes.
