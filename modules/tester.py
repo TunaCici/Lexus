@@ -14,7 +14,7 @@ def test_logger():
     test_logger.log_info("Hello from the tester file.")
     test_logger.log_warning("This is a awrning. Careful.")
     test_logger.log_error("Something went wrong. Error!")
-    print("You should not see this.")
 
 if __name__ == "__main__":
     test_logger()
+    print("mama mia")
