@@ -21,7 +21,7 @@ We will mostly get the latest project files before working. After doing some wor
 1. Download the setup file.
 [Download Git for Windows](https://git-scm.com/downloads)
 2. Click next all the way to the end.
-3. After the installiation open cmd.exe and check if Git exists.
+3. After the installation open cmd.exe and check if Git exists.
     ```bash
     git --version
     ```
