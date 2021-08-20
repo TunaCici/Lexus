@@ -75,6 +75,9 @@ Git uses SSH for connecting to your account. We need to create private and publi
 ### Doing some changes and submitting them
 Up until this point everything we did was one-time only. We do not need to these step everytime we want to do something for the project.
 
+Before each coding session we should refresh our project files just in case. This way we will have the latest project files.
+We can do this refreshing by clicking on the circular icon at the bottom-left. If it asks anything just say yes.
+
 After writing some code and adding files we need to submit it to Github. Submitting has two steps *comitting* and *pushing*.
 
 *Commiting* is basically saying Git that this file is ready for the upload.
