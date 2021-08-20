@@ -1,0 +1,1 @@
+2021-08-20 20:57:28,017 [INFO] [main.py] Hey bir sey ters gitti.
