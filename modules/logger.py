@@ -8,16 +8,17 @@ Author: Tuna Cici
 Created: 19/08/2021
 """
 
-# import libraries
 import os
 import inspect
 import logging
 import logging.handlers
 
+from . import config
 class LexusLogger:
     #class member(s)
     logger = None
-    log_format = "%(asctime)s [%(levelname)s] [%(name)s] %(message)s"
+
+
     #init
     def __init__(self):
         #get the callers filename
@@ -29,10 +30,10 @@ class LexusLogger:
         rootlogger.setLevel(logging.DEBUG)
 
         #set log format
-        formatter = logging.Formatter(self.log_format)
+        formatter = logging.Formatter(config.LOG_FORMAT)
 
         #setup logging to file, rotating every minute
-        filelog = logging.handlers.TimedRotatingFileHandler("./logs/lexuslogfile.txt",
+        filelog = logging.handlers.TimedRotatingFileHandler(config.LOG_FILE_DIR,
                         when='m', interval=1)
         filelog.setLevel(logging.DEBUG)
         filelog.setFormatter(formatter)

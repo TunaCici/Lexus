@@ -7,7 +7,8 @@ Author: Team Crossbones
 Created: 20/08/2021
 """
 
-import logger
+from modules import logger
+from modules import config
 
 def test_logger():
     test_logger = logger.LexusLogger()
@@ -15,5 +16,9 @@ def test_logger():
     test_logger.log_warning("This is a warning. Careful.")
     test_logger.log_error("Something went wrong. Error!")
 
+def test_config():
+    print(config.PROJECT_DIR)
+
 if __name__ == "__main__":
     test_logger()
+    #test_config()

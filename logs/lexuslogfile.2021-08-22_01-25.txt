@@ -1,0 +1,4 @@
+2021-08-22 01:25:18,471 [INFO] [tester.py] Hello from the tester file.
+2021-08-22 01:25:18,471 [WARNING] [tester.py] This is a warning. Careful.
+2021-08-22 01:25:18,471 [ERROR] [tester.py] Something went wrong. Error!
+2021-08-22 01:25:43,323 [INFO] [main.py] Hey bir sey ters gitti.
