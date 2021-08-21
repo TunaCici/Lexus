@@ -86,6 +86,7 @@ After writing some code and adding files we need to submit it to Github. Submitt
 We commit the modified files by:
 1. Opening Source Control from the left side (3rd icon)
 2. Clicking the tick icon '✓'. If it asks something just say 'Yes' or 'Always yes'.
+3. Look at the top. It will ask you to write some message. Write what you did with the code here.
 
 We are now ready to upload these files to Github:
 1. Click the 'three dots' icon near the tick icon '✓'.
