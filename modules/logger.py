@@ -18,7 +18,6 @@ class LexusLogger:
     #class member(s)
     logger = None
 
-
     #init
     def __init__(self):
         #get the callers filename

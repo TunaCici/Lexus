@@ -1,0 +1,7 @@
+2021-08-22 02:02:35,474 [INFO] [tester.py] Testing random_quote utility.
+2021-08-22 02:02:35,668 [INFO] [tester.py] “Nothing has any power over me other than that which I give it through my conscious thoughts.”
+2021-08-22 02:03:20,812 [INFO] [tester.py] Testing random_quote utility.
+2021-08-22 02:03:20,812 [INFO] [tester.py] “The two most important days in your life are the day you are born, and the day you find out why.”
+2021-08-22 02:03:43,694 [INFO] [tester.py] Testing random_quote utility.
+2021-08-22 02:03:43,695 [INFO] [tester.py] “Excellence is possible without perfection.”
+2021-08-22 02:03:43,697 [INFO] [tester.py] “Find your purpose, your passion, your unique place in the world… and fight for it.”
