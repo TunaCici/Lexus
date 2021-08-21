@@ -10,11 +10,11 @@ Created: 19/08/2021
 
 
 from modules import logger
-
+from modules import voice_command
+from modules import cv2
 # entry point
 if __name__ == "__main__":
     yazici = logger.LexusLogger()
-
     yazici.log_info("Hey bir sey ters gitti.")
 
     # testing if this commit will be verified

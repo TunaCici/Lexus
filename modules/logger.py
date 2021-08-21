@@ -18,7 +18,6 @@ class LexusLogger:
     #class member(s)
     logger = None
     log_format = "%(asctime)s [%(levelname)s] [%(name)s] %(message)s"
-
     #init
     def __init__(self):
         #get the callers filename
