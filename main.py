@@ -16,3 +16,5 @@ if __name__ == "__main__":
     yazici = logger.LexusLogger()
 
     yazici.log_info("Hey bir sey ters gitti.")
+
+    # testing if this commit will be verified
