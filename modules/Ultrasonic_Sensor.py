@@ -2,7 +2,7 @@
 
 import RPi.GPIO as GPIO
 import time
-
+import config 
 
 
 # Ultraschall Sensor Konfiguration
@@ -13,7 +13,7 @@ Messung_Trigger = 0.00001     # in sekunden
 Messung_Pause = 0.2           # in sekunden
 Messung_Faktor = (343460 / 2) # Schallgeschwindigkeit durch 2 (hin und zurück) in mm/s
     
-Abstand_Max = 4000        # Max value in mm
+Abstand_Max = config.THRESHOLD        # Max value in mm
 Abstand_Max_Error = Abstand_Max + 1
 def US_SENSOR_GetDistance():
     # setze TRIGGER für min 0.01ms
