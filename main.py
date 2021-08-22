@@ -19,4 +19,6 @@ if __name__ == "__main__":
     main_logger.log_info(f"Current project directory: {config.PROJECT_DIR}")
     # TODO: Initialize all modules.
     print("Merhaabalar")
+    print("Her sey calısıyor yayy!")
+
     main_logger.log_info("Everything went smoothly. Have a good day!")
