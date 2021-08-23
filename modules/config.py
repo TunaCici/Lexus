@@ -9,6 +9,9 @@ Created: 22/08/2021
 
 import os
 
+# Camera
+PHOTO_NUMBER = 0
+
 # Project
 PROJECT_DIR = os.getcwd()
 
