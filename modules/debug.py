@@ -28,9 +28,7 @@ class Ui_ProjectLexusDebugScreen(object):
         self.baslaButton.setGeometry(QtCore.QRect(320, 40, 111, 71))
         self.baslaButton.setObjectName("baslaButton")
 
-        self.cameraWithPartial = partial(camera.cameraPhotoCapturer,i)
-
-        self.baslaButton.pressed.connect(self.cameraWithPartial)
+        self.baslaButton.pressed.connect(self.camera.cameraPhotoCapturer)
         self.durButton = QtWidgets.QPushButton(self.centralwidget)
         self.durButton.setGeometry(QtCore.QRect(320, 120, 111, 71))
         self.durButton.setObjectName("durButton")
