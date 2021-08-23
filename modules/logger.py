@@ -33,7 +33,7 @@ class LexusLogger:
 
         #setup logging to file, rotating every minute
         filelog = logging.handlers.TimedRotatingFileHandler(config.LOG_FILE_DIR,
-                        when='m', interval=1)
+                        when='m', interval=1, encoding='utf-8')
         filelog.setLevel(logging.DEBUG)
         filelog.setFormatter(formatter)
         filelog.namer = lambda name: name.replace(".txt", "") + ".txt"
