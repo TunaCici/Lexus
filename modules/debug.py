@@ -11,12 +11,18 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 import camera
-from functools import partial
+import config
 
 i = 0
 
-
 class Ui_ProjectLexusDebugScreen(object):
+    def starter():
+        config.DEBUG_RUNNER = True
+        camera.cameraPhotoCapturer()
+    
+    def stopper():
+        config.DEBUG_RUNNER = False
+
     def setupUi(self, ProjectLexusDebugScreen):
         ProjectLexusDebugScreen.setObjectName("ProjectLexusDebugScreen")
         ProjectLexusDebugScreen.resize(800, 600)
@@ -27,11 +33,11 @@ class Ui_ProjectLexusDebugScreen(object):
         self.baslaButton = QtWidgets.QPushButton(self.centralwidget)
         self.baslaButton.setGeometry(QtCore.QRect(320, 40, 111, 71))
         self.baslaButton.setObjectName("baslaButton")
-
-        self.baslaButton.pressed.connect(self.camera.cameraPhotoCapturer)
+        self.baslaButton.pressed.connect(self.starter)
         self.durButton = QtWidgets.QPushButton(self.centralwidget)
         self.durButton.setGeometry(QtCore.QRect(320, 120, 111, 71))
         self.durButton.setObjectName("durButton")
+        self.durButton.pressed.connect(self.stopper)
         self.goruntuSecButton = QtWidgets.QPushButton(self.centralwidget)
         self.goruntuSecButton.setGeometry(QtCore.QRect(320, 200, 111, 71))
         self.goruntuSecButton.setObjectName("goruntuSecButton")

@@ -9,6 +9,9 @@ Created: 22/08/2021
 
 import os
 
+# Debug Screen
+DEBUG_RUNNER = True
+
 # Camera
 PHOTO_NUMBER = 0
 
