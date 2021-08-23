@@ -3,12 +3,14 @@ import os
 import time
 import glob
 import tkinter as tk
+
+import config
     
 def cameraPhotoCapturer(i):
     videoCaptureObject = cv2.VideoCapture(0, cv2.CAP_DSHOW) # This opens the camera.
 
-    path = r"C:\Users\sirri\Desktop\Projects\Teknofest\Teknofest\Photos" # Path for photos. It can be changed.
-    pathFiles = r"C:\Users\sirri\Desktop\Projects\Teknofest\Teknofest\Photos\*.png" # Path for photo files. It can be changed.
+    path = config.PROJECT_DIR + "/photos/"# Path for photos. It can be changed.
+    pathFiles = config.PROJECT_DIR + "/photos/*.png" # Path for photo files. It can be changed.
 
     while(True):
         ret, frame = videoCaptureObject.read() # This reads the photo from the camera.
