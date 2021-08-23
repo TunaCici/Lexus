@@ -13,14 +13,12 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 import camera
 import config
 
-i = 0
-
 class Ui_ProjectLexusDebugScreen(object):
-    def starter():
+    def starter(self):
         config.DEBUG_RUNNER = True
-        camera.cameraPhotoCapturer()
+        camera.cameraPhotoCapturer(config.PHOTO_NUMBER)
     
-    def stopper():
+    def stopper(self):
         config.DEBUG_RUNNER = False
 
     def setupUi(self, ProjectLexusDebugScreen):
