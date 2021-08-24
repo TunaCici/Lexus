@@ -12,7 +12,7 @@ import os
 import inspect
 import logging
 import logging.handlers
-import time
+from PyQt5 import QtTest
 
 import config
 import camera
@@ -51,7 +51,7 @@ class LexusLogger:
         self.logger = logging.getLogger(filename)
 
         if config.DEBUG_RUNNER == True:
-            time.sleep(0.1)
+            QtTest.QTest.qWait(100)
             camera.cameraPhotoCapturer(config.PHOTO_NUMBER)
 
     def log_info(self, text : str):
