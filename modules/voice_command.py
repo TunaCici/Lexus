@@ -1,6 +1,14 @@
+import os
 from gtts import gTTS
 
-import logger
+if __name__ == "modules." + os.path.basename(__file__)[:-3]:
+    # importing from outside the package
+    from modules import config
+    from modules import logger
+else:
+    # importing from main and inside the package
+    import config
+    import logger
 
 # TODO:
 # 1. class name should be in capitals (ex. VoiceCommander)

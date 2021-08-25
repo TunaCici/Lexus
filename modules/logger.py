@@ -8,13 +8,10 @@ Author: Tuna Cici
 Created: 19/08/2021
 """
 
-
 import os
 import inspect
 import logging
 import logging.handlers
-
-print(__name__)
 
 if __name__ == "modules." + os.path.basename(__file__)[:-3]:
     # importing from outside the package
