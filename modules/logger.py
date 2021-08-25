@@ -16,6 +16,7 @@ from PyQt5 import QtTest
 
 import config
 import camera
+import debug
 class LexusLogger:
     #class member(s)
     logger = None
@@ -52,7 +53,7 @@ class LexusLogger:
 
         if config.DEBUG_RUNNER == True:
             QtTest.QTest.qWait(100)
-            camera.cameraPhotoCapturer(config.PHOTO_NUMBER)
+            debug.Ui_ProjectLexusDebugScreen.starter()
 
     def log_info(self, text : str):
         """
