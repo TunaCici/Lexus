@@ -8,19 +8,8 @@ Created: 20/08/2021
 """
 
 from modules import logger
+from modules import config
 from utils import random_quote
-from PyQt5 import QtCore, QtGui, QtWidgets, QtTest
-
-print("hello")
-
-if __name__ == "__main__":
-    import config
-    import logger
-    import debug
-else:
-    from . import config
-    from . import logger
-    from . import debug
 
 def test_logger():
     test_logger = logger.LexusLogger()
@@ -31,6 +20,7 @@ def test_logger():
 def test_config():
     print(config.PROJECT_DIR)
 
+"""
 def test_debug():
     import sys
     app = QtWidgets.QApplication(sys.argv)
@@ -39,6 +29,7 @@ def test_debug():
     ui.setupUi(MainWindow)
     MainWindow.show()
     sys.exit(app.exec_())
+"""
 
 def test_random_quote():
     test_logger = logger.LexusLogger()
@@ -52,5 +43,4 @@ def test_random_quote():
 if __name__ == "__main__":
     #test_logger()
     #test_config()
-    #test_random_quote()
-    test_debug()
+    test_random_quote()

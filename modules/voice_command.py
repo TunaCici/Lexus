@@ -1,13 +1,6 @@
 from gtts import gTTS
 
-if __name__ == "__main__":
-    # if the script started as main
-    import config
-    import logger
-else:
-    # if the script imported elsewhere
-    from . import config
-    from . import logger
+import logger
 
 # TODO:
 # 1. class name should be in capitals (ex. VoiceCommander)

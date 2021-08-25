@@ -14,12 +14,15 @@ import inspect
 import logging
 import logging.handlers
 
-print(f"name: {__name__}")
+print(__name__)
 
-if __name__ == "__main__":
-    import config
+if __name__ == "modules." + os.path.basename(__file__)[:-3]:
+    # importing from outside the package
+    from modules import config
 else:
-    from . import config
+    # importing from main and inside the package
+    import config
+
 class LexusLogger:
     #class member(s)
     logger = None
