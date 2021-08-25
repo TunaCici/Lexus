@@ -1,0 +1,17 @@
+Ambulance
+Bench
+Bicycle
+Bus
+Car
+Cat
+Chair
+Couch
+Dog
+Motorcycle
+Stop sign
+Taxi
+Traffic light
+Traffic sign
+
+
+python main.py downloader --classes Ambulance Bench Bicycle Bus Car Cat Chair Couch Dog Motorcycle Stop_sign Taxi Traffic_light Traffic_sign --type_csv train --limit 1000 --multiclasses 1
