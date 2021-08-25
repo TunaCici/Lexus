@@ -13,7 +13,7 @@ import os
 DEBUG_RUNNER = True
 
 # Camera
-PHOTO_NUMBER = 0
+PHOTO_NUMBER = 200
 
 # Project
 PROJECT_DIR = os.getcwd()

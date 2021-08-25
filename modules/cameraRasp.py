@@ -11,8 +11,8 @@ def Camera():
     pathFiles = r"/home/lexus/Desktop/*.png"
     
     # These paths for testing
-    pathWindows = r"C:\Users\sirri\Desktop\Projects\Teknofest\Photos"
-    pathFilesWindows = r"C:\Users\sirri\Desktop\Projects\Teknofest\Photos*.png"
+    pathWindows = r"C:\Users\andre\OneDrive\Masaüstü\Dersler\proje\photos"
+    pathFilesWindows = r"C:\Users\andre\OneDrive\Masaüstü\Dersler\proje\photos*.png"
     
     print("Press ESC to Quit...")
     
@@ -20,7 +20,7 @@ def Camera():
     
     i = 0
     while(True):
-        camera.capture('C:\Users\sirri\Desktop\Projects\Teknofest\Photos\%s.png' % i) # This captures the photo.
+        camera.capture('C:\Users\andre\OneDrive\Masaüstü\Dersler\proje\photos\%s.png' % i) # This captures the photo.
         i = i + 1
         
         time.sleep(0.1)

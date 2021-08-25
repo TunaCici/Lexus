@@ -12,7 +12,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 
 import camera
 import config
-
+import voice_command
 class Ui_ProjectLexusDebugScreen(object):
     def starter(self):
         config.DEBUG_RUNNER = True
@@ -132,4 +132,5 @@ if __name__ == "__main__":
     ui = Ui_ProjectLexusDebugScreen()
     ui.setupUi(MainWindow)
     MainWindow.show()
+    voice_command.voice_commander()  # if you don't want to see mp3 delete here
     sys.exit(app.exec_())
