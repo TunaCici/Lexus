@@ -11,6 +11,8 @@ from modules import logger
 from utils import random_quote
 from PyQt5 import QtCore, QtGui, QtWidgets, QtTest
 
+print("hello")
+
 if __name__ == "__main__":
     import config
     import logger
