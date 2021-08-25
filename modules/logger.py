@@ -14,6 +14,8 @@ import inspect
 import logging
 import logging.handlers
 
+print(f"name: {__name__}")
+
 if __name__ == "__main__":
     import config
 else:
