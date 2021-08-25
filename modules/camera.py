@@ -14,6 +14,14 @@ from PyQt5 import QtTest, QtWidgets, QtCore, QtGui
 # custom_camera.update()
 # my_frame = custom_camera.getFrame()
 
+# TODO:
+# 1. take the resize parameters from the config (ex. RESIZE_X and RESIZE_Y)
+# 2. add short descriptions to functions
+# 3. if not already done, add the CAMERA_RUNNING state to your class
+# 4. do some housekeeping like changing class name from getFrame to get_frame
+
+# Note: Test that everything here works using tester.py
+
 
 class Camera:
     # images
