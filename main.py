@@ -10,7 +10,6 @@ Created: 19/08/2021
 
 from modules import logger
 from modules import config
-from modules import camera
 
 # entry point
 if __name__ == "__main__":
@@ -33,10 +32,8 @@ if __name__ == "__main__":
             # TODO: Update the modules.
             
         except KeyboardInterrupt as e:
-            main_logger.log_info("Detetying keyboard interrupt.")
+            main_logger.log_info("Detecting keyboard interrupt.")
             main_logger.log_info("Exitting the program.")
             exit(-13)
         except Exception as e:
             print(e)
-        else:
-            main_logger.log_info("Everything went smoothly. Have a good day!")

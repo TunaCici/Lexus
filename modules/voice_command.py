@@ -10,6 +10,7 @@ else:
     import config
     import logger
 
+
 # TODO:
 # 1. class name should be in capitals (ex. VoiceCommander)
 # 2. add a queue for voices to be played. (ex. files in the queue will be played one by one)
@@ -41,6 +42,7 @@ else:
 #                 I just want to give you some idea how they will play out.
 # Also the "voice_file" i wrote is a python dictionary. You can learn about it pretty easily.
 # I highly recommend that you learn it, it is very useful.
+
 class voice_commander:
     # queue
     queue = []
