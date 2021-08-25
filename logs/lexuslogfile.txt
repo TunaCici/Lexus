@@ -1,3 +1,6 @@
-2021-08-22 17:01:58,142 [INFO] [main.py] Starting Project Lexus...
-2021-08-22 17:01:58,145 [INFO] [main.py] Current project directory: /home/dilara/Desktop/Project_LeXuS
-2021-08-22 17:01:58,145 [INFO] [main.py] Everything went smoothly. Have a good day!
+2021-08-25 15:15:49,475 [INFO] [main.py] Starting Project Lexus...
+2021-08-25 15:15:49,489 [INFO] [main.py] Current project directory: D:\Code_Gang\Project_LeXuS
+2021-08-25 15:15:49,492 [INFO] [main.py] Everything went smoothly. Have a good day!
+2021-08-25 15:16:43,830 [INFO] [main.py] Starting Project Lexus...
+2021-08-25 15:16:43,830 [INFO] [main.py] Current project directory: D:\Code_Gang\Project_LeXuS
+2021-08-25 15:16:43,831 [INFO] [main.py] Everything went smoothly. Have a good day!
