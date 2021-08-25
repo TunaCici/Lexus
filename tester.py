@@ -13,6 +13,9 @@ from PyQt5 import QtCore, QtGui, QtWidgets, QtTest
 
 print("hello")
 
+
+print("bruh")
+
 if __name__ == "__main__":
     import config
     import logger

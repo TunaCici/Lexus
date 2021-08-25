@@ -8,6 +8,7 @@ Author: Tuna Cici
 Created: 19/08/2021
 """
 
+
 import os
 import inspect
 import logging
@@ -17,7 +18,6 @@ if __name__ == "__main__":
     import config
 else:
     from . import config
-
 class LexusLogger:
     #class member(s)
     logger = None
