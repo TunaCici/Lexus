@@ -2,7 +2,6 @@ import cv2 # pip install opencv-python
 import os
 import time
 import glob
-
 import config
 import logger
 

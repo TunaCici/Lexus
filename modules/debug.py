@@ -13,7 +13,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets, QtTest
 
 import camera
 import config
-
+import voice_command
 class Ui_ProjectLexusDebugScreen(object):
     def starter(self):
         config.DEBUG_RUNNER = True
@@ -126,4 +126,18 @@ class Ui_ProjectLexusDebugScreen(object):
         self.label_2.setText(_translate("ProjectLexusDebugScreen", "ISLEMLER"))
         self.label_4.setText(_translate("ProjectLexusDebugScreen", "YAPAY ZEKA GORUNTUSU"))
         self.label_5.setText(_translate("ProjectLexusDebugScreen", "LOG"))
+<<<<<<< HEAD
         self.label_6.setText(_translate("ProjectLexusDebugScreen", "TESPIT EDILEN OBJELER"))
+=======
+        self.label_6.setText(_translate("ProjectLexusDebugScreen", "TESPIT EDILEN OBJELER"))
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    MainWindow = QtWidgets.QMainWindow()
+    ui = Ui_ProjectLexusDebugScreen()
+    ui.setupUi(MainWindow)
+    MainWindow.show()
+    voice_command.voice_commander()  # if you don't want to see mp3 delete here
+    sys.exit(app.exec_())
+>>>>>>> 1f7dcd137ece7160577de1260bad74a3a16836a4
