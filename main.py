@@ -11,7 +11,6 @@ Created: 19/08/2021
 from modules import logger
 from modules import config
 
-
 # entry point
 if __name__ == "__main__":
     main_logger = logger.LexusLogger()
@@ -20,5 +19,4 @@ if __name__ == "__main__":
     # TODO: Initialize all modules.
     print("Merhaabalar")
     print("Her sey calısıyor yayy!")
-
     main_logger.log_info("Everything went smoothly. Have a good day!")
