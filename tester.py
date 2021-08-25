@@ -8,10 +8,17 @@ Created: 20/08/2021
 """
 
 from modules import logger
-from modules import config
 from utils import random_quote
 from PyQt5 import QtCore, QtGui, QtWidgets, QtTest
-from modules import debug
+
+if __name__ == "__main__":
+    import config
+    import logger
+    import debug
+else:
+    from . import config
+    from . import logger
+    from . import debug
 
 def test_logger():
     test_logger = logger.LexusLogger()

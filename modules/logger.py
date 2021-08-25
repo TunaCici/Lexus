@@ -13,16 +13,11 @@ import inspect
 import logging
 import logging.handlers
 
-<<<<<<< HEAD
-import config
-import camera
-import debug
-=======
 if __name__ == "__main__":
     import config
 else:
     from . import config
->>>>>>> 1f7dcd137ece7160577de1260bad74a3a16836a4
+
 class LexusLogger:
     #class member(s)
     logger = None
@@ -57,13 +52,6 @@ class LexusLogger:
         #get a logger for my script
         self.logger = logging.getLogger(filename)
 
-<<<<<<< HEAD
-        if config.DEBUG_RUNNER == True:
-            QtTest.QTest.qWait(100)
-            debug.Ui_ProjectLexusDebugScreen.starter()
-
-=======
->>>>>>> 1f7dcd137ece7160577de1260bad74a3a16836a4
     def log_info(self, text : str):
         """
         Logs the given text to both console and logfile.
