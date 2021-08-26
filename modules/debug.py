@@ -10,56 +10,70 @@
 # ----------------------------------------------------------------------------------
 
 from PyQt5 import QtCore, QtGui, QtWidgets, QtTest
+from PIL import Image
+from PIL.ImageQt import ImageQt
 import os
 import glob
+
+from cv2 import PARAM_ALGORITHM, fitEllipse
 
 if __name__ == "modules." + os.path.basename(__file__)[:-3]:
     # importing from outside the package
     from modules import config
     from modules import camera
-    from modules import logger
 else:
     # importing from main and inside the package
     import config
     import camera
-    import logger
 
 class DebugScreen(object):
     def start(self):
-        config.DSCREEN_RUNNING = True
+        config.CAMERA_RUNNING = True
+
+        self.item.setText(self._translate("ProjectLexusDebugScreen", "KAMERA :  ACIK"))
+
         self.obje = camera.Camera()
         self.update()
     
     def close(self):
         config.CAMERA_RUNNING = False
-        config.DSCREEN_RUNNING = False
 
-        files = glob.glob(config.PROJECT_DIR + "/photos/")
-        for f in files:
-            os.remove(f)
+        self.item.setText(self._translate("ProjectLexusDebugScreen", "KAMERA :  DEVRE DISI"))
+
+        self.obje.videoCaptureObject.release()
         
         self.obje.photo_no = 0
 
     def update(self):
-        while(config.DSCREEN_RUNNING == True and self.obje.photo_no != config.PHOTO_NUMBER):
-            if config.CAMERA_RUNNING == True:
-                self.obje.update()
-                QtTest.QTest.qWait(100)
-                pathName = config.PROJECT_DIR + "\\photos\\" + str(self.obje.photo_no) + ".png"
+        while(config.CAMERA_RUNNING == True and self.obje.photo_no != config.PHOTO_NUMBER + 1):
+            self.obje.update()
+            QtTest.QTest.qWait(100)
+            self.files = glob.glob(config.PROJECT_DIR + "/photos/")
+            if len(self.files) >= 0:
+                self.file = Image.open(config.PROJECT_DIR + "/photos/" + str(self.obje.photo_no) + ".png")
+                self.photo = ImageQt(self.file)
                 self.aiScreen.resize(config.RESIZE_X,config.RESIZE_Y)
-                self.pixmap = QtGui.QPixmap(pathName)
+                self.pixmap = QtGui.QPixmap.fromImage(self.photo)
                 self.aiScreen.setPixmap(self.pixmap)
                 QtTest.QTest.qWait(100)
+            self.obje.photo_no = self.obje.photo_no + 1
 
-        if self.obje.photo_no == config.PHOTO_NUMBER:
-            self.obje.photo_no = 0
-            self.update()
+            if self.obje.photo_no == config.PHOTO_NUMBER:
+                self.obje.photo_no = 0
+
+    def goruntu_sec(self):
+        self.filename = QtWidgets.QFileDialog.getOpenFileName()
+        self.path = self.filename[0]
+        self.image = Image.open(self.path)
+        self.image.show()
 
     def setupUi(self, ProjectLexusDebugScreen):
         ProjectLexusDebugScreen.setObjectName("ProjectLexusDebugScreen")
-        ProjectLexusDebugScreen.resize(800, 600)
+        ProjectLexusDebugScreen.resize(1080, 720)
         ProjectLexusDebugScreen.setMinimumSize(QtCore.QSize(0, 600))
         ProjectLexusDebugScreen.setMaximumSize(QtCore.QSize(800, 16777215))
+        ProjectLexusDebugScreen.setFixedWidth(900)
+        ProjectLexusDebugScreen.setFixedHeight(720)
         self.centralwidget = QtWidgets.QWidget(ProjectLexusDebugScreen)
         self.centralwidget.setObjectName("centralwidget")
         self.baslaButton = QtWidgets.QPushButton(self.centralwidget)
@@ -76,6 +90,7 @@ class DebugScreen(object):
         self.goruntuSecButton.setGeometry(QtCore.QRect(320, 200, 111, 71))
         self.goruntuSecButton.setObjectName("goruntuSecButton")
         self.goruntuSecButton.setStyleSheet("background-color : #ff9f8e")
+        self.goruntuSecButton.pressed.connect(self.goruntu_sec)
         self.modulSituations = QtWidgets.QListWidget(self.centralwidget)
         self.modulSituations.setGeometry(QtCore.QRect(10, 30, 256, 192))
         self.modulSituations.setObjectName("modulSituations")
@@ -131,28 +146,28 @@ class DebugScreen(object):
         QtCore.QMetaObject.connectSlotsByName(ProjectLexusDebugScreen)
 
     def retranslateUi(self, ProjectLexusDebugScreen):
-        _translate = QtCore.QCoreApplication.translate
-        ProjectLexusDebugScreen.setWindowTitle(_translate("ProjectLexusDebugScreen", "Project Lexus Debug Screen"))
-        self.baslaButton.setText(_translate("ProjectLexusDebugScreen", "BASLA"))
-        self.durButton.setText(_translate("ProjectLexusDebugScreen", "DUR"))
-        self.goruntuSecButton.setText(_translate("ProjectLexusDebugScreen", "GORUNTU SEC"))
+        self._translate = QtCore.QCoreApplication.translate
+        ProjectLexusDebugScreen.setWindowTitle(self._translate("ProjectLexusDebugScreen", "Project Lexus Debug Screen"))
+        self.baslaButton.setText(self._translate("ProjectLexusDebugScreen", "BASLA"))
+        self.durButton.setText(self._translate("ProjectLexusDebugScreen", "DUR"))
+        self.goruntuSecButton.setText(self._translate("ProjectLexusDebugScreen", "GORUNTU SEC"))
         __sortingEnabled = self.modulSituations.isSortingEnabled()
         self.modulSituations.setSortingEnabled(False)
-        item = self.modulSituations.item(0)
-        item.setText(_translate("ProjectLexusDebugScreen", "KAMERA :  DEVRE DISI"))
-        item = self.modulSituations.item(1)
-        item.setText(_translate("ProjectLexusDebugScreen", "TITRESIM : DEVRE DISI"))
-        item = self.modulSituations.item(2)
-        item.setText(_translate("ProjectLexusDebugScreen", "YAKINLIK : DEVRE DISI"))
-        item = self.modulSituations.item(3)
-        item.setText(_translate("ProjectLexusDebugScreen", "SES : DEVRE DISI"))
-        item = self.modulSituations.item(4)
-        item.setText(_translate("ProjectLexusDebugScreen", "KONROLCU : DEVRE DISI"))
-        item = self.modulSituations.item(5)
-        item.setText(_translate("ProjectLexusDebugScreen", "YAPAY ZEKA : DEVRE DISI"))
+        self.item = self.modulSituations.item(0)
+        self.item.setText(self._translate("ProjectLexusDebugScreen", "KAMERA :  DEVRE DISI"))
+        self.item2 = self.modulSituations.item(1)
+        self.item2.setText(self._translate("ProjectLexusDebugScreen", "TITRESIM : DEVRE DISI"))
+        self.item3 = self.modulSituations.item(2)
+        self.item3.setText(self._translate("ProjectLexusDebugScreen", "YAKINLIK : DEVRE DISI"))
+        self.item4 = self.modulSituations.item(3)
+        self.item4.setText(self._translate("ProjectLexusDebugScreen", "SES : DEVRE DISI"))
+        self.item5 = self.modulSituations.item(4)
+        self.item5.setText(self._translate("ProjectLexusDebugScreen", "KONROLCU : DEVRE DISI"))
+        self.item6 = self.modulSituations.item(5)
+        self.item6.setText(self._translate("ProjectLexusDebugScreen", "YAPAY ZEKA : DEVRE DISI"))
         self.modulSituations.setSortingEnabled(__sortingEnabled)
-        self.label.setText(_translate("ProjectLexusDebugScreen", "MODUL DURUMU"))
-        self.label_2.setText(_translate("ProjectLexusDebugScreen", "ISLEMLER"))
-        self.label_4.setText(_translate("ProjectLexusDebugScreen", "YAPAY ZEKA GORUNTUSU"))
-        self.label_5.setText(_translate("ProjectLexusDebugScreen", "LOG"))
-        self.label_6.setText(_translate("ProjectLexusDebugScreen", "TESPIT EDILEN OBJELER"))
+        self.label.setText(self._translate("ProjectLexusDebugScreen", "MODUL DURUMU"))
+        self.label_2.setText(self._translate("ProjectLexusDebugScreen", "ISLEMLER"))
+        self.label_4.setText(self._translate("ProjectLexusDebugScreen", "YAPAY ZEKA GORUNTUSU"))
+        self.label_5.setText(self._translate("ProjectLexusDebugScreen", "LOG"))
+        self.label_6.setText(self._translate("ProjectLexusDebugScreen", "TESPIT EDILEN OBJELER"))
