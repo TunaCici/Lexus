@@ -9,67 +9,51 @@
 
 # ----------------------------------------------------------------------------------
 
-# TODO:
-# 1. name your class to something more readable (ex. DebugScreen)
-# 2. use the new import method (ex. you can take it from voice_command.py)
-# 3. add descriptions to your functions (ex. "initializes the deug screen")
-# 4. make a function called update() where you update labels on the screen
-# 5. make a function called close() that closes the debug screen
-# 6. read from the config file to update each modules state (ex. if camera is running display its label)
-# 7. change the DEBUG_RUNNER name to DSCREEN_RUNNING or something that ends with _RUNNING.
-# 8. Add a function to update states individually. (ex. change_camera_state() etc. etc.)
-
-# Note: The UI is functional but looks a bit old. Try to modernize its look.
-# For example you can use more modern fonts or colors.
-
-# Note: Dilara will add some all the X_RUNNING states to each module later.
-# Just implement the DSCREEN_RUNNING for now, we can add others later.
-
-# USE CASE 1
-# main_camera.change_camera_state(True)
-# main_camera.update()
-
-# This code will change the text "KAMERA: CALISMIYOR" to "KAMERA: CALISIYOR"
-# Of course the words can be changed like instead of "CALISMIYOR" you can write "DEVRE DISI"
-
-# USE CASE 2
-# frame = main_ai.get_vision()
-# main_camera.change_img(frame)
-# main_camera.update()
-
-# Here we get the image from the ai (i will write the main_ai.get_vision() part)
-# Then update the debug screen to show it
-
-# You can add descriptions to functions like this
-
-# *******************
-def shrek():
-    """
-    prints shrek to console.
-    """
-    print("shrek")
-# *******************
-
 from PyQt5 import QtCore, QtGui, QtWidgets, QtTest
+import os
+import glob
 
-if __name__ == "__main__":
-    import camera
+if __name__ == "modules." + os.path.basename(__file__)[:-3]:
+    # importing from outside the package
+    from modules import config
+    from modules import camera
+    from modules import logger
 else:
-    from . import camera
-
-if __name__ == "__main__":
+    # importing from main and inside the package
     import config
-else:
-    from . import config
+    import camera
+    import logger
 
-class Ui_ProjectLexusDebugScreen(object):
-    def starter(self):
-        config.DEBUG_RUNNER = True
-        obje = camera.Camera()
-        obje.cameraPhotoCapturer(config.PHOTO_NUMBER)
+class DebugScreen(object):
+    def start(self):
+        config.DSCREEN_RUNNING = True
+        self.obje = camera.Camera()
+        self.update()
     
-    def stopper(self):
-        config.DEBUG_RUNNER = False
+    def close(self):
+        config.CAMERA_RUNNING = False
+        config.DSCREEN_RUNNING = False
+
+        files = glob.glob(config.PROJECT_DIR + "/photos/")
+        for f in files:
+            os.remove(f)
+        
+        self.obje.photo_no = 0
+
+    def update(self):
+        while(config.DSCREEN_RUNNING == True and self.obje.photo_no != config.PHOTO_NUMBER):
+            if config.CAMERA_RUNNING == True:
+                self.obje.update()
+                QtTest.QTest.qWait(100)
+                pathName = config.PROJECT_DIR + "\\photos\\" + str(self.obje.photo_no) + ".png"
+                self.aiScreen.resize(config.RESIZE_X,config.RESIZE_Y)
+                self.pixmap = QtGui.QPixmap(pathName)
+                self.aiScreen.setPixmap(self.pixmap)
+                QtTest.QTest.qWait(100)
+
+        if self.obje.photo_no == config.PHOTO_NUMBER:
+            self.obje.photo_no = 0
+            self.update()
 
     def setupUi(self, ProjectLexusDebugScreen):
         ProjectLexusDebugScreen.setObjectName("ProjectLexusDebugScreen")
@@ -82,12 +66,12 @@ class Ui_ProjectLexusDebugScreen(object):
         self.baslaButton.setGeometry(QtCore.QRect(320, 40, 111, 71))
         self.baslaButton.setObjectName("baslaButton")
         self.baslaButton.setStyleSheet("background-color : #ff9f8e")
-        self.baslaButton.pressed.connect(self.starter)
+        self.baslaButton.pressed.connect(self.start)
         self.durButton = QtWidgets.QPushButton(self.centralwidget)
         self.durButton.setGeometry(QtCore.QRect(320, 120, 111, 71))
         self.durButton.setObjectName("durButton")
         self.durButton.setStyleSheet("background-color : #ff9f8e")
-        self.durButton.pressed.connect(self.stopper)
+        self.durButton.pressed.connect(self.close)
         self.goruntuSecButton = QtWidgets.QPushButton(self.centralwidget)
         self.goruntuSecButton.setGeometry(QtCore.QRect(320, 200, 111, 71))
         self.goruntuSecButton.setObjectName("goruntuSecButton")
@@ -126,9 +110,6 @@ class Ui_ProjectLexusDebugScreen(object):
         self.aiScreen = QtWidgets.QLabel(self.centralwidget)
         self.aiScreen.setGeometry(QtCore.QRect(510, 40, 261, 211))
         self.aiScreen.setObjectName("aiScreen")
-        self.aiScreen.setStyleSheet("font-weight : bold")
-        self.pixmap = QtGui.QPixmap(camera.Camera.resized)
-        self.aiScreen.setPixmap(self.pixmap)
         self.label_4 = QtWidgets.QLabel(self.centralwidget)
         self.label_4.setGeometry(QtCore.QRect(500, 20, 141, 16))
         self.label_4.setObjectName("label_4")
@@ -158,21 +139,20 @@ class Ui_ProjectLexusDebugScreen(object):
         __sortingEnabled = self.modulSituations.isSortingEnabled()
         self.modulSituations.setSortingEnabled(False)
         item = self.modulSituations.item(0)
-        item.setText(_translate("ProjectLexusDebugScreen", "KAMERA :  "))
+        item.setText(_translate("ProjectLexusDebugScreen", "KAMERA :  DEVRE DISI"))
         item = self.modulSituations.item(1)
-        item.setText(_translate("ProjectLexusDebugScreen", "TITRESIM : "))
+        item.setText(_translate("ProjectLexusDebugScreen", "TITRESIM : DEVRE DISI"))
         item = self.modulSituations.item(2)
-        item.setText(_translate("ProjectLexusDebugScreen", "YAKINLIK :"))
+        item.setText(_translate("ProjectLexusDebugScreen", "YAKINLIK : DEVRE DISI"))
         item = self.modulSituations.item(3)
-        item.setText(_translate("ProjectLexusDebugScreen", "SES : "))
+        item.setText(_translate("ProjectLexusDebugScreen", "SES : DEVRE DISI"))
         item = self.modulSituations.item(4)
-        item.setText(_translate("ProjectLexusDebugScreen", "KONROLCU : "))
+        item.setText(_translate("ProjectLexusDebugScreen", "KONROLCU : DEVRE DISI"))
         item = self.modulSituations.item(5)
-        item.setText(_translate("ProjectLexusDebugScreen", "YAPAY ZEKA : "))
+        item.setText(_translate("ProjectLexusDebugScreen", "YAPAY ZEKA : DEVRE DISI"))
         self.modulSituations.setSortingEnabled(__sortingEnabled)
         self.label.setText(_translate("ProjectLexusDebugScreen", "MODUL DURUMU"))
         self.label_2.setText(_translate("ProjectLexusDebugScreen", "ISLEMLER"))
         self.label_4.setText(_translate("ProjectLexusDebugScreen", "YAPAY ZEKA GORUNTUSU"))
         self.label_5.setText(_translate("ProjectLexusDebugScreen", "LOG"))
-        self.label_6.setText(_translate("ProjectLexusDebugScreen", "TESPIT EDILEN OBJELER"))
         self.label_6.setText(_translate("ProjectLexusDebugScreen", "TESPIT EDILEN OBJELER"))

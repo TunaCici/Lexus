@@ -10,17 +10,18 @@ Created: 22/08/2021
 import os
 
 # Debug Screen
-DEBUG_RUNNER = True
+DSCREEN_RUNNING = True
 
 # Camera
 PHOTO_NUMBER = 200
+RESIZE_X = 360
+RESIZE_Y = 240
+CAMERA_RUNNING = True
 
 # Project
 PROJECT_DIR = os.getcwd()
 
 # Controller
-
-# Debug_screen
 
 # Logger
 LOG_FORMAT = "%(asctime)s [%(levelname)s] [%(name)s] %(message)s"
