@@ -394,7 +394,7 @@ def prepare_batch(images, network, channels=3):
         darknet_images.append(custom_image)
     
     batch_array = numpy.concatenate(darknet_images, axis=0)
-    batch_array = numpy.ascontiguousarray(batch_array.flat, dtype=np.float32)/255.0
+    batch_array = numpy.ascontiguousarray(batch_array.flat, dtype=numpy.float32)/255.0
     darknet_images = batch_array.ctypes.data_as(POINTER(c_float))
     return Image(width, height, channels, darknet_images)
 

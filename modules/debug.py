@@ -15,20 +15,27 @@ from PIL.ImageQt import ImageQt
 import os
 import glob
 
-from cv2 import PARAM_ALGORITHM, fitEllipse
-
 if __name__ == "modules." + os.path.basename(__file__)[:-3]:
     # importing from outside the package
     from modules import config
     from modules import camera
+    from modules import logger
 else:
     # importing from main and inside the package
     import config
     import camera
+    import logger
 
 class DebugScreen(object):
+    def logger_start(self):
+        if config.IS_LOGGER_RUNNING == True:
+            logger.LexusLogger()
+
+        self.file_log = open(config.PROJECT_DIR + "/logs/lexuslogfile.txt")
+    
     def start(self):
         config.CAMERA_RUNNING = True
+        config.IS_LOGGER_RUNNING = True
 
         self.item.setText(self._translate("ProjectLexusDebugScreen", "KAMERA :  ACIK"))
 
@@ -37,6 +44,7 @@ class DebugScreen(object):
     
     def close(self):
         config.CAMERA_RUNNING = False
+        config.IS_LOGGER_RUNNING = False
 
         self.item.setText(self._translate("ProjectLexusDebugScreen", "KAMERA :  DEVRE DISI"))
 
@@ -44,8 +52,16 @@ class DebugScreen(object):
         
         self.obje.photo_no = 0
 
+        self.i = 0
+        config.LINE_NUMBER = 0
+
+        self.logs.clear()
+
+        self.file_log.close()
+        
+
     def update(self):
-        while(config.CAMERA_RUNNING == True and self.obje.photo_no != config.PHOTO_NUMBER + 1):
+        while(config.CAMERA_RUNNING == True and config.IS_LOGGER_RUNNING == True and self.obje.photo_no != config.PHOTO_NUMBER + 1):
             self.obje.update()
             QtTest.QTest.qWait(100)
             self.files = glob.glob(config.PROJECT_DIR + "/photos/")
@@ -61,6 +77,15 @@ class DebugScreen(object):
             if self.obje.photo_no == config.PHOTO_NUMBER:
                 self.obje.photo_no = 0
 
+            self.logger_start()
+
+            self.list_Lines = self.file_log.readlines()
+            config.LINE_NUMBER = len(self.list_Lines)
+
+            self.i = 0
+            self.logs.addItem(self.list_Lines[self.i])
+            self.i = self.i + 1
+
     def goruntu_sec(self):
         self.filename = QtWidgets.QFileDialog.getOpenFileName()
         self.path = self.filename[0]
@@ -74,6 +99,7 @@ class DebugScreen(object):
         ProjectLexusDebugScreen.setMaximumSize(QtCore.QSize(800, 16777215))
         ProjectLexusDebugScreen.setFixedWidth(900)
         ProjectLexusDebugScreen.setFixedHeight(720)
+        ProjectLexusDebugScreen.setStyleSheet("background-color: #ab9191;")
         self.centralwidget = QtWidgets.QWidget(ProjectLexusDebugScreen)
         self.centralwidget.setObjectName("centralwidget")
         self.baslaButton = QtWidgets.QPushButton(self.centralwidget)
@@ -92,8 +118,9 @@ class DebugScreen(object):
         self.goruntuSecButton.setStyleSheet("background-color : #ff9f8e")
         self.goruntuSecButton.pressed.connect(self.goruntu_sec)
         self.modulSituations = QtWidgets.QListWidget(self.centralwidget)
-        self.modulSituations.setGeometry(QtCore.QRect(10, 30, 256, 192))
+        self.modulSituations.setGeometry(QtCore.QRect(10, 30, 200, 150))
         self.modulSituations.setObjectName("modulSituations")
+        self.modulSituations.setStyleSheet("background-color : #d2c8c8")
         item = QtWidgets.QListWidgetItem()
         self.modulSituations.addItem(item)
         item = QtWidgets.QListWidgetItem()
@@ -114,14 +141,16 @@ class DebugScreen(object):
         self.label_2.setGeometry(QtCore.QRect(350, 20, 54, 16))
         self.label_2.setObjectName("label_2")
         self.label_2.setStyleSheet("font-weight : bold")
-        self.objects = QtWidgets.QListView(self.centralwidget)
+        self.objects = QtWidgets.QListWidget(self.centralwidget)
         self.objects.setGeometry(QtCore.QRect(440, 370, 341, 192))
         self.objects.setObjectName("objects")
         self.objects.setStyleSheet("font-weight : bold")
+        self.objects.setStyleSheet("background-color : #d2c8c8")
         self.logs = QtWidgets.QListWidget(self.centralwidget)
         self.logs.setGeometry(QtCore.QRect(20, 370, 361, 192))
         self.logs.setObjectName("logs")
         self.logs.setStyleSheet("font-weight : bold")
+        self.logs.setStyleSheet("background-color : #d2c8c8")
         self.aiScreen = QtWidgets.QLabel(self.centralwidget)
         self.aiScreen.setGeometry(QtCore.QRect(510, 40, 261, 211))
         self.aiScreen.setObjectName("aiScreen")
