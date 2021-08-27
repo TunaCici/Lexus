@@ -1,7 +1,8 @@
 """
 Made by Project Lexus Team
 Name: ai.py
-Purpose: Talks with the AI and runs it.
+Purpose: Initializez AI and DLL's.
+Also, provides communication with it.
 
 Author: Tuna Cici
 Created: 25/08/2021
@@ -27,12 +28,25 @@ else:
 
 # C Type Structures
 class Box(Structure):
+    """
+    C type box structure.
+    x (float): left coordinate of the box.
+    y (float): top coordinate of the box.
+    w (float): width of the box.
+    h (float): height of the box.
+    """
     _fields_ = [("x", c_float),
                 ("y", c_float),
                 ("w", c_float),
                 ("h", c_float)]
 
 class Detection(Structure):
+    """
+    C type detection structure.
+    bbox (box): bounding box.
+    classes (int): number of the class
+    prob (float*): probility
+    """
     _fields_ = [("bbox", Box),
                 ("classes", c_int),
                 ("prob", POINTER(c_float)),
@@ -47,29 +61,64 @@ class Detection(Structure):
                 ("track_id", c_int)]
 
 class DetNumPair(Structure):
+    """
+    C type detnumpair structure.
+    num (int): class number of the object
+    dets (detection): detects belonging to that object 
+    """
     _fields_ = [("num", c_int),
                 ("dets", POINTER(Detection))]
 
 class Image(Structure):
+    """
+    C type image structure.
+    w (int): width
+    h (int): height
+    c (channels): no. of color channels
+    data (float*): image data
+    """
     _fields_ = [("w", c_int),
                 ("h", c_int),
                 ("c", c_int),
                 ("data", POINTER(c_float))]
 
 class MetaData(Structure):
+    """
+    C type metadata structure.
+    classes (int): number of classes
+    names (char*): class names
+    """
     _fields_ = [("classes", c_int),
                 ("names", POINTER(c_char_p))]
 
 def network_width(net):
+    """
+    uses C function network_width().\n
+    args:
+        net: network
+    returns:
+        width of the image in the network
+    """
     return lib.network_width(net)
 
 def network_height(net):
+    """
+    uses C function network_height().\n
+    args:
+        net: network
+    returns:
+        height of the image in the network
+    """
     return lib.network_height(net)
 
 def bbox2points(bbox):
     """
-    Converts yolo type bounding box 
-    to cv2 rectangle.
+    converts yolo type bounding box 
+    to cv2 rectangle.\n
+    args:
+        bounding box
+    returns:
+        tuple of coordinates
     """
     x, y, w, h = bbox
     x_min = int(round(x - (w / 2)))
@@ -81,8 +130,12 @@ def bbox2points(bbox):
 
 def class_colors(names):
     """
-    Creates random color for each class name.
-    Colorformat is BGR.
+    creates random color for each class name.
+    colorformat is BGR.\n
+    args:
+        list of names
+    returns:
+        list of names with colors (BGR)
     """
     return {name: (
         random.randint(0, 255),
@@ -93,7 +146,7 @@ def load_network(config_file: str, data_file : str,
                     weights : str, batch_size : int = 1):
     """
     loads model description and weights.
-    takes:
+    args:
         config_file: path to .cfg file.
         data_file: path to .data file
         weights: path to weights
