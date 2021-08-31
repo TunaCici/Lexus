@@ -9,6 +9,7 @@
 
 # ----------------------------------------------------------------------------------
 
+from modules import voice_command
 from PyQt5 import QtCore, QtGui, QtWidgets, QtTest
 from PIL import Image
 from PIL.ImageQt import ImageQt
@@ -27,6 +28,12 @@ else:
     import logger
 
 class DebugScreen(object):
+    def voice_start(self):
+        self.voice_obj = voice_command.voice_commander()
+
+        if self.voice_obj.is_playing == True:
+            self.item4.setText(self._translate("ProjectLexusDebugScreen", "SES : ACIK"))
+    
     def logger_start(self):
         if config.IS_LOGGER_RUNNING == True:
             logger.LexusLogger()
@@ -45,7 +52,7 @@ class DebugScreen(object):
     def close(self):
         config.CAMERA_RUNNING = False
         config.IS_LOGGER_RUNNING = False
-
+        self.voice_obj.is_playing = False
         self.item.setText(self._translate("ProjectLexusDebugScreen", "KAMERA :  DEVRE DISI"))
 
         self.obje.videoCaptureObject.release()
@@ -83,8 +90,9 @@ class DebugScreen(object):
             config.LINE_NUMBER = len(self.list_Lines)
 
             self.i = 0
-            self.logs.addItem(self.list_Lines[self.i])
-            self.i = self.i + 1
+            for i in range(config.LINE_NUMBER):
+                self.logs.addItem(self.list_Lines[self.i])
+                self.i = self.i + 1
 
     def goruntu_sec(self):
         self.filename = QtWidgets.QFileDialog.getOpenFileName()
