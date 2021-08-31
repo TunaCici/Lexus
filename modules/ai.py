@@ -26,6 +26,8 @@ else:
     import config
     import logger
 
+custom_logger = logger.LexusLogger()
+
 # C Type Structures
 class Box(Structure):
     """
@@ -91,7 +93,8 @@ class MetaData(Structure):
     _fields_ = [("classes", c_int),
                 ("names", POINTER(c_char_p))]
 
-def network_width(net):
+def network_width(net: int):
+    custom_logger.log_info(f"[network_width] net is: {type(net)}")
     """
     uses C function network_width().\n
     args:
@@ -101,7 +104,8 @@ def network_width(net):
     """
     return lib.network_width(net)
 
-def network_height(net):
+def network_height(net: int):
+    custom_logger.log_info(f"[network_height] net is: {type(net)}")
     """
     uses C function network_height().\n
     args:
@@ -111,7 +115,8 @@ def network_height(net):
     """
     return lib.network_height(net)
 
-def bbox2points(bbox):
+def bbox2points(bbox: tuple):
+    custom_logger.log_info(f"[bbox2points] bbox is: {type(bbox)}")
     """
     converts yolo type bounding box 
     to cv2 rectangle.\n
@@ -128,7 +133,8 @@ def bbox2points(bbox):
 
     return x_min, y_min, x_max, y_max
 
-def class_colors(names):
+def class_colors(names: list):
+    custom_logger.log_info(f"[class_colors] names is: {type(names)}")
     """
     creates random color for each class name.
     colorformat is BGR.\n
@@ -164,7 +170,8 @@ def load_network(config_file: str, data_file : str,
 
     return network, class_names, colors
 
-def print_detections(detections, coordinates = False):
+def print_detections(detections: list, coordinates : bool = False):
+    custom_logger.log_info(f"[print_detections] detections is: {type(detections)}")
     """
     prints the detections onto the terminal.\n
     args:
@@ -181,7 +188,9 @@ def print_detections(detections, coordinates = False):
         else:
             print("{}: {}%".format(label, confidence))
 
-def draw_boxes(detections, image, colors):
+def draw_boxes(detections: list, image: numpy.ndarray, colors: dict):
+    custom_logger.log_info(
+        f"[draw_boxes] detections is: {type(detections)}, image is: {type(image)}, colors is: {type(colors)}")
     """
     draws the detections onto image using cv2.\n
     args:
@@ -210,7 +219,9 @@ def draw_boxes(detections, image, colors):
     
     return image
 
-def decode_detection(detections):
+def decode_detection(detections: list):
+    custom_logger.log_info(
+        f"[decode_detection] detections is: {type(detections)}")
     """
     turns 0-1 value range to 0-100 for confidence level.\n
     args:
@@ -226,7 +237,9 @@ def decode_detection(detections):
     
     return decoded
 
-def remove_negatives(detections, class_names, num):
+def remove_negatives(detections: Detection, class_names: list, num: int):
+    custom_logger.log_info(
+        f"[remove_negatives] detections is: {type(detections)}, class_names is: {type(class_names)}, num is: {type(num)}")
     """
     removes all classes with 0 percent confidence level.\n
     args:
@@ -250,12 +263,14 @@ def remove_negatives(detections, class_names, num):
     return predictions
 
 def detect_image(
-    network,
-    class_names,
-    image,
-    thresh = .5,
-    hier_thresh = .5,
-    nms = .45,):
+    network: int,
+    class_names: list,
+    image: Image,
+    thresh: float= .5,
+    hier_thresh: float = .5,
+    nms: float = .45,):
+    custom_logger.log_info(
+        f"[detect_image] network is: {type(network)}, class_names is: {type(class_names)}, image is: {type(image)}")
     """
     runs the image throught the model and returns a list
     with highest confidence class and their bounding box\n
@@ -449,6 +464,8 @@ data_file = "cfg/coco.data"
 thresh = 0.25
 
 def check_batch_shape(images, batch_size):
+    custom_logger.log_info(
+        f"[check_batch_shape] images is: {type(images)}, batch_size is: {type(batch_size)}")
     """
     checks the list of images for their size.\n
     args:
@@ -465,7 +482,9 @@ def check_batch_shape(images, batch_size):
     
     return shapes[0]
 
-def load_images(images_path):
+def load_images(images_path: str):
+    custom_logger.log_info(
+        f"[load_images] images_path is: {type(images_path)}")
     """
     If image path is given, return it directly
     For txt file, read it and return each line as image path
@@ -485,6 +504,8 @@ def load_images(images_path):
             glob.glob(os.path.join(images_path, "*.jpeg"))
 
 def prepare_batch(images, network, channels=3):
+    custom_logger.log_info(
+        f"[prepare_batch] images is: {type(images)}, network is: {type(network)}, channels is: {type(channels)}")
     """
     prepares list of images to be proccessed.\n
     args:
@@ -511,7 +532,9 @@ def prepare_batch(images, network, channels=3):
     darknet_images = batch_array.ctypes.data_as(POINTER(c_float))
     return Image(width, height, channels, darknet_images)
 
-def image_detection(image_path, network, class_names, class_colors, thresh):
+def image_detection(image_path: str, network: int, class_names: list, class_colors: dict, thresh: float):
+    custom_logger.log_info(
+        f"[image_detection] image_path is: {type(image_path)}, network is: {type(network)}, class_names is: {type(class_names)} class_colors is: {type(class_colors)}, thresh is: {type(thresh)}")
     """
     runs the image through the model to make predictions.\n
     args:
@@ -545,6 +568,8 @@ def image_detection(image_path, network, class_names, class_colors, thresh):
 
 def batch_detection(network, images, class_names, class_colors,
                     thresh=0.25, hier_thresh=0.5, nms=0.45, batch_size=4):
+    custom_logger.log_info(
+        f"[batch_detection] network is: {type(network)}, images is: {type(images)}, class_names is: {type(class_names)} class_colors is: {type(class_colors)}")                
     """
     runs batch of images through the model to make predictions.\n
     args:
@@ -579,6 +604,8 @@ def batch_detection(network, images, class_names, class_colors,
     return images, batch_predictions
 
 def image_classification(image, network, class_names):
+    custom_logger.log_info(
+        f"[image_classification] image is: {type(image)}, network is: {type(network)}, class_names is: {type(class_names)}")
     """
     runs the image through the model for classification.\n
     args:
@@ -602,6 +629,8 @@ def image_classification(image, network, class_names):
     return sorted(predictions, key=lambda x: -x[-1])
 
 def convert2relative(image, bbox):
+    custom_logger.log_info(
+        f"[convert2relative] image is: {type(image)}, bbox is: {type(bbox)}")
     """
     converts to relative coordinates for the annotions
     YOLO only uses this format\n
@@ -617,6 +646,8 @@ def convert2relative(image, bbox):
     return x/width, y/height, w/width, h/height
 
 def save_annotions(name, image, detections, class_names):
+    custom_logger.log_info(
+        f"[save_annotions] name is: {type(name)}, image is: {type(image)}, detections is: {type(detections)} class_names is: {type(class_names)}")
     """
     saves the detection result to a text file.\n
     args:
