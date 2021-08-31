@@ -1,0 +1,6 @@
+2021-08-25 17:53:04,326 [INFO] [tester.py] Testing random_quote utility.
+2021-08-25 17:53:04,327 [INFO] [tester.py] Certain things catch your eye, but pursue only those that capture the heart. - Ancient Indian Proverb
+2021-08-25 17:53:04,328 [INFO] [tester.py] Our lives begin to end the day we become silent about things that matter. -Martin Luther King Jr.
+2021-08-25 17:53:42,336 [INFO] [tester.py] Testing random_quote utility.
+2021-08-25 17:53:42,337 [INFO] [tester.py] Whether you think you can or you think you can’t, you’re right. -Henry Ford
+2021-08-25 17:53:42,338 [INFO] [tester.py] You can never cross the ocean until you have the courage to lose sight of the shore. -Christopher Columbus

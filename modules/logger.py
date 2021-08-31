@@ -13,10 +13,19 @@ import inspect
 import logging
 import logging.handlers
 
-from . import config
+from numpy.testing._private.utils import runstring
+
+if __name__ == "modules." + os.path.basename(__file__)[:-3]:
+    # importing from outside the package
+    from modules import config
+else:
+    # importing from main and inside the package
+    import config
+
 class LexusLogger:
     #class member(s)
     logger = None
+    running = True
 
     #init
     def __init__(self):
@@ -33,7 +42,7 @@ class LexusLogger:
 
         #setup logging to file, rotating every minute
         filelog = logging.handlers.TimedRotatingFileHandler(config.LOG_FILE_DIR,
-                        when='m', interval=1)
+                        when='m', interval=1, encoding='utf-8')
         filelog.setLevel(logging.DEBUG)
         filelog.setFormatter(formatter)
         filelog.namer = lambda name: name.replace(".txt", "") + ".txt"
@@ -48,21 +57,29 @@ class LexusLogger:
         #get a logger for my script
         self.logger = logging.getLogger(filename)
 
-    def log_info(self, text : str):
+    def stop(self):
+        self.running = False
+    
+    def start(self):
+        self.running = True
+
+    def log_info(self, text: str):
         """
         Logs the given text to both console and logfile.
         Level: INFO
         """
-        self.logger.info(text)
+        if self.running:
+            self.logger.info(text)
     
-    def log_warning(self, text : str):
+    def log_warning(self, text: str):
         """
         Logs the given text to both console and logfile
         Level: WARNING
         """
-        self.logger.warning(text)
+        if self.running:
+            self.logger.warning(text)
 
-    def log_error(self, text : str):
+    def log_error(self, text: str):
         """
         Logs the given text to both console and logfile
         Level: ERROR
