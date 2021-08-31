@@ -145,15 +145,15 @@ def class_colors(names):
 def load_network(config_file: str, data_file : str,
                     weights : str, batch_size : int = 1):
     """
-    loads model description and weights.
+    loads model description and weights.\n
     args:
         config_file: path to .cfg file.
         data_file: path to .data file
         weights: path to weights
     returns:
         network: the model
-        class_names
-        class_colors
+        class_names: list if obj names
+        class_colors: list of obj colors
     """
     network = load_net_custom(
         config_file.encode("ascii"),
@@ -165,6 +165,14 @@ def load_network(config_file: str, data_file : str,
     return network, class_names, colors
 
 def print_detections(detections, coordinates = False):
+    """
+    prints the detections onto the terminal.\n
+    args:
+        detections: list of detections
+        coordinates: whether to print coords or not
+    returns:
+        None
+    """
     print("\nObjects:")
     for label, confidence, bbox in detections:
         x, y, w, h = bbox
@@ -174,6 +182,15 @@ def print_detections(detections, coordinates = False):
             print("{}: {}%".format(label, confidence))
 
 def draw_boxes(detections, image, colors):
+    """
+    draws the detections onto image using cv2.\n
+    args:
+        detections: list of detections
+        image: image to be drawn onto
+        colors: list of obj colors
+    returns:
+        image: drawn version of the image
+    """
     import cv2
 
     for label, confidence, bbox in detections:
@@ -194,6 +211,13 @@ def draw_boxes(detections, image, colors):
     return image
 
 def decode_detection(detections):
+    """
+    turns 0-1 value range to 0-100 for confidence level.\n
+    args:
+        detections: list of detections
+    returns:
+        decoded: list of decoded detections
+    """
     decoded = []
 
     for label, confidence, bbox in detections:
@@ -204,7 +228,13 @@ def decode_detection(detections):
 
 def remove_negatives(detections, class_names, num):
     """
-    removes all classes with 0 percent confidence
+    removes all classes with 0 percent confidence level.\n
+    args:
+        detections: list of detections
+        class_name: list of class names
+        num: I AM NOT SURE
+    return:
+        predictions: clean list of detections
     """
     predictions = []
 
@@ -229,6 +259,15 @@ def detect_image(
     """
     runs the image throught the model and returns a list
     with highest confidence class and their bounding box
+    args:
+        network: the model
+        class_names: list of class names
+        image: image to be processed
+        thresh: threshold value for the prediction
+        hier_thresh: hierarchy threshold for Yolo9000
+        nms: for trimming down multiple boxes
+    returns:
+        predictions: sorted list of predictions
     """
 
     pnum = pointer(c_int(0))
