@@ -27,6 +27,7 @@ else:
     import logger
 
 custom_logger = logger.LexusLogger()
+custom_logger.stop()
 
 # C Type Structures
 class Box(Structure):
@@ -699,7 +700,7 @@ def main():
             image_name, network, class_names, class_colors, thresh
         )
         
-        print_detections(detections, False)
+        print_detections(detections, True)
         fps = int(1/(time.time() - prev_time))
         print("FPS: {}".format(fps))
         cv2.imshow('Inference', image)

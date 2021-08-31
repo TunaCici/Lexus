@@ -13,6 +13,8 @@ import inspect
 import logging
 import logging.handlers
 
+from numpy.testing._private.utils import runstring
+
 if __name__ == "modules." + os.path.basename(__file__)[:-3]:
     # importing from outside the package
     from modules import config
@@ -23,6 +25,7 @@ else:
 class LexusLogger:
     #class member(s)
     logger = None
+    running = True
 
     #init
     def __init__(self):
@@ -54,21 +57,29 @@ class LexusLogger:
         #get a logger for my script
         self.logger = logging.getLogger(filename)
 
-    def log_info(self, text : str):
+    def stop(self):
+        self.running = False
+    
+    def start(self):
+        self.running = True
+
+    def log_info(self, text: str):
         """
         Logs the given text to both console and logfile.
         Level: INFO
         """
-        self.logger.info(text)
+        if self.running:
+            self.logger.info(text)
     
-    def log_warning(self, text : str):
+    def log_warning(self, text: str):
         """
         Logs the given text to both console and logfile
         Level: WARNING
         """
-        self.logger.warning(text)
+        if self.running:
+            self.logger.warning(text)
 
-    def log_error(self, text : str):
+    def log_error(self, text: str):
         """
         Logs the given text to both console and logfile
         Level: ERROR
