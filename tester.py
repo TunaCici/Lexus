@@ -7,7 +7,6 @@ Author: Team Crossbones
 Created: 20/08/2021
 """
 
-from cv2 import textureFlattening
 from modules import logger
 from modules import config
 from utils import random_quote
