@@ -258,7 +258,7 @@ def detect_image(
     nms = .45,):
     """
     runs the image throught the model and returns a list
-    with highest confidence class and their bounding box
+    with highest confidence class and their bounding box\n
     args:
         network: the model
         class_names: list of class names
@@ -297,6 +297,9 @@ def detect_image(
 
 hasGPU = True
 
+"""
+Imports the necessary dll's from the current directory
+"""
 if os.name == "nt":
     cwd = os.path.dirname(__file__)
     os.environ['PATH'] = cwd + ";" + os.environ['PATH']
@@ -340,6 +343,10 @@ if os.name == "nt":
 else:
     lib = CDLL("./libdarknet.so", RTLD_GLOBAL)
 
+"""
+Imports the C function from the loaded dll and converts it
+into a python-usable form
+"""
 lib.network_width.argtypes = [c_void_p]
 lib.network_width.restype = c_int
 lib.network_height.argtypes = [c_void_p]
@@ -443,7 +450,12 @@ thresh = 0.25
 
 def check_batch_shape(images, batch_size):
     """
-    all the images must have the same width and height
+    checks the list of images for their size.\n
+    args:
+        images: list of images
+        batch_size: size of batch
+    returns:
+        shape: size of the image
     """
     shapes = [image.shape for image in images]
     if len(set(shapes)) > 1:
@@ -473,6 +485,15 @@ def load_images(images_path):
             glob.glob(os.path.join(images_path, "*.jpeg"))
 
 def prepare_batch(images, network, channels=3):
+    """
+    prepares list of images to be proccessed.\n
+    args:
+        images: list of images
+        network: the model
+        channel: num of color channels
+    return:
+        image_struct: list of images ready to be processed
+    """
     width = network_width(network)
     height = network_height(network)
 
@@ -491,6 +512,18 @@ def prepare_batch(images, network, channels=3):
     return Image(width, height, channels, darknet_images)
 
 def image_detection(image_path, network, class_names, class_colors, thresh):
+    """
+    runs the image through the model to make predictions.\n
+    args:
+        image_path: path of the image
+        network: the model
+        class_names: list of class names
+        class_colors: list of class colors
+        thresh: threshold for predictions
+    returns:
+        image: cv2 type image to be displayed
+        detections: list of detections
+    """
     # Darknet does not accept numpy images
     # Create one with image we reuse for each detect
     width = network_width(network)
@@ -512,6 +545,20 @@ def image_detection(image_path, network, class_names, class_colors, thresh):
 
 def batch_detection(network, images, class_names, class_colors,
                     thresh=0.25, hier_thresh=0.5, nms=0.45, batch_size=4):
+    """
+    runs batch of images through the model to make predictions.\n
+    args:
+        network: the model
+        images: list of images
+        class_names: list of class names
+        class_colors: list of class colors
+        thresh: threshold for predictions
+        hier_thresh hierarchy threshold for Yolo9000
+        nms: for trimming down multiple boxes
+    returns:
+        images: list of images to be displayed
+        batch_predictions: list of predictions for each image in the batch
+    """
     image_height, image_width = check_batch_shape(images, batch_size)
     darknet_images = prepare_batch(images, network)
     batch_detections = network_predict_batch(network, darknet_images, batch_size, image_width,
@@ -532,6 +579,15 @@ def batch_detection(network, images, class_names, class_colors,
     return images, batch_predictions
 
 def image_classification(image, network, class_names):
+    """
+    runs the image through the model for classification.\n
+    args:
+        image: image to be used
+        network: the model
+        class_names: list of class names
+    returns:
+        sorted list of predictions
+    """
     width = network_width(network)
     height = network_height(network)
     image_rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
@@ -547,8 +603,13 @@ def image_classification(image, network, class_names):
 
 def convert2relative(image, bbox):
     """
-    convert to relative coordinates for the annotion
-    YOLO only uses this format
+    converts to relative coordinates for the annotions
+    YOLO only uses this format\n
+    args:
+        image: used for metadata for bbox
+        bbox: bounding box of the image
+    returns:
+        relative coordinates
     """
     x, y, w, h = bbox
     height, width , _ = image.shape
@@ -557,7 +618,14 @@ def convert2relative(image, bbox):
 
 def save_annotions(name, image, detections, class_names):
     """
-    files saved with image_name.txt and relative coordinates
+    saves the detection result to a text file.\n
+    args:
+        name: name of the file to be saved
+        image: image
+        detections: list of detections
+        class_names: list of class names
+    returns:
+        None
     """
     file_name = os.path.splitext(name)[0] + ".txt"
     with open(file_name, "w") as f:
@@ -567,6 +635,14 @@ def save_annotions(name, image, detections, class_names):
             f.write("{} {:.4f} {:.4f} {:.4f} {:.4f} {:.4f}\n".format(label, x, y, w, h, float(confidence)))
 
 def main():
+    """
+    continues function which takes image path from the user and
+    runs it through the model and displays predictions.\n
+    args:
+        None
+    returns:
+        None
+    """
     random.seed(3)
     network, class_names, class_colors = load_network(
         config_file,
