@@ -15,8 +15,8 @@ import numpy as np
 class Camera:
     # images
     frame = None
-    resized = None
     photo_no = 0
+    frame_list = list()
 
     # video object
     videoCaptureObject = None
@@ -28,11 +28,7 @@ class Camera:
 
     # This function returns frame which taken by the camera.
     def get_frame(self):
-        return self.frame
-
-    # This function returns the resized frame.
-    def get_resized(self):
-        return self.resized
+        return self.frame_list[-1]
 
     # This function saves the photo which taken by the camera.
     def save(self):
@@ -40,19 +36,8 @@ class Camera:
         name = str(self.photo_no) + '.png' # Photo file name
         if self.ret:
             cv2.imwrite(os.path.join(path, name), self.get_frame())
-            self.resizer()
-            cv2.imwrite(os.path.join(path, name), self.get_resized())
-
-    def resizer(self):
-        self.before_resizing = cv2.imread(config.PROJECT_DIR + "\\photos\\" + str(self.photo_no) + ".png",1) 
-        self.resized = cv2.resize(self.before_resizing,(config.RESIZE_X,config.RESIZE_Y))
 
     # This function updates the photo, saves it inside the frame and resizes the frame.  
     def update(self):
-        path = config.PROJECT_DIR + "/photos/"# Path for photos. It can be changed.
-        pathFiles = config.PROJECT_DIR + "/photos/*.png" # Path for photo files. It can be changed.
         self.ret, self.frame = self.videoCaptureObject.read() # This reads the photo from the camera.
-        
-        if config.CAMERA_RUNNING == True:
-            self.save()
-            return
+        self.frame_list.append(self.frame)

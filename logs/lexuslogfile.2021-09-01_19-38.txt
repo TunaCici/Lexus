@@ -1,0 +1,131 @@
+2021-09-01 19:37:58,965 [INFO] [ai.py] Initialazing...
+2021-09-01 19:37:58,966 [INFO] [ai.py] Importing DLL(s)...
+2021-09-01 19:37:59,012 [INFO] [ai.py] Import complete.
+2021-09-01 19:37:59,012 [INFO] [ai.py] Loading the network...
+2021-09-01 19:37:59,267 [INFO] [ai.py] [class_colors] names is: <class 'list'>
+2021-09-01 19:37:59,267 [INFO] [ai.py] Network loaded.
+2021-09-01 19:37:59,267 [INFO] [ai.py] Initialazing complete.
+2021-09-01 19:37:59,283 [INFO] [ai.py] Updating AI.
+2021-09-01 19:37:59,283 [INFO] [ai.py] [image_detection] image is: <class 'numpy.ndarray'>, network is: <class 'int'>, class_names is: <class 'list'> class_colors is: <class 'dict'>, thresh is: <class 'float'>
+2021-09-01 19:37:59,283 [INFO] [ai.py] [network_width] net is: <class 'int'>
+2021-09-01 19:37:59,284 [INFO] [ai.py] [network_height] net is: <class 'int'>
+2021-09-01 19:37:59,296 [INFO] [ai.py] [detect_image] network is: <class 'int'>, class_names is: <class 'list'>, image is: <class 'modules.ai.Image'>
+2021-09-01 19:37:59,502 [INFO] [ai.py] [remove_negatives] detections is: <class 'modules.ai.LP_Detection'>, class_names is: <class 'list'>, num is: <class 'int'>
+2021-09-01 19:37:59,502 [INFO] [ai.py] [decode_detection] detections is: <class 'list'>
+2021-09-01 19:37:59,503 [INFO] [ai.py] [draw_boxes] detections is: <class 'list'>, image is: <class 'numpy.ndarray'>, colors is: <class 'dict'>
+2021-09-01 19:37:59,503 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-01 19:37:59,510 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-01 19:37:59,510 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-01 19:37:59,510 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-01 19:37:59,511 [INFO] [ai.py] Update complete.
+2021-09-01 19:37:59,541 [INFO] [ai.py] Updating AI.
+2021-09-01 19:37:59,541 [INFO] [ai.py] [image_detection] image is: <class 'numpy.ndarray'>, network is: <class 'int'>, class_names is: <class 'list'> class_colors is: <class 'dict'>, thresh is: <class 'float'>
+2021-09-01 19:37:59,541 [INFO] [ai.py] [network_width] net is: <class 'int'>
+2021-09-01 19:37:59,541 [INFO] [ai.py] [network_height] net is: <class 'int'>
+2021-09-01 19:37:59,544 [INFO] [ai.py] [detect_image] network is: <class 'int'>, class_names is: <class 'list'>, image is: <class 'modules.ai.Image'>
+2021-09-01 19:37:59,745 [INFO] [ai.py] [remove_negatives] detections is: <class 'modules.ai.LP_Detection'>, class_names is: <class 'list'>, num is: <class 'int'>
+2021-09-01 19:37:59,745 [INFO] [ai.py] [decode_detection] detections is: <class 'list'>
+2021-09-01 19:37:59,746 [INFO] [ai.py] [draw_boxes] detections is: <class 'list'>, image is: <class 'numpy.ndarray'>, colors is: <class 'dict'>
+2021-09-01 19:37:59,746 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-01 19:37:59,746 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-01 19:37:59,747 [INFO] [ai.py] Update complete.
+2021-09-01 19:37:59,770 [INFO] [ai.py] Updating AI.
+2021-09-01 19:37:59,770 [INFO] [ai.py] [image_detection] image is: <class 'numpy.ndarray'>, network is: <class 'int'>, class_names is: <class 'list'> class_colors is: <class 'dict'>, thresh is: <class 'float'>
+2021-09-01 19:37:59,770 [INFO] [ai.py] [network_width] net is: <class 'int'>
+2021-09-01 19:37:59,771 [INFO] [ai.py] [network_height] net is: <class 'int'>
+2021-09-01 19:37:59,773 [INFO] [ai.py] [detect_image] network is: <class 'int'>, class_names is: <class 'list'>, image is: <class 'modules.ai.Image'>
+2021-09-01 19:37:59,956 [INFO] [ai.py] [remove_negatives] detections is: <class 'modules.ai.LP_Detection'>, class_names is: <class 'list'>, num is: <class 'int'>
+2021-09-01 19:37:59,958 [INFO] [ai.py] [decode_detection] detections is: <class 'list'>
+2021-09-01 19:37:59,959 [INFO] [ai.py] [draw_boxes] detections is: <class 'list'>, image is: <class 'numpy.ndarray'>, colors is: <class 'dict'>
+2021-09-01 19:37:59,959 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-01 19:37:59,960 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-01 19:37:59,960 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-01 19:37:59,960 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-01 19:37:59,961 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-01 19:37:59,961 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-01 19:37:59,962 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-01 19:37:59,962 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-01 19:37:59,963 [INFO] [ai.py] Update complete.
+2021-09-01 19:37:59,995 [INFO] [ai.py] Updating AI.
+2021-09-01 19:37:59,995 [INFO] [ai.py] [image_detection] image is: <class 'numpy.ndarray'>, network is: <class 'int'>, class_names is: <class 'list'> class_colors is: <class 'dict'>, thresh is: <class 'float'>
+2021-09-01 19:37:59,995 [INFO] [ai.py] [network_width] net is: <class 'int'>
+2021-09-01 19:37:59,995 [INFO] [ai.py] [network_height] net is: <class 'int'>
+2021-09-01 19:37:59,998 [INFO] [ai.py] [detect_image] network is: <class 'int'>, class_names is: <class 'list'>, image is: <class 'modules.ai.Image'>
+2021-09-01 19:38:00,194 [INFO] [ai.py] [remove_negatives] detections is: <class 'modules.ai.LP_Detection'>, class_names is: <class 'list'>, num is: <class 'int'>
+2021-09-01 19:38:00,195 [INFO] [ai.py] [decode_detection] detections is: <class 'list'>
+2021-09-01 19:38:00,196 [INFO] [ai.py] [draw_boxes] detections is: <class 'list'>, image is: <class 'numpy.ndarray'>, colors is: <class 'dict'>
+2021-09-01 19:38:00,196 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-01 19:38:00,197 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-01 19:38:00,197 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-01 19:38:00,197 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-01 19:38:00,198 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-01 19:38:00,198 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-01 19:38:00,198 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-01 19:38:00,199 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-01 19:38:00,199 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-01 19:38:00,199 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-01 19:38:00,200 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-01 19:38:00,200 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-01 19:38:00,200 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-01 19:38:00,201 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-01 19:38:00,201 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-01 19:38:00,202 [INFO] [ai.py] Update complete.
+2021-09-01 19:38:00,311 [INFO] [ai.py] Updating AI.
+2021-09-01 19:38:00,311 [INFO] [ai.py] [image_detection] image is: <class 'numpy.ndarray'>, network is: <class 'int'>, class_names is: <class 'list'> class_colors is: <class 'dict'>, thresh is: <class 'float'>
+2021-09-01 19:38:00,311 [INFO] [ai.py] [network_width] net is: <class 'int'>
+2021-09-01 19:38:00,311 [INFO] [ai.py] [network_height] net is: <class 'int'>
+2021-09-01 19:38:00,316 [INFO] [ai.py] [detect_image] network is: <class 'int'>, class_names is: <class 'list'>, image is: <class 'modules.ai.Image'>
+2021-09-01 19:38:00,537 [INFO] [ai.py] [remove_negatives] detections is: <class 'modules.ai.LP_Detection'>, class_names is: <class 'list'>, num is: <class 'int'>
+2021-09-01 19:38:00,540 [INFO] [ai.py] [decode_detection] detections is: <class 'list'>
+2021-09-01 19:38:00,540 [INFO] [ai.py] [draw_boxes] detections is: <class 'list'>, image is: <class 'numpy.ndarray'>, colors is: <class 'dict'>
+2021-09-01 19:38:00,541 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-01 19:38:00,541 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-01 19:38:00,542 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-01 19:38:00,543 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-01 19:38:00,543 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-01 19:38:00,544 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-01 19:38:00,544 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-01 19:38:00,544 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-01 19:38:00,545 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-01 19:38:00,545 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-01 19:38:00,545 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-01 19:38:00,546 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-01 19:38:00,546 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-01 19:38:00,546 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-01 19:38:00,547 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-01 19:38:00,547 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-01 19:38:00,547 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-01 19:38:00,548 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-01 19:38:00,548 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-01 19:38:00,548 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-01 19:38:00,549 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-01 19:38:00,551 [INFO] [ai.py] Update complete.
+2021-09-01 19:38:00,587 [INFO] [ai.py] Updating AI.
+2021-09-01 19:38:00,587 [INFO] [ai.py] [image_detection] image is: <class 'numpy.ndarray'>, network is: <class 'int'>, class_names is: <class 'list'> class_colors is: <class 'dict'>, thresh is: <class 'float'>
+2021-09-01 19:38:00,587 [INFO] [ai.py] [network_width] net is: <class 'int'>
+2021-09-01 19:38:00,587 [INFO] [ai.py] [network_height] net is: <class 'int'>
+2021-09-01 19:38:00,590 [INFO] [ai.py] [detect_image] network is: <class 'int'>, class_names is: <class 'list'>, image is: <class 'modules.ai.Image'>
+2021-09-01 19:38:00,788 [INFO] [ai.py] [remove_negatives] detections is: <class 'modules.ai.LP_Detection'>, class_names is: <class 'list'>, num is: <class 'int'>
+2021-09-01 19:38:00,790 [INFO] [ai.py] [decode_detection] detections is: <class 'list'>
+2021-09-01 19:38:00,791 [INFO] [ai.py] [draw_boxes] detections is: <class 'list'>, image is: <class 'numpy.ndarray'>, colors is: <class 'dict'>
+2021-09-01 19:38:00,791 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-01 19:38:00,792 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-01 19:38:00,792 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-01 19:38:00,792 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-01 19:38:00,793 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-01 19:38:00,793 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-01 19:38:00,793 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-01 19:38:00,793 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-01 19:38:00,794 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-01 19:38:00,795 [INFO] [ai.py] Update complete.
+2021-09-01 19:38:00,840 [INFO] [ai.py] Updating AI.
+2021-09-01 19:38:00,840 [INFO] [ai.py] [image_detection] image is: <class 'numpy.ndarray'>, network is: <class 'int'>, class_names is: <class 'list'> class_colors is: <class 'dict'>, thresh is: <class 'float'>
+2021-09-01 19:38:00,840 [INFO] [ai.py] [network_width] net is: <class 'int'>
+2021-09-01 19:38:00,840 [INFO] [ai.py] [network_height] net is: <class 'int'>
+2021-09-01 19:38:00,843 [INFO] [ai.py] [detect_image] network is: <class 'int'>, class_names is: <class 'list'>, image is: <class 'modules.ai.Image'>
+2021-09-01 19:38:01,044 [INFO] [ai.py] [remove_negatives] detections is: <class 'modules.ai.LP_Detection'>, class_names is: <class 'list'>, num is: <class 'int'>
+2021-09-01 19:38:01,045 [INFO] [ai.py] [decode_detection] detections is: <class 'list'>
+2021-09-01 19:38:01,045 [INFO] [ai.py] [draw_boxes] detections is: <class 'list'>, image is: <class 'numpy.ndarray'>, colors is: <class 'dict'>
+2021-09-01 19:38:01,045 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-01 19:38:01,046 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-01 19:38:01,047 [INFO] [ai.py] Update complete.

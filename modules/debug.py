@@ -9,7 +9,7 @@
 
 # ----------------------------------------------------------------------------------
 
-from modules import voice_command
+
 from PyQt5 import QtCore, QtGui, QtWidgets, QtTest
 from PIL import Image
 from PIL.ImageQt import ImageQt
@@ -21,11 +21,13 @@ if __name__ == "modules." + os.path.basename(__file__)[:-3]:
     from modules import config
     from modules import camera
     from modules import logger
+    from modules import voice_command
 else:
     # importing from main and inside the package
     import config
     import camera
     import logger
+    import voice_command
 
 class DebugScreen(object):
     def voice_start(self):
@@ -40,6 +42,9 @@ class DebugScreen(object):
 
         self.file_log = open(config.PROJECT_DIR + "/logs/lexuslogfile.txt")
     
+    def save_function(self):
+        self.obje.save()
+
     def start(self):
         config.CAMERA_RUNNING = True
         config.IS_LOGGER_RUNNING = True
@@ -52,7 +57,6 @@ class DebugScreen(object):
     def close(self):
         config.CAMERA_RUNNING = False
         config.IS_LOGGER_RUNNING = False
-        self.voice_obj.is_playing = False
         self.item.setText(self._translate("ProjectLexusDebugScreen", "KAMERA :  DEVRE DISI"))
 
         self.obje.videoCaptureObject.release()
@@ -65,24 +69,35 @@ class DebugScreen(object):
         self.logs.clear()
 
         self.file_log.close()
-        
+
+        """
+        self.files = glob.glob(config.PROJECT_DIR + "/photos/")
+
+        for file in self.files:
+            os.remove(file)
+        """        
 
     def update(self):
         while(config.CAMERA_RUNNING == True and config.IS_LOGGER_RUNNING == True and self.obje.photo_no != config.PHOTO_NUMBER + 1):
             self.obje.update()
             QtTest.QTest.qWait(100)
-            self.files = glob.glob(config.PROJECT_DIR + "/photos/")
-            if len(self.files) >= 0:
-                self.file = Image.open(config.PROJECT_DIR + "/photos/" + str(self.obje.photo_no) + ".png")
-                self.photo = ImageQt(self.file)
-                self.aiScreen.resize(config.RESIZE_X,config.RESIZE_Y)
-                self.pixmap = QtGui.QPixmap.fromImage(self.photo)
-                self.aiScreen.setPixmap(self.pixmap)
-                QtTest.QTest.qWait(100)
+            
+            height, width, channel = self.obje.get_frame().shape
+            bytesPerLine = 3 * width
+            self.qImg = QtGui.QImage(self.obje.get_frame().data, width, height, bytesPerLine, QtGui.QImage.Format_RGB888)
+
+            self.aiScreen.resize(config.RESIZE_X,config.RESIZE_Y)
+            self.pixmap = QtGui.QPixmap(self.qImg)
+            self.aiScreen.setPixmap(self.pixmap)
+
+            QtTest.QTest.qWait(100)
             self.obje.photo_no = self.obje.photo_no + 1
 
             if self.obje.photo_no == config.PHOTO_NUMBER:
                 self.obje.photo_no = 0
+                self.obje.frame_list.clear()
+
+            QtTest.QTest.qWait(100)
 
             self.logger_start()
 
@@ -125,6 +140,11 @@ class DebugScreen(object):
         self.goruntuSecButton.setObjectName("goruntuSecButton")
         self.goruntuSecButton.setStyleSheet("background-color : #ff9f8e")
         self.goruntuSecButton.pressed.connect(self.goruntu_sec)
+        self.saveButton = QtWidgets.QPushButton(self.centralwidget)
+        self.saveButton.setGeometry(QtCore.QRect(320, 280, 111, 71))
+        self.saveButton.setObjectName("baslaButton")
+        self.saveButton.setStyleSheet("background-color : #ff9f8e")
+        self.saveButton.pressed.connect(self.save_function)
         self.modulSituations = QtWidgets.QListWidget(self.centralwidget)
         self.modulSituations.setGeometry(QtCore.QRect(10, 30, 200, 150))
         self.modulSituations.setObjectName("modulSituations")
@@ -154,11 +174,13 @@ class DebugScreen(object):
         self.objects.setObjectName("objects")
         self.objects.setStyleSheet("font-weight : bold")
         self.objects.setStyleSheet("background-color : #d2c8c8")
+        self.objects.move(480,450)
         self.logs = QtWidgets.QListWidget(self.centralwidget)
         self.logs.setGeometry(QtCore.QRect(20, 370, 361, 192))
         self.logs.setObjectName("logs")
         self.logs.setStyleSheet("font-weight : bold")
         self.logs.setStyleSheet("background-color : #d2c8c8")
+        self.logs.move(20,450)
         self.aiScreen = QtWidgets.QLabel(self.centralwidget)
         self.aiScreen.setGeometry(QtCore.QRect(510, 40, 261, 211))
         self.aiScreen.setObjectName("aiScreen")
@@ -170,10 +192,12 @@ class DebugScreen(object):
         self.label_5.setGeometry(QtCore.QRect(20, 350, 47, 13))
         self.label_5.setObjectName("label_5")
         self.label_5.setStyleSheet("font-weight : bold")
+        self.label_5.move(20,400)
         self.label_6 = QtWidgets.QLabel(self.centralwidget)
         self.label_6.setGeometry(QtCore.QRect(440, 350, 131, 16))
         self.label_6.setObjectName("label_6")
         self.label_6.setStyleSheet("font-weight : bold")
+        self.label_6.move(480,400)
         ProjectLexusDebugScreen.setCentralWidget(self.centralwidget)
         self.statusbar = QtWidgets.QStatusBar(ProjectLexusDebugScreen)
         self.statusbar.setObjectName("statusbar")
@@ -188,6 +212,7 @@ class DebugScreen(object):
         self.baslaButton.setText(self._translate("ProjectLexusDebugScreen", "BASLA"))
         self.durButton.setText(self._translate("ProjectLexusDebugScreen", "DUR"))
         self.goruntuSecButton.setText(self._translate("ProjectLexusDebugScreen", "GORUNTU SEC"))
+        self.saveButton.setText(self._translate("ProjectLexusDebugScreen", "KAYDET"))
         __sortingEnabled = self.modulSituations.isSortingEnabled()
         self.modulSituations.setSortingEnabled(False)
         self.item = self.modulSituations.item(0)
