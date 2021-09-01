@@ -9,10 +9,12 @@ Created: 19/08/2021
 """
 
 import time
+import cv2
 
 from modules import logger
 from modules import config
-
+from modules import Ultrasonic_Sensor
+from modules import ai
 update_rate = 30.0 # update(s) per second
 print(f"{1/update_rate * 1000}ms per run")
 
@@ -21,6 +23,8 @@ if __name__ == "__main__":
     main_logger = logger.LexusLogger()
     main_logger.log_info("Starting Project Lexus...")
     main_logger.log_info(f"Current project directory: {config.PROJECT_DIR}")
+
+    main_ai = ai.Lexus_AI()
 
     curr_time = time.perf_counter()
     prev_time = time.perf_counter()
@@ -43,10 +47,17 @@ if __name__ == "__main__":
                     # a second has passed
                     print("1 second passed")
                     elapsed = 0
+                # ADD THE CODE HERE
+                img = main_ai.get_image()
+                detections = main_ai.get_detections()
+
+                print(detections)
+
                 prev_time = time.perf_counter()
 
             # TODO: Update the modules.
-            
+            main_ai.update(cv2.imread("dog.jpg"))
+
         except KeyboardInterrupt as e:
             main_logger.log_info("Detecting keyboard interrupt.")
             main_logger.log_info("Exitting the program.")

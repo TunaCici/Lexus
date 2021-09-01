@@ -6,14 +6,15 @@ for the controller.
 Author: Team Crossbones
 Created: 20/08/2021
 """
+from utils import random_quote
 
 from modules import logger
 from modules import config
-from utils import random_quote
-# from modules import camera
-# from modules import debug
+from modules import camera
+from modules import debug
 from modules import ai
-# from PyQt5 import QtCore, QtGui, QtWidgets, QtTest
+from modules import Ultrasonic_Sensor
+from PyQt5 import QtCore, QtGui, QtWidgets, QtTest
 
 def test_logger():
     test_logger = logger.LexusLogger()
@@ -38,6 +39,9 @@ def test_debug():
 def test_camera():
     test_camera = camera.Camera()
 """
+
+def test_sensor():
+    print("")
 
 def test_ai():
     import cv2
@@ -68,6 +72,6 @@ if __name__ == "__main__":
     #test_logger()
     #test_config()
     #test_random_quote()
-    #test_debug()
+    test_debug()
     #test_camera()
-    test_ai()
+    #test_ai()
