@@ -1,0 +1,4 @@
+2021-09-01 13:55:06,475 [INFO] [main.py] Starting Project Lexus...
+2021-09-01 13:55:06,475 [INFO] [main.py] Current project directory: D:\Code_Gang\Project_LeXuS
+2021-09-01 13:55:10,828 [INFO] [main.py] Detecting keyboard interrupt.
+2021-09-01 13:55:10,828 [INFO] [main.py] Exitting the program.

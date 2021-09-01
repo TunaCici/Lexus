@@ -1,0 +1,20 @@
+2021-09-01 13:56:21,318 [INFO] [main.py] Starting Project Lexus...
+2021-09-01 13:56:21,318 [INFO] [main.py] Current project directory: D:\Code_Gang\Project_LeXuS
+2021-09-01 13:56:35,160 [INFO] [main.py] Detecting keyboard interrupt.
+2021-09-01 13:56:35,161 [INFO] [main.py] Exitting the program.
+2021-09-01 13:57:04,058 [INFO] [main.py] Starting Project Lexus...
+2021-09-01 13:57:04,058 [INFO] [main.py] Current project directory: D:\Code_Gang\Project_LeXuS
+2021-09-01 13:57:28,892 [INFO] [main.py] Starting Project Lexus...
+2021-09-01 13:57:28,892 [INFO] [main.py] Current project directory: D:\Code_Gang\Project_LeXuS
+2021-09-01 13:57:30,095 [INFO] [main.py] Detecting keyboard interrupt.
+2021-09-01 13:57:30,095 [INFO] [main.py] Exitting the program.
+2021-09-01 13:58:23,456 [INFO] [main.py] Starting Project Lexus...
+2021-09-01 13:58:23,456 [INFO] [main.py] Current project directory: D:\Code_Gang\Project_LeXuS
+2021-09-01 13:58:24,112 [INFO] [main.py] Detecting keyboard interrupt.
+2021-09-01 13:58:24,112 [INFO] [main.py] Exitting the program.
+2021-09-01 13:58:43,604 [INFO] [main.py] Starting Project Lexus...
+2021-09-01 13:58:43,604 [INFO] [main.py] Current project directory: D:\Code_Gang\Project_LeXuS
+2021-09-01 13:58:45,726 [INFO] [main.py] Detecting keyboard interrupt.
+2021-09-01 13:58:45,726 [INFO] [main.py] Exitting the program.
+2021-09-01 13:59:34,918 [INFO] [main.py] Starting Project Lexus...
+2021-09-01 13:59:34,918 [INFO] [main.py] Current project directory: D:\Code_Gang\Project_LeXuS
