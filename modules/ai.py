@@ -113,6 +113,9 @@ class Lexus_AI():
     class_names: list
     class_colors: list
 
+    last_image: None
+    last_detections: list
+
     hasGPU = True
 
     lib: CDLL
@@ -699,10 +702,9 @@ class Lexus_AI():
                 label = class_names.index(label)
                 f.write("{} {:.4f} {:.4f} {:.4f} {:.4f} {:.4f}\n".format(label, x, y, w, h, float(confidence)))
 
-    def update(self, image):
+    def run_and_display(self, image):
         """
-        continues function which takes image path from the user and
-        runs it through the model and displays predictions.\n
+        runs the image through the model and displays predictions.\n
         args:
             None
         returns:
@@ -713,6 +715,9 @@ class Lexus_AI():
         image, detections = self.image_detection(
             image, self.network, self.class_names, self.class_colors, self.thresh
         )
+
+        self.last_image = image
+        self.last_detections = detections
         
         self.print_detections(detections, True)
         fps = int(1/(time.time() - prev_time))
@@ -720,3 +725,40 @@ class Lexus_AI():
         cv2.imshow('Inference', image)
         if cv2.waitKey() & 0xFF == ord('q'):
             return
+    
+    def update(self, image):
+        """
+        runs the image through the model and saves the result.
+        args:
+            image: image itself
+        returns: None
+        """
+        custom_logger.log_info("Updating AI.")
+        try:
+            self.last_image, self.last_detections = self.image_detection(
+                image, self.network, self.class_names, self.class_colors, self.thresh
+            )
+        except Exception as e:
+            custom_logger.log_warning("Something went wrong while updating.")
+            custom_logger.log_warning(e)
+        custom_logger.log_info("Update complete.")
+
+    def get_image(self):
+        """
+        returns the image from the last run
+        args:
+            None
+        returns:
+            image: proccessed image
+        """
+        return self.last_image
+
+    def get_detections(self):
+        """
+        returns the last detection results.
+        args:
+            None
+        returns:
+            detections: list of detections from the last run
+        """
+        return self.last_detections
