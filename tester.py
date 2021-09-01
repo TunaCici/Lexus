@@ -35,9 +35,10 @@ def test_debug():
         MainWindow.show()
         sys.exit(app.exec_())
 
-""""
+"""
 def test_camera():
     test_camera = camera.Camera()
+    test_camera.update()
 """
 
 def test_sensor():
@@ -47,7 +48,7 @@ def test_ai():
     import cv2
 
     temp_ai =  ai.Lexus_AI()
-    temp_ai.update(cv2.imread("dog.jpg"))
+    temp_ai.run_and_display(cv2.imread("dog.jpg"))
     temp_ai.update(cv2.imread("crossing.jpg"))
     temp_ai.update(cv2.imread("no-time-to-die.jpg"))
     temp_ai.update(cv2.imread("running.jpg"))
