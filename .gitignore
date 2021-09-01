@@ -1,2 +1,3 @@
 # ignore the weights file
 modules/yolov4.weights
+config/yolov4.weights

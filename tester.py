@@ -10,9 +10,10 @@ Created: 20/08/2021
 from modules import logger
 from modules import config
 from utils import random_quote
-from modules import camera
-from modules import debug
-from PyQt5 import QtCore, QtGui, QtWidgets, QtTest
+# from modules import camera
+# from modules import debug
+from modules import ai
+# from PyQt5 import QtCore, QtGui, QtWidgets, QtTest
 
 def test_logger():
     test_logger = logger.LexusLogger()
@@ -38,6 +39,22 @@ def test_camera():
     test_camera = camera.Camera()
 """
 
+def test_ai():
+    import cv2
+
+    temp_ai =  ai.Lexus_AI()
+    temp_ai.update(cv2.imread("dog.jpg"))
+    temp_ai.update(cv2.imread("crossing.jpg"))
+    temp_ai.update(cv2.imread("no-time-to-die.jpg"))
+    temp_ai.update(cv2.imread("running.jpg"))
+    temp_ai.update(cv2.imread("street.jpg"))
+    temp_ai.update(cv2.imread("drawing.png"))
+    temp_ai.update(cv2.imread("john_wick.png"))
+
+
+
+
+
 def test_random_quote():
     test_logger = logger.LexusLogger()
     r_quote1 = random_quote.get_quote()
@@ -51,5 +68,6 @@ if __name__ == "__main__":
     #test_logger()
     #test_config()
     #test_random_quote()
-    test_debug()
+    #test_debug()
     #test_camera()
+    test_ai()

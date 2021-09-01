@@ -16,6 +16,7 @@ import numpy
 import time
 
 from ctypes import *
+from typing import Callable
 
 if __name__ == "modules." + os.path.basename(__file__)[:-3]:
     # importing from outside the package
@@ -27,7 +28,7 @@ else:
     import logger
 
 custom_logger = logger.LexusLogger()
-custom_logger.stop()
+# custom_logger.stop()
 
 # C Type Structures
 class Box(Structure):
@@ -100,46 +101,54 @@ class Lexus_AI():
     """
     wrapper class for the AI
     """
-
+    
     input_file = ""
     batch_size = 1
-    weights = "yolov4.weights"
-    config_file = "cfg/yolov4.cfg"
-    data_file = "cfg/coco.data"
+    weights = "config/yolov4-tiny.weights"
+    config_file = "config/yolov4-tiny.cfg"
+    data_file = "config/coco.data"
     thresh = 0.25
 
-    lib: CDLL
-    copy_image_from_bytes: function
-    predict: function
-    set_gpu: function
-    init_cpu: function
-    make_image: function
-    get_network_boxes: function
-    make_network_boxes: function
-    free_detections: function
-    free_batch_detections: function
-    free_ptrs: function
-    network_predict: function
-    reset_rnn: function
-    load_net: function
-    load_net_custom: function
-    do_nms_obj: function
-    do_nms_sort: function
-    free_image: function
-    letterbox_image: function
-    load_meta: function
-    load_image: function
-    rgbgr_image: function
-    predict_image: function
-    predict_image_letterbox: function
-    network_predict_batch: function
+    network: int
+    class_names: list
+    class_colors: list
 
-    def __int__(self):
+    hasGPU = True
+
+    lib: CDLL
+    copy_image_from_bytes: None
+    predict: None
+    set_gpu: None
+    init_cpu: None
+    make_image: None
+    get_network_boxes: None
+    make_network_boxes: None
+    free_detections: None
+    free_batch_detections: None
+    free_ptrs: None
+    network_predict: None
+    reset_rnn: None
+    load_net: None
+    load_net_custom: None
+    do_nms_obj: None
+    do_nms_sort: None
+    free_image: None
+    letterbox_image: None
+    load_meta: None
+    load_image: None
+    rgbgr_image: None
+    predict_image: None
+    predict_image_letterbox: None
+    network_predict_batch: None
+
+    def __init__(self):
         """
         loads the dll and the core C functions
         """
-        hasGPU = True
+        
+        custom_logger.log_info("Initialazing...")
 
+        custom_logger.log_info("Importing DLL(s)...")
         # import the dlls
         if os.name == "nt":
             cwd = os.path.dirname(__file__)
@@ -208,7 +217,7 @@ class Lexus_AI():
         self.make_image.restype = Image
 
         self.get_network_boxes = self.lib.get_network_boxes
-        self.et_network_boxes.argtypes = [c_void_p, c_int, c_int, c_float, c_float, POINTER(c_int), c_int, POINTER(c_int), c_int]
+        self.get_network_boxes.argtypes = [c_void_p, c_int, c_int, c_float, c_float, POINTER(c_int), c_int, POINTER(c_int), c_int]
         self.get_network_boxes.restype = POINTER(Detection)
 
         self.make_network_boxes = self.lib.make_network_boxes
@@ -275,6 +284,19 @@ class Lexus_AI():
         self.network_predict_batch.argtypes = [c_void_p, Image, c_int, c_int, c_int,
                                         c_float, c_float, POINTER(c_int), c_int, c_int]
         self.network_predict_batch.restype = POINTER(DetNumPair)
+        custom_logger.log_info("Import complete.")
+
+        custom_logger.log_info("Loading the network...")
+        random.seed(3)
+        self.network, self.class_names, self.class_colors = self.load_network(
+            self.config_file,
+            self.data_file,
+            self.weights,
+            self.batch_size
+        )
+        custom_logger.log_info("Network loaded.")
+
+        custom_logger.log_info("Initialazing complete.")
 
     def network_width(self, net: int):
         custom_logger.log_info(f"[network_width] net is: {type(net)}")
@@ -349,7 +371,7 @@ class Lexus_AI():
             weights.encode("ascii"), 0, batch_size)
         metadata = self.load_meta(data_file.encode("ascii"))
         class_names = [metadata.names[i].decode("ascii") for i in range(metadata.classes)]
-        colors = class_colors(class_names)
+        colors = self.class_colors(class_names)
 
         return network, class_names, colors
 
@@ -386,7 +408,7 @@ class Lexus_AI():
         import cv2
 
         for label, confidence, bbox in detections:
-            left, top, right, bottom = bbox2points(bbox)
+            left, top, right, bottom = self.bbox2points(bbox)
             cv2.rectangle(image,
                             (left, top),
                             (right, bottom),
@@ -545,13 +567,13 @@ class Lexus_AI():
 
         return Image(width, height, channels, darknet_images)
     
-    def image_detection(self, image_path: str, network: int, class_names: list, class_colors: dict, thresh: float):
+    def image_detection(self, image: None, network: int, class_names: list, class_colors: dict, thresh: float):
         custom_logger.log_info(
-            f"[image_detection] image_path is: {type(image_path)}, network is: {type(network)}, class_names is: {type(class_names)} class_colors is: {type(class_colors)}, thresh is: {type(thresh)}")
+            f"[image_detection] image is: {type(image)}, network is: {type(network)}, class_names is: {type(class_names)} class_colors is: {type(class_colors)}, thresh is: {type(thresh)}")
         """
         runs the image through the model to make predictions.\n
         args:
-            image_path: path of the image
+            image: image retrieved from cv2.imread
             network: the model
             class_names: list of class names
             class_colors: list of class colors
@@ -566,7 +588,7 @@ class Lexus_AI():
         height = self.network_height(network)
         darknet_image = self.make_image(width, height, 3)
         
-        image = cv2.imread(image_path)
+        # image = cv2.imread(image_path)
         image_rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
         image_resized = cv2.resize(image_rgb, (width, height),
                                     interpolation=cv2.INTER_LINEAR)
@@ -677,7 +699,7 @@ class Lexus_AI():
                 label = class_names.index(label)
                 f.write("{} {:.4f} {:.4f} {:.4f} {:.4f} {:.4f}\n".format(label, x, y, w, h, float(confidence)))
 
-    def main(self):
+    def update(self, image):
         """
         continues function which takes image path from the user and
         runs it through the model and displays predictions.\n
@@ -686,35 +708,15 @@ class Lexus_AI():
         returns:
             None
         """
-        random.seed(3)
-        network, class_names, class_colors = self.load_network(
-            self.config_file,
-            self.data_file,
-            self.weights,
-            self.batch_size
+
+        prev_time = time.time()
+        image, detections = self.image_detection(
+            image, self.network, self.class_names, self.class_colors, self.thresh
         )
-
-        images = self.load_images(self.input_file)
-
-        index = 0
-        while True:
-            # loop asking for new image paths if no list is given
-            if self.input_file:
-                if index >= len(images):
-                    break
-                image_name = images[index]
-            else:
-                image_name = input("Enter Image Path: ")
-
-            prev_time = time.time()
-            image, detections = self.image_detection(
-                image_name, network, class_names, class_colors, self.thresh
-            )
-            
-            self.print_detections(detections, True)
-            fps = int(1/(time.time() - prev_time))
-            print("FPS: {}".format(fps))
-            cv2.imshow('Inference', image)
-            if cv2.waitKey() & 0xFF == ord('q'):
-                break     
-            index += 1
+        
+        self.print_detections(detections, True)
+        fps = int(1/(time.time() - prev_time))
+        print("FPS: {}".format(fps))
+        cv2.imshow('Inference', image)
+        if cv2.waitKey() & 0xFF == ord('q'):
+            return

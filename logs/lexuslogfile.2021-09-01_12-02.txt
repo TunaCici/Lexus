@@ -1,0 +1,12 @@
+2021-09-01 12:02:40,055 [INFO] [ai.py] [image_detection] image_path is: <class 'str'>, network is: <class 'int'>, class_names is: <class 'list'> class_colors is: <class 'dict'>, thresh is: <class 'float'>
+2021-09-01 12:02:40,055 [INFO] [ai.py] [network_width] net is: <class 'int'>
+2021-09-01 12:02:40,055 [INFO] [ai.py] [network_height] net is: <class 'int'>
+2021-09-01 12:02:40,075 [INFO] [ai.py] [detect_image] network is: <class 'int'>, class_names is: <class 'list'>, image is: <class 'modules.ai.Image'>
+2021-09-01 12:02:44,310 [INFO] [ai.py] [remove_negatives] detections is: <class 'modules.ai.LP_Detection'>, class_names is: <class 'list'>, num is: <class 'int'>
+2021-09-01 12:02:44,310 [INFO] [ai.py] [decode_detection] detections is: <class 'list'>
+2021-09-01 12:02:44,315 [INFO] [ai.py] [draw_boxes] detections is: <class 'list'>, image is: <class 'numpy.ndarray'>, colors is: <class 'dict'>
+2021-09-01 12:02:44,315 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-01 12:02:44,315 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-01 12:02:44,315 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-01 12:02:44,315 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-01 12:02:44,320 [INFO] [ai.py] [print_detections] detections is: <class 'list'>
