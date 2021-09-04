@@ -15,6 +15,8 @@ from PIL import Image
 from PIL.ImageQt import ImageQt
 import os
 import glob
+import stat
+import sys
 
 if __name__ == "modules." + os.path.basename(__file__)[:-3]:
     # importing from outside the package
@@ -22,18 +24,41 @@ if __name__ == "modules." + os.path.basename(__file__)[:-3]:
     from modules import camera
     from modules import logger
     from modules import voice_command
+    from modules import ai
 else:
     # importing from main and inside the package
     import config
     import camera
     import logger
     import voice_command
+    import ai
 
 class DebugScreen(object):
-    def voice_start(self):
-        self.voice_obj = voice_command.voice_commander()
+    ambulance = 0
+    bench = 0
+    bicycle = 0
+    bus = 0
+    car = 0
+    cat = 0
+    chair = 0
+    couch = 0
+    dog = 0
+    motorcycle = 0
+    person = 0
+    stop_sign = 0
+    taxi = 0
+    traffic_light = 0
+    traffic_sign = 0
+    
+    def ai_start(self):
+        if config.AI_RUNNING == True:
+            self.ai_obj = ai.Lexus_AI()
+            self.item6.setText(self._translate("ProjectLexusDebugScreen", "YAPAY ZEKA : ACIK"))
 
-        if self.voice_obj.is_playing == True:
+    def voice_start(self):
+        self.voice_obj = voice_command.VoiceCommander()
+
+        if config.is_playing == True:
             self.item4.setText(self._translate("ProjectLexusDebugScreen", "SES : ACIK"))
     
     def logger_start(self):
@@ -43,52 +68,144 @@ class DebugScreen(object):
         self.file_log = open(config.PROJECT_DIR + "/logs/lexuslogfile.txt")
     
     def save_function(self):
-        self.obje.save()
+        try:
+            self.obje.save()
+
+        except:
+            print("Camera is not opened.")
 
     def start(self):
         config.CAMERA_RUNNING = True
         config.IS_LOGGER_RUNNING = True
+        config.is_playing = True
 
         self.item.setText(self._translate("ProjectLexusDebugScreen", "KAMERA :  ACIK"))
-
+        self.item4.setText(self._translate("ProjectLexusDebugScreen", "SES : ACIK"))
         self.obje = camera.Camera()
+        self.voice_start()
+        self.ai_start()
         self.update()
     
     def close(self):
-        config.CAMERA_RUNNING = False
-        config.IS_LOGGER_RUNNING = False
-        self.item.setText(self._translate("ProjectLexusDebugScreen", "KAMERA :  DEVRE DISI"))
+        try:
+            config.CAMERA_RUNNING = False
+            config.IS_LOGGER_RUNNING = False
+            config.is_playing = False
+            self.item.setText(self._translate("ProjectLexusDebugScreen", "KAMERA :  DEVRE DISI"))
+            self.item4.setText(self._translate("ProjectLexusDebugScreen", "SES : DEVRE DISI"))
+            self.item6.setText(self._translate("ProjectLexusDebugScreen", "YAPAY ZEKA : DEVRE DISI"))
 
-        self.obje.videoCaptureObject.release()
-        
-        self.obje.photo_no = 0
+            self.obje.videoCaptureObject.release()
+            
+            self.obje.photo_no = 0
 
-        self.i = 0
-        config.LINE_NUMBER = 0
+            self.i = 0
+            config.LINE_NUMBER = 0
 
-        self.logs.clear()
+            self.logs.clear()
 
-        self.file_log.close()
+            self.file_log.close()
+    
+        except:
+            print("An Error Occured...")
 
-        """
-        self.files = glob.glob(config.PROJECT_DIR + "/photos/")
+        try:
+            self.files = glob.glob(config.PROJECT_DIR + "/photos/")
 
-        for file in self.files:
-            os.remove(file)
-        """        
+            for file in self.files:
+                os.chmod(file, mode=stat.S_IWRITE)
+                os.remove(file)
+
+        except PermissionError as p:
+            print("Permission Error Occured...")
+
+    def get_picture(self):
+        return self.picture_list[-1]
 
     def update(self):
         while(config.CAMERA_RUNNING == True and config.IS_LOGGER_RUNNING == True and self.obje.photo_no != config.PHOTO_NUMBER + 1):
             self.obje.update()
             QtTest.QTest.qWait(100)
+
+            self.ambulance = 0
+            self.bench = 0
+            self.bicycle = 0
+            self.bus = 0
+            self.car = 0
+            self.cat = 0
+            self.chair = 0
+            self.couch = 0
+            self.dog = 0
+            self.motorcycle = 0
+            self.person = 0
+            self.stop_sign = 0
+            self.taxi = 0
+            self.traffic_light = 0
+            self.traffic_sign = 0
+
+            self.picture = self.obje.get_frame()
+
+            self.picture,self.detection_list = self.ai_obj.update(self.picture)
+
+            self.picture_list = list()
+            self.picture_list.append(self.picture)
             
-            height, width, channel = self.obje.get_frame().shape
+            height, width, channel = self.get_picture().shape
             bytesPerLine = 3 * width
-            self.qImg = QtGui.QImage(self.obje.get_frame().data, width, height, bytesPerLine, QtGui.QImage.Format_RGB888)
+            self.qImg = QtGui.QImage(self.get_picture().data, width, height, bytesPerLine, QtGui.QImage.Format_RGB888)
 
             self.aiScreen.resize(config.RESIZE_X,config.RESIZE_Y)
             self.pixmap = QtGui.QPixmap(self.qImg)
             self.aiScreen.setPixmap(self.pixmap)
+
+            for i in self.detection_list:
+                print(i[0])
+
+                if i[0] == 'ambulance':
+                    self.ambulance = self.ambulance + 1
+
+                if i[0] == 'bench':
+                    self.bench = self.bench + 1
+
+                if i[0] == 'bicycle':
+                    self.bicycle = self.bicycle + 1
+
+                if i[0] == 'bus':
+                    self.bus = self.bus + 1
+
+                if i[0] == 'car':
+                    self.car = self.car + 1
+
+                if i[0] == 'cat':
+                    self.cat = self.cat + 1
+
+                if i[0] == 'chair':
+                    self.chair = self.chair + 1
+
+                if i[0] == 'couch':
+                    self.couch = self.couch + 1
+
+                if i[0] == 'dog':
+                    self.dog = self.dog + 1
+
+                if i[0] == 'motorcycle':
+                    self.motorcycle = self.motorcycle + 1
+
+                if i[0] == 'person':
+                    self.person = self.person + 1
+
+                if i[0] == 'stop sign':
+                    self.stop_sign = self.stop_sign + 1
+
+                if i[0] == 'taxi':
+                    self.taxi = self.taxi + 1
+
+                if i[0] == 'traffic light':
+                    self.traffic_light = self.traffic_light + 1
+
+                if i[0] == 'traffic sign':
+                    self.traffic_sign = self.traffic_sign + 1
+
 
             QtTest.QTest.qWait(100)
             self.obje.photo_no = self.obje.photo_no + 1
@@ -110,10 +227,14 @@ class DebugScreen(object):
                 self.i = self.i + 1
 
     def goruntu_sec(self):
-        self.filename = QtWidgets.QFileDialog.getOpenFileName()
-        self.path = self.filename[0]
-        self.image = Image.open(self.path)
-        self.image.show()
+        try:
+            self.filename = QtWidgets.QFileDialog.getOpenFileName(directory=config.PROJECT_DIR + "/photos/")
+            self.path = self.filename[0]
+            self.image = Image.open(self.path)
+            self.image.show()
+
+        except:
+            print("No Picture Selected")
 
     def setupUi(self, ProjectLexusDebugScreen):
         ProjectLexusDebugScreen.setObjectName("ProjectLexusDebugScreen")
@@ -175,6 +296,36 @@ class DebugScreen(object):
         self.objects.setStyleSheet("font-weight : bold")
         self.objects.setStyleSheet("background-color : #d2c8c8")
         self.objects.move(480,450)
+        x1 = QtWidgets.QListWidgetItem()
+        self.objects.addItem(x1)
+        x1 = QtWidgets.QListWidgetItem()
+        self.objects.addItem(x1)
+        x1 = QtWidgets.QListWidgetItem()
+        self.objects.addItem(x1)
+        x1 = QtWidgets.QListWidgetItem()
+        self.objects.addItem(x1)
+        x1 = QtWidgets.QListWidgetItem()
+        self.objects.addItem(x1)
+        x1 = QtWidgets.QListWidgetItem()
+        self.objects.addItem(x1)
+        x1 = QtWidgets.QListWidgetItem()
+        self.objects.addItem(x1)
+        x1 = QtWidgets.QListWidgetItem()
+        self.objects.addItem(x1)
+        x1 = QtWidgets.QListWidgetItem()
+        self.objects.addItem(x1)
+        x1 = QtWidgets.QListWidgetItem()
+        self.objects.addItem(x1)
+        x1 = QtWidgets.QListWidgetItem()
+        self.objects.addItem(x1)
+        x1 = QtWidgets.QListWidgetItem()
+        self.objects.addItem(x1)
+        x1 = QtWidgets.QListWidgetItem()
+        self.objects.addItem(x1)
+        x1 = QtWidgets.QListWidgetItem()
+        self.objects.addItem(x1)
+        x1 = QtWidgets.QListWidgetItem()
+        self.objects.addItem(x1)
         self.logs = QtWidgets.QListWidget(self.centralwidget)
         self.logs.setGeometry(QtCore.QRect(20, 370, 361, 192))
         self.logs.setObjectName("logs")
@@ -228,6 +379,39 @@ class DebugScreen(object):
         self.item6 = self.modulSituations.item(5)
         self.item6.setText(self._translate("ProjectLexusDebugScreen", "YAPAY ZEKA : DEVRE DISI"))
         self.modulSituations.setSortingEnabled(__sortingEnabled)
+        __sort = self.objects.isSortingEnabled()
+        self.objects.setSortingEnabled(False)
+        self.x1 = self.objects.item(0)
+        self.x1.setText(self._translate("ProjectLexusDebugScreen","Ambulance: " + str(self.ambulance)))
+        self.x2 = self.objects.item(1)
+        self.x2.setText(self._translate("ProjectLexusDebugScreen","Bench: " + str(self.bench)))
+        self.x3 = self.objects.item(2)
+        self.x3.setText(self._translate("ProjectLexusDebugScreen","Bicycle: " + str(self.bicycle)))
+        self.x4 = self.objects.item(3)
+        self.x4.setText(self._translate("ProjectLexusDebugScreen","Bus: " + str(self.bus)))
+        self.x5 = self.objects.item(4)
+        self.x5.setText(self._translate("ProjectLexusDebugScreen","Car: " + str(self.car)))
+        self.x6 = self.objects.item(5)
+        self.x6.setText(self._translate("ProjectLexusDebugScreen","Cat: " + str(self.cat)))
+        self.x7 = self.objects.item(6)
+        self.x7.setText(self._translate("ProjectLexusDebugScreen","Chair: " + str(self.chair)))
+        self.x8 = self.objects.item(7)
+        self.x8.setText(self._translate("ProjectLexusDebugScreen","Couch: " + str(self.couch)))
+        self.x9 = self.objects.item(8)
+        self.x9.setText(self._translate("ProjectLexusDebugScreen","Dog: " + str(self.dog)))
+        self.x10 = self.objects.item(9)
+        self.x10.setText(self._translate("ProjectLexusDebugScreen","Motorcycle: " + str(self.motorcycle)))
+        self.x11 = self.objects.item(10)
+        self.x11.setText(self._translate("ProjectLexusDebugScreen","People: " + str(self.person)))
+        self.x12 = self.objects.item(11)
+        self.x12.setText(self._translate("ProjectLexusDebugScreen","Stop Sign: " + str(self.stop_sign)))
+        self.x13 = self.objects.item(12)
+        self.x13.setText(self._translate("ProjectLexusDebugScreen","Taxi: " + str(self.taxi)))
+        self.x14 = self.objects.item(13)
+        self.x14.setText(self._translate("ProjectLexusDebugScreen","Traffic Light: " + str(self.traffic_light)))
+        self.x15 = self.objects.item(14)
+        self.x15.setText(self._translate("ProjectLexusDebugScreen","Traffic Sign: " + str(self.traffic_sign)))
+        self.objects.setSortingEnabled(__sort)
         self.label.setText(self._translate("ProjectLexusDebugScreen", "MODUL DURUMU"))
         self.label_2.setText(self._translate("ProjectLexusDebugScreen", "ISLEMLER"))
         self.label_4.setText(self._translate("ProjectLexusDebugScreen", "YAPAY ZEKA GORUNTUSU"))

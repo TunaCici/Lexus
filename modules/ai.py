@@ -731,13 +731,14 @@ class Lexus_AI():
         runs the image through the model and saves the result.
         args:
             image: image itself
-        returns: None
+        returns: Last Image
         """
         custom_logger.log_info("Updating AI.")
         try:
             self.last_image, self.last_detections = self.image_detection(
                 image, self.network, self.class_names, self.class_colors, self.thresh
             )
+            return self.last_image,self.last_detections
         except Exception as e:
             custom_logger.log_warning("Something went wrong while updating.")
             custom_logger.log_warning(e)

@@ -13,7 +13,7 @@ from modules import config
 from modules import camera
 from modules import debug
 from modules import ai
-from modules import Ultrasonic_Sensor
+#from modules import Ultrasonic_Sensor
 from PyQt5 import QtCore, QtGui, QtWidgets, QtTest
 
 def test_logger():
@@ -55,10 +55,6 @@ def test_ai():
     temp_ai.update(cv2.imread("street.jpg"))
     temp_ai.update(cv2.imread("drawing.png"))
     temp_ai.update(cv2.imread("john_wick.png"))
-
-
-
-
 
 def test_random_quote():
     test_logger = logger.LexusLogger()

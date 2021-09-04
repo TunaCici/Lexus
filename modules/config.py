@@ -9,6 +9,10 @@ Created: 22/08/2021
 
 import os
 
+# AI
+AI_RUNNING = True
+
+
 # Debug Screen
 DSCREEN_RUNNING = True
 
@@ -31,3 +35,6 @@ LINE_NUMBER = 0
 
 #Ultrasonic_Sensor
 THRESHOLD = 2000 #mm
+
+# Voice Sensor
+is_playing = True
