@@ -34,21 +34,6 @@ else:
     import ai
 
 class DebugScreen(object):
-    ambulance = 0
-    bench = 0
-    bicycle = 0
-    bus = 0
-    car = 0
-    cat = 0
-    chair = 0
-    couch = 0
-    dog = 0
-    motorcycle = 0
-    person = 0
-    stop_sign = 0
-    taxi = 0
-    traffic_light = 0
-    traffic_sign = 0
     
     def ai_start(self):
         if config.AI_RUNNING == True:
@@ -161,50 +146,85 @@ class DebugScreen(object):
             for i in self.detection_list:
                 print(i[0])
 
-                if i[0] == 'ambulance':
+                if i[0] == "ambulance":
                     self.ambulance = self.ambulance + 1
 
-                if i[0] == 'bench':
+                if i[0] == "bench":
                     self.bench = self.bench + 1
 
-                if i[0] == 'bicycle':
+                if i[0] == "bicycle":
                     self.bicycle = self.bicycle + 1
 
-                if i[0] == 'bus':
+                if i[0] == "bus":
                     self.bus = self.bus + 1
 
-                if i[0] == 'car':
+                if i[0] == "car":
                     self.car = self.car + 1
 
-                if i[0] == 'cat':
+                if i[0] == "cat":
                     self.cat = self.cat + 1
 
-                if i[0] == 'chair':
+                if i[0] == "chair":
                     self.chair = self.chair + 1
 
-                if i[0] == 'couch':
+                if i[0] == "couch":
                     self.couch = self.couch + 1
 
-                if i[0] == 'dog':
+                if i[0] == "dog":
                     self.dog = self.dog + 1
 
-                if i[0] == 'motorcycle':
+                if i[0] == "motorcycle":
                     self.motorcycle = self.motorcycle + 1
 
-                if i[0] == 'person':
+                if i[0] == "person":
                     self.person = self.person + 1
+                    print(self.person)
 
-                if i[0] == 'stop sign':
+                if i[0] == "stop sign":
                     self.stop_sign = self.stop_sign + 1
 
-                if i[0] == 'taxi':
+                if i[0] == "taxi":
                     self.taxi = self.taxi + 1
 
-                if i[0] == 'traffic light':
+                if i[0] == "traffic light":
                     self.traffic_light = self.traffic_light + 1
 
-                if i[0] == 'traffic sign':
+                if i[0] == "traffic sign":
                     self.traffic_sign = self.traffic_sign + 1
+
+            __sort = self.objects.isSortingEnabled()
+            self.objects.setSortingEnabled(False)
+            self.x1 = self.objects.item(0)
+            self.x1.setText(self._translate("ProjectLexusDebugScreen","Ambulance: " + str(self.ambulance)))
+            self.x2 = self.objects.item(1)
+            self.x2.setText(self._translate("ProjectLexusDebugScreen","Bench: " + str(self.bench)))
+            self.x3 = self.objects.item(2)
+            self.x3.setText(self._translate("ProjectLexusDebugScreen","Bicycle: " + str(self.bicycle)))
+            self.x4 = self.objects.item(3)
+            self.x4.setText(self._translate("ProjectLexusDebugScreen","Bus: " + str(self.bus)))
+            self.x5 = self.objects.item(4)
+            self.x5.setText(self._translate("ProjectLexusDebugScreen","Car: " + str(self.car)))
+            self.x6 = self.objects.item(5)
+            self.x6.setText(self._translate("ProjectLexusDebugScreen","Cat: " + str(self.cat)))
+            self.x7 = self.objects.item(6)
+            self.x7.setText(self._translate("ProjectLexusDebugScreen","Chair: " + str(self.chair)))
+            self.x8 = self.objects.item(7)
+            self.x8.setText(self._translate("ProjectLexusDebugScreen","Couch: " + str(self.couch)))
+            self.x9 = self.objects.item(8)
+            self.x9.setText(self._translate("ProjectLexusDebugScreen","Dog: " + str(self.dog)))
+            self.x10 = self.objects.item(9)
+            self.x10.setText(self._translate("ProjectLexusDebugScreen","Motorcycle: " + str(self.motorcycle)))
+            self.x11 = self.objects.item(10)
+            self.x11.setText(self._translate("ProjectLexusDebugScreen","People: " + str(self.person)))
+            self.x12 = self.objects.item(11)
+            self.x12.setText(self._translate("ProjectLexusDebugScreen","Stop Sign: " + str(self.stop_sign)))
+            self.x13 = self.objects.item(12)
+            self.x13.setText(self._translate("ProjectLexusDebugScreen","Taxi: " + str(self.taxi)))
+            self.x14 = self.objects.item(13)
+            self.x14.setText(self._translate("ProjectLexusDebugScreen","Traffic Light: " + str(self.traffic_light)))
+            self.x15 = self.objects.item(14)
+            self.x15.setText(self._translate("ProjectLexusDebugScreen","Traffic Sign: " + str(self.traffic_sign)))
+            self.objects.setSortingEnabled(__sort)
 
 
             QtTest.QTest.qWait(100)
@@ -379,39 +399,6 @@ class DebugScreen(object):
         self.item6 = self.modulSituations.item(5)
         self.item6.setText(self._translate("ProjectLexusDebugScreen", "YAPAY ZEKA : DEVRE DISI"))
         self.modulSituations.setSortingEnabled(__sortingEnabled)
-        __sort = self.objects.isSortingEnabled()
-        self.objects.setSortingEnabled(False)
-        self.x1 = self.objects.item(0)
-        self.x1.setText(self._translate("ProjectLexusDebugScreen","Ambulance: " + str(self.ambulance)))
-        self.x2 = self.objects.item(1)
-        self.x2.setText(self._translate("ProjectLexusDebugScreen","Bench: " + str(self.bench)))
-        self.x3 = self.objects.item(2)
-        self.x3.setText(self._translate("ProjectLexusDebugScreen","Bicycle: " + str(self.bicycle)))
-        self.x4 = self.objects.item(3)
-        self.x4.setText(self._translate("ProjectLexusDebugScreen","Bus: " + str(self.bus)))
-        self.x5 = self.objects.item(4)
-        self.x5.setText(self._translate("ProjectLexusDebugScreen","Car: " + str(self.car)))
-        self.x6 = self.objects.item(5)
-        self.x6.setText(self._translate("ProjectLexusDebugScreen","Cat: " + str(self.cat)))
-        self.x7 = self.objects.item(6)
-        self.x7.setText(self._translate("ProjectLexusDebugScreen","Chair: " + str(self.chair)))
-        self.x8 = self.objects.item(7)
-        self.x8.setText(self._translate("ProjectLexusDebugScreen","Couch: " + str(self.couch)))
-        self.x9 = self.objects.item(8)
-        self.x9.setText(self._translate("ProjectLexusDebugScreen","Dog: " + str(self.dog)))
-        self.x10 = self.objects.item(9)
-        self.x10.setText(self._translate("ProjectLexusDebugScreen","Motorcycle: " + str(self.motorcycle)))
-        self.x11 = self.objects.item(10)
-        self.x11.setText(self._translate("ProjectLexusDebugScreen","People: " + str(self.person)))
-        self.x12 = self.objects.item(11)
-        self.x12.setText(self._translate("ProjectLexusDebugScreen","Stop Sign: " + str(self.stop_sign)))
-        self.x13 = self.objects.item(12)
-        self.x13.setText(self._translate("ProjectLexusDebugScreen","Taxi: " + str(self.taxi)))
-        self.x14 = self.objects.item(13)
-        self.x14.setText(self._translate("ProjectLexusDebugScreen","Traffic Light: " + str(self.traffic_light)))
-        self.x15 = self.objects.item(14)
-        self.x15.setText(self._translate("ProjectLexusDebugScreen","Traffic Sign: " + str(self.traffic_sign)))
-        self.objects.setSortingEnabled(__sort)
         self.label.setText(self._translate("ProjectLexusDebugScreen", "MODUL DURUMU"))
         self.label_2.setText(self._translate("ProjectLexusDebugScreen", "ISLEMLER"))
         self.label_4.setText(self._translate("ProjectLexusDebugScreen", "YAPAY ZEKA GORUNTUSU"))
