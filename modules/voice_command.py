@@ -1,7 +1,5 @@
 import os
 import queue
-from gtts import gTTS
-
 if __name__ == "modules." + os.path.basename(__file__)[:-3]:
     # importing from outside the package
     from modules import config
@@ -45,6 +43,10 @@ else:
 # I highly recommend that you learn it, it is very useful.
 # A simple implementation of Priority Queue
 # using Queue.
+import os
+from gtts import gTTS
+from time import sleep
+import pyglet
 from collections import deque 
 from queue import Empty, Queue
 class VoiceCommander:
@@ -62,10 +64,20 @@ class VoiceCommander:
         "path:" : config.PROJECT_DIR + "data/speech/merhaba.mp3",
         "priority": "low"
     }'''
-    def __init__(self,text1='ağaç',distance=10):
-        
+    def __init__(self):
+        import os
+        from gtts import gTTS
+        from time import sleep
+        import pyglet
+        tts1 = gTTS(text="Merhaba yol arkadaşım", lang='tr')
+        filename1 =config.PROJECT_DIR +"\\data"+"\.mp3"
+        tts1.save(filename1)
+        music = pyglet.media.load(filename1, streaming=False)
+        music.play()
+        sleep(music.duration)
+        os.remove(filename1)
         #sistem dosyalarını daha rahat şekilde açmak için
-        import os     
+        
         #Burada kullanacağımız 2 parametre bulunuyor, Dil ve Text
         #Burada oluşturduğumuz ses dosyasını konuma merhaba.mp3 diye kaydediyoruz
         #şimdi ise bu dosyayı açalım.
@@ -74,16 +86,22 @@ class VoiceCommander:
         """
         plays the selected voice file.
         """
-        if speech is None:
-            self.voice_logger.log_warning("Voice file is empty.")
-            return
         # how to get data from voice file
         i = 0
         for a in self.queue:
             vc_file= self.queue[i]
             text=vc_file.get("text")
-            os.system('espeak -v tr+f2 "{}"'.format(text))
+            tts =gTTS(text=text, lang='tr')
+            filename = vc_file.get("path")+str(i)+".mp3"
+            tts.save(filename)
+            music = pyglet.media.load(filename, streaming=False)
+            is_playing= True
+            music.play()
+            sleep(music.duration)
+            os.remove(filename)
             i+=1
+        is_playing=False
+        self.queue.clear()    
             
         
        
@@ -111,7 +129,7 @@ class VoiceCommander:
         if priority == "high":
             vc_file = {
                 "text" : text,
-                "path" : config.PROJECT_DIR + "\\data\\speech",
+                "path" : config.PROJECT_DIR + "\\data",
                 "priority": priority
             }
             # TODO: add this vc_file at the front of the queue
@@ -120,12 +138,12 @@ class VoiceCommander:
         else:
             vc_file = {
                 "text" : text,
-                "path" : config.PROJECT_DIR + "\\data\\speech",
+                "path" : config.PROJECT_DIR + "\\data",
                 "priority": priority
             }
             # TODO: add this vc_file at the end of the queue
             self.queue.append(vc_file)
-            
-    def delete(self):
-        self.queue.clear()
-        print(self.queue)
+if __name__=="__main__":
+    a = VoiceCommander()     
+    a.request("Dikkat! Dikkat!","high")
+    a.update()   
