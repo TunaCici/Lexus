@@ -2,6 +2,7 @@ import speech_recognition as sr
 import pyaudio as pa
 import locale
 import config
+import os
 
 class voice_recognition():
     def recorder(self):
@@ -34,24 +35,28 @@ class voice_recognition():
         try:
             self.sentence = self.recorder()
 
+            if self.sentence.lower() == 'kamerayi ac':
+                config.CAMERA_RUNNING = True
+                print("Correctly Opened...")
+
+            if self.sentence.lower() == 'kamerayi kapat':
+                config.CAMERA_RUNNING = False
+                print("Correctly Closed...")
+
+            if self.sentence.lower() == 'titresimi ac':
+                pass
+            
+            if self.sentence.lower() == 'titresimi kapat':
+                pass
+
+            if self.sentence.lower() == 'sistemi kapat':
+                print("System is Shutting Down")
+                os.system("shutdown /s")
+
         except:
             print("There is an error...")
-
-        if self.sentence.lower() == 'kamerayi ac':
-            config.CAMERA_RUNNING = True
-            print("Correctly Opened...")
-
-        if self.sentence.lower() == 'kamerayi kapat':
-            config.CAMERA_RUNNING = False
-            print("Correctly Closed...")
-
-        if self.sentence.lower() == 'titresimi ac':
-            pass
-        
-        if self.sentence.lower() == 'titresimi kapat':
-            pass
             
 
 obj = voice_recognition()
 
-obj.recorder()
+obj.update()
