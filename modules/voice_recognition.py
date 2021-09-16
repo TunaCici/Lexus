@@ -10,7 +10,7 @@ class voice_recognition():
         locale.setlocale(locale.LC_ALL, 'tr_TR.utf8')
         with sr.Microphone() as source:
             self.r.adjust_for_ambient_noise(source)
-            self.data = self.r.record(source, duration=3)
+            self.data = self.r.record(source, duration=2)
             print("Voice is Recognising...")
             try:
                 self.text = self.r.recognize_google(self.data, language = 'tr-TR')
@@ -55,8 +55,3 @@ class voice_recognition():
 
         except:
             print("There is an error...")
-            
-
-obj = voice_recognition()
-
-obj.update()

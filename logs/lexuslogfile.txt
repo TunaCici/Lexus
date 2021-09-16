@@ -1,45 +1,37 @@
-2021-09-15 14:26:07,797 [INFO] [ai.py] Initialazing...
-2021-09-15 14:26:07,814 [INFO] [ai.py] Importing DLL(s)...
-2021-09-15 14:26:07,845 [INFO] [ai.py] Import complete.
-2021-09-15 14:26:07,846 [INFO] [ai.py] Loading the network...
-2021-09-15 14:26:08,162 [INFO] [ai.py] [class_colors] names is: <class 'list'>
-2021-09-15 14:26:08,164 [INFO] [ai.py] Network loaded.
-2021-09-15 14:26:08,165 [INFO] [ai.py] Initialazing complete.
-2021-09-15 14:26:08,271 [INFO] [ai.py] Updating AI.
-2021-09-15 14:26:08,273 [INFO] [ai.py] [image_detection] image is: <class 'NoneType'>, network is: <class 'int'>, class_names is: <class 'list'> class_colors is: <class 'dict'>, thresh is: <class 'float'>
-2021-09-15 14:26:08,276 [INFO] [ai.py] [network_width] net is: <class 'int'>
-2021-09-15 14:26:08,277 [INFO] [ai.py] [network_height] net is: <class 'int'>
-2021-09-15 14:26:08,291 [WARNING] [ai.py] Something went wrong while updating.
-2021-09-15 14:26:08,293 [WARNING] [ai.py] OpenCV(4.5.3) C:\Users\runneradmin\AppData\Local\Temp\pip-req-build-sn_xpupm\opencv\modules\imgproc\src\color.cpp:182: error: (-215:Assertion failed) !_src.empty() in function 'cv::cvtColor'
-
-2021-09-15 14:26:08,295 [INFO] [ai.py] Update complete.
-2021-09-15 14:27:01,997 [INFO] [ai.py] Initialazing...
-2021-09-15 14:27:01,997 [INFO] [ai.py] Initialazing...
-2021-09-15 14:27:01,997 [INFO] [ai.py] Importing DLL(s)...
-2021-09-15 14:27:01,997 [INFO] [ai.py] Importing DLL(s)...
-2021-09-15 14:27:02,000 [INFO] [ai.py] Import complete.
-2021-09-15 14:27:02,000 [INFO] [ai.py] Import complete.
-2021-09-15 14:27:02,000 [INFO] [ai.py] Loading the network...
-2021-09-15 14:27:02,000 [INFO] [ai.py] Loading the network...
-2021-09-15 14:27:02,289 [INFO] [ai.py] [class_colors] names is: <class 'list'>
-2021-09-15 14:27:02,289 [INFO] [ai.py] [class_colors] names is: <class 'list'>
-2021-09-15 14:27:02,290 [INFO] [ai.py] Network loaded.
-2021-09-15 14:27:02,290 [INFO] [ai.py] Network loaded.
-2021-09-15 14:27:02,291 [INFO] [ai.py] Initialazing complete.
-2021-09-15 14:27:02,291 [INFO] [ai.py] Initialazing complete.
-2021-09-15 14:27:02,393 [INFO] [ai.py] Updating AI.
-2021-09-15 14:27:02,393 [INFO] [ai.py] Updating AI.
-2021-09-15 14:27:02,395 [INFO] [ai.py] [image_detection] image is: <class 'NoneType'>, network is: <class 'int'>, class_names is: <class 'list'> class_colors is: <class 'dict'>, thresh is: <class 'float'>
-2021-09-15 14:27:02,395 [INFO] [ai.py] [image_detection] image is: <class 'NoneType'>, network is: <class 'int'>, class_names is: <class 'list'> class_colors is: <class 'dict'>, thresh is: <class 'float'>
-2021-09-15 14:27:02,397 [INFO] [ai.py] [network_width] net is: <class 'int'>
-2021-09-15 14:27:02,397 [INFO] [ai.py] [network_width] net is: <class 'int'>
-2021-09-15 14:27:02,399 [INFO] [ai.py] [network_height] net is: <class 'int'>
-2021-09-15 14:27:02,399 [INFO] [ai.py] [network_height] net is: <class 'int'>
-2021-09-15 14:27:02,402 [WARNING] [ai.py] Something went wrong while updating.
-2021-09-15 14:27:02,402 [WARNING] [ai.py] Something went wrong while updating.
-2021-09-15 14:27:02,404 [WARNING] [ai.py] OpenCV(4.5.3) C:\Users\runneradmin\AppData\Local\Temp\pip-req-build-sn_xpupm\opencv\modules\imgproc\src\color.cpp:182: error: (-215:Assertion failed) !_src.empty() in function 'cv::cvtColor'
-
-2021-09-15 14:27:02,404 [WARNING] [ai.py] OpenCV(4.5.3) C:\Users\runneradmin\AppData\Local\Temp\pip-req-build-sn_xpupm\opencv\modules\imgproc\src\color.cpp:182: error: (-215:Assertion failed) !_src.empty() in function 'cv::cvtColor'
-
-2021-09-15 14:27:02,409 [INFO] [ai.py] Update complete.
-2021-09-15 14:27:02,409 [INFO] [ai.py] Update complete.
+2021-09-16 11:00:20,636 [DEBUG] [gtts.tts] text: Merhaba yol arkadaşım
+2021-09-16 11:00:20,638 [DEBUG] [gtts.tts] tld: com
+2021-09-16 11:00:20,639 [DEBUG] [gtts.tts] lang: tr
+2021-09-16 11:00:20,640 [DEBUG] [gtts.tts] slow: False
+2021-09-16 11:00:20,641 [DEBUG] [gtts.tts] lang_check: True
+2021-09-16 11:00:20,642 [DEBUG] [gtts.tts] pre_processor_funcs: [<function tone_marks at 0x00000203B510D1F0>, <function end_of_line at 0x00000203B510DAF0>, <function abbreviations at 0x00000203B510DA60>, <function word_sub at 0x00000203B510DB80>]
+2021-09-16 11:00:20,642 [DEBUG] [gtts.tts] tokenizer_func: <bound method Tokenizer.run of re.compile('(?<=\\?).|(?<=!).|(?<=？).|(?<=！).|(?<!\\.[a-z])\\. |(?<!\\.[a-z]), |(?<!\\d):|‥|：|\\(|،|\\\n|，|。|—|;|\\[|…|¿|\\]|¡|\\)|、', re.IGNORECASE) from: [<function tone_marks at 0x00000203B510DD30>, <function period_comma at 0x00000203B510DDC0>, <function colon at 0x00000203B510DE50>, <function other_punctuation at 0x00000203B510DEE0>]>
+2021-09-16 11:00:20,645 [DEBUG] [gtts.lang] langs: {'af': 'Afrikaans', 'ar': 'Arabic', 'bg': 'Bulgarian', 'bn': 'Bengali', 'bs': 'Bosnian', 'ca': 'Catalan', 'cs': 'Czech', 'cy': 'Welsh', 'da': 'Danish', 'de': 'German', 'el': 'Greek', 'en': 'English', 'eo': 'Esperanto', 'es': 'Spanish', 'et': 'Estonian', 'fi': 'Finnish', 'fr': 'French', 'gu': 'Gujarati', 'hi': 'Hindi', 'hr': 'Croatian', 'hu': 'Hungarian', 'hy': 'Armenian', 'id': 'Indonesian', 'is': 'Icelandic', 'it': 'Italian', 'ja': 'Japanese', 'jw': 'Javanese', 'km': 'Khmer', 'kn': 'Kannada', 'ko': 'Korean', 'la': 'Latin', 'lv': 'Latvian', 'mk': 'Macedonian', 'ml': 'Malayalam', 'mr': 'Marathi', 'my': 'Myanmar (Burmese)', 'ne': 'Nepali', 'nl': 'Dutch', 'no': 'Norwegian', 'pl': 'Polish', 'pt': 'Portuguese', 'ro': 'Romanian', 'ru': 'Russian', 'si': 'Sinhala', 'sk': 'Slovak', 'sq': 'Albanian', 'sr': 'Serbian', 'su': 'Sundanese', 'sv': 'Swedish', 'sw': 'Swahili', 'ta': 'Tamil', 'te': 'Telugu', 'th': 'Thai', 'tl': 'Filipino', 'tr': 'Turkish', 'uk': 'Ukrainian', 'ur': 'Urdu', 'vi': 'Vietnamese', 'zh-CN': 'Chinese', 'zh-TW': 'Chinese (Mandarin/Taiwan)', 'zh': 'Chinese (Mandarin)'}
+2021-09-16 11:00:20,646 [DEBUG] [gtts.tts] pre-processing: <function tone_marks at 0x00000203B510D1F0>
+2021-09-16 11:00:20,647 [DEBUG] [gtts.tts] pre-processing: <function end_of_line at 0x00000203B510DAF0>
+2021-09-16 11:00:20,648 [DEBUG] [gtts.tts] pre-processing: <function abbreviations at 0x00000203B510DA60>
+2021-09-16 11:00:20,649 [DEBUG] [gtts.tts] pre-processing: <function word_sub at 0x00000203B510DB80>
+2021-09-16 11:00:20,650 [DEBUG] [gtts.tts] text_parts: ['Merhaba yol arkadaşım']
+2021-09-16 11:00:20,651 [DEBUG] [gtts.tts] text_parts: 1
+2021-09-16 11:00:20,652 [DEBUG] [gtts.tts] data-0: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22Merhaba%20yol%20arkada%5C%5Cu015f%5C%5Cu0131m%5C%22%2C%5C%22tr%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2021-09-16 11:00:20,654 [DEBUG] [urllib3.connectionpool] Starting new HTTPS connection (1): translate.google.com:443
+2021-09-16 11:00:20,883 [DEBUG] [urllib3.connectionpool] https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2021-09-16 11:00:20,894 [DEBUG] [gtts.tts] headers-0: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '175'}
+2021-09-16 11:00:20,895 [DEBUG] [gtts.tts] url-0: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2021-09-16 11:00:20,896 [DEBUG] [gtts.tts] status-0: 200
+2021-09-16 11:00:20,898 [DEBUG] [gtts.tts] part-0 written to <_io.BufferedWriter name='c:\\Users\\sirri\\Desktop\\Projects\\Teknofest\\Teknofest\\Project_LeXuS\\data\\.mp3'>
+2021-09-16 11:00:20,899 [DEBUG] [gtts.tts] Saved to c:\Users\sirri\Desktop\Projects\Teknofest\Teknofest\Project_LeXuS\data\.mp3
+2021-09-16 11:00:23,428 [INFO] [ai.py] Initialazing...
+2021-09-16 11:00:23,429 [INFO] [ai.py] Importing DLL(s)...
+2021-09-16 11:00:23,433 [INFO] [ai.py] Import complete.
+2021-09-16 11:00:23,433 [INFO] [ai.py] Loading the network...
+2021-09-16 11:00:23,686 [INFO] [ai.py] [class_colors] names is: <class 'list'>
+2021-09-16 11:00:23,687 [INFO] [ai.py] Network loaded.
+2021-09-16 11:00:23,688 [INFO] [ai.py] Initialazing complete.
+2021-09-16 11:00:23,791 [INFO] [ai.py] Updating AI.
+2021-09-16 11:00:23,792 [INFO] [ai.py] [image_detection] image is: <class 'numpy.ndarray'>, network is: <class 'int'>, class_names is: <class 'list'> class_colors is: <class 'dict'>, thresh is: <class 'float'>
+2021-09-16 11:00:23,792 [INFO] [ai.py] [network_width] net is: <class 'int'>
+2021-09-16 11:00:23,793 [INFO] [ai.py] [network_height] net is: <class 'int'>
+2021-09-16 11:00:23,800 [INFO] [ai.py] [detect_image] network is: <class 'int'>, class_names is: <class 'list'>, image is: <class 'modules.ai.Image'>
+2021-09-16 11:00:23,988 [INFO] [ai.py] [remove_negatives] detections is: <class 'modules.ai.LP_Detection'>, class_names is: <class 'list'>, num is: <class 'int'>
+2021-09-16 11:00:23,990 [INFO] [ai.py] [decode_detection] detections is: <class 'list'>
+2021-09-16 11:00:23,991 [INFO] [ai.py] [draw_boxes] detections is: <class 'list'>, image is: <class 'numpy.ndarray'>, colors is: <class 'dict'>
