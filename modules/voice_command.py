@@ -8,8 +8,6 @@ else:
     # importing from main and inside the package
     import config
     import logger
-
-
 # TODO:
 # 1. class name should be in capitals (ex. VoiceCommander)
 # 2. add a queue for voices to be played. (ex. files in the queue will be played one by one)
