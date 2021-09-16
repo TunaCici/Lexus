@@ -18,12 +18,35 @@ class Camera:
     photo_no = 0
     frame_list = list()
 
+    # It is trying time that try number to open camera.
+
     # video object
     videoCaptureObject = None
 
-    # This function opens the camera and finds the number of photos inside the photos folder.
+    # This function opens the camera
+    def open_camera(self):
+        try:
+            self.videoCaptureObject = cv2.VideoCapture(0, cv2.CAP_DSHOW)
+            return 1
+
+        except cv2.error as error:
+            print("[Error]: {}".format(error))
+            return -1
+
+
+    # This function finds the number of photos inside the photos folder.
     def __init__(self):
-        self.videoCaptureObject = cv2.VideoCapture(0, cv2.CAP_DSHOW)
+        for i in range (0,3):
+            is_running = self.open_camera()
+            print(i)
+
+            if is_running == 1:
+                break
+
+            if i == 2:
+                print("There is an issue for camera module. Please check it...")
+                break
+        
         self.photo_no = 0
 
     # This function returns frame which taken by the camera.
