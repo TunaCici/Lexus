@@ -8,39 +8,6 @@ else:
     # importing from main and inside the package
     import config
     import logger
-# TODO:
-# 1. class name should be in capitals (ex. VoiceCommander)
-# 2. add a queue for voices to be played. (ex. files in the queue will be played one by one)
-# 3. add a request() function where you will get the text and the priority add it to the queue
-# 3. add a play() function where you will play the selected file/voice
-# 4. add an update() function where you check the queue for voices. 
-#    (ex. if there is something in the queue. call the play() fuction to play it and then remove it)
-# 5. add priority to voice files (ex. if a voice has high priority it will be played first)
-
-# Note: i have written some templates for you.
-# Here are example test cases:
-
-# TEST CASE 1
-# voice_commander.request("There is a bench in front in front of you, it is close.", "low")
-# voice_commander.update()
-
-# in the above code we request a text to be played first.
-# then we call the update function to make it play the voice
-
-# TEST CASE 2
-# voice_commander.request("There is a cat nearby.", "low")
-# voice_commander.request("You are too close to an object on your left side, careful!", "high")
-# voice_commander.update()
-
-# in the above code we requst two different text to be played
-# you will need to play the high priority text first. even though it came later.
-
-# IMPORTANT NOTE: It is up to you how you implament these features.
-#                 I just want to give you some idea how they will play out.
-# Also the "voice_file" i wrote is a python dictionary. You can learn about it pretty easily.
-# I highly recommend that you learn it, it is very useful.
-# A simple implementation of Priority Queue
-# using Queue.
 import os
 from gtts import gTTS
 from time import sleep
@@ -55,14 +22,8 @@ class VoiceCommander:
 
     # a flah for cheking if a file is in play
     is_playing = False
-
-    # example voice file
-    '''vc_file = {     
-        "text:" : "Voice modules is initializing.",
-        "path:" : config.PROJECT_DIR + "data/speech/merhaba.mp3",
-        "priority": "low"
-    }'''
     def __init__(self):
+        import threading
         import os
         from gtts import gTTS
         from time import sleep
@@ -74,12 +35,10 @@ class VoiceCommander:
         music.play()
         sleep(music.duration)
         os.remove(filename1)
-        #sistem dosyalarını daha rahat şekilde açmak için
-        
-        #Burada kullanacağımız 2 parametre bulunuyor, Dil ve Text
-        #Burada oluşturduğumuz ses dosyasını konuma merhaba.mp3 diye kaydediyoruz
-        #şimdi ise bu dosyayı açalım.
-
+    def islem(second):
+        for i in range(second):
+            sleep(1)
+            pass 
     def play(self, speech : dict):
         """
         plays the selected voice file.
@@ -93,18 +52,13 @@ class VoiceCommander:
             filename = vc_file.get("path")+str(i)+".mp3"
             tts.save(filename)
             music = pyglet.media.load(filename, streaming=False)
-            is_playing= True
+            self.is_playing= True
             music.play()
             sleep(music.duration)
             os.remove(filename)
             i+=1
-        is_playing=False
+        self.is_playing=False
         self.queue.clear()    
-            
-        
-       
-        
-
     def update(self):
         """
         checks the queue, if there is a voice file, plays it.
@@ -142,6 +96,5 @@ class VoiceCommander:
             # TODO: add this vc_file at the end of the queue
             self.queue.append(vc_file)
 if __name__=="__main__":
-    a = VoiceCommander()     
-    a.request("Dikkat! Dikkat!","high")
-    a.update()   
+    
+        
