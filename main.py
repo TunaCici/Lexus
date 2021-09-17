@@ -13,41 +13,49 @@ import cv2
 
 from modules import logger
 from modules import config
-from modules import Ultrasonic_Sensor
 from modules import ai
-update_rate = 30.0 # update(s) per second
+from modules import vibration
+from modules import voice_command
+from modules import camere
+
+update_rate = 10.0 # update(s) per second
 print(f"{1/update_rate * 1000}ms per run")
 
 # entry point
 if __name__ == "__main__":
+    # logger setup
     main_logger = logger.LexusLogger()
     main_logger.log_info("Starting Project Lexus...")
     main_logger.log_info(f"Current project directory: {config.PROJECT_DIR}")
 
+    # modules setup
     main_ai = ai.Lexus_AI()
+    main_vib = vibration.Vibration()
+    main_sound = voice_command.VoiceCommander()
+    main_camera = camera.Camera()
 
+    # timers for sync and performance
     curr_time = time.perf_counter()
     prev_time = time.perf_counter()
-    elapsed = 0
-    # our main loop
+    ai_last_run = time.perf_counter()
+    vib_last_run = time.perf_counter()
+    sound_last_run = time.perf_counter()
+    camera_last_run = time.perf_counter()
+
+    # main loop start
     while True:
         try:
-            # TODO: Check if modules are alive
-            # if they are down. initialize them.
-            if True == False:
-                print("initialize debugger screen.")
-            else:
-                None
-
-            # TODO: Design the program flow.
+            # update time
             curr_time = time.perf_counter()
+            
+            # TODO: Design the program flow.
             if (1 / update_rate) <= (curr_time - prev_time):
-                elapsed += 1
-                if update_rate <= elapsed:
-                    # a second has passed
-                    print("1 second passed")
-                    elapsed = 0
-                # ADD THE CODE HERE
+                """------------- CYCLE START -------------"""
+                # TODO: Check if modules are alive
+                if not ai.running():
+                    main_logger.log_info("AI failed to load.")
+                    continue
+
                 img = main_ai.get_image()
                 detections = main_ai.get_detections()
 
@@ -55,8 +63,9 @@ if __name__ == "__main__":
 
                 prev_time = time.perf_counter()
 
-            # TODO: Update the modules.
-            main_ai.update(cv2.imread("dog.jpg"))
+                # TODO: Update the modules.
+                main_ai.update(cv2.imread("dog.jpg"))
+                """------------- CYCLE END -------------"""
 
         except KeyboardInterrupt as e:
             main_logger.log_info("Detecting keyboard interrupt.")
