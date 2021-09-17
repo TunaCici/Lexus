@@ -15,6 +15,7 @@ import os
 import glob
 import stat
 import sys
+import cv2
 
 if __name__ == "modules." + os.path.basename(__file__)[:-3]:
     # importing from outside the package
@@ -104,6 +105,8 @@ class DebugScreen(object):
             print("Permission Error Occured...")
 
     def get_picture(self):
+        dim = (521,461)
+        self.picture_list[-1] = cv2.resize(self.picture_list[-1],dim)
         return self.picture_list[-1]
 
     def update(self):
@@ -138,9 +141,9 @@ class DebugScreen(object):
             bytesPerLine = 3 * width
             self.qImg = QtGui.QImage(self.get_picture().data, width, height, bytesPerLine, QtGui.QImage.Format_RGB888)
 
-            self.camera.resize(config.RESIZE_X,config.RESIZE_Y)
             self.pixmap = QtGui.QPixmap(self.qImg)
             self.camera.setPixmap(self.pixmap)
+            self.camera.resize(width,height)
 
             for i in self.detection_list:
                 if i[0] == "ambulance":

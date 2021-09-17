@@ -63,4 +63,6 @@ class Camera:
     # This function updates the photo, saves it inside the frame and resizes the frame.  
     def update(self):
         self.ret, self.frame = self.videoCaptureObject.read() # This reads the photo from the camera.
+        dim = (720, 520)
+        self.frame = cv2.resize(self.frame, dim)
         self.frame_list.append(self.frame)
