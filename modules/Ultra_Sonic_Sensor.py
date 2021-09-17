@@ -63,7 +63,7 @@ def US_Sensor_GetDistance() :
     else :
         Distance = Distance_Max_Error
 
-    return int(Distance)
+    return Distance
 
 
 # Starting with the program 
@@ -86,7 +86,7 @@ if __name__ == '__main__':
                 print ("Kein Object gefunden")
             
             else  :
-                print ( "Measured Distance = %i mm" % Distance)
+                print ( "Measured Distance = %i cm" % Distance)
 
                 # sllep 0.2 seconds
 
