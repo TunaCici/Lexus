@@ -25,7 +25,6 @@ class Vibration:
         GPIO.output(self.channel,GPIO.LOW)
         self.is_runing= False
         GPIO.cleanup()
-        
     def running(self):
         print("")
 
