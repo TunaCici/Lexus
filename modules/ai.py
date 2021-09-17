@@ -102,6 +102,8 @@ class Lexus_AI():
     wrapper class for the AI
     """
     
+    is_running = False
+
     input_file = ""
     batch_size = 1
     weights = "config/yolov4-tiny.weights"
@@ -194,7 +196,7 @@ class Lexus_AI():
                     self.lib = CDLL(winGPUdll, RTLD_GLOBAL)
                     print("Environment variables indicated a CPU run, but we didn't find {}. Trying a GPU run anyway.".format(winNoGPUdll))
         else:
-            lib = CDLL("./libdarknet.so", RTLD_GLOBAL)
+            self.lib = CDLL(config.PROJECT_DIR + "/libdarknet.so", RTLD_GLOBAL)
 
         # import the c functions from the dll
         self.lib.network_width.argtypes = [c_void_p]
@@ -300,6 +302,11 @@ class Lexus_AI():
         custom_logger.log_info("Network loaded.")
 
         custom_logger.log_info("Initialazing complete.")
+
+        self.is_running = True
+    
+    def running(self):
+        return self.is_running
 
     def network_width(self, net: int):
         custom_logger.log_info(f"[network_width] net is: {type(net)}")

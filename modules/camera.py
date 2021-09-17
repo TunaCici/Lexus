@@ -18,12 +18,32 @@ class Camera:
     photo_no = 0
     frame_list = list()
 
+    # It is trying time that try number to open camera.
+
     # video object
     videoCaptureObject = None
 
-    # This function opens the camera and finds the number of photos inside the photos folder.
+    def running(self):
+        self.is_running = self.videoCaptureObject.isOpened()
+        return self.is_running
+
+    # This function opens the camera
+    def open_camera(self):
+        try:
+            self.videoCaptureObject = cv2.VideoCapture(0, cv2.CAP_DSHOW)
+
+        except cv2.error as error:
+            print("[Error]: {}".format(error))
+
+    # This function finds the number of photos inside the photos folder.
     def __init__(self):
-        self.videoCaptureObject = cv2.VideoCapture(0, cv2.CAP_DSHOW)
+        try:
+            self.open_camera()
+            self.camera_control = self.running()
+
+        except:
+            print("Opening Camera Failed")
+        
         self.photo_no = 0
 
     # This function returns frame which taken by the camera.
@@ -39,5 +59,11 @@ class Camera:
 
     # This function updates the photo, saves it inside the frame and resizes the frame.  
     def update(self):
-        self.ret, self.frame = self.videoCaptureObject.read() # This reads the photo from the camera.
-        self.frame_list.append(self.frame)
+        dim = (720, 520)
+        try:
+            self.ret, self.frame = self.videoCaptureObject.read() # This reads the photo from the camera.
+            self.frame = cv2.resize(self.frame, dim)
+            self.frame_list.append(self.frame)
+        
+        except:
+            print("Camera cannot read the frame!!!")
