@@ -25,6 +25,7 @@ def test_logger():
 def test_config():
     print(config.PROJECT_DIR)
 
+"""
 def test_debug():
     import sys
     if config.DSCREEN_RUNNING == True:
@@ -34,12 +35,13 @@ def test_debug():
         ui.setupUi(MainWindow)
         MainWindow.show()
         sys.exit(app.exec_())
-
 """
+
+
 def test_camera():
     test_camera = camera.Camera()
     test_camera.update()
-"""
+
 
 def test_sensor():
     print("")
@@ -70,6 +72,6 @@ if __name__ == "__main__":
     #test_logger()
     #test_config()
     #test_random_quote()
-    test_debug()
-    #test_camera()
+    #test_debug()
+    test_camera()
     #test_ai()

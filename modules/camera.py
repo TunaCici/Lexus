@@ -23,29 +23,26 @@ class Camera:
     # video object
     videoCaptureObject = None
 
+    def running(self):
+        self.is_running = self.videoCaptureObject.isOpened()
+        return self.is_running
+
     # This function opens the camera
     def open_camera(self):
         try:
             self.videoCaptureObject = cv2.VideoCapture(0, cv2.CAP_DSHOW)
-            return 1
 
         except cv2.error as error:
             print("[Error]: {}".format(error))
-            return -1
-
 
     # This function finds the number of photos inside the photos folder.
     def __init__(self):
-        for i in range (0,3):
-            is_running = self.open_camera()
-            print(i)
+        try:
+            self.open_camera()
+            self.camera_control = self.running()
 
-            if is_running == 1:
-                break
-
-            if i == 2:
-                print("There is an issue for camera module. Please check it...")
-                break
+        except:
+            print("Opening Camera Failed")
         
         self.photo_no = 0
 
@@ -62,7 +59,11 @@ class Camera:
 
     # This function updates the photo, saves it inside the frame and resizes the frame.  
     def update(self):
-        self.ret, self.frame = self.videoCaptureObject.read() # This reads the photo from the camera.
         dim = (720, 520)
-        self.frame = cv2.resize(self.frame, dim)
-        self.frame_list.append(self.frame)
+        try:
+            self.ret, self.frame = self.videoCaptureObject.read() # This reads the photo from the camera.
+            self.frame = cv2.resize(self.frame, dim)
+            self.frame_list.append(self.frame)
+        
+        except:
+            print("Camera cannot read the frame!!!")
