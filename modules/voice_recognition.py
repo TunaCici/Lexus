@@ -55,3 +55,6 @@ class voice_recognition():
 
         except:
             print("There is an error...")
+
+obj = voice_recognition()
+obj.update()
