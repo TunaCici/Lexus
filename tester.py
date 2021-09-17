@@ -11,7 +11,7 @@ from utils import random_quote
 from modules import logger
 from modules import config
 from modules import camera
-from modules import debug
+from modules import debugNew
 from modules import ai
 #from modules import Ultrasonic_Sensor
 from PyQt5 import QtCore, QtGui, QtWidgets, QtTest
@@ -30,7 +30,7 @@ def test_debug():
     if config.DSCREEN_RUNNING == True:
         app = QtWidgets.QApplication(sys.argv)
         MainWindow = QtWidgets.QMainWindow()
-        ui = debug.DebugScreen()
+        ui = debugNew.DebugScreen()
         ui.setupUi(MainWindow)
         MainWindow.show()
         sys.exit(app.exec_())
