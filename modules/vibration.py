@@ -17,14 +17,15 @@ class Vibration:
             
 
     def islem(self,number):
+        if number < 0:
+            return False
         GPIO.output(self.channel,GPIO.HIGH)
         self.is_runing= True
-        for i in range(number):
-            time.sleep(1)
-            pass
+        time.sleep(number)
         GPIO.output(self.channel,GPIO.LOW)
         self.is_runing= False
         GPIO.cleanup()
+        
     def running(self):
         print("")
 

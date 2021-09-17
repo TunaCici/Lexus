@@ -25,15 +25,11 @@ class VoiceCommander:
     # a flah for cheking if a file is in play
     is_playing = False
     def __init__(self):
-<<<<<<< HEAD
-        
-=======
         import threading
         import os
         from gtts import gTTS
         from time import sleep
         import pyglet
->>>>>>> cd74bb80ac5344b85aef4bc178a2b917cbafe324
         tts1 = gTTS(text="Merhaba yol arkadaşım", lang='tr')
         filename1 =config.PROJECT_DIR +"\\data"+"\.mp3"
         tts1.save(filename1)
@@ -42,7 +38,6 @@ class VoiceCommander:
         music.play()
         sleep(music.duration)
         os.remove(filename1)
-<<<<<<< HEAD
         self.is_playing =False
     def __del__(self):
         tts1 = gTTS(text="Bir sonraki yolculuğunda görüşmek üzere yol arkadaşım", lang='tr')
@@ -57,10 +52,8 @@ class VoiceCommander:
 
     def islem(second):
         for i in range(int(second)+1):
-=======
     def islem(second):
         for i in range(second):
->>>>>>> cd74bb80ac5344b85aef4bc178a2b917cbafe324
             sleep(1)
             pass 
     def play(self, speech : dict):
@@ -81,10 +74,8 @@ class VoiceCommander:
             sleep(music.duration)
             os.remove(filename)
             i+=1
-<<<<<<< HEAD
             self.is_playing= False
-=======
->>>>>>> cd74bb80ac5344b85aef4bc178a2b917cbafe324
+
         self.is_playing=False
         self.queue.clear()    
     def update(self):
@@ -123,14 +114,11 @@ class VoiceCommander:
             }
             # TODO: add this vc_file at the end of the queue
             self.queue.append(vc_file)
-<<<<<<< HEAD
 a = VoiceCommander()
 a.request("naber","low")
 a.update()
 del a
 
-=======
-if __name__=="__main__":
->>>>>>> cd74bb80ac5344b85aef4bc178a2b917cbafe324
+
     
         
