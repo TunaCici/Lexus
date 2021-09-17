@@ -58,7 +58,7 @@ def US_Sensor_GetDistance() :
     if StartTime < StopTime :
 
         # If measurment is completed 
-        Time = Stoptime - StartTime  
+        Time = StopTime - StartTime  
         Distance = Time * Measurment_Factor
     else :
         Distance = Distance_Max_Error
