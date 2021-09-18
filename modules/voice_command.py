@@ -38,6 +38,7 @@ class VoiceCommander:
         self.islem(music.duration)
         os.remove(filename1)
         self.is_playing =False
+        
     def _del_(self):
         tts1 = gTTS(text="Bir sonraki yolculuğunda görüşmek üzere yol arkadaşım", lang='tr')
         filename1 =config.PROJECT_DIR +"\\data"+"\.mp3"
@@ -48,12 +49,7 @@ class VoiceCommander:
         self.islem(music.duration)
         os.remove(filename1)
         self.is_playing=False
-<<<<<<< HEAD
-    def islem(second):
-        for i in range(second):
-            sleep(1)
-            pass 
-=======
+
     def islem(self,number):
         if number < 0:
             return False
@@ -61,7 +57,6 @@ class VoiceCommander:
         sleep(number)
         self.is_playing= False
     
->>>>>>> 881795583388cfaa2df536594c45e3624a673193
     def play(self, speech : dict):
         """
         plays the selected voice file.

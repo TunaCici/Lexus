@@ -18,7 +18,7 @@ from modules import vibration
 #from modules import voice_command
 from modules import camera
 
-update_rate = 1.0 # update(s) per second
+update_rate = 24.0 # update(s) per second
 print(f"{1/update_rate * 1000}ms per run")
 
 # entry point
@@ -56,13 +56,14 @@ if __name__ == "__main__":
                     main_logger.log_info("AI failed to load.")
                     continue
 
-                main_vib.vibration(0.5)
-
+                print("start")
+                main_vib.vibration(0.1)
+                print("end")
 
                 prev_time = time.perf_counter()
 
                 # TODO: Update the modules.
-                main_ai.update(cv2.imread("dog.jpg"))
+                # main_ai.update(cv2.imread("dog.jpg"))
                 """------------- CYCLE END -------------"""
 
         except KeyboardInterrupt as e:
