@@ -27,7 +27,7 @@ class VoiceCommander:
 
     # a flah for cheking if a file is in play
     is_playing = False
-    def _init_(self):
+    def __init__(self):
         
         tts1 = gTTS(text="Merhaba yol arkadaşım", lang='tr')
         filename1 =config.PROJECT_DIR +"\\data"+"\.mp3"
@@ -38,7 +38,7 @@ class VoiceCommander:
         self.islem(music.duration)
         os.remove(filename1)
         self.is_playing =False
-    def _del_(self):
+    def __del__(self):
         tts1 = gTTS(text="Bir sonraki yolculuğunda görüşmek üzere yol arkadaşım", lang='tr')
         filename1 =config.PROJECT_DIR +"\\data"+"\.mp3"
         tts1.save(filename1)
@@ -48,20 +48,18 @@ class VoiceCommander:
         self.islem(music.duration)
         os.remove(filename1)
         self.is_playing=False
-<<<<<<< HEAD
+
     def islem(second):
         for i in range(second):
             sleep(1)
             pass 
-=======
     def islem(self,number):
         if number < 0:
             return False
         self.is_playing= True
         sleep(number)
         self.is_playing= False
-    
->>>>>>> 881795583388cfaa2df536594c45e3624a673193
+        
     def play(self, speech : dict):
         """
         plays the selected voice file.
