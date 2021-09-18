@@ -34,18 +34,68 @@ else:
 
 
 class DebugScreen(object):
+    running = None
+    ai_running = None
+    voice_open = None
+    logger_run = None
+    
+    def camera_start(self):
+        try:
+            self.obje = camera.Camera()
+
+        except:
+            print("Camera Module object cannot be created!!!")
+
+        self.isOpen = self.obje.running()
+
+        if self.isOpen == True:
+            self.running = 'Active'
+
+        else:
+            self.running = 'Deactive'
+    
     def ai_start(self):
-        if config.AI_RUNNING == True:
+        try:
             self.ai_obj = ai.Lexus_AI()
 
+        except:
+            print("AI Module object cannot be created!!!")
+
+        self.ai_obj.is_running = True
+
+        if self.ai_obj.is_running == True:
+            self.ai_running = 'Active'
+
+        else:
+            self.ai_running = 'Deactive'
+
     def voice_start(self):
-        if config.is_playing == True:
+        try:
             self.voice_obj = voice_command.VoiceCommander()
 
+        except:
+            print("Voice Module object cannot be created!!!")
+
+        if self.voice_obj.is_playing == True:
+            self.voice_open = 'Active'
+
+        else:
+            self.voice_open = 'Deactive'
 
     def logger_start(self):
-        if config.IS_LOGGER_RUNNING == True:
-            logger.LexusLogger()
+        try:
+            self.logger_obj = logger.LexusLogger()
+
+        except:
+            print("Logger Module object cannot be created")
+
+        self.logger_obj.running = True
+
+        if self.logger_obj.running == True:
+            self.logger_run = 'Active'
+
+        else:
+            self.logger_run = 'Deactive'
 
         self.file_log = open(config.PROJECT_DIR + "/logs/lexuslogfile.txt",encoding='utf-8')
     
@@ -57,81 +107,146 @@ class DebugScreen(object):
             print("Camera is not opened.")
 
     def start(self):
-        config.CAMERA_RUNNING = True
-        config.IS_LOGGER_RUNNING = True
-        config.is_playing = True
-        config.AI_RUNNING = True
+        try:
+            self.camera_start()
+
+        except:
+            print("Camera cannot be started!!!")
+
+        try:
+            self.voice_start()
+        
+        except:
+            print("Voice Module cannot be started!!!")
+
+        try:
+            self.ai_start()
+
+        except:
+            print("AI Module object cannot be started")
+
+        try:
+            self.update()
+
+        except:
+            print("Update Failed!!!")
 
         __sortingEnabled = self.Sensors.isSortingEnabled()
         self.Sensors.setSortingEnabled(False)
-        self.item1 = self.Sensors.item(0)
-        self.item1.setText(self._translate("ProjectLexusDebugScreen", "\n\n\n\t  KAMERA : \n\t  ACIK\n"))
-        self.item1.setFont(QtGui.QFont("Lucida Console", 14))
-        self.item2 = self.Sensors.item(1)
-        self.item2.setText(self._translate("ProjectLexusDebugScreen", "\t  SES : \n\t  ACIK\n"))
-        self.item2.setFont(QtGui.QFont("Lucida Console", 14))
-        self.item3 = self.Sensors.item(2)
-        self.item3.setText(self._translate("ProjectLexusDebugScreen", "\t  TITRESIM : \n\t  DEVRE DISI\n"))
-        self.item3.setFont(QtGui.QFont("Lucida Console", 14))
-        self.item4 = self.Sensors.item(3)
-        self.item4.setText(self._translate("ProjectLexusDebugScreen", "\t  YAPAY ZEKA : \n\t  ACIK\n"))
-        self.item4.setFont(QtGui.QFont("Lucida Console", 14))
-        self.item5 = self.Sensors.item(4)
-        self.item5.setText(self._translate("ProjectLexusDebugScreen", "\t  UZAKLIK SENSORU : \n\t  DEVRE DISI\n"))
-        self.item5.setFont(QtGui.QFont("Lucida Console", 14))
-        self.item6 = self.Sensors.item(5)
-        self.item6.setText(self._translate("ProjectLexusDebugScreen", "\t  KONTROLCU : \n\t  DEVRE DISI\n"))
-        self.item6.setFont(QtGui.QFont("Lucida Console", 14))
-        self.Sensors.setSortingEnabled(__sortingEnabled)
+        
+        if self.running == 'Active':
+            self.item1 = self.Sensors.item(0)
+            self.item1.setText(self._translate("ProjectLexusDebugScreen", "\n\n\n\t  KAMERA : \n\t  ACIK\n"))
+            self.item1.setFont(QtGui.QFont("Lucida Console", 14))
 
-        self.obje = camera.Camera()
-        self.voice_start()
-        self.ai_start()
-        self.update()
-    
-    def close(self):
-        try:
-            config.CAMERA_RUNNING = False
-            config.IS_LOGGER_RUNNING = False
-            config.is_playing = False
-            config.AI_RUNNING = False
-
-            __sortingEnabled = self.Sensors.isSortingEnabled()
-            self.Sensors.setSortingEnabled(False)
+        else:
             self.item1 = self.Sensors.item(0)
             self.item1.setText(self._translate("ProjectLexusDebugScreen", "\n\n\n\t  KAMERA : \n\t  DEVRE DISI\n"))
             self.item1.setFont(QtGui.QFont("Lucida Console", 14))
+
+        if self.voice_open == 'Active':
+            self.item2 = self.Sensors.item(1)
+            self.item2.setText(self._translate("ProjectLexusDebugScreen", "\t  SES : \n\t  ACIK\n"))
+            self.item2.setFont(QtGui.QFont("Lucida Console", 14))
+
+        else:
             self.item2 = self.Sensors.item(1)
             self.item2.setText(self._translate("ProjectLexusDebugScreen", "\t  SES : \n\t  DEVRE DISI\n"))
             self.item2.setFont(QtGui.QFont("Lucida Console", 14))
-            self.item3 = self.Sensors.item(2)
-            self.item3.setText(self._translate("ProjectLexusDebugScreen", "\t  TITRESIM : \n\t  DEVRE DISI\n"))
-            self.item3.setFont(QtGui.QFont("Lucida Console", 14))
+
+        self.item3 = self.Sensors.item(2)
+        self.item3.setText(self._translate("ProjectLexusDebugScreen", "\t  TITRESIM : \n\t  DEVRE DISI\n"))
+        self.item3.setFont(QtGui.QFont("Lucida Console", 14))
+
+        if self.ai_running == 'Active':
+            self.item4 = self.Sensors.item(3)
+            self.item4.setText(self._translate("ProjectLexusDebugScreen", "\t  YAPAY ZEKA : \n\t  ACIK\n"))
+            self.item4.setFont(QtGui.QFont("Lucida Console", 14))
+
+        else:
             self.item4 = self.Sensors.item(3)
             self.item4.setText(self._translate("ProjectLexusDebugScreen", "\t  YAPAY ZEKA : \n\t  DEVRE DISI\n"))
             self.item4.setFont(QtGui.QFont("Lucida Console", 14))
+        
+        self.item5 = self.Sensors.item(4)
+        self.item5.setText(self._translate("ProjectLexusDebugScreen", "\t  UZAKLIK SENSORU : \n\t  DEVRE DISI\n"))
+        self.item5.setFont(QtGui.QFont("Lucida Console", 14))
+
+        self.item6 = self.Sensors.item(5)
+        self.item6.setText(self._translate("ProjectLexusDebugScreen", "\t  KONTROLCU : \n\t  DEVRE DISI\n"))
+        self.item6.setFont(QtGui.QFont("Lucida Console", 14))
+        
+        self.Sensors.setSortingEnabled(__sortingEnabled)
+    
+    def close(self):
+        self.running = 'Deactive'
+        self.ai_running = 'Deactive'
+        self.voice_open = 'Deactive'
+        self.logger_run = 'Deactive'
+        
+        try:
+            __sortingEnabled = self.Sensors.isSortingEnabled()
+            self.Sensors.setSortingEnabled(False)
+            
+            if self.running == 'Deactive':
+                self.item1 = self.Sensors.item(0)
+                self.item1.setText(self._translate("ProjectLexusDebugScreen", "\n\n\n\t  KAMERA : \n\t  DEVRE DISI\n"))
+                self.item1.setFont(QtGui.QFont("Lucida Console", 14))
+            
+            if self.voice_open == 'Deactive':
+                self.item2 = self.Sensors.item(1)
+                self.item2.setText(self._translate("ProjectLexusDebugScreen", "\t  SES : \n\t  DEVRE DISI\n"))
+                self.item2.setFont(QtGui.QFont("Lucida Console", 14))
+            
+            self.item3 = self.Sensors.item(2)
+            self.item3.setText(self._translate("ProjectLexusDebugScreen", "\t  TITRESIM : \n\t  DEVRE DISI\n"))
+            self.item3.setFont(QtGui.QFont("Lucida Console", 14))
+            
+            if self.ai_running == 'Deactive':
+                self.item4 = self.Sensors.item(3)
+                self.item4.setText(self._translate("ProjectLexusDebugScreen", "\t  YAPAY ZEKA : \n\t  DEVRE DISI\n"))
+                self.item4.setFont(QtGui.QFont("Lucida Console", 14))
+            
             self.item5 = self.Sensors.item(4)
             self.item5.setText(self._translate("ProjectLexusDebugScreen", "\t  UZAKLIK SENSORU : \n\t  DEVRE DISI\n"))
             self.item5.setFont(QtGui.QFont("Lucida Console", 14))
+            
             self.item6 = self.Sensors.item(5)
             self.item6.setText(self._translate("ProjectLexusDebugScreen", "\t  KONTROLCU : \n\t  DEVRE DISI\n"))
             self.item6.setFont(QtGui.QFont("Lucida Console", 14))
-            self.Sensors.setSortingEnabled(__sortingEnabled)
-
-            self.obje.videoCaptureObject.release()
             
+            self.Sensors.setSortingEnabled(__sortingEnabled)
+            
+        except:
+            print("An Error Occured...")
+
+        try:
             self.obje.photo_no = 0
 
             self.i = 0
             config.LINE_NUMBER = 0
 
-            self.logger.clear()
-
-            self.file_log.close()
-    
         except:
-            print("An Error Occured...")
+            print("Reset Failed!!!")
 
+        try:
+            self.obje.release()
+
+        except:
+            print("Release Failed!!!")
+
+        try:            
+            self.logger.clear()
+            
+        except:
+            print("Cleaning Logger Failed!!!")
+
+        try:
+            self.file_log.close()
+
+        except:
+            print("File cannot be closed!!!")
+            
         try:
             self.files = glob.glob(config.PROJECT_DIR + "/photos/")
 
@@ -148,7 +263,7 @@ class DebugScreen(object):
         return self.picture_list[-1]
 
     def update(self):
-        while(config.CAMERA_RUNNING == True and config.IS_LOGGER_RUNNING == True and self.obje.photo_no != config.PHOTO_NUMBER + 1):
+        while(self.running == 'Active' and self.logger_run == 'Active' and self.obje.photo_no != config.PHOTO_NUMBER + 1):
             self.obje.update()
             QtTest.QTest.qWait(100)
 

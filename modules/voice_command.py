@@ -52,10 +52,12 @@ class VoiceCommander:
 
     def islem(second):
         for i in range(int(second)+1):
+    
     def islem(second):
         for i in range(second):
             sleep(1)
             pass 
+    
     def play(self, speech : dict):
         """
         plays the selected voice file.
