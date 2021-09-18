@@ -15,10 +15,10 @@ from modules import logger
 from modules import config
 from modules import ai
 from modules import vibration
-from modules import voice_command
-from modules import camere
+#from modules import voice_command
+from modules import camera
 
-update_rate = 10.0 # update(s) per second
+update_rate = 1.0 # update(s) per second
 print(f"{1/update_rate * 1000}ms per run")
 
 # entry point
@@ -30,8 +30,8 @@ if __name__ == "__main__":
 
     # modules setup
     main_ai = ai.Lexus_AI()
-    main_vib = vibration.Vibration()
-    main_sound = voice_command.VoiceCommander()
+    main_vib = vibration.Vibration(17)
+    #main_sound = voice_command.VoiceCommander()
     main_camera = camera.Camera()
 
     # timers for sync and performance
@@ -52,14 +52,12 @@ if __name__ == "__main__":
             if (1 / update_rate) <= (curr_time - prev_time):
                 """------------- CYCLE START -------------"""
                 # TODO: Check if modules are alive
-                if not ai.running():
+                if not main_ai.running():
                     main_logger.log_info("AI failed to load.")
                     continue
 
-                img = main_ai.get_image()
-                detections = main_ai.get_detections()
+                main_vib.vibration(0.5)
 
-                print(detections)
 
                 prev_time = time.perf_counter()
 

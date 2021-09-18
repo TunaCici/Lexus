@@ -49,9 +49,6 @@ class VoiceCommander:
         sleep(music.duration)
         os.remove(filename1)
         self.is_playing=False
-
-    def islem(second):
-        for i in range(int(second)+1):
     def islem(second):
         for i in range(second):
             sleep(1)
