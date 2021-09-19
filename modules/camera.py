@@ -1,6 +1,7 @@
 import cv2 # pip install opencv-python
 import os
 import glob
+import time
 
 if __name__ == "modules." + os.path.basename(__file__)[:-3]:
     # importing from outside the package
@@ -50,6 +51,9 @@ class Camera:
     def get_frame(self):
         return self.frame_list[-1]
 
+    def show_photo(self):
+        cv2.imshow("image",self.get_frame())
+
     # This function saves the photo which taken by the camera.
     def save(self):
         path = config.PROJECT_DIR + "/photos/"
@@ -67,3 +71,21 @@ class Camera:
         
         except:
             print("Camera cannot read the frame!!!")
+
+def test_camera():
+    test_camera_obj = Camera()
+    is_Open = test_camera_obj.running()
+    print(is_Open)
+   
+    while True:
+        test_camera_obj.update()
+        test_camera_obj.show_photo()
+
+        if cv2.waitKey(1) & 0xFF == ord('q'):
+            break
+
+    test_camera_obj.videoCaptureObject.release()
+    cv2.destroyAllWindows()
+
+if __name__ == '__main__':
+    test_camera()
