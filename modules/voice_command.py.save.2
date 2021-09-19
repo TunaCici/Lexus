@@ -1,7 +1,7 @@
 import os
 import queue
 
-if __name__ == "modules." + os.path.basename(__file__)[:-3]:
+ __name__ == "modules." + os.path.basename(__file__)[:-3]:
     # importing from outside the package
     from modules import config
     from modules import logger
@@ -43,7 +43,8 @@ class VoiceCommander:
         self.islem(music.duration)
         os.remove(filename1)
         self.is_playing =False
-            def __del__(self):
+        
+    def __del__(self):
         
         print("Program kapandı")
 

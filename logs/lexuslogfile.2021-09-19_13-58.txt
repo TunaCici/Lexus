@@ -1,0 +1,3 @@
+2021-09-19 13:59:39,288 [INFO] [ai.py] [class_colors] names is: <class 'list'>
+2021-09-19 13:59:39,293 [INFO] [ai.py] Network loaded.
+2021-09-19 13:59:39,296 [INFO] [ai.py] Initialazing complete.

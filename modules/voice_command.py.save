@@ -43,7 +43,8 @@ class VoiceCommander:
         self.islem(music.duration)
         os.remove(filename1)
         self.is_playing =False
-            def __del__(self):
+        
+    def __del__(self):
         
         print("Program kapandı")
 
@@ -96,7 +97,7 @@ class VoiceCommander:
         self.play(vc_file)
         
 
-    def request(self, text : str, priority : str):
+sudo apt-get install gstreamer-1.0    def request(self, text : str, priority : str):
         """
         gets some text requests to be played. adds it to the queue accordingly.
         """

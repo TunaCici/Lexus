@@ -68,7 +68,7 @@ def US_Sensor_GetDistance() :
 
 # Starting with the program 
 
-if __name__ == '__main__':
+def start():
 
         # Configuration of the GPIO ports
 

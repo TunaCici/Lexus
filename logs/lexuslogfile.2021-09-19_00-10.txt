@@ -1,0 +1,17 @@
+2021-09-19 00:11:49,450 [INFO] [main.py] Starting Project Lexus...
+2021-09-19 00:11:49,453 [INFO] [main.py] Current project directory: /home/pi/Desktop/Project_LeXuS
+2021-09-19 00:11:49,455 [INFO] [ai.py] Initialazing...
+2021-09-19 00:11:49,456 [INFO] [ai.py] Importing DLL(s)...
+2021-09-19 00:11:49,485 [INFO] [ai.py] Import complete.
+2021-09-19 00:11:49,487 [INFO] [ai.py] Loading the network...
+2021-09-19 00:11:50,058 [INFO] [ai.py] [class_colors] names is: <class 'list'>
+2021-09-19 00:11:50,061 [INFO] [ai.py] Network loaded.
+2021-09-19 00:11:50,062 [INFO] [ai.py] Initialazing complete.
+2021-09-19 00:11:50,063 [DEBUG] [gtts.tts] text: Merhaba yol arkadaşım
+2021-09-19 00:11:50,064 [DEBUG] [gtts.tts] tld: com
+2021-09-19 00:11:50,065 [DEBUG] [gtts.tts] lang: tr
+2021-09-19 00:11:50,066 [DEBUG] [gtts.tts] slow: False
+2021-09-19 00:11:50,067 [DEBUG] [gtts.tts] lang_check: True
+2021-09-19 00:11:50,068 [DEBUG] [gtts.tts] pre_processor_funcs: [<function tone_marks at 0x7f98949c80>, <function end_of_line at 0x7f9895a730>, <function abbreviations at 0x7f9895a7b8>, <function word_sub at 0x7f9895a840>]
+2021-09-19 00:11:50,068 [DEBUG] [gtts.tts] tokenizer_func: <bound method Tokenizer.run of re.compile('(?<=\\?).|(?<=!).|(?<=？).|(?<=！).|(?<!\\.[a-z])\\. |(?<!\\.[a-z]), |(?<!\\d):|;|—|、|：|…|¿|،|\\\n|\\[|。|¡|\\)|\\]|，|\\(|‥', re.IGNORECASE) from: [<function tone_marks at 0x7f9895a8c8>, <function period_comma at 0x7f9895a950>, <function colon at 0x7f9895a9d8>, <function other_punctuation at 0x7f9895aa60>]>
+2021-09-19 00:11:50,069 [DEBUG] [gtts.lang] langs: {'af': 'Afrikaans', 'ar': 'Arabic', 'bg': 'Bulgarian', 'bn': 'Bengali', 'bs': 'Bosnian', 'ca': 'Catalan', 'cs': 'Czech', 'cy': 'Welsh', 'da': 'Danish', 'de': 'German', 'el': 'Greek', 'en': 'English', 'eo': 'Esperanto', 'es': 'Spanish', 'et': 'Estonian', 'fi': 'Finnish', 'fr': 'French', 'gu': 'Gujarati', 'hi': 'Hindi', 'hr': 'Croatian', 'hu': 'Hungarian', 'hy': 'Armenian', 'id': 'Indonesian', 'is': 'Icelandic', 'it': 'Italian', 'ja': 'Japanese', 'jw': 'Javanese', 'km': 'Khmer', 'kn': 'Kannada', 'ko': 'Korean', 'la': 'Latin', 'lv': 'Latvian', 'mk': 'Macedonian', 'ml': 'Malayalam', 'mr': 'Marathi', 'my': 'Myanmar (Burmese)', 'ne': 'Nepali', 'nl': 'Dutch', 'no': 'Norwegian', 'pl': 'Polish', 'pt': 'Portuguese', 'ro': 'Romanian', 'ru': 'Russian', 'si': 'Sinhala', 'sk': 'Slovak', 'sq': 'Albanian', 'sr': 'Serbian', 'su': 'Sundanese', 'sv': 'Swedish', 'sw': 'Swahili', 'ta': 'Tamil', 'te': 'Telugu', 'th': 'Thai', 'tl': 'Filipino', 'tr': 'Turkish', 'uk': 'Ukrainian', 'ur': 'Urdu', 'vi': 'Vietnamese', 'zh-CN': 'Chinese', 'zh-TW': 'Chinese (Mandarin/Taiwan)', 'zh': 'Chinese (Mandarin)'}
