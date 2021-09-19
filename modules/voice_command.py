@@ -48,7 +48,18 @@ class VoiceCommand:
         music.play()
         os.remove(filename1)
         self.is_playing =False
+<<<<<<< HEAD
             
+=======
+    
+    def __del__(self):
+        print("Program kapandı")
+
+    def islem(second):
+        for i in range(second):
+            sleep(1)
+            pass 
+>>>>>>> 1ecc815a33d1588b72f14eccb1708dca81ce585b
     def islem(self,number):
         if number < 0:
             return False
@@ -116,6 +127,10 @@ class VoiceCommand:
                 "priority": priority
             }
             # TODO: add this vc_file at the end of the queue
+<<<<<<< HEAD
             self.queue.append(vc_file)
 
         self.last_run = time.perf_counter()
+=======
+            self.queue.append(vc_file)
+>>>>>>> 1ecc815a33d1588b72f14eccb1708dca81ce585b

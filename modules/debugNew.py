@@ -41,6 +41,14 @@ class DebugScreen(object):
     is_ultrasonic_open = False
     is_controller_open = False
     is_logger_open = False
+    camera_obj = None
+    ai_obj = None
+    log_obj = None
+
+    def __init__(self,c_o,ai_o,l_obj):
+        self.camera_obj = c_o
+        self.ai_obj = ai_o
+        self.log_obj = l_obj
 
     def ai_status(self,status):
         if status == 'Active':
@@ -51,14 +59,12 @@ class DebugScreen(object):
     
     def ai_start(self):
         if self.is_ai_open == True:
-            self.ai_obj = ai.Lexus_AI()
             self.item4 = self.Sensors.item(3)
             self.item4.setText(self._translate("ProjectLexusDebugScreen", "\t  YAPAY ZEKA : \n\t  ACIK\n"))
             self.item4.setFont(QtGui.QFont("Lucida Console", 14))
 
     def ai_close(self):
         if self.is_ai_open == False:
-            del self.ai_obj
             self.item4 = self.Sensors.item(3)
             self.item4.setText(self._translate("ProjectLexusDebugScreen", "\t  YAPAY ZEKA : \n\t  DEVRE DISI\n"))
             self.item4.setFont(QtGui.QFont("Lucida Console", 14))
@@ -72,14 +78,16 @@ class DebugScreen(object):
 
     def voice_start(self):
         if self.is_voice_open == True:
+<<<<<<< HEAD
             self.voice_obj = voice_command.VoiceCommand()
+=======
+>>>>>>> 1ecc815a33d1588b72f14eccb1708dca81ce585b
             self.item2 = self.Sensors.item(1)
             self.item2.setText(self._translate("ProjectLexusDebugScreen", "\t  SES : \n\t  ACIK\n"))
             self.item2.setFont(QtGui.QFont("Lucida Console", 14))
 
     def voice_close(self):
         if self.is_voice_open == False:
-            del self.voice_obj
             self.item2 = self.Sensors.item(1)
             self.item2.setText(self._translate("ProjectLexusDebugScreen", "\t  SES : \n\t  DEVRE DISI\n"))
             self.item2.setFont(QtGui.QFont("Lucida Console", 14))
@@ -93,16 +101,12 @@ class DebugScreen(object):
 
     def camera_start(self):
         if self.is_camera_open == True:
-            self.obje = camera.Camera()
             self.item1 = self.Sensors.item(0)
             self.item1.setText(self._translate("ProjectLexusDebugScreen", "\n\n\n\t  KAMERA : \n\t  ACIK\n"))
             self.item1.setFont(QtGui.QFont("Lucida Console", 14))
 
     def camera_close(self):
         if self.is_camera_open == False:
-            self.obje.photo_no = 0
-            del self.obje.videoCaptureObject
-            del self.obje
             self.item1 = self.Sensors.item(0)
             self.item1.setText(self._translate("ProjectLexusDebugScreen", "\n\n\n\t  KAMERA : \n\t  DEVRE DISI\n"))
             self.item1.setFont(QtGui.QFont("Lucida Console", 14))
@@ -113,17 +117,6 @@ class DebugScreen(object):
 
         elif status == 'Deactive':
             self.is_logger_open = False
-
-    def logger_start(self):
-        if self.is_logger_open == True:
-            self.log_obj = logger.LexusLogger()
-
-        self.file_log = open(config.PROJECT_DIR + "/logs/lexuslogfile.txt",encoding='utf-8')
-
-    def logger_close(self):
-        if self.is_logger_open == True:
-            self.logger.clear()
-            self.file_log.close()
     
     def vibration_status(self,status):
         if status == 'Active':
@@ -166,7 +159,7 @@ class DebugScreen(object):
 
     def save_function(self):
         try:
-            self.obje.save()
+            self.camera_obj.save()
 
         except:
             print("Camera is not opened.")
@@ -174,7 +167,6 @@ class DebugScreen(object):
     def start(self):
         __sortingEnabled = self.Sensors.isSortingEnabled()
         self.Sensors.setSortingEnabled(False)
-        
         self.voice_status('Active')
         self.voice_start()
         self.ai_status('Active')
@@ -243,13 +235,6 @@ class DebugScreen(object):
             print("Camera Closing Failed")
 
         try:
-            self.logger_status('Deactive')
-            self.logger_close()
-
-        except:
-            print("Log Closing Failed")
-
-        try:
             self.vibration_status('Deactive')
             self.vibration_close()
 
@@ -275,6 +260,8 @@ class DebugScreen(object):
         self.i = 0
         config.LINE_NUMBER = 0
 
+        self.logger.clear()
+
         try:
             self.files = glob.glob(config.PROJECT_DIR + "/photos/")
 
@@ -291,8 +278,8 @@ class DebugScreen(object):
         return self.picture_list[-1]
 
     def update(self):
-        while(self.is_camera_open == True and self.obje.photo_no != config.PHOTO_NUMBER + 1):
-            self.obje.update()
+        while(self.is_camera_open == True and self.camera_obj.photo_no != config.PHOTO_NUMBER + 1):
+            self.camera_obj.update()
             QtTest.QTest.qWait(100)
 
             self.ambulance = 0
@@ -311,7 +298,7 @@ class DebugScreen(object):
             self.traffic_light = 0
             self.traffic_sign = 0
 
-            self.picture = self.obje.get_frame()
+            self.picture = self.camera_obj.get_frame()
 
             self.picture,self.detection_list = self.ai_obj.update(self.picture)
 
@@ -424,15 +411,15 @@ class DebugScreen(object):
             QtTest.QTest.qWait(100)
             
             if self.is_camera_open == True:
-                self.obje.photo_no = self.obje.photo_no + 1
+                self.camera_obj.photo_no = self.camera_obj.photo_no + 1
 
-                if self.obje.photo_no == config.PHOTO_NUMBER:
-                    self.obje.photo_no = 0
-                    self.obje.frame_list.clear()
+                if self.camera_obj.photo_no == config.PHOTO_NUMBER:
+                    self.camera_obj.photo_no = 0
+                    self.camera_obj.frame_list.clear()
 
                 QtTest.QTest.qWait(100)
 
-                self.logger_start()
+                self.file_log = open(config.PROJECT_DIR + "/logs/lexuslogfile.txt","r")
                 self.list_Lines = self.file_log.readlines()
                 config.LINE_NUMBER = len(self.list_Lines)
 
