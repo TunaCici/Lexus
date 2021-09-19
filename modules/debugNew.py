@@ -156,7 +156,7 @@ class DebugScreen(object):
 
     def save_function(self):
         try:
-            self.obje.save()
+            self.camera_obj.save()
 
         except:
             print("Camera is not opened.")
