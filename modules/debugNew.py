@@ -175,7 +175,6 @@ class DebugScreen(object):
     def start(self):
         __sortingEnabled = self.Sensors.isSortingEnabled()
         self.Sensors.setSortingEnabled(False)
-        
         self.voice_status('Active')
         self.voice_start()
         self.ai_status('Active')

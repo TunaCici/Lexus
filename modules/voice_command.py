@@ -43,8 +43,8 @@ class VoiceCommander:
         self.islem(music.duration)
         os.remove(filename1)
         self.is_playing =False
-            def __del__(self):
-        
+    
+    def __del__(self):
         print("Program kapandı")
 
     def islem(second):
@@ -115,7 +115,3 @@ class VoiceCommander:
             }
             # TODO: add this vc_file at the end of the queue
             self.queue.append(vc_file)
-a = VoiceCommander()
-a.request("Dilara halledicez rahat ol","high")
-a.update()
-
