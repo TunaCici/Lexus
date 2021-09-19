@@ -15,7 +15,7 @@ from modules import config
 #from modules import camera
 #from modules import debugNew
 from modules import ai
-#from modules import Ultrasonic_Sensor
+from modules import ultrasonic_sensor
 #from PyQt5 import QtCore, QtGui, QtWidgets, QtTest
 
 def test_logger():
@@ -50,7 +50,12 @@ def test_camera():
     cv2.destroyAllWindows()
 
 def test_sensor():
-    print("")
+    x = ultrasonic_sensor.UltrasonicSensor(27, 22)
+    x.start()
+
+    while True:
+        print(f"Distance: {x.get_distance()}")
+        time.sleep(1/30)
 
 def test_ai():
     import cv2
@@ -78,5 +83,6 @@ if __name__ == "__main__":
     #test_config()
     #test_random_quote()
     #test_debug()
-    test_camera()
+    #test_camera()
     #test_ai()
+    test_sensor()

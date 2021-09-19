@@ -18,7 +18,6 @@ from modules import vibration
 #from modules import voice_command
 from modules import camera
 from modules import ultrasonic_sensor
-from modules import Ultra_Sonic_Sensor_pin_27_22
 
 update_rate = 24.0 # update(s) per second
 print(f"{1/update_rate * 1000}ms per run")
@@ -36,7 +35,7 @@ if __name__ == "__main__":
     main_sensor_fw = ultrasonic_sensor.UltrasonicSensor(27, 22)
     main_sensor_lf = ultrasonic_sensor.UltrasonicSensor(23, 24)
     #main_sound = voice_command.VoiceCommander()
-    main_camera = camera.Camera()
+    #main_camera = camera.Camera()
 
     # timers for sync and performance
     curr_time = time.perf_counter()
@@ -65,13 +64,15 @@ if __name__ == "__main__":
                     continue
 
                 print("start")
-                main_vib.vibration(0.1)
                 fw_dist = main_sensor_fw.get_distance()
                 lf_dist = main_sensor_lf.get_distance()
+                time.sleep(0.01)
                 print(f"fw_dist: {fw_dist}")
-                print(f"lf_dist: {lf_dist}")
-
-                
+                print(f"lf_dist: {lf_dist}")                
+                if fw_dist <= 10.0:
+                    main_vib.vibration(0.1)
+                if lf_dist <= 10.0:
+                    main_vib.vibration(0.4)
 
                 prev_time = time.perf_counter()
 

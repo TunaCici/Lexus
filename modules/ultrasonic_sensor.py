@@ -64,7 +64,7 @@ class UltrasonicSensor():
         if self.StartTime < self.StopTime:
 
             # If measurment is completed 
-            Time = self.StopTime - self.StartTime  
+            Time = self.StopTime - self.StartTime
             self.Distance = Time * self.Measurment_Factor
         else :
             self.Distance = self.Distance_Max_Error
@@ -83,7 +83,7 @@ class UltrasonicSensor():
 
         try:
             while True:
-                self.Distance = self.US_Sensor_GetDistance()
+                self.Distance = round(self.US_Sensor_GetDistance(), 4)
 
                 # sleep 0.2 seconds
 
@@ -93,7 +93,6 @@ class UltrasonicSensor():
         except KeyboardInterrupt as e:
             # clean up GPIO port  (yoksa hata verir)
             print("hello")
-            GPIO.cleanup()
             print(e)
 
     # Starting the program with a thread
@@ -105,4 +104,12 @@ class UltrasonicSensor():
         my_thread.start()
             
     def get_distance(self):
-        return round(self.Distance, 2)
+        return self.Distance
+
+if __name__ == "__main__":
+    x = UltrasonicSensor(27, 22)
+    x.start()
+
+    while True:
+        print(f"Distance: {x.get_distance()}")
+        time.sleep(0.5)
