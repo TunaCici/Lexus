@@ -10,11 +10,11 @@ else:
     # importing from main and inside the package
     import config
 
-from PyQt5 import QtTest, QtWidgets, QtCore, QtGui
 import numpy as np
 
 class Camera:
     # images
+    ret = None
     frame = None
     photo_no = 0
     frame_list = list()
@@ -31,7 +31,7 @@ class Camera:
     # This function opens the camera
     def open_camera(self):
         try:
-            self.videoCaptureObject = cv2.VideoCapture(0, cv2.CAP_DSHOW)
+            self.videoCaptureObject = cv2.VideoCapture(0)
 
         except cv2.error as error:
             print("[Error]: {}".format(error))
@@ -42,8 +42,8 @@ class Camera:
             self.open_camera()
             self.camera_control = self.running()
 
-        except:
-            print("Opening Camera Failed")
+        except Exception as e:
+            print(f"Opening Camera Failed: {e}")
         
         self.photo_no = 0
 
@@ -59,6 +59,7 @@ class Camera:
         path = config.PROJECT_DIR + "/photos/"
         name = str(self.photo_no) + '.png' # Photo file name
         if self.ret:
+            print(os.path.join(path, name))
             cv2.imwrite(os.path.join(path, name), self.get_frame())
 
     # This function updates the photo, saves it inside the frame and resizes the frame.  

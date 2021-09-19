@@ -26,6 +26,10 @@ CAMERA_RUNNING = True
 PROJECT_DIR = os.getcwd()
 
 # Controller
+WALKING_SPEED = 4 # km/h
+REACTION_DISTANCE = ((WALKING_SPEED / 10) * 3)
+FW_DIST_THRESH = 30.0
+FW_DIST_THRESH = 30.0
 
 # Logger
 LOG_FORMAT = "%(asctime)s [%(levelname)s] [%(name)s] %(message)s"

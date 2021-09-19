@@ -6,11 +6,10 @@ class Vibration:
     channel= 0
     def __init__(self, channel):
         self.channel = channel
-        GPIO.setwarnings(False)
+        GPIO.setwarnings(True)
         GPIO.setmode(GPIO.BCM)
-        GPIO.setup(channel,GPIO.OUT)
+        GPIO.setup(self.channel,GPIO.OUT)
             
-
     def islem(self,number):
         if number < 0:
             return False
@@ -18,7 +17,7 @@ class Vibration:
         GPIO.output(self.channel, GPIO.HIGH)
         self.is_runing= True
         time.sleep(number)
-        GPIO.output(self.channel,GPIO.LOW)
+        GPIO.output(self.channel, GPIO.LOW)
         self.is_runing= False
         
         return True
@@ -28,7 +27,6 @@ class Vibration:
             return True
         else:
             return False
-
 
     def vibration(self,number):
         a=threading.Thread(target=self.islem, args=(number,))
