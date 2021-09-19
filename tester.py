@@ -41,12 +41,15 @@ def test_debug():
 
 def test_camera():
     import cv2
+
     cam = cv2.VideoCapture(0)
     while True:
         ret_val, img = cam.read()
-        img = cv2.rotate(img, cv2.ROTATE_180)
+        if True: 
+            img = cv2.rotate(img, cv2.ROTATE_180)
         cv2.imshow('my webcam', img)
-        cv2.waitKey(1)
+        if cv2.waitKey(1) == 27: 
+            break  # esc to quit
     cv2.destroyAllWindows()
 
 def test_sensor():
@@ -83,6 +86,6 @@ if __name__ == "__main__":
     #test_config()
     #test_random_quote()
     #test_debug()
-    #test_camera()
+    test_camera()
     #test_ai()
-    test_sensor()
+    #test_sensor()

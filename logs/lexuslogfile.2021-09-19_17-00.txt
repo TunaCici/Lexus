@@ -1,0 +1,529 @@
+2021-09-19 16:57:37,020 [INFO] [main.py] Starting Project Lexus...
+2021-09-19 16:57:37,025 [INFO] [main.py] Current project directory: /home/pi/Desktop/Project_LeXuS
+2021-09-19 16:57:37,026 [INFO] [ai.py] Initialazing...
+2021-09-19 16:57:37,027 [INFO] [ai.py] Importing DLL(s)...
+2021-09-19 16:57:37,036 [INFO] [ai.py] Import complete.
+2021-09-19 16:57:37,037 [INFO] [ai.py] Loading the network...
+2021-09-19 16:57:37,548 [INFO] [ai.py] Network loaded.
+2021-09-19 16:57:37,550 [INFO] [ai.py] Initialazing complete.
+2021-09-19 16:57:37,552 [DEBUG] [gtts.tts] text: Merhaba yol arkadaşım
+2021-09-19 16:57:37,553 [DEBUG] [gtts.tts] tld: com
+2021-09-19 16:57:37,554 [DEBUG] [gtts.tts] lang: tr
+2021-09-19 16:57:37,555 [DEBUG] [gtts.tts] slow: False
+2021-09-19 16:57:37,556 [DEBUG] [gtts.tts] lang_check: True
+2021-09-19 16:57:37,556 [DEBUG] [gtts.tts] pre_processor_funcs: [<function tone_marks at 0x7f81095a60>, <function end_of_line at 0x7f81024510>, <function abbreviations at 0x7f81024598>, <function word_sub at 0x7f81024620>]
+2021-09-19 16:57:37,557 [DEBUG] [gtts.tts] tokenizer_func: <bound method Tokenizer.run of re.compile('(?<=\\?).|(?<=!).|(?<=？).|(?<=！).|(?<!\\.[a-z])\\. |(?<!\\.[a-z]), |(?<!\\d):|،|\\[|\\\n|。|¿|¡|\\(|;|‥|，|\\]|、|\\)|：|—|…', re.IGNORECASE) from: [<function tone_marks at 0x7f810246a8>, <function period_comma at 0x7f81024730>, <function colon at 0x7f810247b8>, <function other_punctuation at 0x7f81024840>]>
+2021-09-19 16:57:37,559 [DEBUG] [gtts.lang] langs: {'af': 'Afrikaans', 'ar': 'Arabic', 'bg': 'Bulgarian', 'bn': 'Bengali', 'bs': 'Bosnian', 'ca': 'Catalan', 'cs': 'Czech', 'cy': 'Welsh', 'da': 'Danish', 'de': 'German', 'el': 'Greek', 'en': 'English', 'eo': 'Esperanto', 'es': 'Spanish', 'et': 'Estonian', 'fi': 'Finnish', 'fr': 'French', 'gu': 'Gujarati', 'hi': 'Hindi', 'hr': 'Croatian', 'hu': 'Hungarian', 'hy': 'Armenian', 'id': 'Indonesian', 'is': 'Icelandic', 'it': 'Italian', 'ja': 'Japanese', 'jw': 'Javanese', 'km': 'Khmer', 'kn': 'Kannada', 'ko': 'Korean', 'la': 'Latin', 'lv': 'Latvian', 'mk': 'Macedonian', 'ml': 'Malayalam', 'mr': 'Marathi', 'my': 'Myanmar (Burmese)', 'ne': 'Nepali', 'nl': 'Dutch', 'no': 'Norwegian', 'pl': 'Polish', 'pt': 'Portuguese', 'ro': 'Romanian', 'ru': 'Russian', 'si': 'Sinhala', 'sk': 'Slovak', 'sq': 'Albanian', 'sr': 'Serbian', 'su': 'Sundanese', 'sv': 'Swedish', 'sw': 'Swahili', 'ta': 'Tamil', 'te': 'Telugu', 'th': 'Thai', 'tl': 'Filipino', 'tr': 'Turkish', 'uk': 'Ukrainian', 'ur': 'Urdu', 'vi': 'Vietnamese', 'zh-CN': 'Chinese', 'zh-TW': 'Chinese (Mandarin/Taiwan)', 'zh': 'Chinese (Mandarin)'}
+2021-09-19 16:57:37,560 [DEBUG] [gtts.tts] pre-processing: <function tone_marks at 0x7f81095a60>
+2021-09-19 16:57:37,562 [DEBUG] [gtts.tts] pre-processing: <function end_of_line at 0x7f81024510>
+2021-09-19 16:57:37,563 [DEBUG] [gtts.tts] pre-processing: <function abbreviations at 0x7f81024598>
+2021-09-19 16:57:37,568 [DEBUG] [gtts.tts] pre-processing: <function word_sub at 0x7f81024620>
+2021-09-19 16:57:37,569 [DEBUG] [gtts.tts] text_parts: ['Merhaba yol arkadaşım']
+2021-09-19 16:57:37,570 [DEBUG] [gtts.tts] text_parts: 1
+2021-09-19 16:57:37,572 [DEBUG] [gtts.tts] data-0: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22Merhaba%20yol%20arkada%5C%5Cu015f%5C%5Cu0131m%5C%22%2C%5C%22tr%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2021-09-19 16:57:37,581 [DEBUG] [urllib3.connectionpool] Starting new HTTPS connection (1): translate.google.com:443
+2021-09-19 16:57:38,046 [DEBUG] [urllib3.connectionpool] https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2021-09-19 16:57:38,055 [DEBUG] [gtts.tts] headers-0: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '175'}
+2021-09-19 16:57:38,056 [DEBUG] [gtts.tts] url-0: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2021-09-19 16:57:38,057 [DEBUG] [gtts.tts] status-0: 200
+2021-09-19 16:57:38,059 [DEBUG] [gtts.tts] part-0 written to <_io.BufferedWriter name='temp.mp3'>
+2021-09-19 16:57:38,060 [DEBUG] [gtts.tts] Saved to temp.mp3
+2021-09-19 16:57:39,701 [INFO] [ai.py] Updating AI.
+2021-09-19 16:57:43,102 [INFO] [ai.py] Update complete.
+2021-09-19 16:57:43,145 [DEBUG] [gtts.tts] text: dikkat, araba görüldü.
+2021-09-19 16:57:43,146 [DEBUG] [gtts.tts] tld: com
+2021-09-19 16:57:43,147 [DEBUG] [gtts.tts] lang: tr
+2021-09-19 16:57:43,148 [DEBUG] [gtts.tts] slow: False
+2021-09-19 16:57:43,149 [DEBUG] [gtts.tts] lang_check: True
+2021-09-19 16:57:43,150 [DEBUG] [gtts.tts] pre_processor_funcs: [<function tone_marks at 0x7f81095a60>, <function end_of_line at 0x7f81024510>, <function abbreviations at 0x7f81024598>, <function word_sub at 0x7f81024620>]
+2021-09-19 16:57:43,151 [DEBUG] [gtts.tts] tokenizer_func: <bound method Tokenizer.run of re.compile('(?<=\\?).|(?<=!).|(?<=？).|(?<=！).|(?<!\\.[a-z])\\. |(?<!\\.[a-z]), |(?<!\\d):|،|\\[|\\\n|。|¿|¡|\\(|;|‥|，|\\]|、|\\)|：|—|…', re.IGNORECASE) from: [<function tone_marks at 0x7f810246a8>, <function period_comma at 0x7f81024730>, <function colon at 0x7f810247b8>, <function other_punctuation at 0x7f81024840>]>
+2021-09-19 16:57:43,152 [DEBUG] [gtts.lang] langs: {'af': 'Afrikaans', 'ar': 'Arabic', 'bg': 'Bulgarian', 'bn': 'Bengali', 'bs': 'Bosnian', 'ca': 'Catalan', 'cs': 'Czech', 'cy': 'Welsh', 'da': 'Danish', 'de': 'German', 'el': 'Greek', 'en': 'English', 'eo': 'Esperanto', 'es': 'Spanish', 'et': 'Estonian', 'fi': 'Finnish', 'fr': 'French', 'gu': 'Gujarati', 'hi': 'Hindi', 'hr': 'Croatian', 'hu': 'Hungarian', 'hy': 'Armenian', 'id': 'Indonesian', 'is': 'Icelandic', 'it': 'Italian', 'ja': 'Japanese', 'jw': 'Javanese', 'km': 'Khmer', 'kn': 'Kannada', 'ko': 'Korean', 'la': 'Latin', 'lv': 'Latvian', 'mk': 'Macedonian', 'ml': 'Malayalam', 'mr': 'Marathi', 'my': 'Myanmar (Burmese)', 'ne': 'Nepali', 'nl': 'Dutch', 'no': 'Norwegian', 'pl': 'Polish', 'pt': 'Portuguese', 'ro': 'Romanian', 'ru': 'Russian', 'si': 'Sinhala', 'sk': 'Slovak', 'sq': 'Albanian', 'sr': 'Serbian', 'su': 'Sundanese', 'sv': 'Swedish', 'sw': 'Swahili', 'ta': 'Tamil', 'te': 'Telugu', 'th': 'Thai', 'tl': 'Filipino', 'tr': 'Turkish', 'uk': 'Ukrainian', 'ur': 'Urdu', 'vi': 'Vietnamese', 'zh-CN': 'Chinese', 'zh-TW': 'Chinese (Mandarin/Taiwan)', 'zh': 'Chinese (Mandarin)'}
+2021-09-19 16:57:43,155 [DEBUG] [gtts.tts] pre-processing: <function tone_marks at 0x7f81095a60>
+2021-09-19 16:57:43,156 [DEBUG] [gtts.tts] pre-processing: <function end_of_line at 0x7f81024510>
+2021-09-19 16:57:43,157 [DEBUG] [gtts.tts] pre-processing: <function abbreviations at 0x7f81024598>
+2021-09-19 16:57:43,158 [DEBUG] [gtts.tts] pre-processing: <function word_sub at 0x7f81024620>
+2021-09-19 16:57:43,159 [DEBUG] [gtts.tts] text_parts: ['dikkat, araba görüldü.']
+2021-09-19 16:57:43,160 [DEBUG] [gtts.tts] text_parts: 1
+2021-09-19 16:57:43,161 [DEBUG] [gtts.tts] data-0: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22dikkat%2C%20araba%20g%5C%5Cu00f6r%5C%5Cu00fcld%5C%5Cu00fc.%5C%22%2C%5C%22tr%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2021-09-19 16:57:43,168 [DEBUG] [urllib3.connectionpool] Starting new HTTPS connection (1): translate.google.com:443
+2021-09-19 16:57:43,743 [DEBUG] [urllib3.connectionpool] https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2021-09-19 16:57:43,756 [DEBUG] [gtts.tts] headers-0: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '188'}
+2021-09-19 16:57:43,758 [DEBUG] [gtts.tts] url-0: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2021-09-19 16:57:43,759 [DEBUG] [gtts.tts] status-0: 200
+2021-09-19 16:57:43,760 [DEBUG] [gtts.tts] part-0 written to <_io.BufferedWriter name='temp.mp3'>
+2021-09-19 16:57:43,761 [DEBUG] [gtts.tts] Saved to temp.mp3
+2021-09-19 16:57:43,851 [INFO] [ai.py] Updating AI.
+2021-09-19 16:57:47,133 [INFO] [ai.py] Update complete.
+2021-09-19 16:57:47,190 [DEBUG] [gtts.tts] text: dikkat, araba görüldü.
+2021-09-19 16:57:47,192 [DEBUG] [gtts.tts] tld: com
+2021-09-19 16:57:47,193 [DEBUG] [gtts.tts] lang: tr
+2021-09-19 16:57:47,194 [DEBUG] [gtts.tts] slow: False
+2021-09-19 16:57:47,194 [DEBUG] [gtts.tts] lang_check: True
+2021-09-19 16:57:47,196 [DEBUG] [gtts.tts] pre_processor_funcs: [<function tone_marks at 0x7f81095a60>, <function end_of_line at 0x7f81024510>, <function abbreviations at 0x7f81024598>, <function word_sub at 0x7f81024620>]
+2021-09-19 16:57:47,197 [DEBUG] [gtts.tts] tokenizer_func: <bound method Tokenizer.run of re.compile('(?<=\\?).|(?<=!).|(?<=？).|(?<=！).|(?<!\\.[a-z])\\. |(?<!\\.[a-z]), |(?<!\\d):|،|\\[|\\\n|。|¿|¡|\\(|;|‥|，|\\]|、|\\)|：|—|…', re.IGNORECASE) from: [<function tone_marks at 0x7f810246a8>, <function period_comma at 0x7f81024730>, <function colon at 0x7f810247b8>, <function other_punctuation at 0x7f81024840>]>
+2021-09-19 16:57:47,199 [DEBUG] [gtts.lang] langs: {'af': 'Afrikaans', 'ar': 'Arabic', 'bg': 'Bulgarian', 'bn': 'Bengali', 'bs': 'Bosnian', 'ca': 'Catalan', 'cs': 'Czech', 'cy': 'Welsh', 'da': 'Danish', 'de': 'German', 'el': 'Greek', 'en': 'English', 'eo': 'Esperanto', 'es': 'Spanish', 'et': 'Estonian', 'fi': 'Finnish', 'fr': 'French', 'gu': 'Gujarati', 'hi': 'Hindi', 'hr': 'Croatian', 'hu': 'Hungarian', 'hy': 'Armenian', 'id': 'Indonesian', 'is': 'Icelandic', 'it': 'Italian', 'ja': 'Japanese', 'jw': 'Javanese', 'km': 'Khmer', 'kn': 'Kannada', 'ko': 'Korean', 'la': 'Latin', 'lv': 'Latvian', 'mk': 'Macedonian', 'ml': 'Malayalam', 'mr': 'Marathi', 'my': 'Myanmar (Burmese)', 'ne': 'Nepali', 'nl': 'Dutch', 'no': 'Norwegian', 'pl': 'Polish', 'pt': 'Portuguese', 'ro': 'Romanian', 'ru': 'Russian', 'si': 'Sinhala', 'sk': 'Slovak', 'sq': 'Albanian', 'sr': 'Serbian', 'su': 'Sundanese', 'sv': 'Swedish', 'sw': 'Swahili', 'ta': 'Tamil', 'te': 'Telugu', 'th': 'Thai', 'tl': 'Filipino', 'tr': 'Turkish', 'uk': 'Ukrainian', 'ur': 'Urdu', 'vi': 'Vietnamese', 'zh-CN': 'Chinese', 'zh-TW': 'Chinese (Mandarin/Taiwan)', 'zh': 'Chinese (Mandarin)'}
+2021-09-19 16:57:47,200 [DEBUG] [gtts.tts] pre-processing: <function tone_marks at 0x7f81095a60>
+2021-09-19 16:57:47,202 [DEBUG] [gtts.tts] pre-processing: <function end_of_line at 0x7f81024510>
+2021-09-19 16:57:47,203 [DEBUG] [gtts.tts] pre-processing: <function abbreviations at 0x7f81024598>
+2021-09-19 16:57:47,204 [DEBUG] [gtts.tts] pre-processing: <function word_sub at 0x7f81024620>
+2021-09-19 16:57:47,206 [DEBUG] [gtts.tts] text_parts: ['dikkat, araba görüldü.']
+2021-09-19 16:57:47,206 [DEBUG] [gtts.tts] text_parts: 1
+2021-09-19 16:57:47,207 [DEBUG] [gtts.tts] data-0: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22dikkat%2C%20araba%20g%5C%5Cu00f6r%5C%5Cu00fcld%5C%5Cu00fc.%5C%22%2C%5C%22tr%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2021-09-19 16:57:47,215 [DEBUG] [urllib3.connectionpool] Starting new HTTPS connection (1): translate.google.com:443
+2021-09-19 16:57:47,566 [DEBUG] [urllib3.connectionpool] https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2021-09-19 16:57:47,605 [DEBUG] [gtts.tts] headers-0: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '188'}
+2021-09-19 16:57:47,607 [DEBUG] [gtts.tts] url-0: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2021-09-19 16:57:47,608 [DEBUG] [gtts.tts] status-0: 200
+2021-09-19 16:57:47,610 [DEBUG] [gtts.tts] part-0 written to <_io.BufferedWriter name='temp.mp3'>
+2021-09-19 16:57:47,611 [DEBUG] [gtts.tts] Saved to temp.mp3
+2021-09-19 16:57:47,697 [INFO] [ai.py] Updating AI.
+2021-09-19 16:58:42,437 [INFO] [main.py] Starting Project Lexus...
+2021-09-19 16:58:42,437 [INFO] [main.py] Starting Project Lexus...
+2021-09-19 16:58:42,437 [INFO] [main.py] Starting Project Lexus...
+2021-09-19 16:58:42,438 [INFO] [main.py] Current project directory: /home/pi/Desktop/Project_LeXuS
+2021-09-19 16:58:42,438 [INFO] [main.py] Current project directory: /home/pi/Desktop/Project_LeXuS
+2021-09-19 16:58:42,438 [INFO] [main.py] Current project directory: /home/pi/Desktop/Project_LeXuS
+2021-09-19 16:58:42,439 [INFO] [ai.py] Initialazing...
+2021-09-19 16:58:42,439 [INFO] [ai.py] Initialazing...
+2021-09-19 16:58:42,439 [INFO] [ai.py] Initialazing...
+2021-09-19 16:58:42,440 [INFO] [ai.py] Importing DLL(s)...
+2021-09-19 16:58:42,440 [INFO] [ai.py] Importing DLL(s)...
+2021-09-19 16:58:42,440 [INFO] [ai.py] Importing DLL(s)...
+2021-09-19 16:58:42,447 [INFO] [ai.py] Import complete.
+2021-09-19 16:58:42,447 [INFO] [ai.py] Import complete.
+2021-09-19 16:58:42,447 [INFO] [ai.py] Import complete.
+2021-09-19 16:58:42,448 [INFO] [ai.py] Loading the network...
+2021-09-19 16:58:42,448 [INFO] [ai.py] Loading the network...
+2021-09-19 16:58:42,448 [INFO] [ai.py] Loading the network...
+2021-09-19 16:58:42,955 [INFO] [ai.py] Network loaded.
+2021-09-19 16:58:42,955 [INFO] [ai.py] Network loaded.
+2021-09-19 16:58:42,955 [INFO] [ai.py] Network loaded.
+2021-09-19 16:58:42,956 [INFO] [ai.py] Initialazing complete.
+2021-09-19 16:58:42,956 [INFO] [ai.py] Initialazing complete.
+2021-09-19 16:58:42,956 [INFO] [ai.py] Initialazing complete.
+2021-09-19 16:58:42,958 [DEBUG] [gtts.tts] text: Merhaba yol arkadaşım
+2021-09-19 16:58:42,958 [DEBUG] [gtts.tts] text: Merhaba yol arkadaşım
+2021-09-19 16:58:42,958 [DEBUG] [gtts.tts] text: Merhaba yol arkadaşım
+2021-09-19 16:58:42,958 [DEBUG] [gtts.tts] tld: com
+2021-09-19 16:58:42,958 [DEBUG] [gtts.tts] tld: com
+2021-09-19 16:58:42,958 [DEBUG] [gtts.tts] tld: com
+2021-09-19 16:58:42,959 [DEBUG] [gtts.tts] lang: tr
+2021-09-19 16:58:42,959 [DEBUG] [gtts.tts] lang: tr
+2021-09-19 16:58:42,959 [DEBUG] [gtts.tts] lang: tr
+2021-09-19 16:58:42,960 [DEBUG] [gtts.tts] slow: False
+2021-09-19 16:58:42,960 [DEBUG] [gtts.tts] slow: False
+2021-09-19 16:58:42,960 [DEBUG] [gtts.tts] slow: False
+2021-09-19 16:58:42,960 [DEBUG] [gtts.tts] lang_check: True
+2021-09-19 16:58:42,960 [DEBUG] [gtts.tts] lang_check: True
+2021-09-19 16:58:42,960 [DEBUG] [gtts.tts] lang_check: True
+2021-09-19 16:58:42,961 [DEBUG] [gtts.tts] pre_processor_funcs: [<function tone_marks at 0x7f86d63a60>, <function end_of_line at 0x7f86cd6510>, <function abbreviations at 0x7f86cd6598>, <function word_sub at 0x7f86cd6620>]
+2021-09-19 16:58:42,961 [DEBUG] [gtts.tts] pre_processor_funcs: [<function tone_marks at 0x7f86d63a60>, <function end_of_line at 0x7f86cd6510>, <function abbreviations at 0x7f86cd6598>, <function word_sub at 0x7f86cd6620>]
+2021-09-19 16:58:42,961 [DEBUG] [gtts.tts] pre_processor_funcs: [<function tone_marks at 0x7f86d63a60>, <function end_of_line at 0x7f86cd6510>, <function abbreviations at 0x7f86cd6598>, <function word_sub at 0x7f86cd6620>]
+2021-09-19 16:58:42,962 [DEBUG] [gtts.tts] tokenizer_func: <bound method Tokenizer.run of re.compile('(?<=\\?).|(?<=!).|(?<=？).|(?<=！).|(?<!\\.[a-z])\\. |(?<!\\.[a-z]), |(?<!\\d):|¡|\\[|、|\\\n|\\)|…|،|—|‥|¿|\\]|\\(|，|。|：|;', re.IGNORECASE) from: [<function tone_marks at 0x7f86cd66a8>, <function period_comma at 0x7f86cd6730>, <function colon at 0x7f86cd67b8>, <function other_punctuation at 0x7f86cd6840>]>
+2021-09-19 16:58:42,962 [DEBUG] [gtts.tts] tokenizer_func: <bound method Tokenizer.run of re.compile('(?<=\\?).|(?<=!).|(?<=？).|(?<=！).|(?<!\\.[a-z])\\. |(?<!\\.[a-z]), |(?<!\\d):|¡|\\[|、|\\\n|\\)|…|،|—|‥|¿|\\]|\\(|，|。|：|;', re.IGNORECASE) from: [<function tone_marks at 0x7f86cd66a8>, <function period_comma at 0x7f86cd6730>, <function colon at 0x7f86cd67b8>, <function other_punctuation at 0x7f86cd6840>]>
+2021-09-19 16:58:42,962 [DEBUG] [gtts.tts] tokenizer_func: <bound method Tokenizer.run of re.compile('(?<=\\?).|(?<=!).|(?<=？).|(?<=！).|(?<!\\.[a-z])\\. |(?<!\\.[a-z]), |(?<!\\d):|¡|\\[|、|\\\n|\\)|…|،|—|‥|¿|\\]|\\(|，|。|：|;', re.IGNORECASE) from: [<function tone_marks at 0x7f86cd66a8>, <function period_comma at 0x7f86cd6730>, <function colon at 0x7f86cd67b8>, <function other_punctuation at 0x7f86cd6840>]>
+2021-09-19 16:58:42,963 [DEBUG] [gtts.lang] langs: {'af': 'Afrikaans', 'ar': 'Arabic', 'bg': 'Bulgarian', 'bn': 'Bengali', 'bs': 'Bosnian', 'ca': 'Catalan', 'cs': 'Czech', 'cy': 'Welsh', 'da': 'Danish', 'de': 'German', 'el': 'Greek', 'en': 'English', 'eo': 'Esperanto', 'es': 'Spanish', 'et': 'Estonian', 'fi': 'Finnish', 'fr': 'French', 'gu': 'Gujarati', 'hi': 'Hindi', 'hr': 'Croatian', 'hu': 'Hungarian', 'hy': 'Armenian', 'id': 'Indonesian', 'is': 'Icelandic', 'it': 'Italian', 'ja': 'Japanese', 'jw': 'Javanese', 'km': 'Khmer', 'kn': 'Kannada', 'ko': 'Korean', 'la': 'Latin', 'lv': 'Latvian', 'mk': 'Macedonian', 'ml': 'Malayalam', 'mr': 'Marathi', 'my': 'Myanmar (Burmese)', 'ne': 'Nepali', 'nl': 'Dutch', 'no': 'Norwegian', 'pl': 'Polish', 'pt': 'Portuguese', 'ro': 'Romanian', 'ru': 'Russian', 'si': 'Sinhala', 'sk': 'Slovak', 'sq': 'Albanian', 'sr': 'Serbian', 'su': 'Sundanese', 'sv': 'Swedish', 'sw': 'Swahili', 'ta': 'Tamil', 'te': 'Telugu', 'th': 'Thai', 'tl': 'Filipino', 'tr': 'Turkish', 'uk': 'Ukrainian', 'ur': 'Urdu', 'vi': 'Vietnamese', 'zh-CN': 'Chinese', 'zh-TW': 'Chinese (Mandarin/Taiwan)', 'zh': 'Chinese (Mandarin)'}
+2021-09-19 16:58:42,963 [DEBUG] [gtts.lang] langs: {'af': 'Afrikaans', 'ar': 'Arabic', 'bg': 'Bulgarian', 'bn': 'Bengali', 'bs': 'Bosnian', 'ca': 'Catalan', 'cs': 'Czech', 'cy': 'Welsh', 'da': 'Danish', 'de': 'German', 'el': 'Greek', 'en': 'English', 'eo': 'Esperanto', 'es': 'Spanish', 'et': 'Estonian', 'fi': 'Finnish', 'fr': 'French', 'gu': 'Gujarati', 'hi': 'Hindi', 'hr': 'Croatian', 'hu': 'Hungarian', 'hy': 'Armenian', 'id': 'Indonesian', 'is': 'Icelandic', 'it': 'Italian', 'ja': 'Japanese', 'jw': 'Javanese', 'km': 'Khmer', 'kn': 'Kannada', 'ko': 'Korean', 'la': 'Latin', 'lv': 'Latvian', 'mk': 'Macedonian', 'ml': 'Malayalam', 'mr': 'Marathi', 'my': 'Myanmar (Burmese)', 'ne': 'Nepali', 'nl': 'Dutch', 'no': 'Norwegian', 'pl': 'Polish', 'pt': 'Portuguese', 'ro': 'Romanian', 'ru': 'Russian', 'si': 'Sinhala', 'sk': 'Slovak', 'sq': 'Albanian', 'sr': 'Serbian', 'su': 'Sundanese', 'sv': 'Swedish', 'sw': 'Swahili', 'ta': 'Tamil', 'te': 'Telugu', 'th': 'Thai', 'tl': 'Filipino', 'tr': 'Turkish', 'uk': 'Ukrainian', 'ur': 'Urdu', 'vi': 'Vietnamese', 'zh-CN': 'Chinese', 'zh-TW': 'Chinese (Mandarin/Taiwan)', 'zh': 'Chinese (Mandarin)'}
+2021-09-19 16:58:42,963 [DEBUG] [gtts.lang] langs: {'af': 'Afrikaans', 'ar': 'Arabic', 'bg': 'Bulgarian', 'bn': 'Bengali', 'bs': 'Bosnian', 'ca': 'Catalan', 'cs': 'Czech', 'cy': 'Welsh', 'da': 'Danish', 'de': 'German', 'el': 'Greek', 'en': 'English', 'eo': 'Esperanto', 'es': 'Spanish', 'et': 'Estonian', 'fi': 'Finnish', 'fr': 'French', 'gu': 'Gujarati', 'hi': 'Hindi', 'hr': 'Croatian', 'hu': 'Hungarian', 'hy': 'Armenian', 'id': 'Indonesian', 'is': 'Icelandic', 'it': 'Italian', 'ja': 'Japanese', 'jw': 'Javanese', 'km': 'Khmer', 'kn': 'Kannada', 'ko': 'Korean', 'la': 'Latin', 'lv': 'Latvian', 'mk': 'Macedonian', 'ml': 'Malayalam', 'mr': 'Marathi', 'my': 'Myanmar (Burmese)', 'ne': 'Nepali', 'nl': 'Dutch', 'no': 'Norwegian', 'pl': 'Polish', 'pt': 'Portuguese', 'ro': 'Romanian', 'ru': 'Russian', 'si': 'Sinhala', 'sk': 'Slovak', 'sq': 'Albanian', 'sr': 'Serbian', 'su': 'Sundanese', 'sv': 'Swedish', 'sw': 'Swahili', 'ta': 'Tamil', 'te': 'Telugu', 'th': 'Thai', 'tl': 'Filipino', 'tr': 'Turkish', 'uk': 'Ukrainian', 'ur': 'Urdu', 'vi': 'Vietnamese', 'zh-CN': 'Chinese', 'zh-TW': 'Chinese (Mandarin/Taiwan)', 'zh': 'Chinese (Mandarin)'}
+2021-09-19 16:58:42,964 [DEBUG] [gtts.tts] pre-processing: <function tone_marks at 0x7f86d63a60>
+2021-09-19 16:58:42,964 [DEBUG] [gtts.tts] pre-processing: <function tone_marks at 0x7f86d63a60>
+2021-09-19 16:58:42,964 [DEBUG] [gtts.tts] pre-processing: <function tone_marks at 0x7f86d63a60>
+2021-09-19 16:58:42,966 [DEBUG] [gtts.tts] pre-processing: <function end_of_line at 0x7f86cd6510>
+2021-09-19 16:58:42,966 [DEBUG] [gtts.tts] pre-processing: <function end_of_line at 0x7f86cd6510>
+2021-09-19 16:58:42,966 [DEBUG] [gtts.tts] pre-processing: <function end_of_line at 0x7f86cd6510>
+2021-09-19 16:58:42,968 [DEBUG] [gtts.tts] pre-processing: <function abbreviations at 0x7f86cd6598>
+2021-09-19 16:58:42,968 [DEBUG] [gtts.tts] pre-processing: <function abbreviations at 0x7f86cd6598>
+2021-09-19 16:58:42,968 [DEBUG] [gtts.tts] pre-processing: <function abbreviations at 0x7f86cd6598>
+2021-09-19 16:58:42,971 [DEBUG] [gtts.tts] pre-processing: <function word_sub at 0x7f86cd6620>
+2021-09-19 16:58:42,971 [DEBUG] [gtts.tts] pre-processing: <function word_sub at 0x7f86cd6620>
+2021-09-19 16:58:42,971 [DEBUG] [gtts.tts] pre-processing: <function word_sub at 0x7f86cd6620>
+2021-09-19 16:58:42,973 [DEBUG] [gtts.tts] text_parts: ['Merhaba yol arkadaşım']
+2021-09-19 16:58:42,973 [DEBUG] [gtts.tts] text_parts: ['Merhaba yol arkadaşım']
+2021-09-19 16:58:42,973 [DEBUG] [gtts.tts] text_parts: ['Merhaba yol arkadaşım']
+2021-09-19 16:58:42,974 [DEBUG] [gtts.tts] text_parts: 1
+2021-09-19 16:58:42,974 [DEBUG] [gtts.tts] text_parts: 1
+2021-09-19 16:58:42,974 [DEBUG] [gtts.tts] text_parts: 1
+2021-09-19 16:58:42,975 [DEBUG] [gtts.tts] data-0: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22Merhaba%20yol%20arkada%5C%5Cu015f%5C%5Cu0131m%5C%22%2C%5C%22tr%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2021-09-19 16:58:42,975 [DEBUG] [gtts.tts] data-0: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22Merhaba%20yol%20arkada%5C%5Cu015f%5C%5Cu0131m%5C%22%2C%5C%22tr%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2021-09-19 16:58:42,975 [DEBUG] [gtts.tts] data-0: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22Merhaba%20yol%20arkada%5C%5Cu015f%5C%5Cu0131m%5C%22%2C%5C%22tr%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2021-09-19 16:58:42,982 [DEBUG] [urllib3.connectionpool] Starting new HTTPS connection (1): translate.google.com:443
+2021-09-19 16:58:42,982 [DEBUG] [urllib3.connectionpool] Starting new HTTPS connection (1): translate.google.com:443
+2021-09-19 16:58:42,982 [DEBUG] [urllib3.connectionpool] Starting new HTTPS connection (1): translate.google.com:443
+2021-09-19 16:58:43,269 [DEBUG] [urllib3.connectionpool] https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2021-09-19 16:58:43,269 [DEBUG] [urllib3.connectionpool] https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2021-09-19 16:58:43,269 [DEBUG] [urllib3.connectionpool] https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2021-09-19 16:58:43,275 [DEBUG] [gtts.tts] headers-0: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '175'}
+2021-09-19 16:58:43,275 [DEBUG] [gtts.tts] headers-0: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '175'}
+2021-09-19 16:58:43,275 [DEBUG] [gtts.tts] headers-0: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '175'}
+2021-09-19 16:58:43,276 [DEBUG] [gtts.tts] url-0: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2021-09-19 16:58:43,276 [DEBUG] [gtts.tts] url-0: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2021-09-19 16:58:43,276 [DEBUG] [gtts.tts] url-0: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2021-09-19 16:58:43,277 [DEBUG] [gtts.tts] status-0: 200
+2021-09-19 16:58:43,277 [DEBUG] [gtts.tts] status-0: 200
+2021-09-19 16:58:43,277 [DEBUG] [gtts.tts] status-0: 200
+2021-09-19 16:58:43,279 [DEBUG] [gtts.tts] part-0 written to <_io.BufferedWriter name='temp.mp3'>
+2021-09-19 16:58:43,279 [DEBUG] [gtts.tts] part-0 written to <_io.BufferedWriter name='temp.mp3'>
+2021-09-19 16:58:43,279 [DEBUG] [gtts.tts] part-0 written to <_io.BufferedWriter name='temp.mp3'>
+2021-09-19 16:58:43,280 [DEBUG] [gtts.tts] Saved to temp.mp3
+2021-09-19 16:58:43,280 [DEBUG] [gtts.tts] Saved to temp.mp3
+2021-09-19 16:58:43,280 [DEBUG] [gtts.tts] Saved to temp.mp3
+2021-09-19 16:58:56,082 [INFO] [main.py] Starting Project Lexus...
+2021-09-19 16:58:56,082 [INFO] [main.py] Starting Project Lexus...
+2021-09-19 16:58:56,082 [INFO] [main.py] Starting Project Lexus...
+2021-09-19 16:58:56,084 [INFO] [main.py] Current project directory: /home/pi/Desktop/Project_LeXuS
+2021-09-19 16:58:56,084 [INFO] [main.py] Current project directory: /home/pi/Desktop/Project_LeXuS
+2021-09-19 16:58:56,084 [INFO] [main.py] Current project directory: /home/pi/Desktop/Project_LeXuS
+2021-09-19 16:58:56,085 [INFO] [ai.py] Initialazing...
+2021-09-19 16:58:56,085 [INFO] [ai.py] Initialazing...
+2021-09-19 16:58:56,085 [INFO] [ai.py] Initialazing...
+2021-09-19 16:58:56,086 [INFO] [ai.py] Importing DLL(s)...
+2021-09-19 16:58:56,086 [INFO] [ai.py] Importing DLL(s)...
+2021-09-19 16:58:56,086 [INFO] [ai.py] Importing DLL(s)...
+2021-09-19 16:58:56,094 [INFO] [ai.py] Import complete.
+2021-09-19 16:58:56,094 [INFO] [ai.py] Import complete.
+2021-09-19 16:58:56,094 [INFO] [ai.py] Import complete.
+2021-09-19 16:58:56,096 [INFO] [ai.py] Loading the network...
+2021-09-19 16:58:56,096 [INFO] [ai.py] Loading the network...
+2021-09-19 16:58:56,096 [INFO] [ai.py] Loading the network...
+2021-09-19 16:58:56,621 [INFO] [ai.py] Network loaded.
+2021-09-19 16:58:56,621 [INFO] [ai.py] Network loaded.
+2021-09-19 16:58:56,621 [INFO] [ai.py] Network loaded.
+2021-09-19 16:58:56,622 [INFO] [ai.py] Initialazing complete.
+2021-09-19 16:58:56,622 [INFO] [ai.py] Initialazing complete.
+2021-09-19 16:58:56,622 [INFO] [ai.py] Initialazing complete.
+2021-09-19 16:58:56,624 [DEBUG] [gtts.tts] text: Merhaba yol arkadaşım
+2021-09-19 16:58:56,624 [DEBUG] [gtts.tts] text: Merhaba yol arkadaşım
+2021-09-19 16:58:56,624 [DEBUG] [gtts.tts] text: Merhaba yol arkadaşım
+2021-09-19 16:58:56,625 [DEBUG] [gtts.tts] tld: com
+2021-09-19 16:58:56,625 [DEBUG] [gtts.tts] tld: com
+2021-09-19 16:58:56,625 [DEBUG] [gtts.tts] tld: com
+2021-09-19 16:58:56,626 [DEBUG] [gtts.tts] lang: tr
+2021-09-19 16:58:56,626 [DEBUG] [gtts.tts] lang: tr
+2021-09-19 16:58:56,626 [DEBUG] [gtts.tts] lang: tr
+2021-09-19 16:58:56,626 [DEBUG] [gtts.tts] slow: False
+2021-09-19 16:58:56,626 [DEBUG] [gtts.tts] slow: False
+2021-09-19 16:58:56,626 [DEBUG] [gtts.tts] slow: False
+2021-09-19 16:58:56,627 [DEBUG] [gtts.tts] lang_check: True
+2021-09-19 16:58:56,627 [DEBUG] [gtts.tts] lang_check: True
+2021-09-19 16:58:56,627 [DEBUG] [gtts.tts] lang_check: True
+2021-09-19 16:58:56,628 [DEBUG] [gtts.tts] pre_processor_funcs: [<function tone_marks at 0x7f97d1ba60>, <function end_of_line at 0x7f97c8e510>, <function abbreviations at 0x7f97c8e598>, <function word_sub at 0x7f97c8e620>]
+2021-09-19 16:58:56,628 [DEBUG] [gtts.tts] pre_processor_funcs: [<function tone_marks at 0x7f97d1ba60>, <function end_of_line at 0x7f97c8e510>, <function abbreviations at 0x7f97c8e598>, <function word_sub at 0x7f97c8e620>]
+2021-09-19 16:58:56,628 [DEBUG] [gtts.tts] pre_processor_funcs: [<function tone_marks at 0x7f97d1ba60>, <function end_of_line at 0x7f97c8e510>, <function abbreviations at 0x7f97c8e598>, <function word_sub at 0x7f97c8e620>]
+2021-09-19 16:58:56,630 [DEBUG] [gtts.tts] tokenizer_func: <bound method Tokenizer.run of re.compile('(?<=\\?).|(?<=!).|(?<=？).|(?<=！).|(?<!\\.[a-z])\\. |(?<!\\.[a-z]), |(?<!\\d):|\\(|\\[|\\\n|…|：|‥|¿|、|\\]|—|;|。|，|،|\\)|¡', re.IGNORECASE) from: [<function tone_marks at 0x7f97c8e6a8>, <function period_comma at 0x7f97c8e730>, <function colon at 0x7f97c8e7b8>, <function other_punctuation at 0x7f97c8e840>]>
+2021-09-19 16:58:56,630 [DEBUG] [gtts.tts] tokenizer_func: <bound method Tokenizer.run of re.compile('(?<=\\?).|(?<=!).|(?<=？).|(?<=！).|(?<!\\.[a-z])\\. |(?<!\\.[a-z]), |(?<!\\d):|\\(|\\[|\\\n|…|：|‥|¿|、|\\]|—|;|。|，|،|\\)|¡', re.IGNORECASE) from: [<function tone_marks at 0x7f97c8e6a8>, <function period_comma at 0x7f97c8e730>, <function colon at 0x7f97c8e7b8>, <function other_punctuation at 0x7f97c8e840>]>
+2021-09-19 16:58:56,630 [DEBUG] [gtts.tts] tokenizer_func: <bound method Tokenizer.run of re.compile('(?<=\\?).|(?<=!).|(?<=？).|(?<=！).|(?<!\\.[a-z])\\. |(?<!\\.[a-z]), |(?<!\\d):|\\(|\\[|\\\n|…|：|‥|¿|、|\\]|—|;|。|，|،|\\)|¡', re.IGNORECASE) from: [<function tone_marks at 0x7f97c8e6a8>, <function period_comma at 0x7f97c8e730>, <function colon at 0x7f97c8e7b8>, <function other_punctuation at 0x7f97c8e840>]>
+2021-09-19 16:58:56,631 [DEBUG] [gtts.lang] langs: {'af': 'Afrikaans', 'ar': 'Arabic', 'bg': 'Bulgarian', 'bn': 'Bengali', 'bs': 'Bosnian', 'ca': 'Catalan', 'cs': 'Czech', 'cy': 'Welsh', 'da': 'Danish', 'de': 'German', 'el': 'Greek', 'en': 'English', 'eo': 'Esperanto', 'es': 'Spanish', 'et': 'Estonian', 'fi': 'Finnish', 'fr': 'French', 'gu': 'Gujarati', 'hi': 'Hindi', 'hr': 'Croatian', 'hu': 'Hungarian', 'hy': 'Armenian', 'id': 'Indonesian', 'is': 'Icelandic', 'it': 'Italian', 'ja': 'Japanese', 'jw': 'Javanese', 'km': 'Khmer', 'kn': 'Kannada', 'ko': 'Korean', 'la': 'Latin', 'lv': 'Latvian', 'mk': 'Macedonian', 'ml': 'Malayalam', 'mr': 'Marathi', 'my': 'Myanmar (Burmese)', 'ne': 'Nepali', 'nl': 'Dutch', 'no': 'Norwegian', 'pl': 'Polish', 'pt': 'Portuguese', 'ro': 'Romanian', 'ru': 'Russian', 'si': 'Sinhala', 'sk': 'Slovak', 'sq': 'Albanian', 'sr': 'Serbian', 'su': 'Sundanese', 'sv': 'Swedish', 'sw': 'Swahili', 'ta': 'Tamil', 'te': 'Telugu', 'th': 'Thai', 'tl': 'Filipino', 'tr': 'Turkish', 'uk': 'Ukrainian', 'ur': 'Urdu', 'vi': 'Vietnamese', 'zh-CN': 'Chinese', 'zh-TW': 'Chinese (Mandarin/Taiwan)', 'zh': 'Chinese (Mandarin)'}
+2021-09-19 16:58:56,631 [DEBUG] [gtts.lang] langs: {'af': 'Afrikaans', 'ar': 'Arabic', 'bg': 'Bulgarian', 'bn': 'Bengali', 'bs': 'Bosnian', 'ca': 'Catalan', 'cs': 'Czech', 'cy': 'Welsh', 'da': 'Danish', 'de': 'German', 'el': 'Greek', 'en': 'English', 'eo': 'Esperanto', 'es': 'Spanish', 'et': 'Estonian', 'fi': 'Finnish', 'fr': 'French', 'gu': 'Gujarati', 'hi': 'Hindi', 'hr': 'Croatian', 'hu': 'Hungarian', 'hy': 'Armenian', 'id': 'Indonesian', 'is': 'Icelandic', 'it': 'Italian', 'ja': 'Japanese', 'jw': 'Javanese', 'km': 'Khmer', 'kn': 'Kannada', 'ko': 'Korean', 'la': 'Latin', 'lv': 'Latvian', 'mk': 'Macedonian', 'ml': 'Malayalam', 'mr': 'Marathi', 'my': 'Myanmar (Burmese)', 'ne': 'Nepali', 'nl': 'Dutch', 'no': 'Norwegian', 'pl': 'Polish', 'pt': 'Portuguese', 'ro': 'Romanian', 'ru': 'Russian', 'si': 'Sinhala', 'sk': 'Slovak', 'sq': 'Albanian', 'sr': 'Serbian', 'su': 'Sundanese', 'sv': 'Swedish', 'sw': 'Swahili', 'ta': 'Tamil', 'te': 'Telugu', 'th': 'Thai', 'tl': 'Filipino', 'tr': 'Turkish', 'uk': 'Ukrainian', 'ur': 'Urdu', 'vi': 'Vietnamese', 'zh-CN': 'Chinese', 'zh-TW': 'Chinese (Mandarin/Taiwan)', 'zh': 'Chinese (Mandarin)'}
+2021-09-19 16:58:56,631 [DEBUG] [gtts.lang] langs: {'af': 'Afrikaans', 'ar': 'Arabic', 'bg': 'Bulgarian', 'bn': 'Bengali', 'bs': 'Bosnian', 'ca': 'Catalan', 'cs': 'Czech', 'cy': 'Welsh', 'da': 'Danish', 'de': 'German', 'el': 'Greek', 'en': 'English', 'eo': 'Esperanto', 'es': 'Spanish', 'et': 'Estonian', 'fi': 'Finnish', 'fr': 'French', 'gu': 'Gujarati', 'hi': 'Hindi', 'hr': 'Croatian', 'hu': 'Hungarian', 'hy': 'Armenian', 'id': 'Indonesian', 'is': 'Icelandic', 'it': 'Italian', 'ja': 'Japanese', 'jw': 'Javanese', 'km': 'Khmer', 'kn': 'Kannada', 'ko': 'Korean', 'la': 'Latin', 'lv': 'Latvian', 'mk': 'Macedonian', 'ml': 'Malayalam', 'mr': 'Marathi', 'my': 'Myanmar (Burmese)', 'ne': 'Nepali', 'nl': 'Dutch', 'no': 'Norwegian', 'pl': 'Polish', 'pt': 'Portuguese', 'ro': 'Romanian', 'ru': 'Russian', 'si': 'Sinhala', 'sk': 'Slovak', 'sq': 'Albanian', 'sr': 'Serbian', 'su': 'Sundanese', 'sv': 'Swedish', 'sw': 'Swahili', 'ta': 'Tamil', 'te': 'Telugu', 'th': 'Thai', 'tl': 'Filipino', 'tr': 'Turkish', 'uk': 'Ukrainian', 'ur': 'Urdu', 'vi': 'Vietnamese', 'zh-CN': 'Chinese', 'zh-TW': 'Chinese (Mandarin/Taiwan)', 'zh': 'Chinese (Mandarin)'}
+2021-09-19 16:58:56,633 [DEBUG] [gtts.tts] pre-processing: <function tone_marks at 0x7f97d1ba60>
+2021-09-19 16:58:56,633 [DEBUG] [gtts.tts] pre-processing: <function tone_marks at 0x7f97d1ba60>
+2021-09-19 16:58:56,633 [DEBUG] [gtts.tts] pre-processing: <function tone_marks at 0x7f97d1ba60>
+2021-09-19 16:58:56,636 [DEBUG] [gtts.tts] pre-processing: <function end_of_line at 0x7f97c8e510>
+2021-09-19 16:58:56,636 [DEBUG] [gtts.tts] pre-processing: <function end_of_line at 0x7f97c8e510>
+2021-09-19 16:58:56,636 [DEBUG] [gtts.tts] pre-processing: <function end_of_line at 0x7f97c8e510>
+2021-09-19 16:58:56,637 [DEBUG] [gtts.tts] pre-processing: <function abbreviations at 0x7f97c8e598>
+2021-09-19 16:58:56,637 [DEBUG] [gtts.tts] pre-processing: <function abbreviations at 0x7f97c8e598>
+2021-09-19 16:58:56,637 [DEBUG] [gtts.tts] pre-processing: <function abbreviations at 0x7f97c8e598>
+2021-09-19 16:58:56,641 [DEBUG] [gtts.tts] pre-processing: <function word_sub at 0x7f97c8e620>
+2021-09-19 16:58:56,641 [DEBUG] [gtts.tts] pre-processing: <function word_sub at 0x7f97c8e620>
+2021-09-19 16:58:56,641 [DEBUG] [gtts.tts] pre-processing: <function word_sub at 0x7f97c8e620>
+2021-09-19 16:58:56,643 [DEBUG] [gtts.tts] text_parts: ['Merhaba yol arkadaşım']
+2021-09-19 16:58:56,643 [DEBUG] [gtts.tts] text_parts: ['Merhaba yol arkadaşım']
+2021-09-19 16:58:56,643 [DEBUG] [gtts.tts] text_parts: ['Merhaba yol arkadaşım']
+2021-09-19 16:58:56,644 [DEBUG] [gtts.tts] text_parts: 1
+2021-09-19 16:58:56,644 [DEBUG] [gtts.tts] text_parts: 1
+2021-09-19 16:58:56,644 [DEBUG] [gtts.tts] text_parts: 1
+2021-09-19 16:58:56,645 [DEBUG] [gtts.tts] data-0: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22Merhaba%20yol%20arkada%5C%5Cu015f%5C%5Cu0131m%5C%22%2C%5C%22tr%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2021-09-19 16:58:56,645 [DEBUG] [gtts.tts] data-0: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22Merhaba%20yol%20arkada%5C%5Cu015f%5C%5Cu0131m%5C%22%2C%5C%22tr%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2021-09-19 16:58:56,645 [DEBUG] [gtts.tts] data-0: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22Merhaba%20yol%20arkada%5C%5Cu015f%5C%5Cu0131m%5C%22%2C%5C%22tr%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2021-09-19 16:58:56,652 [DEBUG] [urllib3.connectionpool] Starting new HTTPS connection (1): translate.google.com:443
+2021-09-19 16:58:56,652 [DEBUG] [urllib3.connectionpool] Starting new HTTPS connection (1): translate.google.com:443
+2021-09-19 16:58:56,652 [DEBUG] [urllib3.connectionpool] Starting new HTTPS connection (1): translate.google.com:443
+2021-09-19 16:58:56,989 [DEBUG] [urllib3.connectionpool] https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2021-09-19 16:58:56,989 [DEBUG] [urllib3.connectionpool] https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2021-09-19 16:58:56,989 [DEBUG] [urllib3.connectionpool] https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2021-09-19 16:58:57,028 [DEBUG] [gtts.tts] headers-0: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '175'}
+2021-09-19 16:58:57,028 [DEBUG] [gtts.tts] headers-0: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '175'}
+2021-09-19 16:58:57,028 [DEBUG] [gtts.tts] headers-0: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '175'}
+2021-09-19 16:58:57,029 [DEBUG] [gtts.tts] url-0: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2021-09-19 16:58:57,029 [DEBUG] [gtts.tts] url-0: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2021-09-19 16:58:57,029 [DEBUG] [gtts.tts] url-0: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2021-09-19 16:58:57,030 [DEBUG] [gtts.tts] status-0: 200
+2021-09-19 16:58:57,030 [DEBUG] [gtts.tts] status-0: 200
+2021-09-19 16:58:57,030 [DEBUG] [gtts.tts] status-0: 200
+2021-09-19 16:58:57,032 [DEBUG] [gtts.tts] part-0 written to <_io.BufferedWriter name='temp.mp3'>
+2021-09-19 16:58:57,032 [DEBUG] [gtts.tts] part-0 written to <_io.BufferedWriter name='temp.mp3'>
+2021-09-19 16:58:57,032 [DEBUG] [gtts.tts] part-0 written to <_io.BufferedWriter name='temp.mp3'>
+2021-09-19 16:58:57,033 [DEBUG] [gtts.tts] Saved to temp.mp3
+2021-09-19 16:58:57,033 [DEBUG] [gtts.tts] Saved to temp.mp3
+2021-09-19 16:58:57,033 [DEBUG] [gtts.tts] Saved to temp.mp3
+2021-09-19 16:59:20,564 [INFO] [main.py] Starting Project Lexus...
+2021-09-19 16:59:20,564 [INFO] [main.py] Starting Project Lexus...
+2021-09-19 16:59:20,564 [INFO] [main.py] Starting Project Lexus...
+2021-09-19 16:59:20,565 [INFO] [main.py] Current project directory: /home/pi/Desktop/Project_LeXuS
+2021-09-19 16:59:20,565 [INFO] [main.py] Current project directory: /home/pi/Desktop/Project_LeXuS
+2021-09-19 16:59:20,565 [INFO] [main.py] Current project directory: /home/pi/Desktop/Project_LeXuS
+2021-09-19 16:59:20,566 [INFO] [ai.py] Initialazing...
+2021-09-19 16:59:20,566 [INFO] [ai.py] Initialazing...
+2021-09-19 16:59:20,566 [INFO] [ai.py] Initialazing...
+2021-09-19 16:59:20,567 [INFO] [ai.py] Importing DLL(s)...
+2021-09-19 16:59:20,567 [INFO] [ai.py] Importing DLL(s)...
+2021-09-19 16:59:20,567 [INFO] [ai.py] Importing DLL(s)...
+2021-09-19 16:59:20,575 [INFO] [ai.py] Import complete.
+2021-09-19 16:59:20,575 [INFO] [ai.py] Import complete.
+2021-09-19 16:59:20,575 [INFO] [ai.py] Import complete.
+2021-09-19 16:59:20,576 [INFO] [ai.py] Loading the network...
+2021-09-19 16:59:20,576 [INFO] [ai.py] Loading the network...
+2021-09-19 16:59:20,576 [INFO] [ai.py] Loading the network...
+2021-09-19 16:59:21,071 [INFO] [ai.py] Network loaded.
+2021-09-19 16:59:21,071 [INFO] [ai.py] Network loaded.
+2021-09-19 16:59:21,071 [INFO] [ai.py] Network loaded.
+2021-09-19 16:59:21,072 [INFO] [ai.py] Initialazing complete.
+2021-09-19 16:59:21,072 [INFO] [ai.py] Initialazing complete.
+2021-09-19 16:59:21,072 [INFO] [ai.py] Initialazing complete.
+2021-09-19 16:59:21,074 [DEBUG] [gtts.tts] text: Merhaba yol arkadaşım
+2021-09-19 16:59:21,074 [DEBUG] [gtts.tts] text: Merhaba yol arkadaşım
+2021-09-19 16:59:21,074 [DEBUG] [gtts.tts] text: Merhaba yol arkadaşım
+2021-09-19 16:59:21,075 [DEBUG] [gtts.tts] tld: com
+2021-09-19 16:59:21,075 [DEBUG] [gtts.tts] tld: com
+2021-09-19 16:59:21,075 [DEBUG] [gtts.tts] tld: com
+2021-09-19 16:59:21,075 [DEBUG] [gtts.tts] lang: tr
+2021-09-19 16:59:21,075 [DEBUG] [gtts.tts] lang: tr
+2021-09-19 16:59:21,075 [DEBUG] [gtts.tts] lang: tr
+2021-09-19 16:59:21,076 [DEBUG] [gtts.tts] slow: False
+2021-09-19 16:59:21,076 [DEBUG] [gtts.tts] slow: False
+2021-09-19 16:59:21,076 [DEBUG] [gtts.tts] slow: False
+2021-09-19 16:59:21,077 [DEBUG] [gtts.tts] lang_check: True
+2021-09-19 16:59:21,077 [DEBUG] [gtts.tts] lang_check: True
+2021-09-19 16:59:21,077 [DEBUG] [gtts.tts] lang_check: True
+2021-09-19 16:59:21,077 [DEBUG] [gtts.tts] pre_processor_funcs: [<function tone_marks at 0x7f7dfb9a60>, <function end_of_line at 0x7f7df2c510>, <function abbreviations at 0x7f7df2c598>, <function word_sub at 0x7f7df2c620>]
+2021-09-19 16:59:21,077 [DEBUG] [gtts.tts] pre_processor_funcs: [<function tone_marks at 0x7f7dfb9a60>, <function end_of_line at 0x7f7df2c510>, <function abbreviations at 0x7f7df2c598>, <function word_sub at 0x7f7df2c620>]
+2021-09-19 16:59:21,077 [DEBUG] [gtts.tts] pre_processor_funcs: [<function tone_marks at 0x7f7dfb9a60>, <function end_of_line at 0x7f7df2c510>, <function abbreviations at 0x7f7df2c598>, <function word_sub at 0x7f7df2c620>]
+2021-09-19 16:59:21,078 [DEBUG] [gtts.tts] tokenizer_func: <bound method Tokenizer.run of re.compile('(?<=\\?).|(?<=!).|(?<=？).|(?<=！).|(?<!\\.[a-z])\\. |(?<!\\.[a-z]), |(?<!\\d):|\\(|\\\n|\\[|;|\\]|¿|：|，|،|、|—|\\)|…|¡|‥|。', re.IGNORECASE) from: [<function tone_marks at 0x7f7df2c6a8>, <function period_comma at 0x7f7df2c730>, <function colon at 0x7f7df2c7b8>, <function other_punctuation at 0x7f7df2c840>]>
+2021-09-19 16:59:21,078 [DEBUG] [gtts.tts] tokenizer_func: <bound method Tokenizer.run of re.compile('(?<=\\?).|(?<=!).|(?<=？).|(?<=！).|(?<!\\.[a-z])\\. |(?<!\\.[a-z]), |(?<!\\d):|\\(|\\\n|\\[|;|\\]|¿|：|，|،|、|—|\\)|…|¡|‥|。', re.IGNORECASE) from: [<function tone_marks at 0x7f7df2c6a8>, <function period_comma at 0x7f7df2c730>, <function colon at 0x7f7df2c7b8>, <function other_punctuation at 0x7f7df2c840>]>
+2021-09-19 16:59:21,078 [DEBUG] [gtts.tts] tokenizer_func: <bound method Tokenizer.run of re.compile('(?<=\\?).|(?<=!).|(?<=？).|(?<=！).|(?<!\\.[a-z])\\. |(?<!\\.[a-z]), |(?<!\\d):|\\(|\\\n|\\[|;|\\]|¿|：|，|،|、|—|\\)|…|¡|‥|。', re.IGNORECASE) from: [<function tone_marks at 0x7f7df2c6a8>, <function period_comma at 0x7f7df2c730>, <function colon at 0x7f7df2c7b8>, <function other_punctuation at 0x7f7df2c840>]>
+2021-09-19 16:59:21,079 [DEBUG] [gtts.lang] langs: {'af': 'Afrikaans', 'ar': 'Arabic', 'bg': 'Bulgarian', 'bn': 'Bengali', 'bs': 'Bosnian', 'ca': 'Catalan', 'cs': 'Czech', 'cy': 'Welsh', 'da': 'Danish', 'de': 'German', 'el': 'Greek', 'en': 'English', 'eo': 'Esperanto', 'es': 'Spanish', 'et': 'Estonian', 'fi': 'Finnish', 'fr': 'French', 'gu': 'Gujarati', 'hi': 'Hindi', 'hr': 'Croatian', 'hu': 'Hungarian', 'hy': 'Armenian', 'id': 'Indonesian', 'is': 'Icelandic', 'it': 'Italian', 'ja': 'Japanese', 'jw': 'Javanese', 'km': 'Khmer', 'kn': 'Kannada', 'ko': 'Korean', 'la': 'Latin', 'lv': 'Latvian', 'mk': 'Macedonian', 'ml': 'Malayalam', 'mr': 'Marathi', 'my': 'Myanmar (Burmese)', 'ne': 'Nepali', 'nl': 'Dutch', 'no': 'Norwegian', 'pl': 'Polish', 'pt': 'Portuguese', 'ro': 'Romanian', 'ru': 'Russian', 'si': 'Sinhala', 'sk': 'Slovak', 'sq': 'Albanian', 'sr': 'Serbian', 'su': 'Sundanese', 'sv': 'Swedish', 'sw': 'Swahili', 'ta': 'Tamil', 'te': 'Telugu', 'th': 'Thai', 'tl': 'Filipino', 'tr': 'Turkish', 'uk': 'Ukrainian', 'ur': 'Urdu', 'vi': 'Vietnamese', 'zh-CN': 'Chinese', 'zh-TW': 'Chinese (Mandarin/Taiwan)', 'zh': 'Chinese (Mandarin)'}
+2021-09-19 16:59:21,079 [DEBUG] [gtts.lang] langs: {'af': 'Afrikaans', 'ar': 'Arabic', 'bg': 'Bulgarian', 'bn': 'Bengali', 'bs': 'Bosnian', 'ca': 'Catalan', 'cs': 'Czech', 'cy': 'Welsh', 'da': 'Danish', 'de': 'German', 'el': 'Greek', 'en': 'English', 'eo': 'Esperanto', 'es': 'Spanish', 'et': 'Estonian', 'fi': 'Finnish', 'fr': 'French', 'gu': 'Gujarati', 'hi': 'Hindi', 'hr': 'Croatian', 'hu': 'Hungarian', 'hy': 'Armenian', 'id': 'Indonesian', 'is': 'Icelandic', 'it': 'Italian', 'ja': 'Japanese', 'jw': 'Javanese', 'km': 'Khmer', 'kn': 'Kannada', 'ko': 'Korean', 'la': 'Latin', 'lv': 'Latvian', 'mk': 'Macedonian', 'ml': 'Malayalam', 'mr': 'Marathi', 'my': 'Myanmar (Burmese)', 'ne': 'Nepali', 'nl': 'Dutch', 'no': 'Norwegian', 'pl': 'Polish', 'pt': 'Portuguese', 'ro': 'Romanian', 'ru': 'Russian', 'si': 'Sinhala', 'sk': 'Slovak', 'sq': 'Albanian', 'sr': 'Serbian', 'su': 'Sundanese', 'sv': 'Swedish', 'sw': 'Swahili', 'ta': 'Tamil', 'te': 'Telugu', 'th': 'Thai', 'tl': 'Filipino', 'tr': 'Turkish', 'uk': 'Ukrainian', 'ur': 'Urdu', 'vi': 'Vietnamese', 'zh-CN': 'Chinese', 'zh-TW': 'Chinese (Mandarin/Taiwan)', 'zh': 'Chinese (Mandarin)'}
+2021-09-19 16:59:21,079 [DEBUG] [gtts.lang] langs: {'af': 'Afrikaans', 'ar': 'Arabic', 'bg': 'Bulgarian', 'bn': 'Bengali', 'bs': 'Bosnian', 'ca': 'Catalan', 'cs': 'Czech', 'cy': 'Welsh', 'da': 'Danish', 'de': 'German', 'el': 'Greek', 'en': 'English', 'eo': 'Esperanto', 'es': 'Spanish', 'et': 'Estonian', 'fi': 'Finnish', 'fr': 'French', 'gu': 'Gujarati', 'hi': 'Hindi', 'hr': 'Croatian', 'hu': 'Hungarian', 'hy': 'Armenian', 'id': 'Indonesian', 'is': 'Icelandic', 'it': 'Italian', 'ja': 'Japanese', 'jw': 'Javanese', 'km': 'Khmer', 'kn': 'Kannada', 'ko': 'Korean', 'la': 'Latin', 'lv': 'Latvian', 'mk': 'Macedonian', 'ml': 'Malayalam', 'mr': 'Marathi', 'my': 'Myanmar (Burmese)', 'ne': 'Nepali', 'nl': 'Dutch', 'no': 'Norwegian', 'pl': 'Polish', 'pt': 'Portuguese', 'ro': 'Romanian', 'ru': 'Russian', 'si': 'Sinhala', 'sk': 'Slovak', 'sq': 'Albanian', 'sr': 'Serbian', 'su': 'Sundanese', 'sv': 'Swedish', 'sw': 'Swahili', 'ta': 'Tamil', 'te': 'Telugu', 'th': 'Thai', 'tl': 'Filipino', 'tr': 'Turkish', 'uk': 'Ukrainian', 'ur': 'Urdu', 'vi': 'Vietnamese', 'zh-CN': 'Chinese', 'zh-TW': 'Chinese (Mandarin/Taiwan)', 'zh': 'Chinese (Mandarin)'}
+2021-09-19 16:59:21,082 [DEBUG] [gtts.tts] pre-processing: <function tone_marks at 0x7f7dfb9a60>
+2021-09-19 16:59:21,082 [DEBUG] [gtts.tts] pre-processing: <function tone_marks at 0x7f7dfb9a60>
+2021-09-19 16:59:21,082 [DEBUG] [gtts.tts] pre-processing: <function tone_marks at 0x7f7dfb9a60>
+2021-09-19 16:59:21,084 [DEBUG] [gtts.tts] pre-processing: <function end_of_line at 0x7f7df2c510>
+2021-09-19 16:59:21,084 [DEBUG] [gtts.tts] pre-processing: <function end_of_line at 0x7f7df2c510>
+2021-09-19 16:59:21,084 [DEBUG] [gtts.tts] pre-processing: <function end_of_line at 0x7f7df2c510>
+2021-09-19 16:59:21,086 [DEBUG] [gtts.tts] pre-processing: <function abbreviations at 0x7f7df2c598>
+2021-09-19 16:59:21,086 [DEBUG] [gtts.tts] pre-processing: <function abbreviations at 0x7f7df2c598>
+2021-09-19 16:59:21,086 [DEBUG] [gtts.tts] pre-processing: <function abbreviations at 0x7f7df2c598>
+2021-09-19 16:59:21,090 [DEBUG] [gtts.tts] pre-processing: <function word_sub at 0x7f7df2c620>
+2021-09-19 16:59:21,090 [DEBUG] [gtts.tts] pre-processing: <function word_sub at 0x7f7df2c620>
+2021-09-19 16:59:21,090 [DEBUG] [gtts.tts] pre-processing: <function word_sub at 0x7f7df2c620>
+2021-09-19 16:59:21,091 [DEBUG] [gtts.tts] text_parts: ['Merhaba yol arkadaşım']
+2021-09-19 16:59:21,091 [DEBUG] [gtts.tts] text_parts: ['Merhaba yol arkadaşım']
+2021-09-19 16:59:21,091 [DEBUG] [gtts.tts] text_parts: ['Merhaba yol arkadaşım']
+2021-09-19 16:59:21,092 [DEBUG] [gtts.tts] text_parts: 1
+2021-09-19 16:59:21,092 [DEBUG] [gtts.tts] text_parts: 1
+2021-09-19 16:59:21,092 [DEBUG] [gtts.tts] text_parts: 1
+2021-09-19 16:59:21,094 [DEBUG] [gtts.tts] data-0: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22Merhaba%20yol%20arkada%5C%5Cu015f%5C%5Cu0131m%5C%22%2C%5C%22tr%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2021-09-19 16:59:21,094 [DEBUG] [gtts.tts] data-0: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22Merhaba%20yol%20arkada%5C%5Cu015f%5C%5Cu0131m%5C%22%2C%5C%22tr%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2021-09-19 16:59:21,094 [DEBUG] [gtts.tts] data-0: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22Merhaba%20yol%20arkada%5C%5Cu015f%5C%5Cu0131m%5C%22%2C%5C%22tr%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2021-09-19 16:59:21,101 [DEBUG] [urllib3.connectionpool] Starting new HTTPS connection (1): translate.google.com:443
+2021-09-19 16:59:21,101 [DEBUG] [urllib3.connectionpool] Starting new HTTPS connection (1): translate.google.com:443
+2021-09-19 16:59:21,101 [DEBUG] [urllib3.connectionpool] Starting new HTTPS connection (1): translate.google.com:443
+2021-09-19 16:59:21,704 [DEBUG] [urllib3.connectionpool] https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2021-09-19 16:59:21,704 [DEBUG] [urllib3.connectionpool] https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2021-09-19 16:59:21,704 [DEBUG] [urllib3.connectionpool] https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2021-09-19 16:59:21,716 [DEBUG] [gtts.tts] headers-0: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '175'}
+2021-09-19 16:59:21,716 [DEBUG] [gtts.tts] headers-0: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '175'}
+2021-09-19 16:59:21,716 [DEBUG] [gtts.tts] headers-0: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '175'}
+2021-09-19 16:59:21,718 [DEBUG] [gtts.tts] url-0: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2021-09-19 16:59:21,718 [DEBUG] [gtts.tts] url-0: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2021-09-19 16:59:21,718 [DEBUG] [gtts.tts] url-0: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2021-09-19 16:59:21,719 [DEBUG] [gtts.tts] status-0: 200
+2021-09-19 16:59:21,719 [DEBUG] [gtts.tts] status-0: 200
+2021-09-19 16:59:21,719 [DEBUG] [gtts.tts] status-0: 200
+2021-09-19 16:59:21,723 [DEBUG] [gtts.tts] part-0 written to <_io.BufferedWriter name='temp.mp3'>
+2021-09-19 16:59:21,723 [DEBUG] [gtts.tts] part-0 written to <_io.BufferedWriter name='temp.mp3'>
+2021-09-19 16:59:21,723 [DEBUG] [gtts.tts] part-0 written to <_io.BufferedWriter name='temp.mp3'>
+2021-09-19 16:59:21,724 [DEBUG] [gtts.tts] Saved to temp.mp3
+2021-09-19 16:59:21,724 [DEBUG] [gtts.tts] Saved to temp.mp3
+2021-09-19 16:59:21,724 [DEBUG] [gtts.tts] Saved to temp.mp3
+2021-09-19 16:59:31,762 [INFO] [main.py] Starting Project Lexus...
+2021-09-19 16:59:31,762 [INFO] [main.py] Starting Project Lexus...
+2021-09-19 16:59:31,762 [INFO] [main.py] Starting Project Lexus...
+2021-09-19 16:59:31,764 [INFO] [main.py] Current project directory: /home/pi/Desktop/Project_LeXuS
+2021-09-19 16:59:31,764 [INFO] [main.py] Current project directory: /home/pi/Desktop/Project_LeXuS
+2021-09-19 16:59:31,764 [INFO] [main.py] Current project directory: /home/pi/Desktop/Project_LeXuS
+2021-09-19 16:59:31,765 [INFO] [ai.py] Initialazing...
+2021-09-19 16:59:31,765 [INFO] [ai.py] Initialazing...
+2021-09-19 16:59:31,765 [INFO] [ai.py] Initialazing...
+2021-09-19 16:59:31,766 [INFO] [ai.py] Importing DLL(s)...
+2021-09-19 16:59:31,766 [INFO] [ai.py] Importing DLL(s)...
+2021-09-19 16:59:31,766 [INFO] [ai.py] Importing DLL(s)...
+2021-09-19 16:59:31,774 [INFO] [ai.py] Import complete.
+2021-09-19 16:59:31,774 [INFO] [ai.py] Import complete.
+2021-09-19 16:59:31,774 [INFO] [ai.py] Import complete.
+2021-09-19 16:59:31,775 [INFO] [ai.py] Loading the network...
+2021-09-19 16:59:31,775 [INFO] [ai.py] Loading the network...
+2021-09-19 16:59:31,775 [INFO] [ai.py] Loading the network...
+2021-09-19 16:59:32,293 [INFO] [ai.py] Network loaded.
+2021-09-19 16:59:32,293 [INFO] [ai.py] Network loaded.
+2021-09-19 16:59:32,293 [INFO] [ai.py] Network loaded.
+2021-09-19 16:59:32,294 [INFO] [ai.py] Initialazing complete.
+2021-09-19 16:59:32,294 [INFO] [ai.py] Initialazing complete.
+2021-09-19 16:59:32,294 [INFO] [ai.py] Initialazing complete.
+2021-09-19 16:59:32,297 [DEBUG] [gtts.tts] text: Merhaba yol arkadaşım
+2021-09-19 16:59:32,297 [DEBUG] [gtts.tts] text: Merhaba yol arkadaşım
+2021-09-19 16:59:32,297 [DEBUG] [gtts.tts] text: Merhaba yol arkadaşım
+2021-09-19 16:59:32,298 [DEBUG] [gtts.tts] tld: com
+2021-09-19 16:59:32,298 [DEBUG] [gtts.tts] tld: com
+2021-09-19 16:59:32,298 [DEBUG] [gtts.tts] tld: com
+2021-09-19 16:59:32,299 [DEBUG] [gtts.tts] lang: tr
+2021-09-19 16:59:32,299 [DEBUG] [gtts.tts] lang: tr
+2021-09-19 16:59:32,299 [DEBUG] [gtts.tts] lang: tr
+2021-09-19 16:59:32,300 [DEBUG] [gtts.tts] slow: False
+2021-09-19 16:59:32,300 [DEBUG] [gtts.tts] slow: False
+2021-09-19 16:59:32,300 [DEBUG] [gtts.tts] slow: False
+2021-09-19 16:59:32,301 [DEBUG] [gtts.tts] lang_check: True
+2021-09-19 16:59:32,301 [DEBUG] [gtts.tts] lang_check: True
+2021-09-19 16:59:32,301 [DEBUG] [gtts.tts] lang_check: True
+2021-09-19 16:59:32,302 [DEBUG] [gtts.tts] pre_processor_funcs: [<function tone_marks at 0x7f8ef3ca60>, <function end_of_line at 0x7f8eecc510>, <function abbreviations at 0x7f8eecc598>, <function word_sub at 0x7f8eecc620>]
+2021-09-19 16:59:32,302 [DEBUG] [gtts.tts] pre_processor_funcs: [<function tone_marks at 0x7f8ef3ca60>, <function end_of_line at 0x7f8eecc510>, <function abbreviations at 0x7f8eecc598>, <function word_sub at 0x7f8eecc620>]
+2021-09-19 16:59:32,302 [DEBUG] [gtts.tts] pre_processor_funcs: [<function tone_marks at 0x7f8ef3ca60>, <function end_of_line at 0x7f8eecc510>, <function abbreviations at 0x7f8eecc598>, <function word_sub at 0x7f8eecc620>]
+2021-09-19 16:59:32,303 [DEBUG] [gtts.tts] tokenizer_func: <bound method Tokenizer.run of re.compile('(?<=\\?).|(?<=!).|(?<=？).|(?<=！).|(?<!\\.[a-z])\\. |(?<!\\.[a-z]), |(?<!\\d):|\\\n|¡|\\(|—|‥|\\]|،|…|\\)|。|、|：|，|¿|\\[|;', re.IGNORECASE) from: [<function tone_marks at 0x7f8eecc6a8>, <function period_comma at 0x7f8eecc730>, <function colon at 0x7f8eecc7b8>, <function other_punctuation at 0x7f8eecc840>]>
+2021-09-19 16:59:32,303 [DEBUG] [gtts.tts] tokenizer_func: <bound method Tokenizer.run of re.compile('(?<=\\?).|(?<=!).|(?<=？).|(?<=！).|(?<!\\.[a-z])\\. |(?<!\\.[a-z]), |(?<!\\d):|\\\n|¡|\\(|—|‥|\\]|،|…|\\)|。|、|：|，|¿|\\[|;', re.IGNORECASE) from: [<function tone_marks at 0x7f8eecc6a8>, <function period_comma at 0x7f8eecc730>, <function colon at 0x7f8eecc7b8>, <function other_punctuation at 0x7f8eecc840>]>
+2021-09-19 16:59:32,303 [DEBUG] [gtts.tts] tokenizer_func: <bound method Tokenizer.run of re.compile('(?<=\\?).|(?<=!).|(?<=？).|(?<=！).|(?<!\\.[a-z])\\. |(?<!\\.[a-z]), |(?<!\\d):|\\\n|¡|\\(|—|‥|\\]|،|…|\\)|。|、|：|，|¿|\\[|;', re.IGNORECASE) from: [<function tone_marks at 0x7f8eecc6a8>, <function period_comma at 0x7f8eecc730>, <function colon at 0x7f8eecc7b8>, <function other_punctuation at 0x7f8eecc840>]>
+2021-09-19 16:59:32,304 [DEBUG] [gtts.lang] langs: {'af': 'Afrikaans', 'ar': 'Arabic', 'bg': 'Bulgarian', 'bn': 'Bengali', 'bs': 'Bosnian', 'ca': 'Catalan', 'cs': 'Czech', 'cy': 'Welsh', 'da': 'Danish', 'de': 'German', 'el': 'Greek', 'en': 'English', 'eo': 'Esperanto', 'es': 'Spanish', 'et': 'Estonian', 'fi': 'Finnish', 'fr': 'French', 'gu': 'Gujarati', 'hi': 'Hindi', 'hr': 'Croatian', 'hu': 'Hungarian', 'hy': 'Armenian', 'id': 'Indonesian', 'is': 'Icelandic', 'it': 'Italian', 'ja': 'Japanese', 'jw': 'Javanese', 'km': 'Khmer', 'kn': 'Kannada', 'ko': 'Korean', 'la': 'Latin', 'lv': 'Latvian', 'mk': 'Macedonian', 'ml': 'Malayalam', 'mr': 'Marathi', 'my': 'Myanmar (Burmese)', 'ne': 'Nepali', 'nl': 'Dutch', 'no': 'Norwegian', 'pl': 'Polish', 'pt': 'Portuguese', 'ro': 'Romanian', 'ru': 'Russian', 'si': 'Sinhala', 'sk': 'Slovak', 'sq': 'Albanian', 'sr': 'Serbian', 'su': 'Sundanese', 'sv': 'Swedish', 'sw': 'Swahili', 'ta': 'Tamil', 'te': 'Telugu', 'th': 'Thai', 'tl': 'Filipino', 'tr': 'Turkish', 'uk': 'Ukrainian', 'ur': 'Urdu', 'vi': 'Vietnamese', 'zh-CN': 'Chinese', 'zh-TW': 'Chinese (Mandarin/Taiwan)', 'zh': 'Chinese (Mandarin)'}
+2021-09-19 16:59:32,304 [DEBUG] [gtts.lang] langs: {'af': 'Afrikaans', 'ar': 'Arabic', 'bg': 'Bulgarian', 'bn': 'Bengali', 'bs': 'Bosnian', 'ca': 'Catalan', 'cs': 'Czech', 'cy': 'Welsh', 'da': 'Danish', 'de': 'German', 'el': 'Greek', 'en': 'English', 'eo': 'Esperanto', 'es': 'Spanish', 'et': 'Estonian', 'fi': 'Finnish', 'fr': 'French', 'gu': 'Gujarati', 'hi': 'Hindi', 'hr': 'Croatian', 'hu': 'Hungarian', 'hy': 'Armenian', 'id': 'Indonesian', 'is': 'Icelandic', 'it': 'Italian', 'ja': 'Japanese', 'jw': 'Javanese', 'km': 'Khmer', 'kn': 'Kannada', 'ko': 'Korean', 'la': 'Latin', 'lv': 'Latvian', 'mk': 'Macedonian', 'ml': 'Malayalam', 'mr': 'Marathi', 'my': 'Myanmar (Burmese)', 'ne': 'Nepali', 'nl': 'Dutch', 'no': 'Norwegian', 'pl': 'Polish', 'pt': 'Portuguese', 'ro': 'Romanian', 'ru': 'Russian', 'si': 'Sinhala', 'sk': 'Slovak', 'sq': 'Albanian', 'sr': 'Serbian', 'su': 'Sundanese', 'sv': 'Swedish', 'sw': 'Swahili', 'ta': 'Tamil', 'te': 'Telugu', 'th': 'Thai', 'tl': 'Filipino', 'tr': 'Turkish', 'uk': 'Ukrainian', 'ur': 'Urdu', 'vi': 'Vietnamese', 'zh-CN': 'Chinese', 'zh-TW': 'Chinese (Mandarin/Taiwan)', 'zh': 'Chinese (Mandarin)'}
+2021-09-19 16:59:32,304 [DEBUG] [gtts.lang] langs: {'af': 'Afrikaans', 'ar': 'Arabic', 'bg': 'Bulgarian', 'bn': 'Bengali', 'bs': 'Bosnian', 'ca': 'Catalan', 'cs': 'Czech', 'cy': 'Welsh', 'da': 'Danish', 'de': 'German', 'el': 'Greek', 'en': 'English', 'eo': 'Esperanto', 'es': 'Spanish', 'et': 'Estonian', 'fi': 'Finnish', 'fr': 'French', 'gu': 'Gujarati', 'hi': 'Hindi', 'hr': 'Croatian', 'hu': 'Hungarian', 'hy': 'Armenian', 'id': 'Indonesian', 'is': 'Icelandic', 'it': 'Italian', 'ja': 'Japanese', 'jw': 'Javanese', 'km': 'Khmer', 'kn': 'Kannada', 'ko': 'Korean', 'la': 'Latin', 'lv': 'Latvian', 'mk': 'Macedonian', 'ml': 'Malayalam', 'mr': 'Marathi', 'my': 'Myanmar (Burmese)', 'ne': 'Nepali', 'nl': 'Dutch', 'no': 'Norwegian', 'pl': 'Polish', 'pt': 'Portuguese', 'ro': 'Romanian', 'ru': 'Russian', 'si': 'Sinhala', 'sk': 'Slovak', 'sq': 'Albanian', 'sr': 'Serbian', 'su': 'Sundanese', 'sv': 'Swedish', 'sw': 'Swahili', 'ta': 'Tamil', 'te': 'Telugu', 'th': 'Thai', 'tl': 'Filipino', 'tr': 'Turkish', 'uk': 'Ukrainian', 'ur': 'Urdu', 'vi': 'Vietnamese', 'zh-CN': 'Chinese', 'zh-TW': 'Chinese (Mandarin/Taiwan)', 'zh': 'Chinese (Mandarin)'}
+2021-09-19 16:59:32,306 [DEBUG] [gtts.tts] pre-processing: <function tone_marks at 0x7f8ef3ca60>
+2021-09-19 16:59:32,306 [DEBUG] [gtts.tts] pre-processing: <function tone_marks at 0x7f8ef3ca60>
+2021-09-19 16:59:32,306 [DEBUG] [gtts.tts] pre-processing: <function tone_marks at 0x7f8ef3ca60>
+2021-09-19 16:59:32,308 [DEBUG] [gtts.tts] pre-processing: <function end_of_line at 0x7f8eecc510>
+2021-09-19 16:59:32,308 [DEBUG] [gtts.tts] pre-processing: <function end_of_line at 0x7f8eecc510>
+2021-09-19 16:59:32,308 [DEBUG] [gtts.tts] pre-processing: <function end_of_line at 0x7f8eecc510>
+2021-09-19 16:59:32,310 [DEBUG] [gtts.tts] pre-processing: <function abbreviations at 0x7f8eecc598>
+2021-09-19 16:59:32,310 [DEBUG] [gtts.tts] pre-processing: <function abbreviations at 0x7f8eecc598>
+2021-09-19 16:59:32,310 [DEBUG] [gtts.tts] pre-processing: <function abbreviations at 0x7f8eecc598>
+2021-09-19 16:59:32,314 [DEBUG] [gtts.tts] pre-processing: <function word_sub at 0x7f8eecc620>
+2021-09-19 16:59:32,314 [DEBUG] [gtts.tts] pre-processing: <function word_sub at 0x7f8eecc620>
+2021-09-19 16:59:32,314 [DEBUG] [gtts.tts] pre-processing: <function word_sub at 0x7f8eecc620>
+2021-09-19 16:59:32,316 [DEBUG] [gtts.tts] text_parts: ['Merhaba yol arkadaşım']
+2021-09-19 16:59:32,316 [DEBUG] [gtts.tts] text_parts: ['Merhaba yol arkadaşım']
+2021-09-19 16:59:32,316 [DEBUG] [gtts.tts] text_parts: ['Merhaba yol arkadaşım']
+2021-09-19 16:59:32,317 [DEBUG] [gtts.tts] text_parts: 1
+2021-09-19 16:59:32,317 [DEBUG] [gtts.tts] text_parts: 1
+2021-09-19 16:59:32,317 [DEBUG] [gtts.tts] text_parts: 1
+2021-09-19 16:59:32,319 [DEBUG] [gtts.tts] data-0: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22Merhaba%20yol%20arkada%5C%5Cu015f%5C%5Cu0131m%5C%22%2C%5C%22tr%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2021-09-19 16:59:32,319 [DEBUG] [gtts.tts] data-0: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22Merhaba%20yol%20arkada%5C%5Cu015f%5C%5Cu0131m%5C%22%2C%5C%22tr%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2021-09-19 16:59:32,319 [DEBUG] [gtts.tts] data-0: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22Merhaba%20yol%20arkada%5C%5Cu015f%5C%5Cu0131m%5C%22%2C%5C%22tr%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2021-09-19 16:59:32,325 [DEBUG] [urllib3.connectionpool] Starting new HTTPS connection (1): translate.google.com:443
+2021-09-19 16:59:32,325 [DEBUG] [urllib3.connectionpool] Starting new HTTPS connection (1): translate.google.com:443
+2021-09-19 16:59:32,325 [DEBUG] [urllib3.connectionpool] Starting new HTTPS connection (1): translate.google.com:443
+2021-09-19 16:59:32,669 [DEBUG] [urllib3.connectionpool] https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2021-09-19 16:59:32,669 [DEBUG] [urllib3.connectionpool] https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2021-09-19 16:59:32,669 [DEBUG] [urllib3.connectionpool] https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2021-09-19 16:59:32,675 [DEBUG] [gtts.tts] headers-0: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '175'}
+2021-09-19 16:59:32,675 [DEBUG] [gtts.tts] headers-0: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '175'}
+2021-09-19 16:59:32,675 [DEBUG] [gtts.tts] headers-0: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '175'}
+2021-09-19 16:59:32,677 [DEBUG] [gtts.tts] url-0: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2021-09-19 16:59:32,677 [DEBUG] [gtts.tts] url-0: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2021-09-19 16:59:32,677 [DEBUG] [gtts.tts] url-0: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2021-09-19 16:59:32,679 [DEBUG] [gtts.tts] status-0: 200
+2021-09-19 16:59:32,679 [DEBUG] [gtts.tts] status-0: 200
+2021-09-19 16:59:32,679 [DEBUG] [gtts.tts] status-0: 200
+2021-09-19 16:59:32,682 [DEBUG] [gtts.tts] part-0 written to <_io.BufferedWriter name='temp.mp3'>
+2021-09-19 16:59:32,682 [DEBUG] [gtts.tts] part-0 written to <_io.BufferedWriter name='temp.mp3'>
+2021-09-19 16:59:32,682 [DEBUG] [gtts.tts] part-0 written to <_io.BufferedWriter name='temp.mp3'>
+2021-09-19 16:59:32,683 [DEBUG] [gtts.tts] Saved to temp.mp3
+2021-09-19 16:59:32,683 [DEBUG] [gtts.tts] Saved to temp.mp3
+2021-09-19 16:59:32,683 [DEBUG] [gtts.tts] Saved to temp.mp3
+2021-09-19 17:00:00,195 [INFO] [main.py] Starting Project Lexus...
+2021-09-19 17:00:00,195 [INFO] [main.py] Starting Project Lexus...
+2021-09-19 17:00:00,195 [INFO] [main.py] Starting Project Lexus...
+2021-09-19 17:00:00,197 [INFO] [main.py] Current project directory: /home/pi/Desktop/Project_LeXuS
+2021-09-19 17:00:00,197 [INFO] [main.py] Current project directory: /home/pi/Desktop/Project_LeXuS
+2021-09-19 17:00:00,197 [INFO] [main.py] Current project directory: /home/pi/Desktop/Project_LeXuS
+2021-09-19 17:00:00,198 [INFO] [ai.py] Initialazing...
+2021-09-19 17:00:00,198 [INFO] [ai.py] Initialazing...
+2021-09-19 17:00:00,198 [INFO] [ai.py] Initialazing...
+2021-09-19 17:00:00,200 [INFO] [ai.py] Importing DLL(s)...
+2021-09-19 17:00:00,200 [INFO] [ai.py] Importing DLL(s)...
+2021-09-19 17:00:00,200 [INFO] [ai.py] Importing DLL(s)...
+2021-09-19 17:00:00,208 [INFO] [ai.py] Import complete.
+2021-09-19 17:00:00,208 [INFO] [ai.py] Import complete.
+2021-09-19 17:00:00,208 [INFO] [ai.py] Import complete.
+2021-09-19 17:00:00,210 [INFO] [ai.py] Loading the network...
+2021-09-19 17:00:00,210 [INFO] [ai.py] Loading the network...
+2021-09-19 17:00:00,210 [INFO] [ai.py] Loading the network...
+2021-09-19 17:00:00,723 [INFO] [ai.py] Network loaded.
+2021-09-19 17:00:00,723 [INFO] [ai.py] Network loaded.
+2021-09-19 17:00:00,723 [INFO] [ai.py] Network loaded.
+2021-09-19 17:00:00,725 [INFO] [ai.py] Initialazing complete.
+2021-09-19 17:00:00,725 [INFO] [ai.py] Initialazing complete.
+2021-09-19 17:00:00,725 [INFO] [ai.py] Initialazing complete.
+2021-09-19 17:00:00,727 [DEBUG] [gtts.tts] text: Merhaba yol arkadaşım
+2021-09-19 17:00:00,727 [DEBUG] [gtts.tts] text: Merhaba yol arkadaşım
+2021-09-19 17:00:00,727 [DEBUG] [gtts.tts] text: Merhaba yol arkadaşım
+2021-09-19 17:00:00,728 [DEBUG] [gtts.tts] tld: com
+2021-09-19 17:00:00,728 [DEBUG] [gtts.tts] tld: com
+2021-09-19 17:00:00,728 [DEBUG] [gtts.tts] tld: com
+2021-09-19 17:00:00,730 [DEBUG] [gtts.tts] lang: tr
+2021-09-19 17:00:00,730 [DEBUG] [gtts.tts] lang: tr
+2021-09-19 17:00:00,730 [DEBUG] [gtts.tts] lang: tr
+2021-09-19 17:00:00,731 [DEBUG] [gtts.tts] slow: False
+2021-09-19 17:00:00,731 [DEBUG] [gtts.tts] slow: False
+2021-09-19 17:00:00,731 [DEBUG] [gtts.tts] slow: False
+2021-09-19 17:00:00,732 [DEBUG] [gtts.tts] lang_check: True
+2021-09-19 17:00:00,732 [DEBUG] [gtts.tts] lang_check: True
+2021-09-19 17:00:00,732 [DEBUG] [gtts.tts] lang_check: True
+2021-09-19 17:00:00,733 [DEBUG] [gtts.tts] pre_processor_funcs: [<function tone_marks at 0x7f9c8bda60>, <function end_of_line at 0x7f9c84e510>, <function abbreviations at 0x7f9c84e598>, <function word_sub at 0x7f9c84e620>]
+2021-09-19 17:00:00,733 [DEBUG] [gtts.tts] pre_processor_funcs: [<function tone_marks at 0x7f9c8bda60>, <function end_of_line at 0x7f9c84e510>, <function abbreviations at 0x7f9c84e598>, <function word_sub at 0x7f9c84e620>]
+2021-09-19 17:00:00,733 [DEBUG] [gtts.tts] pre_processor_funcs: [<function tone_marks at 0x7f9c8bda60>, <function end_of_line at 0x7f9c84e510>, <function abbreviations at 0x7f9c84e598>, <function word_sub at 0x7f9c84e620>]
+2021-09-19 17:00:00,735 [DEBUG] [gtts.tts] tokenizer_func: <bound method Tokenizer.run of re.compile('(?<=\\?).|(?<=!).|(?<=？).|(?<=！).|(?<!\\.[a-z])\\. |(?<!\\.[a-z]), |(?<!\\d):|\\)|\\\n|\\(|\\]|…|¿|;|‥|、|\\[|：|，|،|—|¡|。', re.IGNORECASE) from: [<function tone_marks at 0x7f9c84e6a8>, <function period_comma at 0x7f9c84e730>, <function colon at 0x7f9c84e7b8>, <function other_punctuation at 0x7f9c84e840>]>
+2021-09-19 17:00:00,735 [DEBUG] [gtts.tts] tokenizer_func: <bound method Tokenizer.run of re.compile('(?<=\\?).|(?<=!).|(?<=？).|(?<=！).|(?<!\\.[a-z])\\. |(?<!\\.[a-z]), |(?<!\\d):|\\)|\\\n|\\(|\\]|…|¿|;|‥|、|\\[|：|，|،|—|¡|。', re.IGNORECASE) from: [<function tone_marks at 0x7f9c84e6a8>, <function period_comma at 0x7f9c84e730>, <function colon at 0x7f9c84e7b8>, <function other_punctuation at 0x7f9c84e840>]>
+2021-09-19 17:00:00,735 [DEBUG] [gtts.tts] tokenizer_func: <bound method Tokenizer.run of re.compile('(?<=\\?).|(?<=!).|(?<=？).|(?<=！).|(?<!\\.[a-z])\\. |(?<!\\.[a-z]), |(?<!\\d):|\\)|\\\n|\\(|\\]|…|¿|;|‥|、|\\[|：|，|،|—|¡|。', re.IGNORECASE) from: [<function tone_marks at 0x7f9c84e6a8>, <function period_comma at 0x7f9c84e730>, <function colon at 0x7f9c84e7b8>, <function other_punctuation at 0x7f9c84e840>]>
+2021-09-19 17:00:00,737 [DEBUG] [gtts.lang] langs: {'af': 'Afrikaans', 'ar': 'Arabic', 'bg': 'Bulgarian', 'bn': 'Bengali', 'bs': 'Bosnian', 'ca': 'Catalan', 'cs': 'Czech', 'cy': 'Welsh', 'da': 'Danish', 'de': 'German', 'el': 'Greek', 'en': 'English', 'eo': 'Esperanto', 'es': 'Spanish', 'et': 'Estonian', 'fi': 'Finnish', 'fr': 'French', 'gu': 'Gujarati', 'hi': 'Hindi', 'hr': 'Croatian', 'hu': 'Hungarian', 'hy': 'Armenian', 'id': 'Indonesian', 'is': 'Icelandic', 'it': 'Italian', 'ja': 'Japanese', 'jw': 'Javanese', 'km': 'Khmer', 'kn': 'Kannada', 'ko': 'Korean', 'la': 'Latin', 'lv': 'Latvian', 'mk': 'Macedonian', 'ml': 'Malayalam', 'mr': 'Marathi', 'my': 'Myanmar (Burmese)', 'ne': 'Nepali', 'nl': 'Dutch', 'no': 'Norwegian', 'pl': 'Polish', 'pt': 'Portuguese', 'ro': 'Romanian', 'ru': 'Russian', 'si': 'Sinhala', 'sk': 'Slovak', 'sq': 'Albanian', 'sr': 'Serbian', 'su': 'Sundanese', 'sv': 'Swedish', 'sw': 'Swahili', 'ta': 'Tamil', 'te': 'Telugu', 'th': 'Thai', 'tl': 'Filipino', 'tr': 'Turkish', 'uk': 'Ukrainian', 'ur': 'Urdu', 'vi': 'Vietnamese', 'zh-CN': 'Chinese', 'zh-TW': 'Chinese (Mandarin/Taiwan)', 'zh': 'Chinese (Mandarin)'}
+2021-09-19 17:00:00,737 [DEBUG] [gtts.lang] langs: {'af': 'Afrikaans', 'ar': 'Arabic', 'bg': 'Bulgarian', 'bn': 'Bengali', 'bs': 'Bosnian', 'ca': 'Catalan', 'cs': 'Czech', 'cy': 'Welsh', 'da': 'Danish', 'de': 'German', 'el': 'Greek', 'en': 'English', 'eo': 'Esperanto', 'es': 'Spanish', 'et': 'Estonian', 'fi': 'Finnish', 'fr': 'French', 'gu': 'Gujarati', 'hi': 'Hindi', 'hr': 'Croatian', 'hu': 'Hungarian', 'hy': 'Armenian', 'id': 'Indonesian', 'is': 'Icelandic', 'it': 'Italian', 'ja': 'Japanese', 'jw': 'Javanese', 'km': 'Khmer', 'kn': 'Kannada', 'ko': 'Korean', 'la': 'Latin', 'lv': 'Latvian', 'mk': 'Macedonian', 'ml': 'Malayalam', 'mr': 'Marathi', 'my': 'Myanmar (Burmese)', 'ne': 'Nepali', 'nl': 'Dutch', 'no': 'Norwegian', 'pl': 'Polish', 'pt': 'Portuguese', 'ro': 'Romanian', 'ru': 'Russian', 'si': 'Sinhala', 'sk': 'Slovak', 'sq': 'Albanian', 'sr': 'Serbian', 'su': 'Sundanese', 'sv': 'Swedish', 'sw': 'Swahili', 'ta': 'Tamil', 'te': 'Telugu', 'th': 'Thai', 'tl': 'Filipino', 'tr': 'Turkish', 'uk': 'Ukrainian', 'ur': 'Urdu', 'vi': 'Vietnamese', 'zh-CN': 'Chinese', 'zh-TW': 'Chinese (Mandarin/Taiwan)', 'zh': 'Chinese (Mandarin)'}
+2021-09-19 17:00:00,737 [DEBUG] [gtts.lang] langs: {'af': 'Afrikaans', 'ar': 'Arabic', 'bg': 'Bulgarian', 'bn': 'Bengali', 'bs': 'Bosnian', 'ca': 'Catalan', 'cs': 'Czech', 'cy': 'Welsh', 'da': 'Danish', 'de': 'German', 'el': 'Greek', 'en': 'English', 'eo': 'Esperanto', 'es': 'Spanish', 'et': 'Estonian', 'fi': 'Finnish', 'fr': 'French', 'gu': 'Gujarati', 'hi': 'Hindi', 'hr': 'Croatian', 'hu': 'Hungarian', 'hy': 'Armenian', 'id': 'Indonesian', 'is': 'Icelandic', 'it': 'Italian', 'ja': 'Japanese', 'jw': 'Javanese', 'km': 'Khmer', 'kn': 'Kannada', 'ko': 'Korean', 'la': 'Latin', 'lv': 'Latvian', 'mk': 'Macedonian', 'ml': 'Malayalam', 'mr': 'Marathi', 'my': 'Myanmar (Burmese)', 'ne': 'Nepali', 'nl': 'Dutch', 'no': 'Norwegian', 'pl': 'Polish', 'pt': 'Portuguese', 'ro': 'Romanian', 'ru': 'Russian', 'si': 'Sinhala', 'sk': 'Slovak', 'sq': 'Albanian', 'sr': 'Serbian', 'su': 'Sundanese', 'sv': 'Swedish', 'sw': 'Swahili', 'ta': 'Tamil', 'te': 'Telugu', 'th': 'Thai', 'tl': 'Filipino', 'tr': 'Turkish', 'uk': 'Ukrainian', 'ur': 'Urdu', 'vi': 'Vietnamese', 'zh-CN': 'Chinese', 'zh-TW': 'Chinese (Mandarin/Taiwan)', 'zh': 'Chinese (Mandarin)'}
+2021-09-19 17:00:00,738 [DEBUG] [gtts.tts] pre-processing: <function tone_marks at 0x7f9c8bda60>
+2021-09-19 17:00:00,738 [DEBUG] [gtts.tts] pre-processing: <function tone_marks at 0x7f9c8bda60>
+2021-09-19 17:00:00,738 [DEBUG] [gtts.tts] pre-processing: <function tone_marks at 0x7f9c8bda60>
+2021-09-19 17:00:00,742 [DEBUG] [gtts.tts] pre-processing: <function end_of_line at 0x7f9c84e510>
+2021-09-19 17:00:00,742 [DEBUG] [gtts.tts] pre-processing: <function end_of_line at 0x7f9c84e510>
+2021-09-19 17:00:00,742 [DEBUG] [gtts.tts] pre-processing: <function end_of_line at 0x7f9c84e510>
+2021-09-19 17:00:00,743 [DEBUG] [gtts.tts] pre-processing: <function abbreviations at 0x7f9c84e598>
+2021-09-19 17:00:00,743 [DEBUG] [gtts.tts] pre-processing: <function abbreviations at 0x7f9c84e598>
+2021-09-19 17:00:00,743 [DEBUG] [gtts.tts] pre-processing: <function abbreviations at 0x7f9c84e598>
+2021-09-19 17:00:00,747 [DEBUG] [gtts.tts] pre-processing: <function word_sub at 0x7f9c84e620>
+2021-09-19 17:00:00,747 [DEBUG] [gtts.tts] pre-processing: <function word_sub at 0x7f9c84e620>
+2021-09-19 17:00:00,747 [DEBUG] [gtts.tts] pre-processing: <function word_sub at 0x7f9c84e620>
+2021-09-19 17:00:00,750 [DEBUG] [gtts.tts] text_parts: ['Merhaba yol arkadaşım']
+2021-09-19 17:00:00,750 [DEBUG] [gtts.tts] text_parts: ['Merhaba yol arkadaşım']
+2021-09-19 17:00:00,750 [DEBUG] [gtts.tts] text_parts: ['Merhaba yol arkadaşım']
+2021-09-19 17:00:00,751 [DEBUG] [gtts.tts] text_parts: 1
+2021-09-19 17:00:00,751 [DEBUG] [gtts.tts] text_parts: 1
+2021-09-19 17:00:00,751 [DEBUG] [gtts.tts] text_parts: 1
+2021-09-19 17:00:00,753 [DEBUG] [gtts.tts] data-0: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22Merhaba%20yol%20arkada%5C%5Cu015f%5C%5Cu0131m%5C%22%2C%5C%22tr%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2021-09-19 17:00:00,753 [DEBUG] [gtts.tts] data-0: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22Merhaba%20yol%20arkada%5C%5Cu015f%5C%5Cu0131m%5C%22%2C%5C%22tr%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2021-09-19 17:00:00,753 [DEBUG] [gtts.tts] data-0: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22Merhaba%20yol%20arkada%5C%5Cu015f%5C%5Cu0131m%5C%22%2C%5C%22tr%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2021-09-19 17:00:00,760 [DEBUG] [urllib3.connectionpool] Starting new HTTPS connection (1): translate.google.com:443
+2021-09-19 17:00:00,760 [DEBUG] [urllib3.connectionpool] Starting new HTTPS connection (1): translate.google.com:443
+2021-09-19 17:00:00,760 [DEBUG] [urllib3.connectionpool] Starting new HTTPS connection (1): translate.google.com:443
+2021-09-19 17:00:01,161 [DEBUG] [urllib3.connectionpool] https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2021-09-19 17:00:01,161 [DEBUG] [urllib3.connectionpool] https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2021-09-19 17:00:01,161 [DEBUG] [urllib3.connectionpool] https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2021-09-19 17:00:01,168 [DEBUG] [gtts.tts] headers-0: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '175'}
+2021-09-19 17:00:01,168 [DEBUG] [gtts.tts] headers-0: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '175'}
+2021-09-19 17:00:01,168 [DEBUG] [gtts.tts] headers-0: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '175'}
+2021-09-19 17:00:01,170 [DEBUG] [gtts.tts] url-0: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2021-09-19 17:00:01,170 [DEBUG] [gtts.tts] url-0: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2021-09-19 17:00:01,170 [DEBUG] [gtts.tts] url-0: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2021-09-19 17:00:01,171 [DEBUG] [gtts.tts] status-0: 200
+2021-09-19 17:00:01,171 [DEBUG] [gtts.tts] status-0: 200
+2021-09-19 17:00:01,171 [DEBUG] [gtts.tts] status-0: 200
+2021-09-19 17:00:01,174 [DEBUG] [gtts.tts] part-0 written to <_io.BufferedWriter name='temp.mp3'>
+2021-09-19 17:00:01,174 [DEBUG] [gtts.tts] part-0 written to <_io.BufferedWriter name='temp.mp3'>
+2021-09-19 17:00:01,174 [DEBUG] [gtts.tts] part-0 written to <_io.BufferedWriter name='temp.mp3'>
+2021-09-19 17:00:01,176 [DEBUG] [gtts.tts] Saved to temp.mp3
+2021-09-19 17:00:01,176 [DEBUG] [gtts.tts] Saved to temp.mp3
+2021-09-19 17:00:01,176 [DEBUG] [gtts.tts] Saved to temp.mp3

@@ -1,0 +1,32 @@
+2021-09-19 17:40:28,792 [DEBUG] [PIL.TiffImagePlugin] tag: ImageDescription (270) - type: string (2) Tag Location: 22 - Data Location: 134 - value: b'                               \x00'
+2021-09-19 17:40:28,797 [DEBUG] [PIL.TiffImagePlugin] tag: Make (271) - type: string (2) Tag Location: 34 - Data Location: 166 - value: b'Canon\x00'
+2021-09-19 17:40:28,798 [DEBUG] [PIL.TiffImagePlugin] tag: Model (272) - type: string (2) Tag Location: 46 - Data Location: 172 - value: b'Canon PowerShot S95\x00'
+2021-09-19 17:40:28,799 [DEBUG] [PIL.TiffImagePlugin] tag: Orientation (274) - type: short (3) - value: b'\x00\x01'
+2021-09-19 17:40:28,800 [DEBUG] [PIL.TiffImagePlugin] tag: XResolution (282) - type: rational (5) Tag Location: 70 - Data Location: 192 - value: b'\x00\x00\x00H\x00\x00\x00\x01'
+2021-09-19 17:40:28,802 [DEBUG] [PIL.TiffImagePlugin] tag: YResolution (283) - type: rational (5) Tag Location: 82 - Data Location: 200 - value: b'\x00\x00\x00H\x00\x00\x00\x01'
+2021-09-19 17:40:28,803 [DEBUG] [PIL.TiffImagePlugin] tag: ResolutionUnit (296) - type: short (3) - value: b'\x00\x02'
+2021-09-19 17:40:28,806 [DEBUG] [PIL.TiffImagePlugin] tag: Software (305) - type: string (2) Tag Location: 106 - Data Location: 208 - value: b'Photos 1.0\x00'
+2021-09-19 17:40:28,807 [DEBUG] [PIL.TiffImagePlugin] tag: DateTime (306) - type: string (2) Tag Location: 118 - Data Location: 220 - value: b'2014:09:19 16:08:30\x00'
+2021-09-19 17:40:28,808 [DEBUG] [PIL.TiffImagePlugin] tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00\xf0'
+2021-09-19 17:40:33,634 [DEBUG] [gtts.tts] text: Merhaba yol arkadaşım
+2021-09-19 17:40:33,637 [DEBUG] [gtts.tts] tld: com
+2021-09-19 17:40:33,638 [DEBUG] [gtts.tts] lang: tr
+2021-09-19 17:40:33,639 [DEBUG] [gtts.tts] slow: False
+2021-09-19 17:40:33,642 [DEBUG] [gtts.tts] lang_check: True
+2021-09-19 17:40:33,642 [DEBUG] [gtts.tts] pre_processor_funcs: [<function tone_marks at 0x7f65955e18>, <function end_of_line at 0x7f65966840>, <function abbreviations at 0x7f659668c8>, <function word_sub at 0x7f65966950>]
+2021-09-19 17:40:33,643 [DEBUG] [gtts.tts] tokenizer_func: <bound method Tokenizer.run of re.compile('(?<=\\?).|(?<=!).|(?<=？).|(?<=！).|(?<!\\.[a-z])\\. |(?<!\\.[a-z]), |(?<!\\d):|\\(|‥|：|，|\\)|\\]|—|;|。|\\\n|、|\\[|…|¡|،|¿', re.IGNORECASE) from: [<function tone_marks at 0x7f659669d8>, <function period_comma at 0x7f65966a60>, <function colon at 0x7f65966ae8>, <function other_punctuation at 0x7f65966b70>]>
+2021-09-19 17:40:33,644 [DEBUG] [gtts.lang] langs: {'af': 'Afrikaans', 'ar': 'Arabic', 'bg': 'Bulgarian', 'bn': 'Bengali', 'bs': 'Bosnian', 'ca': 'Catalan', 'cs': 'Czech', 'cy': 'Welsh', 'da': 'Danish', 'de': 'German', 'el': 'Greek', 'en': 'English', 'eo': 'Esperanto', 'es': 'Spanish', 'et': 'Estonian', 'fi': 'Finnish', 'fr': 'French', 'gu': 'Gujarati', 'hi': 'Hindi', 'hr': 'Croatian', 'hu': 'Hungarian', 'hy': 'Armenian', 'id': 'Indonesian', 'is': 'Icelandic', 'it': 'Italian', 'ja': 'Japanese', 'jw': 'Javanese', 'km': 'Khmer', 'kn': 'Kannada', 'ko': 'Korean', 'la': 'Latin', 'lv': 'Latvian', 'mk': 'Macedonian', 'ml': 'Malayalam', 'mr': 'Marathi', 'my': 'Myanmar (Burmese)', 'ne': 'Nepali', 'nl': 'Dutch', 'no': 'Norwegian', 'pl': 'Polish', 'pt': 'Portuguese', 'ro': 'Romanian', 'ru': 'Russian', 'si': 'Sinhala', 'sk': 'Slovak', 'sq': 'Albanian', 'sr': 'Serbian', 'su': 'Sundanese', 'sv': 'Swedish', 'sw': 'Swahili', 'ta': 'Tamil', 'te': 'Telugu', 'th': 'Thai', 'tl': 'Filipino', 'tr': 'Turkish', 'uk': 'Ukrainian', 'ur': 'Urdu', 'vi': 'Vietnamese', 'zh-CN': 'Chinese', 'zh-TW': 'Chinese (Mandarin/Taiwan)', 'zh': 'Chinese (Mandarin)'}
+2021-09-19 17:40:33,645 [DEBUG] [gtts.tts] pre-processing: <function tone_marks at 0x7f65955e18>
+2021-09-19 17:40:33,648 [DEBUG] [gtts.tts] pre-processing: <function end_of_line at 0x7f65966840>
+2021-09-19 17:40:33,650 [DEBUG] [gtts.tts] pre-processing: <function abbreviations at 0x7f659668c8>
+2021-09-19 17:40:33,654 [DEBUG] [gtts.tts] pre-processing: <function word_sub at 0x7f65966950>
+2021-09-19 17:40:33,655 [DEBUG] [gtts.tts] text_parts: ['Merhaba yol arkadaşım']
+2021-09-19 17:40:33,656 [DEBUG] [gtts.tts] text_parts: 1
+2021-09-19 17:40:33,658 [DEBUG] [gtts.tts] data-0: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22Merhaba%20yol%20arkada%5C%5Cu015f%5C%5Cu0131m%5C%22%2C%5C%22tr%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2021-09-19 17:40:33,670 [DEBUG] [urllib3.connectionpool] Starting new HTTPS connection (1): translate.google.com:443
+2021-09-19 17:40:33,954 [DEBUG] [urllib3.connectionpool] https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2021-09-19 17:40:33,964 [DEBUG] [gtts.tts] headers-0: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '175'}
+2021-09-19 17:40:33,966 [DEBUG] [gtts.tts] url-0: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2021-09-19 17:40:33,967 [DEBUG] [gtts.tts] status-0: 200
+2021-09-19 17:40:33,971 [DEBUG] [gtts.tts] part-0 written to <_io.BufferedWriter name='temp.mp3'>
+2021-09-19 17:40:33,973 [DEBUG] [gtts.tts] Saved to temp.mp3

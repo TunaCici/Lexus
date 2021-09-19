@@ -1,0 +1,22 @@
+2021-09-19 17:03:20,262 [INFO] [ai.py] Initialazing...
+2021-09-19 17:03:20,263 [INFO] [ai.py] Importing DLL(s)...
+2021-09-19 17:03:20,271 [INFO] [ai.py] Import complete.
+2021-09-19 17:03:20,271 [INFO] [ai.py] Loading the network...
+2021-09-19 17:03:20,782 [INFO] [ai.py] Network loaded.
+2021-09-19 17:03:20,783 [INFO] [ai.py] Initialazing complete.
+2021-09-19 17:03:24,425 [INFO] [ai.py] Updating AI.
+2021-09-19 17:03:27,931 [INFO] [ai.py] Update complete.
+2021-09-19 17:03:27,965 [INFO] [ai.py] Updating AI.
+2021-09-19 17:03:31,288 [INFO] [ai.py] Update complete.
+2021-09-19 17:03:31,346 [INFO] [ai.py] Updating AI.
+2021-09-19 17:03:34,672 [INFO] [ai.py] Update complete.
+2021-09-19 17:03:34,820 [INFO] [ai.py] Updating AI.
+2021-09-19 17:04:25,324 [INFO] [ai.py] Initialazing...
+2021-09-19 17:04:25,324 [INFO] [ai.py] Importing DLL(s)...
+2021-09-19 17:04:25,334 [INFO] [ai.py] Import complete.
+2021-09-19 17:04:25,335 [INFO] [ai.py] Loading the network...
+2021-09-19 17:04:25,853 [INFO] [ai.py] Network loaded.
+2021-09-19 17:04:25,853 [INFO] [ai.py] Initialazing complete.
+2021-09-19 17:04:29,393 [INFO] [ai.py] Updating AI.
+2021-09-19 17:04:32,663 [INFO] [ai.py] Update complete.
+2021-09-19 17:04:32,690 [INFO] [ai.py] Updating AI.

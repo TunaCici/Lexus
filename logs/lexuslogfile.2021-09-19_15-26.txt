@@ -1,0 +1,383 @@
+2021-09-19 15:27:34,661 [INFO] [main.py] Starting Project Lexus...
+2021-09-19 15:27:34,665 [INFO] [main.py] Current project directory: /home/pi/Desktop/Project_LeXuS
+2021-09-19 15:27:34,667 [INFO] [ai.py] Initialazing...
+2021-09-19 15:27:34,669 [INFO] [ai.py] Importing DLL(s)...
+2021-09-19 15:27:34,700 [INFO] [ai.py] Import complete.
+2021-09-19 15:27:34,701 [INFO] [ai.py] Loading the network...
+2021-09-19 15:27:35,266 [INFO] [ai.py] [class_colors] names is: <class 'list'>
+2021-09-19 15:27:35,269 [INFO] [ai.py] Network loaded.
+2021-09-19 15:27:35,270 [INFO] [ai.py] Initialazing complete.
+2021-09-19 15:27:35,272 [DEBUG] [gtts.tts] text: Merhaba yol arkadaşım
+2021-09-19 15:27:35,272 [DEBUG] [gtts.tts] tld: com
+2021-09-19 15:27:35,273 [DEBUG] [gtts.tts] lang: tr
+2021-09-19 15:27:35,274 [DEBUG] [gtts.tts] slow: False
+2021-09-19 15:27:35,275 [DEBUG] [gtts.tts] lang_check: True
+2021-09-19 15:27:35,275 [DEBUG] [gtts.tts] pre_processor_funcs: [<function tone_marks at 0x7fa2fccc80>, <function end_of_line at 0x7fa2fd8730>, <function abbreviations at 0x7fa2fd87b8>, <function word_sub at 0x7fa2fd8840>]
+2021-09-19 15:27:35,276 [DEBUG] [gtts.tts] tokenizer_func: <bound method Tokenizer.run of re.compile('(?<=\\?).|(?<=!).|(?<=？).|(?<=！).|(?<!\\.[a-z])\\. |(?<!\\.[a-z]), |(?<!\\d):|‥|：|¡|—|\\(|\\]|،|\\)|、|…|\\[|;|¿|。|\\\n|，', re.IGNORECASE) from: [<function tone_marks at 0x7fa2fd88c8>, <function period_comma at 0x7fa2fd8950>, <function colon at 0x7fa2fd89d8>, <function other_punctuation at 0x7fa2fd8a60>]>
+2021-09-19 15:27:35,277 [DEBUG] [gtts.lang] langs: {'af': 'Afrikaans', 'ar': 'Arabic', 'bg': 'Bulgarian', 'bn': 'Bengali', 'bs': 'Bosnian', 'ca': 'Catalan', 'cs': 'Czech', 'cy': 'Welsh', 'da': 'Danish', 'de': 'German', 'el': 'Greek', 'en': 'English', 'eo': 'Esperanto', 'es': 'Spanish', 'et': 'Estonian', 'fi': 'Finnish', 'fr': 'French', 'gu': 'Gujarati', 'hi': 'Hindi', 'hr': 'Croatian', 'hu': 'Hungarian', 'hy': 'Armenian', 'id': 'Indonesian', 'is': 'Icelandic', 'it': 'Italian', 'ja': 'Japanese', 'jw': 'Javanese', 'km': 'Khmer', 'kn': 'Kannada', 'ko': 'Korean', 'la': 'Latin', 'lv': 'Latvian', 'mk': 'Macedonian', 'ml': 'Malayalam', 'mr': 'Marathi', 'my': 'Myanmar (Burmese)', 'ne': 'Nepali', 'nl': 'Dutch', 'no': 'Norwegian', 'pl': 'Polish', 'pt': 'Portuguese', 'ro': 'Romanian', 'ru': 'Russian', 'si': 'Sinhala', 'sk': 'Slovak', 'sq': 'Albanian', 'sr': 'Serbian', 'su': 'Sundanese', 'sv': 'Swedish', 'sw': 'Swahili', 'ta': 'Tamil', 'te': 'Telugu', 'th': 'Thai', 'tl': 'Filipino', 'tr': 'Turkish', 'uk': 'Ukrainian', 'ur': 'Urdu', 'vi': 'Vietnamese', 'zh-CN': 'Chinese', 'zh-TW': 'Chinese (Mandarin/Taiwan)', 'zh': 'Chinese (Mandarin)'}
+2021-09-19 15:27:35,278 [DEBUG] [gtts.tts] pre-processing: <function tone_marks at 0x7fa2fccc80>
+2021-09-19 15:27:35,281 [DEBUG] [gtts.tts] pre-processing: <function end_of_line at 0x7fa2fd8730>
+2021-09-19 15:27:35,282 [DEBUG] [gtts.tts] pre-processing: <function abbreviations at 0x7fa2fd87b8>
+2021-09-19 15:27:35,286 [DEBUG] [gtts.tts] pre-processing: <function word_sub at 0x7fa2fd8840>
+2021-09-19 15:27:35,288 [DEBUG] [gtts.tts] text_parts: ['Merhaba yol arkadaşım']
+2021-09-19 15:27:35,289 [DEBUG] [gtts.tts] text_parts: 1
+2021-09-19 15:27:35,290 [DEBUG] [gtts.tts] data-0: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22Merhaba%20yol%20arkada%5C%5Cu015f%5C%5Cu0131m%5C%22%2C%5C%22tr%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2021-09-19 15:27:35,301 [DEBUG] [urllib3.connectionpool] Starting new HTTPS connection (1): translate.google.com:443
+2021-09-19 15:27:35,543 [DEBUG] [urllib3.connectionpool] https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2021-09-19 15:27:35,557 [DEBUG] [gtts.tts] headers-0: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '175'}
+2021-09-19 15:27:35,559 [DEBUG] [gtts.tts] url-0: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2021-09-19 15:27:35,559 [DEBUG] [gtts.tts] status-0: 200
+2021-09-19 15:27:35,562 [DEBUG] [gtts.tts] part-0 written to <_io.BufferedWriter name='temp.mp3'>
+2021-09-19 15:27:35,563 [DEBUG] [gtts.tts] Saved to temp.mp3
+2021-09-19 15:27:38,179 [DEBUG] [gtts.tts] text: Solunuz problemli
+2021-09-19 15:27:38,183 [DEBUG] [gtts.tts] tld: com
+2021-09-19 15:27:38,185 [DEBUG] [gtts.tts] lang: tr
+2021-09-19 15:27:38,187 [DEBUG] [gtts.tts] slow: False
+2021-09-19 15:27:38,188 [DEBUG] [gtts.tts] lang_check: True
+2021-09-19 15:27:38,189 [DEBUG] [gtts.tts] pre_processor_funcs: [<function tone_marks at 0x7fa2fccc80>, <function end_of_line at 0x7fa2fd8730>, <function abbreviations at 0x7fa2fd87b8>, <function word_sub at 0x7fa2fd8840>]
+2021-09-19 15:27:38,190 [DEBUG] [gtts.tts] tokenizer_func: <bound method Tokenizer.run of re.compile('(?<=\\?).|(?<=!).|(?<=？).|(?<=！).|(?<!\\.[a-z])\\. |(?<!\\.[a-z]), |(?<!\\d):|‥|：|¡|—|\\(|\\]|،|\\)|、|…|\\[|;|¿|。|\\\n|，', re.IGNORECASE) from: [<function tone_marks at 0x7fa2fd88c8>, <function period_comma at 0x7fa2fd8950>, <function colon at 0x7fa2fd89d8>, <function other_punctuation at 0x7fa2fd8a60>]>
+2021-09-19 15:27:38,192 [DEBUG] [gtts.lang] langs: {'af': 'Afrikaans', 'ar': 'Arabic', 'bg': 'Bulgarian', 'bn': 'Bengali', 'bs': 'Bosnian', 'ca': 'Catalan', 'cs': 'Czech', 'cy': 'Welsh', 'da': 'Danish', 'de': 'German', 'el': 'Greek', 'en': 'English', 'eo': 'Esperanto', 'es': 'Spanish', 'et': 'Estonian', 'fi': 'Finnish', 'fr': 'French', 'gu': 'Gujarati', 'hi': 'Hindi', 'hr': 'Croatian', 'hu': 'Hungarian', 'hy': 'Armenian', 'id': 'Indonesian', 'is': 'Icelandic', 'it': 'Italian', 'ja': 'Japanese', 'jw': 'Javanese', 'km': 'Khmer', 'kn': 'Kannada', 'ko': 'Korean', 'la': 'Latin', 'lv': 'Latvian', 'mk': 'Macedonian', 'ml': 'Malayalam', 'mr': 'Marathi', 'my': 'Myanmar (Burmese)', 'ne': 'Nepali', 'nl': 'Dutch', 'no': 'Norwegian', 'pl': 'Polish', 'pt': 'Portuguese', 'ro': 'Romanian', 'ru': 'Russian', 'si': 'Sinhala', 'sk': 'Slovak', 'sq': 'Albanian', 'sr': 'Serbian', 'su': 'Sundanese', 'sv': 'Swedish', 'sw': 'Swahili', 'ta': 'Tamil', 'te': 'Telugu', 'th': 'Thai', 'tl': 'Filipino', 'tr': 'Turkish', 'uk': 'Ukrainian', 'ur': 'Urdu', 'vi': 'Vietnamese', 'zh-CN': 'Chinese', 'zh-TW': 'Chinese (Mandarin/Taiwan)', 'zh': 'Chinese (Mandarin)'}
+2021-09-19 15:27:38,196 [DEBUG] [gtts.tts] pre-processing: <function tone_marks at 0x7fa2fccc80>
+2021-09-19 15:27:38,199 [DEBUG] [gtts.tts] pre-processing: <function end_of_line at 0x7fa2fd8730>
+2021-09-19 15:27:38,200 [DEBUG] [gtts.tts] pre-processing: <function abbreviations at 0x7fa2fd87b8>
+2021-09-19 15:27:38,201 [DEBUG] [gtts.tts] pre-processing: <function word_sub at 0x7fa2fd8840>
+2021-09-19 15:27:38,202 [DEBUG] [gtts.tts] text_parts: ['Solunuz problemli']
+2021-09-19 15:27:38,203 [DEBUG] [gtts.tts] text_parts: 1
+2021-09-19 15:27:38,204 [DEBUG] [gtts.tts] data-0: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22Solunuz%20problemli%5C%22%2C%5C%22tr%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2021-09-19 15:27:38,213 [DEBUG] [urllib3.connectionpool] Starting new HTTPS connection (1): translate.google.com:443
+2021-09-19 15:27:38,522 [DEBUG] [urllib3.connectionpool] https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2021-09-19 15:27:38,529 [DEBUG] [gtts.tts] headers-0: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '149'}
+2021-09-19 15:27:38,531 [DEBUG] [gtts.tts] url-0: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2021-09-19 15:27:38,532 [DEBUG] [gtts.tts] status-0: 200
+2021-09-19 15:27:38,533 [DEBUG] [gtts.tts] part-0 written to <_io.BufferedWriter name='temp.mp3'>
+2021-09-19 15:27:38,534 [DEBUG] [gtts.tts] Saved to temp.mp3
+2021-09-19 15:27:39,263 [DEBUG] [gtts.tts] text: Solunuz problemli
+2021-09-19 15:27:39,264 [DEBUG] [gtts.tts] tld: com
+2021-09-19 15:27:39,265 [DEBUG] [gtts.tts] lang: tr
+2021-09-19 15:27:39,266 [DEBUG] [gtts.tts] slow: False
+2021-09-19 15:27:39,267 [DEBUG] [gtts.tts] lang_check: True
+2021-09-19 15:27:39,268 [DEBUG] [gtts.tts] pre_processor_funcs: [<function tone_marks at 0x7fa2fccc80>, <function end_of_line at 0x7fa2fd8730>, <function abbreviations at 0x7fa2fd87b8>, <function word_sub at 0x7fa2fd8840>]
+2021-09-19 15:27:39,269 [DEBUG] [gtts.tts] tokenizer_func: <bound method Tokenizer.run of re.compile('(?<=\\?).|(?<=!).|(?<=？).|(?<=！).|(?<!\\.[a-z])\\. |(?<!\\.[a-z]), |(?<!\\d):|‥|：|¡|—|\\(|\\]|،|\\)|、|…|\\[|;|¿|。|\\\n|，', re.IGNORECASE) from: [<function tone_marks at 0x7fa2fd88c8>, <function period_comma at 0x7fa2fd8950>, <function colon at 0x7fa2fd89d8>, <function other_punctuation at 0x7fa2fd8a60>]>
+2021-09-19 15:27:39,270 [DEBUG] [gtts.lang] langs: {'af': 'Afrikaans', 'ar': 'Arabic', 'bg': 'Bulgarian', 'bn': 'Bengali', 'bs': 'Bosnian', 'ca': 'Catalan', 'cs': 'Czech', 'cy': 'Welsh', 'da': 'Danish', 'de': 'German', 'el': 'Greek', 'en': 'English', 'eo': 'Esperanto', 'es': 'Spanish', 'et': 'Estonian', 'fi': 'Finnish', 'fr': 'French', 'gu': 'Gujarati', 'hi': 'Hindi', 'hr': 'Croatian', 'hu': 'Hungarian', 'hy': 'Armenian', 'id': 'Indonesian', 'is': 'Icelandic', 'it': 'Italian', 'ja': 'Japanese', 'jw': 'Javanese', 'km': 'Khmer', 'kn': 'Kannada', 'ko': 'Korean', 'la': 'Latin', 'lv': 'Latvian', 'mk': 'Macedonian', 'ml': 'Malayalam', 'mr': 'Marathi', 'my': 'Myanmar (Burmese)', 'ne': 'Nepali', 'nl': 'Dutch', 'no': 'Norwegian', 'pl': 'Polish', 'pt': 'Portuguese', 'ro': 'Romanian', 'ru': 'Russian', 'si': 'Sinhala', 'sk': 'Slovak', 'sq': 'Albanian', 'sr': 'Serbian', 'su': 'Sundanese', 'sv': 'Swedish', 'sw': 'Swahili', 'ta': 'Tamil', 'te': 'Telugu', 'th': 'Thai', 'tl': 'Filipino', 'tr': 'Turkish', 'uk': 'Ukrainian', 'ur': 'Urdu', 'vi': 'Vietnamese', 'zh-CN': 'Chinese', 'zh-TW': 'Chinese (Mandarin/Taiwan)', 'zh': 'Chinese (Mandarin)'}
+2021-09-19 15:27:39,271 [DEBUG] [gtts.tts] pre-processing: <function tone_marks at 0x7fa2fccc80>
+2021-09-19 15:27:39,272 [DEBUG] [gtts.tts] pre-processing: <function end_of_line at 0x7fa2fd8730>
+2021-09-19 15:27:39,273 [DEBUG] [gtts.tts] pre-processing: <function abbreviations at 0x7fa2fd87b8>
+2021-09-19 15:27:39,274 [DEBUG] [gtts.tts] pre-processing: <function word_sub at 0x7fa2fd8840>
+2021-09-19 15:27:39,275 [DEBUG] [gtts.tts] text_parts: ['Solunuz problemli']
+2021-09-19 15:27:39,276 [DEBUG] [gtts.tts] text_parts: 1
+2021-09-19 15:27:39,276 [DEBUG] [gtts.tts] data-0: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22Solunuz%20problemli%5C%22%2C%5C%22tr%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2021-09-19 15:27:39,282 [DEBUG] [urllib3.connectionpool] Starting new HTTPS connection (1): translate.google.com:443
+2021-09-19 15:27:39,662 [DEBUG] [urllib3.connectionpool] https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2021-09-19 15:27:39,701 [DEBUG] [gtts.tts] headers-0: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '149'}
+2021-09-19 15:27:39,702 [DEBUG] [gtts.tts] url-0: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2021-09-19 15:27:39,704 [DEBUG] [gtts.tts] status-0: 200
+2021-09-19 15:27:39,706 [DEBUG] [gtts.tts] part-0 written to <_io.BufferedWriter name='temp.mp3'>
+2021-09-19 15:27:39,707 [DEBUG] [gtts.tts] Saved to temp.mp3
+2021-09-19 15:27:40,447 [DEBUG] [gtts.tts] text: Solunuz problemli
+2021-09-19 15:27:40,453 [DEBUG] [gtts.tts] tld: com
+2021-09-19 15:27:40,454 [DEBUG] [gtts.tts] lang: tr
+2021-09-19 15:27:40,456 [DEBUG] [gtts.tts] slow: False
+2021-09-19 15:27:40,457 [DEBUG] [gtts.tts] lang_check: True
+2021-09-19 15:27:40,458 [DEBUG] [gtts.tts] pre_processor_funcs: [<function tone_marks at 0x7fa2fccc80>, <function end_of_line at 0x7fa2fd8730>, <function abbreviations at 0x7fa2fd87b8>, <function word_sub at 0x7fa2fd8840>]
+2021-09-19 15:27:40,461 [DEBUG] [gtts.tts] tokenizer_func: <bound method Tokenizer.run of re.compile('(?<=\\?).|(?<=!).|(?<=？).|(?<=！).|(?<!\\.[a-z])\\. |(?<!\\.[a-z]), |(?<!\\d):|‥|：|¡|—|\\(|\\]|،|\\)|、|…|\\[|;|¿|。|\\\n|，', re.IGNORECASE) from: [<function tone_marks at 0x7fa2fd88c8>, <function period_comma at 0x7fa2fd8950>, <function colon at 0x7fa2fd89d8>, <function other_punctuation at 0x7fa2fd8a60>]>
+2021-09-19 15:27:40,463 [DEBUG] [gtts.lang] langs: {'af': 'Afrikaans', 'ar': 'Arabic', 'bg': 'Bulgarian', 'bn': 'Bengali', 'bs': 'Bosnian', 'ca': 'Catalan', 'cs': 'Czech', 'cy': 'Welsh', 'da': 'Danish', 'de': 'German', 'el': 'Greek', 'en': 'English', 'eo': 'Esperanto', 'es': 'Spanish', 'et': 'Estonian', 'fi': 'Finnish', 'fr': 'French', 'gu': 'Gujarati', 'hi': 'Hindi', 'hr': 'Croatian', 'hu': 'Hungarian', 'hy': 'Armenian', 'id': 'Indonesian', 'is': 'Icelandic', 'it': 'Italian', 'ja': 'Japanese', 'jw': 'Javanese', 'km': 'Khmer', 'kn': 'Kannada', 'ko': 'Korean', 'la': 'Latin', 'lv': 'Latvian', 'mk': 'Macedonian', 'ml': 'Malayalam', 'mr': 'Marathi', 'my': 'Myanmar (Burmese)', 'ne': 'Nepali', 'nl': 'Dutch', 'no': 'Norwegian', 'pl': 'Polish', 'pt': 'Portuguese', 'ro': 'Romanian', 'ru': 'Russian', 'si': 'Sinhala', 'sk': 'Slovak', 'sq': 'Albanian', 'sr': 'Serbian', 'su': 'Sundanese', 'sv': 'Swedish', 'sw': 'Swahili', 'ta': 'Tamil', 'te': 'Telugu', 'th': 'Thai', 'tl': 'Filipino', 'tr': 'Turkish', 'uk': 'Ukrainian', 'ur': 'Urdu', 'vi': 'Vietnamese', 'zh-CN': 'Chinese', 'zh-TW': 'Chinese (Mandarin/Taiwan)', 'zh': 'Chinese (Mandarin)'}
+2021-09-19 15:27:40,465 [DEBUG] [gtts.tts] pre-processing: <function tone_marks at 0x7fa2fccc80>
+2021-09-19 15:27:40,468 [DEBUG] [gtts.tts] pre-processing: <function end_of_line at 0x7fa2fd8730>
+2021-09-19 15:27:40,470 [DEBUG] [gtts.tts] pre-processing: <function abbreviations at 0x7fa2fd87b8>
+2021-09-19 15:27:40,472 [DEBUG] [gtts.tts] pre-processing: <function word_sub at 0x7fa2fd8840>
+2021-09-19 15:27:40,474 [DEBUG] [gtts.tts] text_parts: ['Solunuz problemli']
+2021-09-19 15:27:40,475 [DEBUG] [gtts.tts] text_parts: 1
+2021-09-19 15:27:40,477 [DEBUG] [gtts.tts] data-0: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22Solunuz%20problemli%5C%22%2C%5C%22tr%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2021-09-19 15:27:40,487 [DEBUG] [urllib3.connectionpool] Starting new HTTPS connection (1): translate.google.com:443
+2021-09-19 15:27:40,857 [DEBUG] [urllib3.connectionpool] https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2021-09-19 15:27:40,862 [DEBUG] [gtts.tts] headers-0: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '149'}
+2021-09-19 15:27:40,864 [DEBUG] [gtts.tts] url-0: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2021-09-19 15:27:40,865 [DEBUG] [gtts.tts] status-0: 200
+2021-09-19 15:27:40,866 [DEBUG] [gtts.tts] part-0 written to <_io.BufferedWriter name='temp.mp3'>
+2021-09-19 15:27:40,867 [DEBUG] [gtts.tts] Saved to temp.mp3
+2021-09-19 15:27:42,500 [DEBUG] [gtts.tts] text: Solunuz problemli
+2021-09-19 15:27:42,502 [DEBUG] [gtts.tts] tld: com
+2021-09-19 15:27:42,503 [DEBUG] [gtts.tts] lang: tr
+2021-09-19 15:27:42,505 [DEBUG] [gtts.tts] slow: False
+2021-09-19 15:27:42,508 [DEBUG] [gtts.tts] lang_check: True
+2021-09-19 15:27:42,509 [DEBUG] [gtts.tts] pre_processor_funcs: [<function tone_marks at 0x7fa2fccc80>, <function end_of_line at 0x7fa2fd8730>, <function abbreviations at 0x7fa2fd87b8>, <function word_sub at 0x7fa2fd8840>]
+2021-09-19 15:27:42,510 [DEBUG] [gtts.tts] tokenizer_func: <bound method Tokenizer.run of re.compile('(?<=\\?).|(?<=!).|(?<=？).|(?<=！).|(?<!\\.[a-z])\\. |(?<!\\.[a-z]), |(?<!\\d):|‥|：|¡|—|\\(|\\]|،|\\)|、|…|\\[|;|¿|。|\\\n|，', re.IGNORECASE) from: [<function tone_marks at 0x7fa2fd88c8>, <function period_comma at 0x7fa2fd8950>, <function colon at 0x7fa2fd89d8>, <function other_punctuation at 0x7fa2fd8a60>]>
+2021-09-19 15:27:42,512 [DEBUG] [gtts.lang] langs: {'af': 'Afrikaans', 'ar': 'Arabic', 'bg': 'Bulgarian', 'bn': 'Bengali', 'bs': 'Bosnian', 'ca': 'Catalan', 'cs': 'Czech', 'cy': 'Welsh', 'da': 'Danish', 'de': 'German', 'el': 'Greek', 'en': 'English', 'eo': 'Esperanto', 'es': 'Spanish', 'et': 'Estonian', 'fi': 'Finnish', 'fr': 'French', 'gu': 'Gujarati', 'hi': 'Hindi', 'hr': 'Croatian', 'hu': 'Hungarian', 'hy': 'Armenian', 'id': 'Indonesian', 'is': 'Icelandic', 'it': 'Italian', 'ja': 'Japanese', 'jw': 'Javanese', 'km': 'Khmer', 'kn': 'Kannada', 'ko': 'Korean', 'la': 'Latin', 'lv': 'Latvian', 'mk': 'Macedonian', 'ml': 'Malayalam', 'mr': 'Marathi', 'my': 'Myanmar (Burmese)', 'ne': 'Nepali', 'nl': 'Dutch', 'no': 'Norwegian', 'pl': 'Polish', 'pt': 'Portuguese', 'ro': 'Romanian', 'ru': 'Russian', 'si': 'Sinhala', 'sk': 'Slovak', 'sq': 'Albanian', 'sr': 'Serbian', 'su': 'Sundanese', 'sv': 'Swedish', 'sw': 'Swahili', 'ta': 'Tamil', 'te': 'Telugu', 'th': 'Thai', 'tl': 'Filipino', 'tr': 'Turkish', 'uk': 'Ukrainian', 'ur': 'Urdu', 'vi': 'Vietnamese', 'zh-CN': 'Chinese', 'zh-TW': 'Chinese (Mandarin/Taiwan)', 'zh': 'Chinese (Mandarin)'}
+2021-09-19 15:27:42,513 [DEBUG] [gtts.tts] pre-processing: <function tone_marks at 0x7fa2fccc80>
+2021-09-19 15:27:42,515 [DEBUG] [gtts.tts] pre-processing: <function end_of_line at 0x7fa2fd8730>
+2021-09-19 15:27:42,516 [DEBUG] [gtts.tts] pre-processing: <function abbreviations at 0x7fa2fd87b8>
+2021-09-19 15:27:42,518 [DEBUG] [gtts.tts] pre-processing: <function word_sub at 0x7fa2fd8840>
+2021-09-19 15:27:42,519 [DEBUG] [gtts.tts] text_parts: ['Solunuz problemli']
+2021-09-19 15:27:42,521 [DEBUG] [gtts.tts] text_parts: 1
+2021-09-19 15:27:42,522 [DEBUG] [gtts.tts] data-0: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22Solunuz%20problemli%5C%22%2C%5C%22tr%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2021-09-19 15:27:42,528 [DEBUG] [urllib3.connectionpool] Starting new HTTPS connection (1): translate.google.com:443
+2021-09-19 15:27:42,849 [DEBUG] [urllib3.connectionpool] https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2021-09-19 15:27:42,857 [DEBUG] [gtts.tts] headers-0: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '149'}
+2021-09-19 15:27:42,858 [DEBUG] [gtts.tts] url-0: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2021-09-19 15:27:42,859 [DEBUG] [gtts.tts] status-0: 200
+2021-09-19 15:27:42,861 [DEBUG] [gtts.tts] part-0 written to <_io.BufferedWriter name='temp.mp3'>
+2021-09-19 15:27:42,862 [DEBUG] [gtts.tts] Saved to temp.mp3
+2021-09-19 15:27:43,736 [DEBUG] [gtts.tts] text: Solunuz problemli
+2021-09-19 15:27:43,739 [DEBUG] [gtts.tts] tld: com
+2021-09-19 15:27:43,740 [DEBUG] [gtts.tts] lang: tr
+2021-09-19 15:27:43,742 [DEBUG] [gtts.tts] slow: False
+2021-09-19 15:27:43,743 [DEBUG] [gtts.tts] lang_check: True
+2021-09-19 15:27:43,744 [DEBUG] [gtts.tts] pre_processor_funcs: [<function tone_marks at 0x7fa2fccc80>, <function end_of_line at 0x7fa2fd8730>, <function abbreviations at 0x7fa2fd87b8>, <function word_sub at 0x7fa2fd8840>]
+2021-09-19 15:27:43,745 [DEBUG] [gtts.tts] tokenizer_func: <bound method Tokenizer.run of re.compile('(?<=\\?).|(?<=!).|(?<=？).|(?<=！).|(?<!\\.[a-z])\\. |(?<!\\.[a-z]), |(?<!\\d):|‥|：|¡|—|\\(|\\]|،|\\)|、|…|\\[|;|¿|。|\\\n|，', re.IGNORECASE) from: [<function tone_marks at 0x7fa2fd88c8>, <function period_comma at 0x7fa2fd8950>, <function colon at 0x7fa2fd89d8>, <function other_punctuation at 0x7fa2fd8a60>]>
+2021-09-19 15:27:43,746 [DEBUG] [gtts.lang] langs: {'af': 'Afrikaans', 'ar': 'Arabic', 'bg': 'Bulgarian', 'bn': 'Bengali', 'bs': 'Bosnian', 'ca': 'Catalan', 'cs': 'Czech', 'cy': 'Welsh', 'da': 'Danish', 'de': 'German', 'el': 'Greek', 'en': 'English', 'eo': 'Esperanto', 'es': 'Spanish', 'et': 'Estonian', 'fi': 'Finnish', 'fr': 'French', 'gu': 'Gujarati', 'hi': 'Hindi', 'hr': 'Croatian', 'hu': 'Hungarian', 'hy': 'Armenian', 'id': 'Indonesian', 'is': 'Icelandic', 'it': 'Italian', 'ja': 'Japanese', 'jw': 'Javanese', 'km': 'Khmer', 'kn': 'Kannada', 'ko': 'Korean', 'la': 'Latin', 'lv': 'Latvian', 'mk': 'Macedonian', 'ml': 'Malayalam', 'mr': 'Marathi', 'my': 'Myanmar (Burmese)', 'ne': 'Nepali', 'nl': 'Dutch', 'no': 'Norwegian', 'pl': 'Polish', 'pt': 'Portuguese', 'ro': 'Romanian', 'ru': 'Russian', 'si': 'Sinhala', 'sk': 'Slovak', 'sq': 'Albanian', 'sr': 'Serbian', 'su': 'Sundanese', 'sv': 'Swedish', 'sw': 'Swahili', 'ta': 'Tamil', 'te': 'Telugu', 'th': 'Thai', 'tl': 'Filipino', 'tr': 'Turkish', 'uk': 'Ukrainian', 'ur': 'Urdu', 'vi': 'Vietnamese', 'zh-CN': 'Chinese', 'zh-TW': 'Chinese (Mandarin/Taiwan)', 'zh': 'Chinese (Mandarin)'}
+2021-09-19 15:27:43,749 [DEBUG] [gtts.tts] pre-processing: <function tone_marks at 0x7fa2fccc80>
+2021-09-19 15:27:43,752 [DEBUG] [gtts.tts] pre-processing: <function end_of_line at 0x7fa2fd8730>
+2021-09-19 15:27:43,754 [DEBUG] [gtts.tts] pre-processing: <function abbreviations at 0x7fa2fd87b8>
+2021-09-19 15:27:43,756 [DEBUG] [gtts.tts] pre-processing: <function word_sub at 0x7fa2fd8840>
+2021-09-19 15:27:43,758 [DEBUG] [gtts.tts] text_parts: ['Solunuz problemli']
+2021-09-19 15:27:43,760 [DEBUG] [gtts.tts] text_parts: 1
+2021-09-19 15:27:43,761 [DEBUG] [gtts.tts] data-0: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22Solunuz%20problemli%5C%22%2C%5C%22tr%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2021-09-19 15:27:43,767 [DEBUG] [urllib3.connectionpool] Starting new HTTPS connection (1): translate.google.com:443
+2021-09-19 15:27:44,125 [DEBUG] [urllib3.connectionpool] https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2021-09-19 15:27:44,130 [DEBUG] [gtts.tts] headers-0: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '149'}
+2021-09-19 15:27:44,131 [DEBUG] [gtts.tts] url-0: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2021-09-19 15:27:44,132 [DEBUG] [gtts.tts] status-0: 200
+2021-09-19 15:27:44,134 [DEBUG] [gtts.tts] part-0 written to <_io.BufferedWriter name='temp.mp3'>
+2021-09-19 15:27:44,137 [DEBUG] [gtts.tts] Saved to temp.mp3
+2021-09-19 15:27:45,016 [DEBUG] [gtts.tts] text: Solunuz problemli
+2021-09-19 15:27:45,018 [DEBUG] [gtts.tts] tld: com
+2021-09-19 15:27:45,020 [DEBUG] [gtts.tts] lang: tr
+2021-09-19 15:27:45,021 [DEBUG] [gtts.tts] slow: False
+2021-09-19 15:27:45,022 [DEBUG] [gtts.tts] lang_check: True
+2021-09-19 15:27:45,022 [DEBUG] [gtts.tts] pre_processor_funcs: [<function tone_marks at 0x7fa2fccc80>, <function end_of_line at 0x7fa2fd8730>, <function abbreviations at 0x7fa2fd87b8>, <function word_sub at 0x7fa2fd8840>]
+2021-09-19 15:27:45,023 [DEBUG] [gtts.tts] tokenizer_func: <bound method Tokenizer.run of re.compile('(?<=\\?).|(?<=!).|(?<=？).|(?<=！).|(?<!\\.[a-z])\\. |(?<!\\.[a-z]), |(?<!\\d):|‥|：|¡|—|\\(|\\]|،|\\)|、|…|\\[|;|¿|。|\\\n|，', re.IGNORECASE) from: [<function tone_marks at 0x7fa2fd88c8>, <function period_comma at 0x7fa2fd8950>, <function colon at 0x7fa2fd89d8>, <function other_punctuation at 0x7fa2fd8a60>]>
+2021-09-19 15:27:45,024 [DEBUG] [gtts.lang] langs: {'af': 'Afrikaans', 'ar': 'Arabic', 'bg': 'Bulgarian', 'bn': 'Bengali', 'bs': 'Bosnian', 'ca': 'Catalan', 'cs': 'Czech', 'cy': 'Welsh', 'da': 'Danish', 'de': 'German', 'el': 'Greek', 'en': 'English', 'eo': 'Esperanto', 'es': 'Spanish', 'et': 'Estonian', 'fi': 'Finnish', 'fr': 'French', 'gu': 'Gujarati', 'hi': 'Hindi', 'hr': 'Croatian', 'hu': 'Hungarian', 'hy': 'Armenian', 'id': 'Indonesian', 'is': 'Icelandic', 'it': 'Italian', 'ja': 'Japanese', 'jw': 'Javanese', 'km': 'Khmer', 'kn': 'Kannada', 'ko': 'Korean', 'la': 'Latin', 'lv': 'Latvian', 'mk': 'Macedonian', 'ml': 'Malayalam', 'mr': 'Marathi', 'my': 'Myanmar (Burmese)', 'ne': 'Nepali', 'nl': 'Dutch', 'no': 'Norwegian', 'pl': 'Polish', 'pt': 'Portuguese', 'ro': 'Romanian', 'ru': 'Russian', 'si': 'Sinhala', 'sk': 'Slovak', 'sq': 'Albanian', 'sr': 'Serbian', 'su': 'Sundanese', 'sv': 'Swedish', 'sw': 'Swahili', 'ta': 'Tamil', 'te': 'Telugu', 'th': 'Thai', 'tl': 'Filipino', 'tr': 'Turkish', 'uk': 'Ukrainian', 'ur': 'Urdu', 'vi': 'Vietnamese', 'zh-CN': 'Chinese', 'zh-TW': 'Chinese (Mandarin/Taiwan)', 'zh': 'Chinese (Mandarin)'}
+2021-09-19 15:27:45,027 [DEBUG] [gtts.tts] pre-processing: <function tone_marks at 0x7fa2fccc80>
+2021-09-19 15:27:45,029 [DEBUG] [gtts.tts] pre-processing: <function end_of_line at 0x7fa2fd8730>
+2021-09-19 15:27:45,030 [DEBUG] [gtts.tts] pre-processing: <function abbreviations at 0x7fa2fd87b8>
+2021-09-19 15:27:45,033 [DEBUG] [gtts.tts] pre-processing: <function word_sub at 0x7fa2fd8840>
+2021-09-19 15:27:45,035 [DEBUG] [gtts.tts] text_parts: ['Solunuz problemli']
+2021-09-19 15:27:45,038 [DEBUG] [gtts.tts] text_parts: 1
+2021-09-19 15:27:45,040 [DEBUG] [gtts.tts] data-0: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22Solunuz%20problemli%5C%22%2C%5C%22tr%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2021-09-19 15:27:45,045 [DEBUG] [urllib3.connectionpool] Starting new HTTPS connection (1): translate.google.com:443
+2021-09-19 15:27:45,376 [DEBUG] [urllib3.connectionpool] https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2021-09-19 15:27:45,381 [DEBUG] [gtts.tts] headers-0: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '149'}
+2021-09-19 15:27:45,384 [DEBUG] [gtts.tts] url-0: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2021-09-19 15:27:45,385 [DEBUG] [gtts.tts] status-0: 200
+2021-09-19 15:27:45,386 [DEBUG] [gtts.tts] part-0 written to <_io.BufferedWriter name='temp.mp3'>
+2021-09-19 15:27:45,387 [DEBUG] [gtts.tts] Saved to temp.mp3
+2021-09-19 15:27:46,719 [DEBUG] [gtts.tts] text: Solunuz problemli
+2021-09-19 15:27:46,721 [DEBUG] [gtts.tts] tld: com
+2021-09-19 15:27:46,724 [DEBUG] [gtts.tts] lang: tr
+2021-09-19 15:27:46,726 [DEBUG] [gtts.tts] slow: False
+2021-09-19 15:27:46,728 [DEBUG] [gtts.tts] lang_check: True
+2021-09-19 15:27:46,729 [DEBUG] [gtts.tts] pre_processor_funcs: [<function tone_marks at 0x7fa2fccc80>, <function end_of_line at 0x7fa2fd8730>, <function abbreviations at 0x7fa2fd87b8>, <function word_sub at 0x7fa2fd8840>]
+2021-09-19 15:27:46,731 [DEBUG] [gtts.tts] tokenizer_func: <bound method Tokenizer.run of re.compile('(?<=\\?).|(?<=!).|(?<=？).|(?<=！).|(?<!\\.[a-z])\\. |(?<!\\.[a-z]), |(?<!\\d):|‥|：|¡|—|\\(|\\]|،|\\)|、|…|\\[|;|¿|。|\\\n|，', re.IGNORECASE) from: [<function tone_marks at 0x7fa2fd88c8>, <function period_comma at 0x7fa2fd8950>, <function colon at 0x7fa2fd89d8>, <function other_punctuation at 0x7fa2fd8a60>]>
+2021-09-19 15:27:46,733 [DEBUG] [gtts.lang] langs: {'af': 'Afrikaans', 'ar': 'Arabic', 'bg': 'Bulgarian', 'bn': 'Bengali', 'bs': 'Bosnian', 'ca': 'Catalan', 'cs': 'Czech', 'cy': 'Welsh', 'da': 'Danish', 'de': 'German', 'el': 'Greek', 'en': 'English', 'eo': 'Esperanto', 'es': 'Spanish', 'et': 'Estonian', 'fi': 'Finnish', 'fr': 'French', 'gu': 'Gujarati', 'hi': 'Hindi', 'hr': 'Croatian', 'hu': 'Hungarian', 'hy': 'Armenian', 'id': 'Indonesian', 'is': 'Icelandic', 'it': 'Italian', 'ja': 'Japanese', 'jw': 'Javanese', 'km': 'Khmer', 'kn': 'Kannada', 'ko': 'Korean', 'la': 'Latin', 'lv': 'Latvian', 'mk': 'Macedonian', 'ml': 'Malayalam', 'mr': 'Marathi', 'my': 'Myanmar (Burmese)', 'ne': 'Nepali', 'nl': 'Dutch', 'no': 'Norwegian', 'pl': 'Polish', 'pt': 'Portuguese', 'ro': 'Romanian', 'ru': 'Russian', 'si': 'Sinhala', 'sk': 'Slovak', 'sq': 'Albanian', 'sr': 'Serbian', 'su': 'Sundanese', 'sv': 'Swedish', 'sw': 'Swahili', 'ta': 'Tamil', 'te': 'Telugu', 'th': 'Thai', 'tl': 'Filipino', 'tr': 'Turkish', 'uk': 'Ukrainian', 'ur': 'Urdu', 'vi': 'Vietnamese', 'zh-CN': 'Chinese', 'zh-TW': 'Chinese (Mandarin/Taiwan)', 'zh': 'Chinese (Mandarin)'}
+2021-09-19 15:27:46,736 [DEBUG] [gtts.tts] pre-processing: <function tone_marks at 0x7fa2fccc80>
+2021-09-19 15:27:46,738 [DEBUG] [gtts.tts] pre-processing: <function end_of_line at 0x7fa2fd8730>
+2021-09-19 15:27:46,740 [DEBUG] [gtts.tts] pre-processing: <function abbreviations at 0x7fa2fd87b8>
+2021-09-19 15:27:46,742 [DEBUG] [gtts.tts] pre-processing: <function word_sub at 0x7fa2fd8840>
+2021-09-19 15:27:46,744 [DEBUG] [gtts.tts] text_parts: ['Solunuz problemli']
+2021-09-19 15:27:46,746 [DEBUG] [gtts.tts] text_parts: 1
+2021-09-19 15:27:46,748 [DEBUG] [gtts.tts] data-0: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22Solunuz%20problemli%5C%22%2C%5C%22tr%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2021-09-19 15:27:46,763 [DEBUG] [urllib3.connectionpool] Starting new HTTPS connection (1): translate.google.com:443
+2021-09-19 15:27:47,141 [DEBUG] [urllib3.connectionpool] https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2021-09-19 15:27:47,146 [DEBUG] [gtts.tts] headers-0: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '149'}
+2021-09-19 15:27:47,148 [DEBUG] [gtts.tts] url-0: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2021-09-19 15:27:47,148 [DEBUG] [gtts.tts] status-0: 200
+2021-09-19 15:27:47,150 [DEBUG] [gtts.tts] part-0 written to <_io.BufferedWriter name='temp.mp3'>
+2021-09-19 15:27:47,151 [DEBUG] [gtts.tts] Saved to temp.mp3
+2021-09-19 15:27:48,641 [DEBUG] [gtts.tts] text: Solunuz problemli
+2021-09-19 15:27:48,642 [DEBUG] [gtts.tts] tld: com
+2021-09-19 15:27:48,643 [DEBUG] [gtts.tts] lang: tr
+2021-09-19 15:27:48,644 [DEBUG] [gtts.tts] slow: False
+2021-09-19 15:27:48,645 [DEBUG] [gtts.tts] lang_check: True
+2021-09-19 15:27:48,645 [DEBUG] [gtts.tts] pre_processor_funcs: [<function tone_marks at 0x7fa2fccc80>, <function end_of_line at 0x7fa2fd8730>, <function abbreviations at 0x7fa2fd87b8>, <function word_sub at 0x7fa2fd8840>]
+2021-09-19 15:27:48,646 [DEBUG] [gtts.tts] tokenizer_func: <bound method Tokenizer.run of re.compile('(?<=\\?).|(?<=!).|(?<=？).|(?<=！).|(?<!\\.[a-z])\\. |(?<!\\.[a-z]), |(?<!\\d):|‥|：|¡|—|\\(|\\]|،|\\)|、|…|\\[|;|¿|。|\\\n|，', re.IGNORECASE) from: [<function tone_marks at 0x7fa2fd88c8>, <function period_comma at 0x7fa2fd8950>, <function colon at 0x7fa2fd89d8>, <function other_punctuation at 0x7fa2fd8a60>]>
+2021-09-19 15:27:48,647 [DEBUG] [gtts.lang] langs: {'af': 'Afrikaans', 'ar': 'Arabic', 'bg': 'Bulgarian', 'bn': 'Bengali', 'bs': 'Bosnian', 'ca': 'Catalan', 'cs': 'Czech', 'cy': 'Welsh', 'da': 'Danish', 'de': 'German', 'el': 'Greek', 'en': 'English', 'eo': 'Esperanto', 'es': 'Spanish', 'et': 'Estonian', 'fi': 'Finnish', 'fr': 'French', 'gu': 'Gujarati', 'hi': 'Hindi', 'hr': 'Croatian', 'hu': 'Hungarian', 'hy': 'Armenian', 'id': 'Indonesian', 'is': 'Icelandic', 'it': 'Italian', 'ja': 'Japanese', 'jw': 'Javanese', 'km': 'Khmer', 'kn': 'Kannada', 'ko': 'Korean', 'la': 'Latin', 'lv': 'Latvian', 'mk': 'Macedonian', 'ml': 'Malayalam', 'mr': 'Marathi', 'my': 'Myanmar (Burmese)', 'ne': 'Nepali', 'nl': 'Dutch', 'no': 'Norwegian', 'pl': 'Polish', 'pt': 'Portuguese', 'ro': 'Romanian', 'ru': 'Russian', 'si': 'Sinhala', 'sk': 'Slovak', 'sq': 'Albanian', 'sr': 'Serbian', 'su': 'Sundanese', 'sv': 'Swedish', 'sw': 'Swahili', 'ta': 'Tamil', 'te': 'Telugu', 'th': 'Thai', 'tl': 'Filipino', 'tr': 'Turkish', 'uk': 'Ukrainian', 'ur': 'Urdu', 'vi': 'Vietnamese', 'zh-CN': 'Chinese', 'zh-TW': 'Chinese (Mandarin/Taiwan)', 'zh': 'Chinese (Mandarin)'}
+2021-09-19 15:27:48,649 [DEBUG] [gtts.tts] pre-processing: <function tone_marks at 0x7fa2fccc80>
+2021-09-19 15:27:48,650 [DEBUG] [gtts.tts] pre-processing: <function end_of_line at 0x7fa2fd8730>
+2021-09-19 15:27:48,654 [DEBUG] [gtts.tts] pre-processing: <function abbreviations at 0x7fa2fd87b8>
+2021-09-19 15:27:48,658 [DEBUG] [gtts.tts] pre-processing: <function word_sub at 0x7fa2fd8840>
+2021-09-19 15:27:48,660 [DEBUG] [gtts.tts] text_parts: ['Solunuz problemli']
+2021-09-19 15:27:48,662 [DEBUG] [gtts.tts] text_parts: 1
+2021-09-19 15:27:48,663 [DEBUG] [gtts.tts] data-0: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22Solunuz%20problemli%5C%22%2C%5C%22tr%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2021-09-19 15:27:48,671 [DEBUG] [urllib3.connectionpool] Starting new HTTPS connection (1): translate.google.com:443
+2021-09-19 15:27:49,065 [DEBUG] [urllib3.connectionpool] https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2021-09-19 15:27:49,099 [DEBUG] [gtts.tts] headers-0: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '149'}
+2021-09-19 15:27:49,102 [DEBUG] [gtts.tts] url-0: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2021-09-19 15:27:49,104 [DEBUG] [gtts.tts] status-0: 200
+2021-09-19 15:27:49,106 [DEBUG] [gtts.tts] part-0 written to <_io.BufferedWriter name='temp.mp3'>
+2021-09-19 15:27:49,108 [DEBUG] [gtts.tts] Saved to temp.mp3
+2021-09-19 15:27:49,833 [DEBUG] [gtts.tts] text: Solunuz problemli
+2021-09-19 15:27:49,835 [DEBUG] [gtts.tts] tld: com
+2021-09-19 15:27:49,836 [DEBUG] [gtts.tts] lang: tr
+2021-09-19 15:27:49,836 [DEBUG] [gtts.tts] slow: False
+2021-09-19 15:27:49,837 [DEBUG] [gtts.tts] lang_check: True
+2021-09-19 15:27:49,838 [DEBUG] [gtts.tts] pre_processor_funcs: [<function tone_marks at 0x7fa2fccc80>, <function end_of_line at 0x7fa2fd8730>, <function abbreviations at 0x7fa2fd87b8>, <function word_sub at 0x7fa2fd8840>]
+2021-09-19 15:27:49,839 [DEBUG] [gtts.tts] tokenizer_func: <bound method Tokenizer.run of re.compile('(?<=\\?).|(?<=!).|(?<=？).|(?<=！).|(?<!\\.[a-z])\\. |(?<!\\.[a-z]), |(?<!\\d):|‥|：|¡|—|\\(|\\]|،|\\)|、|…|\\[|;|¿|。|\\\n|，', re.IGNORECASE) from: [<function tone_marks at 0x7fa2fd88c8>, <function period_comma at 0x7fa2fd8950>, <function colon at 0x7fa2fd89d8>, <function other_punctuation at 0x7fa2fd8a60>]>
+2021-09-19 15:27:49,840 [DEBUG] [gtts.lang] langs: {'af': 'Afrikaans', 'ar': 'Arabic', 'bg': 'Bulgarian', 'bn': 'Bengali', 'bs': 'Bosnian', 'ca': 'Catalan', 'cs': 'Czech', 'cy': 'Welsh', 'da': 'Danish', 'de': 'German', 'el': 'Greek', 'en': 'English', 'eo': 'Esperanto', 'es': 'Spanish', 'et': 'Estonian', 'fi': 'Finnish', 'fr': 'French', 'gu': 'Gujarati', 'hi': 'Hindi', 'hr': 'Croatian', 'hu': 'Hungarian', 'hy': 'Armenian', 'id': 'Indonesian', 'is': 'Icelandic', 'it': 'Italian', 'ja': 'Japanese', 'jw': 'Javanese', 'km': 'Khmer', 'kn': 'Kannada', 'ko': 'Korean', 'la': 'Latin', 'lv': 'Latvian', 'mk': 'Macedonian', 'ml': 'Malayalam', 'mr': 'Marathi', 'my': 'Myanmar (Burmese)', 'ne': 'Nepali', 'nl': 'Dutch', 'no': 'Norwegian', 'pl': 'Polish', 'pt': 'Portuguese', 'ro': 'Romanian', 'ru': 'Russian', 'si': 'Sinhala', 'sk': 'Slovak', 'sq': 'Albanian', 'sr': 'Serbian', 'su': 'Sundanese', 'sv': 'Swedish', 'sw': 'Swahili', 'ta': 'Tamil', 'te': 'Telugu', 'th': 'Thai', 'tl': 'Filipino', 'tr': 'Turkish', 'uk': 'Ukrainian', 'ur': 'Urdu', 'vi': 'Vietnamese', 'zh-CN': 'Chinese', 'zh-TW': 'Chinese (Mandarin/Taiwan)', 'zh': 'Chinese (Mandarin)'}
+2021-09-19 15:27:49,843 [DEBUG] [gtts.tts] pre-processing: <function tone_marks at 0x7fa2fccc80>
+2021-09-19 15:27:49,844 [DEBUG] [gtts.tts] pre-processing: <function end_of_line at 0x7fa2fd8730>
+2021-09-19 15:27:49,845 [DEBUG] [gtts.tts] pre-processing: <function abbreviations at 0x7fa2fd87b8>
+2021-09-19 15:27:49,846 [DEBUG] [gtts.tts] pre-processing: <function word_sub at 0x7fa2fd8840>
+2021-09-19 15:27:49,847 [DEBUG] [gtts.tts] text_parts: ['Solunuz problemli']
+2021-09-19 15:27:49,848 [DEBUG] [gtts.tts] text_parts: 1
+2021-09-19 15:27:49,849 [DEBUG] [gtts.tts] data-0: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22Solunuz%20problemli%5C%22%2C%5C%22tr%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2021-09-19 15:27:49,856 [DEBUG] [urllib3.connectionpool] Starting new HTTPS connection (1): translate.google.com:443
+2021-09-19 15:27:50,177 [DEBUG] [urllib3.connectionpool] https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2021-09-19 15:27:50,186 [DEBUG] [gtts.tts] headers-0: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '149'}
+2021-09-19 15:27:50,187 [DEBUG] [gtts.tts] url-0: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2021-09-19 15:27:50,188 [DEBUG] [gtts.tts] status-0: 200
+2021-09-19 15:27:50,190 [DEBUG] [gtts.tts] part-0 written to <_io.BufferedWriter name='temp.mp3'>
+2021-09-19 15:27:50,191 [DEBUG] [gtts.tts] Saved to temp.mp3
+2021-09-19 15:27:53,372 [DEBUG] [gtts.tts] text: Solunuz problemli
+2021-09-19 15:27:53,375 [DEBUG] [gtts.tts] tld: com
+2021-09-19 15:27:53,376 [DEBUG] [gtts.tts] lang: tr
+2021-09-19 15:27:53,378 [DEBUG] [gtts.tts] slow: False
+2021-09-19 15:27:53,379 [DEBUG] [gtts.tts] lang_check: True
+2021-09-19 15:27:53,380 [DEBUG] [gtts.tts] pre_processor_funcs: [<function tone_marks at 0x7fa2fccc80>, <function end_of_line at 0x7fa2fd8730>, <function abbreviations at 0x7fa2fd87b8>, <function word_sub at 0x7fa2fd8840>]
+2021-09-19 15:27:53,382 [DEBUG] [gtts.tts] tokenizer_func: <bound method Tokenizer.run of re.compile('(?<=\\?).|(?<=!).|(?<=？).|(?<=！).|(?<!\\.[a-z])\\. |(?<!\\.[a-z]), |(?<!\\d):|‥|：|¡|—|\\(|\\]|،|\\)|、|…|\\[|;|¿|。|\\\n|，', re.IGNORECASE) from: [<function tone_marks at 0x7fa2fd88c8>, <function period_comma at 0x7fa2fd8950>, <function colon at 0x7fa2fd89d8>, <function other_punctuation at 0x7fa2fd8a60>]>
+2021-09-19 15:27:53,384 [DEBUG] [gtts.lang] langs: {'af': 'Afrikaans', 'ar': 'Arabic', 'bg': 'Bulgarian', 'bn': 'Bengali', 'bs': 'Bosnian', 'ca': 'Catalan', 'cs': 'Czech', 'cy': 'Welsh', 'da': 'Danish', 'de': 'German', 'el': 'Greek', 'en': 'English', 'eo': 'Esperanto', 'es': 'Spanish', 'et': 'Estonian', 'fi': 'Finnish', 'fr': 'French', 'gu': 'Gujarati', 'hi': 'Hindi', 'hr': 'Croatian', 'hu': 'Hungarian', 'hy': 'Armenian', 'id': 'Indonesian', 'is': 'Icelandic', 'it': 'Italian', 'ja': 'Japanese', 'jw': 'Javanese', 'km': 'Khmer', 'kn': 'Kannada', 'ko': 'Korean', 'la': 'Latin', 'lv': 'Latvian', 'mk': 'Macedonian', 'ml': 'Malayalam', 'mr': 'Marathi', 'my': 'Myanmar (Burmese)', 'ne': 'Nepali', 'nl': 'Dutch', 'no': 'Norwegian', 'pl': 'Polish', 'pt': 'Portuguese', 'ro': 'Romanian', 'ru': 'Russian', 'si': 'Sinhala', 'sk': 'Slovak', 'sq': 'Albanian', 'sr': 'Serbian', 'su': 'Sundanese', 'sv': 'Swedish', 'sw': 'Swahili', 'ta': 'Tamil', 'te': 'Telugu', 'th': 'Thai', 'tl': 'Filipino', 'tr': 'Turkish', 'uk': 'Ukrainian', 'ur': 'Urdu', 'vi': 'Vietnamese', 'zh-CN': 'Chinese', 'zh-TW': 'Chinese (Mandarin/Taiwan)', 'zh': 'Chinese (Mandarin)'}
+2021-09-19 15:27:53,386 [DEBUG] [gtts.tts] pre-processing: <function tone_marks at 0x7fa2fccc80>
+2021-09-19 15:27:53,389 [DEBUG] [gtts.tts] pre-processing: <function end_of_line at 0x7fa2fd8730>
+2021-09-19 15:27:53,391 [DEBUG] [gtts.tts] pre-processing: <function abbreviations at 0x7fa2fd87b8>
+2021-09-19 15:27:53,394 [DEBUG] [gtts.tts] pre-processing: <function word_sub at 0x7fa2fd8840>
+2021-09-19 15:27:53,395 [DEBUG] [gtts.tts] text_parts: ['Solunuz problemli']
+2021-09-19 15:27:53,397 [DEBUG] [gtts.tts] text_parts: 1
+2021-09-19 15:27:53,399 [DEBUG] [gtts.tts] data-0: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22Solunuz%20problemli%5C%22%2C%5C%22tr%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2021-09-19 15:27:53,410 [DEBUG] [urllib3.connectionpool] Starting new HTTPS connection (1): translate.google.com:443
+2021-09-19 15:27:53,768 [DEBUG] [urllib3.connectionpool] https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2021-09-19 15:27:53,775 [DEBUG] [gtts.tts] headers-0: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '149'}
+2021-09-19 15:27:53,777 [DEBUG] [gtts.tts] url-0: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2021-09-19 15:27:53,777 [DEBUG] [gtts.tts] status-0: 200
+2021-09-19 15:27:53,779 [DEBUG] [gtts.tts] part-0 written to <_io.BufferedWriter name='temp.mp3'>
+2021-09-19 15:27:53,780 [DEBUG] [gtts.tts] Saved to temp.mp3
+2021-09-19 15:27:56,802 [DEBUG] [gtts.tts] text: Solunuz problemli
+2021-09-19 15:27:56,804 [DEBUG] [gtts.tts] tld: com
+2021-09-19 15:27:56,805 [DEBUG] [gtts.tts] lang: tr
+2021-09-19 15:27:56,806 [DEBUG] [gtts.tts] slow: False
+2021-09-19 15:27:56,807 [DEBUG] [gtts.tts] lang_check: True
+2021-09-19 15:27:56,807 [DEBUG] [gtts.tts] pre_processor_funcs: [<function tone_marks at 0x7fa2fccc80>, <function end_of_line at 0x7fa2fd8730>, <function abbreviations at 0x7fa2fd87b8>, <function word_sub at 0x7fa2fd8840>]
+2021-09-19 15:27:56,808 [DEBUG] [gtts.tts] tokenizer_func: <bound method Tokenizer.run of re.compile('(?<=\\?).|(?<=!).|(?<=？).|(?<=！).|(?<!\\.[a-z])\\. |(?<!\\.[a-z]), |(?<!\\d):|‥|：|¡|—|\\(|\\]|،|\\)|、|…|\\[|;|¿|。|\\\n|，', re.IGNORECASE) from: [<function tone_marks at 0x7fa2fd88c8>, <function period_comma at 0x7fa2fd8950>, <function colon at 0x7fa2fd89d8>, <function other_punctuation at 0x7fa2fd8a60>]>
+2021-09-19 15:27:56,809 [DEBUG] [gtts.lang] langs: {'af': 'Afrikaans', 'ar': 'Arabic', 'bg': 'Bulgarian', 'bn': 'Bengali', 'bs': 'Bosnian', 'ca': 'Catalan', 'cs': 'Czech', 'cy': 'Welsh', 'da': 'Danish', 'de': 'German', 'el': 'Greek', 'en': 'English', 'eo': 'Esperanto', 'es': 'Spanish', 'et': 'Estonian', 'fi': 'Finnish', 'fr': 'French', 'gu': 'Gujarati', 'hi': 'Hindi', 'hr': 'Croatian', 'hu': 'Hungarian', 'hy': 'Armenian', 'id': 'Indonesian', 'is': 'Icelandic', 'it': 'Italian', 'ja': 'Japanese', 'jw': 'Javanese', 'km': 'Khmer', 'kn': 'Kannada', 'ko': 'Korean', 'la': 'Latin', 'lv': 'Latvian', 'mk': 'Macedonian', 'ml': 'Malayalam', 'mr': 'Marathi', 'my': 'Myanmar (Burmese)', 'ne': 'Nepali', 'nl': 'Dutch', 'no': 'Norwegian', 'pl': 'Polish', 'pt': 'Portuguese', 'ro': 'Romanian', 'ru': 'Russian', 'si': 'Sinhala', 'sk': 'Slovak', 'sq': 'Albanian', 'sr': 'Serbian', 'su': 'Sundanese', 'sv': 'Swedish', 'sw': 'Swahili', 'ta': 'Tamil', 'te': 'Telugu', 'th': 'Thai', 'tl': 'Filipino', 'tr': 'Turkish', 'uk': 'Ukrainian', 'ur': 'Urdu', 'vi': 'Vietnamese', 'zh-CN': 'Chinese', 'zh-TW': 'Chinese (Mandarin/Taiwan)', 'zh': 'Chinese (Mandarin)'}
+2021-09-19 15:27:56,811 [DEBUG] [gtts.tts] pre-processing: <function tone_marks at 0x7fa2fccc80>
+2021-09-19 15:27:56,812 [DEBUG] [gtts.tts] pre-processing: <function end_of_line at 0x7fa2fd8730>
+2021-09-19 15:27:56,813 [DEBUG] [gtts.tts] pre-processing: <function abbreviations at 0x7fa2fd87b8>
+2021-09-19 15:27:56,815 [DEBUG] [gtts.tts] pre-processing: <function word_sub at 0x7fa2fd8840>
+2021-09-19 15:27:56,816 [DEBUG] [gtts.tts] text_parts: ['Solunuz problemli']
+2021-09-19 15:27:56,817 [DEBUG] [gtts.tts] text_parts: 1
+2021-09-19 15:27:56,817 [DEBUG] [gtts.tts] data-0: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22Solunuz%20problemli%5C%22%2C%5C%22tr%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2021-09-19 15:27:56,827 [DEBUG] [urllib3.connectionpool] Starting new HTTPS connection (1): translate.google.com:443
+2021-09-19 15:27:57,198 [DEBUG] [urllib3.connectionpool] https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2021-09-19 15:27:57,246 [DEBUG] [gtts.tts] headers-0: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '149'}
+2021-09-19 15:27:57,249 [DEBUG] [gtts.tts] url-0: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2021-09-19 15:27:57,250 [DEBUG] [gtts.tts] status-0: 200
+2021-09-19 15:27:57,252 [DEBUG] [gtts.tts] part-0 written to <_io.BufferedWriter name='temp.mp3'>
+2021-09-19 15:27:57,253 [DEBUG] [gtts.tts] Saved to temp.mp3
+2021-09-19 15:27:57,838 [DEBUG] [gtts.tts] text: Solunuz problemli
+2021-09-19 15:27:57,840 [DEBUG] [gtts.tts] tld: com
+2021-09-19 15:27:57,841 [DEBUG] [gtts.tts] lang: tr
+2021-09-19 15:27:57,843 [DEBUG] [gtts.tts] slow: False
+2021-09-19 15:27:57,844 [DEBUG] [gtts.tts] lang_check: True
+2021-09-19 15:27:57,845 [DEBUG] [gtts.tts] pre_processor_funcs: [<function tone_marks at 0x7fa2fccc80>, <function end_of_line at 0x7fa2fd8730>, <function abbreviations at 0x7fa2fd87b8>, <function word_sub at 0x7fa2fd8840>]
+2021-09-19 15:27:57,847 [DEBUG] [gtts.tts] tokenizer_func: <bound method Tokenizer.run of re.compile('(?<=\\?).|(?<=!).|(?<=？).|(?<=！).|(?<!\\.[a-z])\\. |(?<!\\.[a-z]), |(?<!\\d):|‥|：|¡|—|\\(|\\]|،|\\)|、|…|\\[|;|¿|。|\\\n|，', re.IGNORECASE) from: [<function tone_marks at 0x7fa2fd88c8>, <function period_comma at 0x7fa2fd8950>, <function colon at 0x7fa2fd89d8>, <function other_punctuation at 0x7fa2fd8a60>]>
+2021-09-19 15:27:57,849 [DEBUG] [gtts.lang] langs: {'af': 'Afrikaans', 'ar': 'Arabic', 'bg': 'Bulgarian', 'bn': 'Bengali', 'bs': 'Bosnian', 'ca': 'Catalan', 'cs': 'Czech', 'cy': 'Welsh', 'da': 'Danish', 'de': 'German', 'el': 'Greek', 'en': 'English', 'eo': 'Esperanto', 'es': 'Spanish', 'et': 'Estonian', 'fi': 'Finnish', 'fr': 'French', 'gu': 'Gujarati', 'hi': 'Hindi', 'hr': 'Croatian', 'hu': 'Hungarian', 'hy': 'Armenian', 'id': 'Indonesian', 'is': 'Icelandic', 'it': 'Italian', 'ja': 'Japanese', 'jw': 'Javanese', 'km': 'Khmer', 'kn': 'Kannada', 'ko': 'Korean', 'la': 'Latin', 'lv': 'Latvian', 'mk': 'Macedonian', 'ml': 'Malayalam', 'mr': 'Marathi', 'my': 'Myanmar (Burmese)', 'ne': 'Nepali', 'nl': 'Dutch', 'no': 'Norwegian', 'pl': 'Polish', 'pt': 'Portuguese', 'ro': 'Romanian', 'ru': 'Russian', 'si': 'Sinhala', 'sk': 'Slovak', 'sq': 'Albanian', 'sr': 'Serbian', 'su': 'Sundanese', 'sv': 'Swedish', 'sw': 'Swahili', 'ta': 'Tamil', 'te': 'Telugu', 'th': 'Thai', 'tl': 'Filipino', 'tr': 'Turkish', 'uk': 'Ukrainian', 'ur': 'Urdu', 'vi': 'Vietnamese', 'zh-CN': 'Chinese', 'zh-TW': 'Chinese (Mandarin/Taiwan)', 'zh': 'Chinese (Mandarin)'}
+2021-09-19 15:27:57,851 [DEBUG] [gtts.tts] pre-processing: <function tone_marks at 0x7fa2fccc80>
+2021-09-19 15:27:57,853 [DEBUG] [gtts.tts] pre-processing: <function end_of_line at 0x7fa2fd8730>
+2021-09-19 15:27:57,855 [DEBUG] [gtts.tts] pre-processing: <function abbreviations at 0x7fa2fd87b8>
+2021-09-19 15:27:57,857 [DEBUG] [gtts.tts] pre-processing: <function word_sub at 0x7fa2fd8840>
+2021-09-19 15:27:57,859 [DEBUG] [gtts.tts] text_parts: ['Solunuz problemli']
+2021-09-19 15:27:57,860 [DEBUG] [gtts.tts] text_parts: 1
+2021-09-19 15:27:57,863 [DEBUG] [gtts.tts] data-0: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22Solunuz%20problemli%5C%22%2C%5C%22tr%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2021-09-19 15:27:57,871 [DEBUG] [urllib3.connectionpool] Starting new HTTPS connection (1): translate.google.com:443
+2021-09-19 15:27:58,154 [DEBUG] [urllib3.connectionpool] https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2021-09-19 15:27:58,159 [DEBUG] [gtts.tts] headers-0: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '149'}
+2021-09-19 15:27:58,161 [DEBUG] [gtts.tts] url-0: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2021-09-19 15:27:58,161 [DEBUG] [gtts.tts] status-0: 200
+2021-09-19 15:27:58,163 [DEBUG] [gtts.tts] part-0 written to <_io.BufferedWriter name='temp.mp3'>
+2021-09-19 15:27:58,164 [DEBUG] [gtts.tts] Saved to temp.mp3
+2021-09-19 15:28:02,152 [DEBUG] [gtts.tts] text: Solunuz problemli
+2021-09-19 15:28:02,154 [DEBUG] [gtts.tts] tld: com
+2021-09-19 15:28:02,156 [DEBUG] [gtts.tts] lang: tr
+2021-09-19 15:28:02,161 [DEBUG] [gtts.tts] slow: False
+2021-09-19 15:28:02,165 [DEBUG] [gtts.tts] lang_check: True
+2021-09-19 15:28:02,170 [DEBUG] [gtts.tts] pre_processor_funcs: [<function tone_marks at 0x7fa2fccc80>, <function end_of_line at 0x7fa2fd8730>, <function abbreviations at 0x7fa2fd87b8>, <function word_sub at 0x7fa2fd8840>]
+2021-09-19 15:28:02,172 [DEBUG] [gtts.tts] tokenizer_func: <bound method Tokenizer.run of re.compile('(?<=\\?).|(?<=!).|(?<=？).|(?<=！).|(?<!\\.[a-z])\\. |(?<!\\.[a-z]), |(?<!\\d):|‥|：|¡|—|\\(|\\]|،|\\)|、|…|\\[|;|¿|。|\\\n|，', re.IGNORECASE) from: [<function tone_marks at 0x7fa2fd88c8>, <function period_comma at 0x7fa2fd8950>, <function colon at 0x7fa2fd89d8>, <function other_punctuation at 0x7fa2fd8a60>]>
+2021-09-19 15:28:02,176 [DEBUG] [gtts.lang] langs: {'af': 'Afrikaans', 'ar': 'Arabic', 'bg': 'Bulgarian', 'bn': 'Bengali', 'bs': 'Bosnian', 'ca': 'Catalan', 'cs': 'Czech', 'cy': 'Welsh', 'da': 'Danish', 'de': 'German', 'el': 'Greek', 'en': 'English', 'eo': 'Esperanto', 'es': 'Spanish', 'et': 'Estonian', 'fi': 'Finnish', 'fr': 'French', 'gu': 'Gujarati', 'hi': 'Hindi', 'hr': 'Croatian', 'hu': 'Hungarian', 'hy': 'Armenian', 'id': 'Indonesian', 'is': 'Icelandic', 'it': 'Italian', 'ja': 'Japanese', 'jw': 'Javanese', 'km': 'Khmer', 'kn': 'Kannada', 'ko': 'Korean', 'la': 'Latin', 'lv': 'Latvian', 'mk': 'Macedonian', 'ml': 'Malayalam', 'mr': 'Marathi', 'my': 'Myanmar (Burmese)', 'ne': 'Nepali', 'nl': 'Dutch', 'no': 'Norwegian', 'pl': 'Polish', 'pt': 'Portuguese', 'ro': 'Romanian', 'ru': 'Russian', 'si': 'Sinhala', 'sk': 'Slovak', 'sq': 'Albanian', 'sr': 'Serbian', 'su': 'Sundanese', 'sv': 'Swedish', 'sw': 'Swahili', 'ta': 'Tamil', 'te': 'Telugu', 'th': 'Thai', 'tl': 'Filipino', 'tr': 'Turkish', 'uk': 'Ukrainian', 'ur': 'Urdu', 'vi': 'Vietnamese', 'zh-CN': 'Chinese', 'zh-TW': 'Chinese (Mandarin/Taiwan)', 'zh': 'Chinese (Mandarin)'}
+2021-09-19 15:28:02,181 [DEBUG] [gtts.tts] pre-processing: <function tone_marks at 0x7fa2fccc80>
+2021-09-19 15:28:02,185 [DEBUG] [gtts.tts] pre-processing: <function end_of_line at 0x7fa2fd8730>
+2021-09-19 15:28:02,189 [DEBUG] [gtts.tts] pre-processing: <function abbreviations at 0x7fa2fd87b8>
+2021-09-19 15:28:02,193 [DEBUG] [gtts.tts] pre-processing: <function word_sub at 0x7fa2fd8840>
+2021-09-19 15:28:02,196 [DEBUG] [gtts.tts] text_parts: ['Solunuz problemli']
+2021-09-19 15:28:02,201 [DEBUG] [gtts.tts] text_parts: 1
+2021-09-19 15:28:02,205 [DEBUG] [gtts.tts] data-0: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22Solunuz%20problemli%5C%22%2C%5C%22tr%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2021-09-19 15:28:02,213 [DEBUG] [urllib3.connectionpool] Starting new HTTPS connection (1): translate.google.com:443
+2021-09-19 15:28:02,597 [DEBUG] [urllib3.connectionpool] https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2021-09-19 15:28:02,606 [DEBUG] [gtts.tts] headers-0: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '149'}
+2021-09-19 15:28:02,611 [DEBUG] [gtts.tts] url-0: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2021-09-19 15:28:02,613 [DEBUG] [gtts.tts] status-0: 200
+2021-09-19 15:28:02,614 [DEBUG] [gtts.tts] part-0 written to <_io.BufferedWriter name='temp.mp3'>
+2021-09-19 15:28:02,615 [DEBUG] [gtts.tts] Saved to temp.mp3
+2021-09-19 15:28:04,562 [DEBUG] [gtts.tts] text: Solunuz problemli
+2021-09-19 15:28:04,571 [DEBUG] [gtts.tts] tld: com
+2021-09-19 15:28:04,575 [DEBUG] [gtts.tts] lang: tr
+2021-09-19 15:28:04,581 [DEBUG] [gtts.tts] slow: False
+2021-09-19 15:28:04,590 [DEBUG] [gtts.tts] lang_check: True
+2021-09-19 15:28:04,595 [DEBUG] [gtts.tts] pre_processor_funcs: [<function tone_marks at 0x7fa2fccc80>, <function end_of_line at 0x7fa2fd8730>, <function abbreviations at 0x7fa2fd87b8>, <function word_sub at 0x7fa2fd8840>]
+2021-09-19 15:28:04,599 [DEBUG] [gtts.tts] tokenizer_func: <bound method Tokenizer.run of re.compile('(?<=\\?).|(?<=!).|(?<=？).|(?<=！).|(?<!\\.[a-z])\\. |(?<!\\.[a-z]), |(?<!\\d):|‥|：|¡|—|\\(|\\]|،|\\)|、|…|\\[|;|¿|。|\\\n|，', re.IGNORECASE) from: [<function tone_marks at 0x7fa2fd88c8>, <function period_comma at 0x7fa2fd8950>, <function colon at 0x7fa2fd89d8>, <function other_punctuation at 0x7fa2fd8a60>]>
+2021-09-19 15:28:04,602 [DEBUG] [gtts.lang] langs: {'af': 'Afrikaans', 'ar': 'Arabic', 'bg': 'Bulgarian', 'bn': 'Bengali', 'bs': 'Bosnian', 'ca': 'Catalan', 'cs': 'Czech', 'cy': 'Welsh', 'da': 'Danish', 'de': 'German', 'el': 'Greek', 'en': 'English', 'eo': 'Esperanto', 'es': 'Spanish', 'et': 'Estonian', 'fi': 'Finnish', 'fr': 'French', 'gu': 'Gujarati', 'hi': 'Hindi', 'hr': 'Croatian', 'hu': 'Hungarian', 'hy': 'Armenian', 'id': 'Indonesian', 'is': 'Icelandic', 'it': 'Italian', 'ja': 'Japanese', 'jw': 'Javanese', 'km': 'Khmer', 'kn': 'Kannada', 'ko': 'Korean', 'la': 'Latin', 'lv': 'Latvian', 'mk': 'Macedonian', 'ml': 'Malayalam', 'mr': 'Marathi', 'my': 'Myanmar (Burmese)', 'ne': 'Nepali', 'nl': 'Dutch', 'no': 'Norwegian', 'pl': 'Polish', 'pt': 'Portuguese', 'ro': 'Romanian', 'ru': 'Russian', 'si': 'Sinhala', 'sk': 'Slovak', 'sq': 'Albanian', 'sr': 'Serbian', 'su': 'Sundanese', 'sv': 'Swedish', 'sw': 'Swahili', 'ta': 'Tamil', 'te': 'Telugu', 'th': 'Thai', 'tl': 'Filipino', 'tr': 'Turkish', 'uk': 'Ukrainian', 'ur': 'Urdu', 'vi': 'Vietnamese', 'zh-CN': 'Chinese', 'zh-TW': 'Chinese (Mandarin/Taiwan)', 'zh': 'Chinese (Mandarin)'}
+2021-09-19 15:28:04,605 [DEBUG] [gtts.tts] pre-processing: <function tone_marks at 0x7fa2fccc80>
+2021-09-19 15:28:04,613 [DEBUG] [gtts.tts] pre-processing: <function end_of_line at 0x7fa2fd8730>
+2021-09-19 15:28:04,617 [DEBUG] [gtts.tts] pre-processing: <function abbreviations at 0x7fa2fd87b8>
+2021-09-19 15:28:04,623 [DEBUG] [gtts.tts] pre-processing: <function word_sub at 0x7fa2fd8840>
+2021-09-19 15:28:04,627 [DEBUG] [gtts.tts] text_parts: ['Solunuz problemli']
+2021-09-19 15:28:04,629 [DEBUG] [gtts.tts] text_parts: 1
+2021-09-19 15:28:04,632 [DEBUG] [gtts.tts] data-0: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22Solunuz%20problemli%5C%22%2C%5C%22tr%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2021-09-19 15:28:04,647 [DEBUG] [urllib3.connectionpool] Starting new HTTPS connection (1): translate.google.com:443
+2021-09-19 15:28:04,995 [DEBUG] [urllib3.connectionpool] https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2021-09-19 15:28:05,002 [DEBUG] [gtts.tts] headers-0: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '149'}
+2021-09-19 15:28:05,003 [DEBUG] [gtts.tts] url-0: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2021-09-19 15:28:05,004 [DEBUG] [gtts.tts] status-0: 200
+2021-09-19 15:28:05,006 [DEBUG] [gtts.tts] part-0 written to <_io.BufferedWriter name='temp.mp3'>
+2021-09-19 15:28:05,008 [DEBUG] [gtts.tts] Saved to temp.mp3
+2021-09-19 15:28:05,592 [DEBUG] [gtts.tts] text: Solunuz problemli
+2021-09-19 15:28:05,595 [DEBUG] [gtts.tts] tld: com
+2021-09-19 15:28:05,598 [DEBUG] [gtts.tts] lang: tr
+2021-09-19 15:28:05,600 [DEBUG] [gtts.tts] slow: False
+2021-09-19 15:28:05,601 [DEBUG] [gtts.tts] lang_check: True
+2021-09-19 15:28:05,602 [DEBUG] [gtts.tts] pre_processor_funcs: [<function tone_marks at 0x7fa2fccc80>, <function end_of_line at 0x7fa2fd8730>, <function abbreviations at 0x7fa2fd87b8>, <function word_sub at 0x7fa2fd8840>]
+2021-09-19 15:28:05,605 [DEBUG] [gtts.tts] tokenizer_func: <bound method Tokenizer.run of re.compile('(?<=\\?).|(?<=!).|(?<=？).|(?<=！).|(?<!\\.[a-z])\\. |(?<!\\.[a-z]), |(?<!\\d):|‥|：|¡|—|\\(|\\]|،|\\)|、|…|\\[|;|¿|。|\\\n|，', re.IGNORECASE) from: [<function tone_marks at 0x7fa2fd88c8>, <function period_comma at 0x7fa2fd8950>, <function colon at 0x7fa2fd89d8>, <function other_punctuation at 0x7fa2fd8a60>]>
+2021-09-19 15:28:05,608 [DEBUG] [gtts.lang] langs: {'af': 'Afrikaans', 'ar': 'Arabic', 'bg': 'Bulgarian', 'bn': 'Bengali', 'bs': 'Bosnian', 'ca': 'Catalan', 'cs': 'Czech', 'cy': 'Welsh', 'da': 'Danish', 'de': 'German', 'el': 'Greek', 'en': 'English', 'eo': 'Esperanto', 'es': 'Spanish', 'et': 'Estonian', 'fi': 'Finnish', 'fr': 'French', 'gu': 'Gujarati', 'hi': 'Hindi', 'hr': 'Croatian', 'hu': 'Hungarian', 'hy': 'Armenian', 'id': 'Indonesian', 'is': 'Icelandic', 'it': 'Italian', 'ja': 'Japanese', 'jw': 'Javanese', 'km': 'Khmer', 'kn': 'Kannada', 'ko': 'Korean', 'la': 'Latin', 'lv': 'Latvian', 'mk': 'Macedonian', 'ml': 'Malayalam', 'mr': 'Marathi', 'my': 'Myanmar (Burmese)', 'ne': 'Nepali', 'nl': 'Dutch', 'no': 'Norwegian', 'pl': 'Polish', 'pt': 'Portuguese', 'ro': 'Romanian', 'ru': 'Russian', 'si': 'Sinhala', 'sk': 'Slovak', 'sq': 'Albanian', 'sr': 'Serbian', 'su': 'Sundanese', 'sv': 'Swedish', 'sw': 'Swahili', 'ta': 'Tamil', 'te': 'Telugu', 'th': 'Thai', 'tl': 'Filipino', 'tr': 'Turkish', 'uk': 'Ukrainian', 'ur': 'Urdu', 'vi': 'Vietnamese', 'zh-CN': 'Chinese', 'zh-TW': 'Chinese (Mandarin/Taiwan)', 'zh': 'Chinese (Mandarin)'}
+2021-09-19 15:28:05,610 [DEBUG] [gtts.tts] pre-processing: <function tone_marks at 0x7fa2fccc80>
+2021-09-19 15:28:05,612 [DEBUG] [gtts.tts] pre-processing: <function end_of_line at 0x7fa2fd8730>
+2021-09-19 15:28:05,615 [DEBUG] [gtts.tts] pre-processing: <function abbreviations at 0x7fa2fd87b8>
+2021-09-19 15:28:05,617 [DEBUG] [gtts.tts] pre-processing: <function word_sub at 0x7fa2fd8840>
+2021-09-19 15:28:05,620 [DEBUG] [gtts.tts] text_parts: ['Solunuz problemli']
+2021-09-19 15:28:05,621 [DEBUG] [gtts.tts] text_parts: 1
+2021-09-19 15:28:05,622 [DEBUG] [gtts.tts] data-0: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22Solunuz%20problemli%5C%22%2C%5C%22tr%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2021-09-19 15:28:05,630 [DEBUG] [urllib3.connectionpool] Starting new HTTPS connection (1): translate.google.com:443
+2021-09-19 15:28:05,998 [DEBUG] [urllib3.connectionpool] https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2021-09-19 15:28:06,005 [DEBUG] [gtts.tts] headers-0: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '149'}
+2021-09-19 15:28:06,007 [DEBUG] [gtts.tts] url-0: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2021-09-19 15:28:06,008 [DEBUG] [gtts.tts] status-0: 200
+2021-09-19 15:28:06,009 [DEBUG] [gtts.tts] part-0 written to <_io.BufferedWriter name='temp.mp3'>
+2021-09-19 15:28:06,010 [DEBUG] [gtts.tts] Saved to temp.mp3
+2021-09-19 15:28:07,293 [DEBUG] [gtts.tts] text: Solunuz problemli
+2021-09-19 15:28:07,298 [DEBUG] [gtts.tts] tld: com
+2021-09-19 15:28:07,300 [DEBUG] [gtts.tts] lang: tr
+2021-09-19 15:28:07,301 [DEBUG] [gtts.tts] slow: False
+2021-09-19 15:28:07,302 [DEBUG] [gtts.tts] lang_check: True
+2021-09-19 15:28:07,303 [DEBUG] [gtts.tts] pre_processor_funcs: [<function tone_marks at 0x7fa2fccc80>, <function end_of_line at 0x7fa2fd8730>, <function abbreviations at 0x7fa2fd87b8>, <function word_sub at 0x7fa2fd8840>]
+2021-09-19 15:28:07,304 [DEBUG] [gtts.tts] tokenizer_func: <bound method Tokenizer.run of re.compile('(?<=\\?).|(?<=!).|(?<=？).|(?<=！).|(?<!\\.[a-z])\\. |(?<!\\.[a-z]), |(?<!\\d):|‥|：|¡|—|\\(|\\]|،|\\)|、|…|\\[|;|¿|。|\\\n|，', re.IGNORECASE) from: [<function tone_marks at 0x7fa2fd88c8>, <function period_comma at 0x7fa2fd8950>, <function colon at 0x7fa2fd89d8>, <function other_punctuation at 0x7fa2fd8a60>]>
+2021-09-19 15:28:07,305 [DEBUG] [gtts.lang] langs: {'af': 'Afrikaans', 'ar': 'Arabic', 'bg': 'Bulgarian', 'bn': 'Bengali', 'bs': 'Bosnian', 'ca': 'Catalan', 'cs': 'Czech', 'cy': 'Welsh', 'da': 'Danish', 'de': 'German', 'el': 'Greek', 'en': 'English', 'eo': 'Esperanto', 'es': 'Spanish', 'et': 'Estonian', 'fi': 'Finnish', 'fr': 'French', 'gu': 'Gujarati', 'hi': 'Hindi', 'hr': 'Croatian', 'hu': 'Hungarian', 'hy': 'Armenian', 'id': 'Indonesian', 'is': 'Icelandic', 'it': 'Italian', 'ja': 'Japanese', 'jw': 'Javanese', 'km': 'Khmer', 'kn': 'Kannada', 'ko': 'Korean', 'la': 'Latin', 'lv': 'Latvian', 'mk': 'Macedonian', 'ml': 'Malayalam', 'mr': 'Marathi', 'my': 'Myanmar (Burmese)', 'ne': 'Nepali', 'nl': 'Dutch', 'no': 'Norwegian', 'pl': 'Polish', 'pt': 'Portuguese', 'ro': 'Romanian', 'ru': 'Russian', 'si': 'Sinhala', 'sk': 'Slovak', 'sq': 'Albanian', 'sr': 'Serbian', 'su': 'Sundanese', 'sv': 'Swedish', 'sw': 'Swahili', 'ta': 'Tamil', 'te': 'Telugu', 'th': 'Thai', 'tl': 'Filipino', 'tr': 'Turkish', 'uk': 'Ukrainian', 'ur': 'Urdu', 'vi': 'Vietnamese', 'zh-CN': 'Chinese', 'zh-TW': 'Chinese (Mandarin/Taiwan)', 'zh': 'Chinese (Mandarin)'}
+2021-09-19 15:28:07,307 [DEBUG] [gtts.tts] pre-processing: <function tone_marks at 0x7fa2fccc80>
+2021-09-19 15:28:07,309 [DEBUG] [gtts.tts] pre-processing: <function end_of_line at 0x7fa2fd8730>
+2021-09-19 15:28:07,309 [DEBUG] [gtts.tts] pre-processing: <function abbreviations at 0x7fa2fd87b8>
+2021-09-19 15:28:07,310 [DEBUG] [gtts.tts] pre-processing: <function word_sub at 0x7fa2fd8840>
+2021-09-19 15:28:07,311 [DEBUG] [gtts.tts] text_parts: ['Solunuz problemli']
+2021-09-19 15:28:07,312 [DEBUG] [gtts.tts] text_parts: 1
+2021-09-19 15:28:07,313 [DEBUG] [gtts.tts] data-0: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22Solunuz%20problemli%5C%22%2C%5C%22tr%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2021-09-19 15:28:07,319 [DEBUG] [urllib3.connectionpool] Starting new HTTPS connection (1): translate.google.com:443
+2021-09-19 15:28:07,679 [DEBUG] [urllib3.connectionpool] https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2021-09-19 15:28:07,730 [DEBUG] [gtts.tts] headers-0: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '149'}
+2021-09-19 15:28:07,733 [DEBUG] [gtts.tts] url-0: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2021-09-19 15:28:07,735 [DEBUG] [gtts.tts] status-0: 200
+2021-09-19 15:28:07,738 [DEBUG] [gtts.tts] part-0 written to <_io.BufferedWriter name='temp.mp3'>
+2021-09-19 15:28:07,740 [DEBUG] [gtts.tts] Saved to temp.mp3

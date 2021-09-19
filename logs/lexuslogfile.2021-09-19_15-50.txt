@@ -1,0 +1,34 @@
+2021-09-19 15:52:19,395 [INFO] [main.py] Starting Project Lexus...
+2021-09-19 15:52:19,399 [INFO] [main.py] Current project directory: /home/pi/Desktop/Project_LeXuS
+2021-09-19 15:52:19,400 [INFO] [ai.py] Initialazing...
+2021-09-19 15:52:19,401 [INFO] [ai.py] Importing DLL(s)...
+2021-09-19 15:52:19,429 [INFO] [ai.py] Import complete.
+2021-09-19 15:52:19,430 [INFO] [ai.py] Loading the network...
+2021-09-19 15:52:19,943 [INFO] [ai.py] Network loaded.
+2021-09-19 15:52:19,944 [INFO] [ai.py] Initialazing complete.
+2021-09-19 15:52:19,945 [DEBUG] [gtts.tts] text: Merhaba yol arkadaşım
+2021-09-19 15:52:19,946 [DEBUG] [gtts.tts] tld: com
+2021-09-19 15:52:19,947 [DEBUG] [gtts.tts] lang: tr
+2021-09-19 15:52:19,948 [DEBUG] [gtts.tts] slow: False
+2021-09-19 15:52:19,950 [DEBUG] [gtts.tts] lang_check: True
+2021-09-19 15:52:19,951 [DEBUG] [gtts.tts] pre_processor_funcs: [<function tone_marks at 0x7f99aedb70>, <function end_of_line at 0x7f99afe620>, <function abbreviations at 0x7f99afe6a8>, <function word_sub at 0x7f99afe730>]
+2021-09-19 15:52:19,952 [DEBUG] [gtts.tts] tokenizer_func: <bound method Tokenizer.run of re.compile('(?<=\\?).|(?<=!).|(?<=？).|(?<=！).|(?<!\\.[a-z])\\. |(?<!\\.[a-z]), |(?<!\\d):|\\[|;|\\\n|，|¿|،|、|…|\\]|¡|。|‥|\\)|：|\\(|—', re.IGNORECASE) from: [<function tone_marks at 0x7f99afe7b8>, <function period_comma at 0x7f99afe840>, <function colon at 0x7f99afe8c8>, <function other_punctuation at 0x7f99afe950>]>
+2021-09-19 15:52:19,953 [DEBUG] [gtts.lang] langs: {'af': 'Afrikaans', 'ar': 'Arabic', 'bg': 'Bulgarian', 'bn': 'Bengali', 'bs': 'Bosnian', 'ca': 'Catalan', 'cs': 'Czech', 'cy': 'Welsh', 'da': 'Danish', 'de': 'German', 'el': 'Greek', 'en': 'English', 'eo': 'Esperanto', 'es': 'Spanish', 'et': 'Estonian', 'fi': 'Finnish', 'fr': 'French', 'gu': 'Gujarati', 'hi': 'Hindi', 'hr': 'Croatian', 'hu': 'Hungarian', 'hy': 'Armenian', 'id': 'Indonesian', 'is': 'Icelandic', 'it': 'Italian', 'ja': 'Japanese', 'jw': 'Javanese', 'km': 'Khmer', 'kn': 'Kannada', 'ko': 'Korean', 'la': 'Latin', 'lv': 'Latvian', 'mk': 'Macedonian', 'ml': 'Malayalam', 'mr': 'Marathi', 'my': 'Myanmar (Burmese)', 'ne': 'Nepali', 'nl': 'Dutch', 'no': 'Norwegian', 'pl': 'Polish', 'pt': 'Portuguese', 'ro': 'Romanian', 'ru': 'Russian', 'si': 'Sinhala', 'sk': 'Slovak', 'sq': 'Albanian', 'sr': 'Serbian', 'su': 'Sundanese', 'sv': 'Swedish', 'sw': 'Swahili', 'ta': 'Tamil', 'te': 'Telugu', 'th': 'Thai', 'tl': 'Filipino', 'tr': 'Turkish', 'uk': 'Ukrainian', 'ur': 'Urdu', 'vi': 'Vietnamese', 'zh-CN': 'Chinese', 'zh-TW': 'Chinese (Mandarin/Taiwan)', 'zh': 'Chinese (Mandarin)'}
+2021-09-19 15:52:19,955 [DEBUG] [gtts.tts] pre-processing: <function tone_marks at 0x7f99aedb70>
+2021-09-19 15:52:19,957 [DEBUG] [gtts.tts] pre-processing: <function end_of_line at 0x7f99afe620>
+2021-09-19 15:52:19,959 [DEBUG] [gtts.tts] pre-processing: <function abbreviations at 0x7f99afe6a8>
+2021-09-19 15:52:19,964 [DEBUG] [gtts.tts] pre-processing: <function word_sub at 0x7f99afe730>
+2021-09-19 15:52:19,966 [DEBUG] [gtts.tts] text_parts: ['Merhaba yol arkadaşım']
+2021-09-19 15:52:19,967 [DEBUG] [gtts.tts] text_parts: 1
+2021-09-19 15:52:19,969 [DEBUG] [gtts.tts] data-0: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22Merhaba%20yol%20arkada%5C%5Cu015f%5C%5Cu0131m%5C%22%2C%5C%22tr%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2021-09-19 15:52:19,980 [DEBUG] [urllib3.connectionpool] Starting new HTTPS connection (1): translate.google.com:443
+2021-09-19 15:52:20,770 [DEBUG] [urllib3.connectionpool] https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2021-09-19 15:52:20,777 [DEBUG] [gtts.tts] headers-0: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '175'}
+2021-09-19 15:52:20,780 [DEBUG] [gtts.tts] url-0: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2021-09-19 15:52:20,781 [DEBUG] [gtts.tts] status-0: 200
+2021-09-19 15:52:20,785 [DEBUG] [gtts.tts] part-0 written to <_io.BufferedWriter name='temp.mp3'>
+2021-09-19 15:52:20,786 [DEBUG] [gtts.tts] Saved to temp.mp3
+2021-09-19 15:52:23,644 [INFO] [ai.py] Updating AI.
+2021-09-19 15:52:28,407 [INFO] [ai.py] Updating AI.
+2021-09-19 15:52:33,736 [INFO] [ai.py] Updating AI.
+2021-09-19 15:52:38,743 [INFO] [ai.py] Updating AI.

@@ -11,6 +11,7 @@ else:
     import logger
 
 import os
+import time
 from gtts import gTTS
 from time import sleep
 import pyglet
@@ -19,19 +20,24 @@ from queue import Empty, Queue
 import threading
 import pyglet
 import threading
-class VoiceCommander:
+
+class VoiceCommand:
     # queue
     queue=deque()
     # logger
-    #voice_logger = logger.LexusLogger()
+    voice_logger = logger.LexusLogger()
 
-    # a flah for cheking if a file is in play
+    # a flag for cheking if a file is in play
     vc_file = {
                 "text" : "",
                 "priority": ""
             }
             # 
     is_playing = False
+
+    # last_run time
+    last_run = time.perf_counter()
+
     def __init__(self):
         
         tts1 = gTTS(text="Merhaba yol arkadaşım", lang='tr')
@@ -40,17 +46,9 @@ class VoiceCommander:
         music = pyglet.media.load(filename1, streaming=False)
         self.is_playing=True
         music.play()
-        self.islem(music.duration)
         os.remove(filename1)
         self.is_playing =False
-            def __del__(self):
-        
-        print("Program kapandı")
-
-    def islem(second):
-        for i in range(second):
-            sleep(1)
-            pass 
+            
     def islem(self,number):
         if number < 0:
             return False
@@ -73,7 +71,6 @@ class VoiceCommander:
             music = pyglet.media.load(filename, streaming=False)
             self.is_playing= True
             music.play()
-            self.islem(music.duration)
             os.remove(filename)
             i+=1
             self.is_playing= False
@@ -89,7 +86,6 @@ class VoiceCommander:
         for a in self.queue:
             i+=1
         if i == 0:
-            self.voice_logger.log_warning("Voice file is empty.")
             return
         if self.queue is not None:
             vc_file= self.queue[0]
@@ -100,6 +96,12 @@ class VoiceCommander:
         """
         gets some text requests to be played. adds it to the queue accordingly.
         """
+        curr_time = time.perf_counter()
+        delta = curr_time - self.last_run
+
+        if delta <= 3:
+            return False
+        
         if priority == "high":
             vc_file = {
                 "text" : text,
@@ -115,7 +117,5 @@ class VoiceCommander:
             }
             # TODO: add this vc_file at the end of the queue
             self.queue.append(vc_file)
-a = VoiceCommander()
-a.request("Dilara halledicez rahat ol","high")
-a.update()
 
+        self.last_run = time.perf_counter()

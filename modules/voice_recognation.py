@@ -4,7 +4,7 @@ import locale
 import config
 import os
 
-class voice_recognition():
+class VoiceRecognation():
     def recorder(self):
         self.r = sr.Recognizer()
         locale.setlocale(locale.LC_ALL, 'tr_TR.utf8')

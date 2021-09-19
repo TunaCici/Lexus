@@ -1,0 +1,263 @@
+2021-09-19 15:49:37,174 [INFO] [main.py] Starting Project Lexus...
+2021-09-19 15:49:37,181 [INFO] [main.py] Current project directory: /home/pi/Desktop/Project_LeXuS
+2021-09-19 15:49:37,182 [INFO] [ai.py] Initialazing...
+2021-09-19 15:49:37,183 [INFO] [ai.py] Importing DLL(s)...
+2021-09-19 15:49:37,216 [INFO] [ai.py] Import complete.
+2021-09-19 15:49:37,217 [INFO] [ai.py] Loading the network...
+2021-09-19 15:49:37,723 [INFO] [ai.py] [class_colors] names is: <class 'list'>
+2021-09-19 15:49:37,726 [INFO] [ai.py] Network loaded.
+2021-09-19 15:49:37,728 [INFO] [ai.py] Initialazing complete.
+2021-09-19 15:49:37,730 [DEBUG] [gtts.tts] text: Merhaba yol arkadaşım
+2021-09-19 15:49:37,731 [DEBUG] [gtts.tts] tld: com
+2021-09-19 15:49:37,732 [DEBUG] [gtts.tts] lang: tr
+2021-09-19 15:49:37,733 [DEBUG] [gtts.tts] slow: False
+2021-09-19 15:49:37,733 [DEBUG] [gtts.tts] lang_check: True
+2021-09-19 15:49:37,734 [DEBUG] [gtts.tts] pre_processor_funcs: [<function tone_marks at 0x7f6b997d08>, <function end_of_line at 0x7f6b9a57b8>, <function abbreviations at 0x7f6b9a5840>, <function word_sub at 0x7f6b9a58c8>]
+2021-09-19 15:49:37,734 [DEBUG] [gtts.tts] tokenizer_func: <bound method Tokenizer.run of re.compile('(?<=\\?).|(?<=!).|(?<=？).|(?<=！).|(?<!\\.[a-z])\\. |(?<!\\.[a-z]), |(?<!\\d):|—|\\\n|‥|、|\\[|،|\\(|;|\\)|\\]|：|，|¿|。|¡|…', re.IGNORECASE) from: [<function tone_marks at 0x7f6b9a5950>, <function period_comma at 0x7f6b9a59d8>, <function colon at 0x7f6b9a5a60>, <function other_punctuation at 0x7f6b9a5ae8>]>
+2021-09-19 15:49:37,736 [DEBUG] [gtts.lang] langs: {'af': 'Afrikaans', 'ar': 'Arabic', 'bg': 'Bulgarian', 'bn': 'Bengali', 'bs': 'Bosnian', 'ca': 'Catalan', 'cs': 'Czech', 'cy': 'Welsh', 'da': 'Danish', 'de': 'German', 'el': 'Greek', 'en': 'English', 'eo': 'Esperanto', 'es': 'Spanish', 'et': 'Estonian', 'fi': 'Finnish', 'fr': 'French', 'gu': 'Gujarati', 'hi': 'Hindi', 'hr': 'Croatian', 'hu': 'Hungarian', 'hy': 'Armenian', 'id': 'Indonesian', 'is': 'Icelandic', 'it': 'Italian', 'ja': 'Japanese', 'jw': 'Javanese', 'km': 'Khmer', 'kn': 'Kannada', 'ko': 'Korean', 'la': 'Latin', 'lv': 'Latvian', 'mk': 'Macedonian', 'ml': 'Malayalam', 'mr': 'Marathi', 'my': 'Myanmar (Burmese)', 'ne': 'Nepali', 'nl': 'Dutch', 'no': 'Norwegian', 'pl': 'Polish', 'pt': 'Portuguese', 'ro': 'Romanian', 'ru': 'Russian', 'si': 'Sinhala', 'sk': 'Slovak', 'sq': 'Albanian', 'sr': 'Serbian', 'su': 'Sundanese', 'sv': 'Swedish', 'sw': 'Swahili', 'ta': 'Tamil', 'te': 'Telugu', 'th': 'Thai', 'tl': 'Filipino', 'tr': 'Turkish', 'uk': 'Ukrainian', 'ur': 'Urdu', 'vi': 'Vietnamese', 'zh-CN': 'Chinese', 'zh-TW': 'Chinese (Mandarin/Taiwan)', 'zh': 'Chinese (Mandarin)'}
+2021-09-19 15:49:37,737 [DEBUG] [gtts.tts] pre-processing: <function tone_marks at 0x7f6b997d08>
+2021-09-19 15:49:37,740 [DEBUG] [gtts.tts] pre-processing: <function end_of_line at 0x7f6b9a57b8>
+2021-09-19 15:49:37,741 [DEBUG] [gtts.tts] pre-processing: <function abbreviations at 0x7f6b9a5840>
+2021-09-19 15:49:37,745 [DEBUG] [gtts.tts] pre-processing: <function word_sub at 0x7f6b9a58c8>
+2021-09-19 15:49:37,748 [DEBUG] [gtts.tts] text_parts: ['Merhaba yol arkadaşım']
+2021-09-19 15:49:37,749 [DEBUG] [gtts.tts] text_parts: 1
+2021-09-19 15:49:37,751 [DEBUG] [gtts.tts] data-0: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22Merhaba%20yol%20arkada%5C%5Cu015f%5C%5Cu0131m%5C%22%2C%5C%22tr%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2021-09-19 15:49:37,762 [DEBUG] [urllib3.connectionpool] Starting new HTTPS connection (1): translate.google.com:443
+2021-09-19 15:49:42,926 [DEBUG] [urllib3.connectionpool] https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2021-09-19 15:49:42,934 [DEBUG] [gtts.tts] headers-0: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '175'}
+2021-09-19 15:49:42,936 [DEBUG] [gtts.tts] url-0: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2021-09-19 15:49:42,936 [DEBUG] [gtts.tts] status-0: 200
+2021-09-19 15:49:42,940 [DEBUG] [gtts.tts] part-0 written to <_io.BufferedWriter name='temp.mp3'>
+2021-09-19 15:49:42,941 [DEBUG] [gtts.tts] Saved to temp.mp3
+2021-09-19 15:49:45,251 [INFO] [ai.py] Updating AI.
+2021-09-19 15:49:45,256 [INFO] [ai.py] [image_detection] image is: <class 'numpy.ndarray'>, network is: <class 'int'>, class_names is: <class 'list'> class_colors is: <class 'dict'>, thresh is: <class 'float'>
+2021-09-19 15:49:45,258 [INFO] [ai.py] [network_width] net is: <class 'int'>
+2021-09-19 15:49:45,260 [INFO] [ai.py] [network_height] net is: <class 'int'>
+2021-09-19 15:49:45,298 [INFO] [ai.py] [detect_image] network is: <class 'int'>, class_names is: <class 'list'>, image is: <class 'modules.ai.Image'>
+2021-09-19 15:49:48,662 [INFO] [ai.py] [remove_negatives] detections is: <class 'modules.ai.LP_Detection'>, class_names is: <class 'list'>, num is: <class 'int'>
+2021-09-19 15:49:48,665 [INFO] [ai.py] [decode_detection] detections is: <class 'list'>
+2021-09-19 15:49:48,666 [INFO] [ai.py] [draw_boxes] detections is: <class 'list'>, image is: <class 'numpy.ndarray'>, colors is: <class 'dict'>
+2021-09-19 15:49:48,667 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-19 15:49:48,669 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-19 15:49:48,670 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-19 15:49:48,671 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-19 15:49:48,674 [DEBUG] [gtts.tts] text: ileri
+2021-09-19 15:49:48,675 [DEBUG] [gtts.tts] tld: com
+2021-09-19 15:49:48,676 [DEBUG] [gtts.tts] lang: tr
+2021-09-19 15:49:48,677 [DEBUG] [gtts.tts] slow: False
+2021-09-19 15:49:48,677 [DEBUG] [gtts.tts] lang_check: True
+2021-09-19 15:49:48,678 [DEBUG] [gtts.tts] pre_processor_funcs: [<function tone_marks at 0x7f6b997d08>, <function end_of_line at 0x7f6b9a57b8>, <function abbreviations at 0x7f6b9a5840>, <function word_sub at 0x7f6b9a58c8>]
+2021-09-19 15:49:48,679 [DEBUG] [gtts.tts] tokenizer_func: <bound method Tokenizer.run of re.compile('(?<=\\?).|(?<=!).|(?<=？).|(?<=！).|(?<!\\.[a-z])\\. |(?<!\\.[a-z]), |(?<!\\d):|—|\\\n|‥|、|\\[|،|\\(|;|\\)|\\]|：|，|¿|。|¡|…', re.IGNORECASE) from: [<function tone_marks at 0x7f6b9a5950>, <function period_comma at 0x7f6b9a59d8>, <function colon at 0x7f6b9a5a60>, <function other_punctuation at 0x7f6b9a5ae8>]>
+2021-09-19 15:49:48,682 [DEBUG] [gtts.lang] langs: {'af': 'Afrikaans', 'ar': 'Arabic', 'bg': 'Bulgarian', 'bn': 'Bengali', 'bs': 'Bosnian', 'ca': 'Catalan', 'cs': 'Czech', 'cy': 'Welsh', 'da': 'Danish', 'de': 'German', 'el': 'Greek', 'en': 'English', 'eo': 'Esperanto', 'es': 'Spanish', 'et': 'Estonian', 'fi': 'Finnish', 'fr': 'French', 'gu': 'Gujarati', 'hi': 'Hindi', 'hr': 'Croatian', 'hu': 'Hungarian', 'hy': 'Armenian', 'id': 'Indonesian', 'is': 'Icelandic', 'it': 'Italian', 'ja': 'Japanese', 'jw': 'Javanese', 'km': 'Khmer', 'kn': 'Kannada', 'ko': 'Korean', 'la': 'Latin', 'lv': 'Latvian', 'mk': 'Macedonian', 'ml': 'Malayalam', 'mr': 'Marathi', 'my': 'Myanmar (Burmese)', 'ne': 'Nepali', 'nl': 'Dutch', 'no': 'Norwegian', 'pl': 'Polish', 'pt': 'Portuguese', 'ro': 'Romanian', 'ru': 'Russian', 'si': 'Sinhala', 'sk': 'Slovak', 'sq': 'Albanian', 'sr': 'Serbian', 'su': 'Sundanese', 'sv': 'Swedish', 'sw': 'Swahili', 'ta': 'Tamil', 'te': 'Telugu', 'th': 'Thai', 'tl': 'Filipino', 'tr': 'Turkish', 'uk': 'Ukrainian', 'ur': 'Urdu', 'vi': 'Vietnamese', 'zh-CN': 'Chinese', 'zh-TW': 'Chinese (Mandarin/Taiwan)', 'zh': 'Chinese (Mandarin)'}
+2021-09-19 15:49:48,684 [DEBUG] [gtts.tts] pre-processing: <function tone_marks at 0x7f6b997d08>
+2021-09-19 15:49:48,685 [DEBUG] [gtts.tts] pre-processing: <function end_of_line at 0x7f6b9a57b8>
+2021-09-19 15:49:48,686 [DEBUG] [gtts.tts] pre-processing: <function abbreviations at 0x7f6b9a5840>
+2021-09-19 15:49:48,688 [DEBUG] [gtts.tts] pre-processing: <function word_sub at 0x7f6b9a58c8>
+2021-09-19 15:49:48,689 [DEBUG] [gtts.tts] text_parts: ['ileri']
+2021-09-19 15:49:48,689 [DEBUG] [gtts.tts] text_parts: 1
+2021-09-19 15:49:48,690 [DEBUG] [gtts.tts] data-0: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22ileri%5C%22%2C%5C%22tr%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2021-09-19 15:49:48,699 [DEBUG] [urllib3.connectionpool] Starting new HTTPS connection (1): translate.google.com:443
+2021-09-19 15:49:50,154 [DEBUG] [urllib3.connectionpool] https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2021-09-19 15:49:50,162 [DEBUG] [gtts.tts] headers-0: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '135'}
+2021-09-19 15:49:50,163 [DEBUG] [gtts.tts] url-0: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2021-09-19 15:49:50,165 [DEBUG] [gtts.tts] status-0: 200
+2021-09-19 15:49:50,166 [DEBUG] [gtts.tts] part-0 written to <_io.BufferedWriter name='temp.mp3'>
+2021-09-19 15:49:50,167 [DEBUG] [gtts.tts] Saved to temp.mp3
+2021-09-19 15:49:50,331 [INFO] [ai.py] Updating AI.
+2021-09-19 15:49:50,333 [INFO] [ai.py] [image_detection] image is: <class 'numpy.ndarray'>, network is: <class 'int'>, class_names is: <class 'list'> class_colors is: <class 'dict'>, thresh is: <class 'float'>
+2021-09-19 15:49:50,335 [INFO] [ai.py] [network_width] net is: <class 'int'>
+2021-09-19 15:49:50,337 [INFO] [ai.py] [network_height] net is: <class 'int'>
+2021-09-19 15:49:50,349 [INFO] [ai.py] [detect_image] network is: <class 'int'>, class_names is: <class 'list'>, image is: <class 'modules.ai.Image'>
+2021-09-19 15:49:53,559 [INFO] [ai.py] [remove_negatives] detections is: <class 'modules.ai.LP_Detection'>, class_names is: <class 'list'>, num is: <class 'int'>
+2021-09-19 15:49:53,561 [INFO] [ai.py] [decode_detection] detections is: <class 'list'>
+2021-09-19 15:49:53,563 [INFO] [ai.py] [draw_boxes] detections is: <class 'list'>, image is: <class 'numpy.ndarray'>, colors is: <class 'dict'>
+2021-09-19 15:49:53,565 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-19 15:49:53,566 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-19 15:49:53,567 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-19 15:49:53,568 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-19 15:49:53,571 [DEBUG] [gtts.tts] text: ileri
+2021-09-19 15:49:53,572 [DEBUG] [gtts.tts] tld: com
+2021-09-19 15:49:53,573 [DEBUG] [gtts.tts] lang: tr
+2021-09-19 15:49:53,575 [DEBUG] [gtts.tts] slow: False
+2021-09-19 15:49:53,576 [DEBUG] [gtts.tts] lang_check: True
+2021-09-19 15:49:53,577 [DEBUG] [gtts.tts] pre_processor_funcs: [<function tone_marks at 0x7f6b997d08>, <function end_of_line at 0x7f6b9a57b8>, <function abbreviations at 0x7f6b9a5840>, <function word_sub at 0x7f6b9a58c8>]
+2021-09-19 15:49:53,578 [DEBUG] [gtts.tts] tokenizer_func: <bound method Tokenizer.run of re.compile('(?<=\\?).|(?<=!).|(?<=？).|(?<=！).|(?<!\\.[a-z])\\. |(?<!\\.[a-z]), |(?<!\\d):|—|\\\n|‥|、|\\[|،|\\(|;|\\)|\\]|：|，|¿|。|¡|…', re.IGNORECASE) from: [<function tone_marks at 0x7f6b9a5950>, <function period_comma at 0x7f6b9a59d8>, <function colon at 0x7f6b9a5a60>, <function other_punctuation at 0x7f6b9a5ae8>]>
+2021-09-19 15:49:53,580 [DEBUG] [gtts.lang] langs: {'af': 'Afrikaans', 'ar': 'Arabic', 'bg': 'Bulgarian', 'bn': 'Bengali', 'bs': 'Bosnian', 'ca': 'Catalan', 'cs': 'Czech', 'cy': 'Welsh', 'da': 'Danish', 'de': 'German', 'el': 'Greek', 'en': 'English', 'eo': 'Esperanto', 'es': 'Spanish', 'et': 'Estonian', 'fi': 'Finnish', 'fr': 'French', 'gu': 'Gujarati', 'hi': 'Hindi', 'hr': 'Croatian', 'hu': 'Hungarian', 'hy': 'Armenian', 'id': 'Indonesian', 'is': 'Icelandic', 'it': 'Italian', 'ja': 'Japanese', 'jw': 'Javanese', 'km': 'Khmer', 'kn': 'Kannada', 'ko': 'Korean', 'la': 'Latin', 'lv': 'Latvian', 'mk': 'Macedonian', 'ml': 'Malayalam', 'mr': 'Marathi', 'my': 'Myanmar (Burmese)', 'ne': 'Nepali', 'nl': 'Dutch', 'no': 'Norwegian', 'pl': 'Polish', 'pt': 'Portuguese', 'ro': 'Romanian', 'ru': 'Russian', 'si': 'Sinhala', 'sk': 'Slovak', 'sq': 'Albanian', 'sr': 'Serbian', 'su': 'Sundanese', 'sv': 'Swedish', 'sw': 'Swahili', 'ta': 'Tamil', 'te': 'Telugu', 'th': 'Thai', 'tl': 'Filipino', 'tr': 'Turkish', 'uk': 'Ukrainian', 'ur': 'Urdu', 'vi': 'Vietnamese', 'zh-CN': 'Chinese', 'zh-TW': 'Chinese (Mandarin/Taiwan)', 'zh': 'Chinese (Mandarin)'}
+2021-09-19 15:49:53,581 [DEBUG] [gtts.tts] pre-processing: <function tone_marks at 0x7f6b997d08>
+2021-09-19 15:49:53,582 [DEBUG] [gtts.tts] pre-processing: <function end_of_line at 0x7f6b9a57b8>
+2021-09-19 15:49:53,583 [DEBUG] [gtts.tts] pre-processing: <function abbreviations at 0x7f6b9a5840>
+2021-09-19 15:49:53,584 [DEBUG] [gtts.tts] pre-processing: <function word_sub at 0x7f6b9a58c8>
+2021-09-19 15:49:53,585 [DEBUG] [gtts.tts] text_parts: ['ileri']
+2021-09-19 15:49:53,586 [DEBUG] [gtts.tts] text_parts: 1
+2021-09-19 15:49:53,587 [DEBUG] [gtts.tts] data-0: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22ileri%5C%22%2C%5C%22tr%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2021-09-19 15:49:53,594 [DEBUG] [urllib3.connectionpool] Starting new HTTPS connection (1): translate.google.com:443
+2021-09-19 15:49:57,062 [DEBUG] [urllib3.connectionpool] https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2021-09-19 15:49:57,069 [DEBUG] [gtts.tts] headers-0: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '135'}
+2021-09-19 15:49:57,072 [DEBUG] [gtts.tts] url-0: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2021-09-19 15:49:57,073 [DEBUG] [gtts.tts] status-0: 200
+2021-09-19 15:49:57,074 [DEBUG] [gtts.tts] part-0 written to <_io.BufferedWriter name='temp.mp3'>
+2021-09-19 15:49:57,076 [DEBUG] [gtts.tts] Saved to temp.mp3
+2021-09-19 15:49:57,643 [INFO] [ai.py] Updating AI.
+2021-09-19 15:49:57,646 [INFO] [ai.py] [image_detection] image is: <class 'numpy.ndarray'>, network is: <class 'int'>, class_names is: <class 'list'> class_colors is: <class 'dict'>, thresh is: <class 'float'>
+2021-09-19 15:49:57,648 [INFO] [ai.py] [network_width] net is: <class 'int'>
+2021-09-19 15:49:57,649 [INFO] [ai.py] [network_height] net is: <class 'int'>
+2021-09-19 15:49:57,657 [INFO] [ai.py] [detect_image] network is: <class 'int'>, class_names is: <class 'list'>, image is: <class 'modules.ai.Image'>
+2021-09-19 15:50:00,843 [INFO] [ai.py] [remove_negatives] detections is: <class 'modules.ai.LP_Detection'>, class_names is: <class 'list'>, num is: <class 'int'>
+2021-09-19 15:50:00,846 [INFO] [ai.py] [decode_detection] detections is: <class 'list'>
+2021-09-19 15:50:00,849 [INFO] [ai.py] [draw_boxes] detections is: <class 'list'>, image is: <class 'numpy.ndarray'>, colors is: <class 'dict'>
+2021-09-19 15:50:00,850 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-19 15:50:00,851 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-19 15:50:00,852 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-19 15:50:00,853 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-19 15:50:00,856 [DEBUG] [gtts.tts] text: ileri
+2021-09-19 15:50:00,858 [DEBUG] [gtts.tts] tld: com
+2021-09-19 15:50:00,861 [DEBUG] [gtts.tts] lang: tr
+2021-09-19 15:50:00,862 [DEBUG] [gtts.tts] slow: False
+2021-09-19 15:50:00,862 [DEBUG] [gtts.tts] lang_check: True
+2021-09-19 15:50:00,863 [DEBUG] [gtts.tts] pre_processor_funcs: [<function tone_marks at 0x7f6b997d08>, <function end_of_line at 0x7f6b9a57b8>, <function abbreviations at 0x7f6b9a5840>, <function word_sub at 0x7f6b9a58c8>]
+2021-09-19 15:50:00,864 [DEBUG] [gtts.tts] tokenizer_func: <bound method Tokenizer.run of re.compile('(?<=\\?).|(?<=!).|(?<=？).|(?<=！).|(?<!\\.[a-z])\\. |(?<!\\.[a-z]), |(?<!\\d):|—|\\\n|‥|、|\\[|،|\\(|;|\\)|\\]|：|，|¿|。|¡|…', re.IGNORECASE) from: [<function tone_marks at 0x7f6b9a5950>, <function period_comma at 0x7f6b9a59d8>, <function colon at 0x7f6b9a5a60>, <function other_punctuation at 0x7f6b9a5ae8>]>
+2021-09-19 15:50:00,865 [DEBUG] [gtts.lang] langs: {'af': 'Afrikaans', 'ar': 'Arabic', 'bg': 'Bulgarian', 'bn': 'Bengali', 'bs': 'Bosnian', 'ca': 'Catalan', 'cs': 'Czech', 'cy': 'Welsh', 'da': 'Danish', 'de': 'German', 'el': 'Greek', 'en': 'English', 'eo': 'Esperanto', 'es': 'Spanish', 'et': 'Estonian', 'fi': 'Finnish', 'fr': 'French', 'gu': 'Gujarati', 'hi': 'Hindi', 'hr': 'Croatian', 'hu': 'Hungarian', 'hy': 'Armenian', 'id': 'Indonesian', 'is': 'Icelandic', 'it': 'Italian', 'ja': 'Japanese', 'jw': 'Javanese', 'km': 'Khmer', 'kn': 'Kannada', 'ko': 'Korean', 'la': 'Latin', 'lv': 'Latvian', 'mk': 'Macedonian', 'ml': 'Malayalam', 'mr': 'Marathi', 'my': 'Myanmar (Burmese)', 'ne': 'Nepali', 'nl': 'Dutch', 'no': 'Norwegian', 'pl': 'Polish', 'pt': 'Portuguese', 'ro': 'Romanian', 'ru': 'Russian', 'si': 'Sinhala', 'sk': 'Slovak', 'sq': 'Albanian', 'sr': 'Serbian', 'su': 'Sundanese', 'sv': 'Swedish', 'sw': 'Swahili', 'ta': 'Tamil', 'te': 'Telugu', 'th': 'Thai', 'tl': 'Filipino', 'tr': 'Turkish', 'uk': 'Ukrainian', 'ur': 'Urdu', 'vi': 'Vietnamese', 'zh-CN': 'Chinese', 'zh-TW': 'Chinese (Mandarin/Taiwan)', 'zh': 'Chinese (Mandarin)'}
+2021-09-19 15:50:00,866 [DEBUG] [gtts.tts] pre-processing: <function tone_marks at 0x7f6b997d08>
+2021-09-19 15:50:00,867 [DEBUG] [gtts.tts] pre-processing: <function end_of_line at 0x7f6b9a57b8>
+2021-09-19 15:50:00,868 [DEBUG] [gtts.tts] pre-processing: <function abbreviations at 0x7f6b9a5840>
+2021-09-19 15:50:00,869 [DEBUG] [gtts.tts] pre-processing: <function word_sub at 0x7f6b9a58c8>
+2021-09-19 15:50:00,872 [DEBUG] [gtts.tts] text_parts: ['ileri']
+2021-09-19 15:50:00,874 [DEBUG] [gtts.tts] text_parts: 1
+2021-09-19 15:50:00,876 [DEBUG] [gtts.tts] data-0: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22ileri%5C%22%2C%5C%22tr%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2021-09-19 15:50:00,881 [DEBUG] [urllib3.connectionpool] Starting new HTTPS connection (1): translate.google.com:443
+2021-09-19 15:50:02,458 [DEBUG] [urllib3.connectionpool] https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2021-09-19 15:50:03,594 [DEBUG] [gtts.tts] headers-0: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '135'}
+2021-09-19 15:50:03,598 [DEBUG] [gtts.tts] url-0: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2021-09-19 15:50:03,600 [DEBUG] [gtts.tts] status-0: 200
+2021-09-19 15:50:03,602 [DEBUG] [gtts.tts] part-0 written to <_io.BufferedWriter name='temp.mp3'>
+2021-09-19 15:50:03,604 [DEBUG] [gtts.tts] Saved to temp.mp3
+2021-09-19 15:50:03,773 [INFO] [ai.py] Updating AI.
+2021-09-19 15:50:03,774 [INFO] [ai.py] [image_detection] image is: <class 'numpy.ndarray'>, network is: <class 'int'>, class_names is: <class 'list'> class_colors is: <class 'dict'>, thresh is: <class 'float'>
+2021-09-19 15:50:03,775 [INFO] [ai.py] [network_width] net is: <class 'int'>
+2021-09-19 15:50:03,777 [INFO] [ai.py] [network_height] net is: <class 'int'>
+2021-09-19 15:50:03,785 [INFO] [ai.py] [detect_image] network is: <class 'int'>, class_names is: <class 'list'>, image is: <class 'modules.ai.Image'>
+2021-09-19 15:50:07,037 [INFO] [ai.py] [remove_negatives] detections is: <class 'modules.ai.LP_Detection'>, class_names is: <class 'list'>, num is: <class 'int'>
+2021-09-19 15:50:07,050 [INFO] [ai.py] [decode_detection] detections is: <class 'list'>
+2021-09-19 15:50:07,051 [INFO] [ai.py] [draw_boxes] detections is: <class 'list'>, image is: <class 'numpy.ndarray'>, colors is: <class 'dict'>
+2021-09-19 15:50:07,051 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-19 15:50:07,053 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-19 15:50:07,054 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-19 15:50:07,055 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-19 15:50:07,057 [DEBUG] [gtts.tts] text: ileri
+2021-09-19 15:50:07,058 [DEBUG] [gtts.tts] tld: com
+2021-09-19 15:50:07,059 [DEBUG] [gtts.tts] lang: tr
+2021-09-19 15:50:07,060 [DEBUG] [gtts.tts] slow: False
+2021-09-19 15:50:07,060 [DEBUG] [gtts.tts] lang_check: True
+2021-09-19 15:50:07,061 [DEBUG] [gtts.tts] pre_processor_funcs: [<function tone_marks at 0x7f6b997d08>, <function end_of_line at 0x7f6b9a57b8>, <function abbreviations at 0x7f6b9a5840>, <function word_sub at 0x7f6b9a58c8>]
+2021-09-19 15:50:07,061 [DEBUG] [gtts.tts] tokenizer_func: <bound method Tokenizer.run of re.compile('(?<=\\?).|(?<=!).|(?<=？).|(?<=！).|(?<!\\.[a-z])\\. |(?<!\\.[a-z]), |(?<!\\d):|—|\\\n|‥|、|\\[|،|\\(|;|\\)|\\]|：|，|¿|。|¡|…', re.IGNORECASE) from: [<function tone_marks at 0x7f6b9a5950>, <function period_comma at 0x7f6b9a59d8>, <function colon at 0x7f6b9a5a60>, <function other_punctuation at 0x7f6b9a5ae8>]>
+2021-09-19 15:50:07,063 [DEBUG] [gtts.lang] langs: {'af': 'Afrikaans', 'ar': 'Arabic', 'bg': 'Bulgarian', 'bn': 'Bengali', 'bs': 'Bosnian', 'ca': 'Catalan', 'cs': 'Czech', 'cy': 'Welsh', 'da': 'Danish', 'de': 'German', 'el': 'Greek', 'en': 'English', 'eo': 'Esperanto', 'es': 'Spanish', 'et': 'Estonian', 'fi': 'Finnish', 'fr': 'French', 'gu': 'Gujarati', 'hi': 'Hindi', 'hr': 'Croatian', 'hu': 'Hungarian', 'hy': 'Armenian', 'id': 'Indonesian', 'is': 'Icelandic', 'it': 'Italian', 'ja': 'Japanese', 'jw': 'Javanese', 'km': 'Khmer', 'kn': 'Kannada', 'ko': 'Korean', 'la': 'Latin', 'lv': 'Latvian', 'mk': 'Macedonian', 'ml': 'Malayalam', 'mr': 'Marathi', 'my': 'Myanmar (Burmese)', 'ne': 'Nepali', 'nl': 'Dutch', 'no': 'Norwegian', 'pl': 'Polish', 'pt': 'Portuguese', 'ro': 'Romanian', 'ru': 'Russian', 'si': 'Sinhala', 'sk': 'Slovak', 'sq': 'Albanian', 'sr': 'Serbian', 'su': 'Sundanese', 'sv': 'Swedish', 'sw': 'Swahili', 'ta': 'Tamil', 'te': 'Telugu', 'th': 'Thai', 'tl': 'Filipino', 'tr': 'Turkish', 'uk': 'Ukrainian', 'ur': 'Urdu', 'vi': 'Vietnamese', 'zh-CN': 'Chinese', 'zh-TW': 'Chinese (Mandarin/Taiwan)', 'zh': 'Chinese (Mandarin)'}
+2021-09-19 15:50:07,064 [DEBUG] [gtts.tts] pre-processing: <function tone_marks at 0x7f6b997d08>
+2021-09-19 15:50:07,065 [DEBUG] [gtts.tts] pre-processing: <function end_of_line at 0x7f6b9a57b8>
+2021-09-19 15:50:07,066 [DEBUG] [gtts.tts] pre-processing: <function abbreviations at 0x7f6b9a5840>
+2021-09-19 15:50:07,067 [DEBUG] [gtts.tts] pre-processing: <function word_sub at 0x7f6b9a58c8>
+2021-09-19 15:50:07,068 [DEBUG] [gtts.tts] text_parts: ['ileri']
+2021-09-19 15:50:07,068 [DEBUG] [gtts.tts] text_parts: 1
+2021-09-19 15:50:07,069 [DEBUG] [gtts.tts] data-0: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22ileri%5C%22%2C%5C%22tr%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2021-09-19 15:50:07,075 [DEBUG] [urllib3.connectionpool] Starting new HTTPS connection (1): translate.google.com:443
+2021-09-19 15:50:08,209 [DEBUG] [urllib3.connectionpool] https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2021-09-19 15:50:08,216 [DEBUG] [gtts.tts] headers-0: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '135'}
+2021-09-19 15:50:08,218 [DEBUG] [gtts.tts] url-0: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2021-09-19 15:50:08,219 [DEBUG] [gtts.tts] status-0: 200
+2021-09-19 15:50:08,219 [DEBUG] [gtts.tts] part-0 written to <_io.BufferedWriter name='temp.mp3'>
+2021-09-19 15:50:08,221 [DEBUG] [gtts.tts] Saved to temp.mp3
+2021-09-19 15:50:08,386 [INFO] [ai.py] Updating AI.
+2021-09-19 15:50:08,387 [INFO] [ai.py] [image_detection] image is: <class 'numpy.ndarray'>, network is: <class 'int'>, class_names is: <class 'list'> class_colors is: <class 'dict'>, thresh is: <class 'float'>
+2021-09-19 15:50:08,389 [INFO] [ai.py] [network_width] net is: <class 'int'>
+2021-09-19 15:50:08,390 [INFO] [ai.py] [network_height] net is: <class 'int'>
+2021-09-19 15:50:08,398 [INFO] [ai.py] [detect_image] network is: <class 'int'>, class_names is: <class 'list'>, image is: <class 'modules.ai.Image'>
+2021-09-19 15:50:11,735 [INFO] [ai.py] [remove_negatives] detections is: <class 'modules.ai.LP_Detection'>, class_names is: <class 'list'>, num is: <class 'int'>
+2021-09-19 15:50:11,738 [INFO] [ai.py] [decode_detection] detections is: <class 'list'>
+2021-09-19 15:50:11,741 [INFO] [ai.py] [draw_boxes] detections is: <class 'list'>, image is: <class 'numpy.ndarray'>, colors is: <class 'dict'>
+2021-09-19 15:50:11,742 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-19 15:50:11,743 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-19 15:50:11,744 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-19 15:50:11,746 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-19 15:50:11,748 [DEBUG] [gtts.tts] text: ileri
+2021-09-19 15:50:11,749 [DEBUG] [gtts.tts] tld: com
+2021-09-19 15:50:11,750 [DEBUG] [gtts.tts] lang: tr
+2021-09-19 15:50:11,751 [DEBUG] [gtts.tts] slow: False
+2021-09-19 15:50:11,752 [DEBUG] [gtts.tts] lang_check: True
+2021-09-19 15:50:11,753 [DEBUG] [gtts.tts] pre_processor_funcs: [<function tone_marks at 0x7f6b997d08>, <function end_of_line at 0x7f6b9a57b8>, <function abbreviations at 0x7f6b9a5840>, <function word_sub at 0x7f6b9a58c8>]
+2021-09-19 15:50:11,755 [DEBUG] [gtts.tts] tokenizer_func: <bound method Tokenizer.run of re.compile('(?<=\\?).|(?<=!).|(?<=？).|(?<=！).|(?<!\\.[a-z])\\. |(?<!\\.[a-z]), |(?<!\\d):|—|\\\n|‥|、|\\[|،|\\(|;|\\)|\\]|：|，|¿|。|¡|…', re.IGNORECASE) from: [<function tone_marks at 0x7f6b9a5950>, <function period_comma at 0x7f6b9a59d8>, <function colon at 0x7f6b9a5a60>, <function other_punctuation at 0x7f6b9a5ae8>]>
+2021-09-19 15:50:11,756 [DEBUG] [gtts.lang] langs: {'af': 'Afrikaans', 'ar': 'Arabic', 'bg': 'Bulgarian', 'bn': 'Bengali', 'bs': 'Bosnian', 'ca': 'Catalan', 'cs': 'Czech', 'cy': 'Welsh', 'da': 'Danish', 'de': 'German', 'el': 'Greek', 'en': 'English', 'eo': 'Esperanto', 'es': 'Spanish', 'et': 'Estonian', 'fi': 'Finnish', 'fr': 'French', 'gu': 'Gujarati', 'hi': 'Hindi', 'hr': 'Croatian', 'hu': 'Hungarian', 'hy': 'Armenian', 'id': 'Indonesian', 'is': 'Icelandic', 'it': 'Italian', 'ja': 'Japanese', 'jw': 'Javanese', 'km': 'Khmer', 'kn': 'Kannada', 'ko': 'Korean', 'la': 'Latin', 'lv': 'Latvian', 'mk': 'Macedonian', 'ml': 'Malayalam', 'mr': 'Marathi', 'my': 'Myanmar (Burmese)', 'ne': 'Nepali', 'nl': 'Dutch', 'no': 'Norwegian', 'pl': 'Polish', 'pt': 'Portuguese', 'ro': 'Romanian', 'ru': 'Russian', 'si': 'Sinhala', 'sk': 'Slovak', 'sq': 'Albanian', 'sr': 'Serbian', 'su': 'Sundanese', 'sv': 'Swedish', 'sw': 'Swahili', 'ta': 'Tamil', 'te': 'Telugu', 'th': 'Thai', 'tl': 'Filipino', 'tr': 'Turkish', 'uk': 'Ukrainian', 'ur': 'Urdu', 'vi': 'Vietnamese', 'zh-CN': 'Chinese', 'zh-TW': 'Chinese (Mandarin/Taiwan)', 'zh': 'Chinese (Mandarin)'}
+2021-09-19 15:50:11,759 [DEBUG] [gtts.tts] pre-processing: <function tone_marks at 0x7f6b997d08>
+2021-09-19 15:50:11,762 [DEBUG] [gtts.tts] pre-processing: <function end_of_line at 0x7f6b9a57b8>
+2021-09-19 15:50:11,763 [DEBUG] [gtts.tts] pre-processing: <function abbreviations at 0x7f6b9a5840>
+2021-09-19 15:50:11,764 [DEBUG] [gtts.tts] pre-processing: <function word_sub at 0x7f6b9a58c8>
+2021-09-19 15:50:11,765 [DEBUG] [gtts.tts] text_parts: ['ileri']
+2021-09-19 15:50:11,766 [DEBUG] [gtts.tts] text_parts: 1
+2021-09-19 15:50:11,768 [DEBUG] [gtts.tts] data-0: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22ileri%5C%22%2C%5C%22tr%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2021-09-19 15:50:11,775 [DEBUG] [urllib3.connectionpool] Starting new HTTPS connection (1): translate.google.com:443
+2021-09-19 15:50:12,196 [DEBUG] [urllib3.connectionpool] https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2021-09-19 15:50:12,232 [DEBUG] [gtts.tts] headers-0: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '135'}
+2021-09-19 15:50:12,233 [DEBUG] [gtts.tts] url-0: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2021-09-19 15:50:12,234 [DEBUG] [gtts.tts] status-0: 200
+2021-09-19 15:50:12,236 [DEBUG] [gtts.tts] part-0 written to <_io.BufferedWriter name='temp.mp3'>
+2021-09-19 15:50:12,237 [DEBUG] [gtts.tts] Saved to temp.mp3
+2021-09-19 15:50:12,406 [INFO] [ai.py] Updating AI.
+2021-09-19 15:50:12,408 [INFO] [ai.py] [image_detection] image is: <class 'numpy.ndarray'>, network is: <class 'int'>, class_names is: <class 'list'> class_colors is: <class 'dict'>, thresh is: <class 'float'>
+2021-09-19 15:50:12,409 [INFO] [ai.py] [network_width] net is: <class 'int'>
+2021-09-19 15:50:12,411 [INFO] [ai.py] [network_height] net is: <class 'int'>
+2021-09-19 15:50:12,420 [INFO] [ai.py] [detect_image] network is: <class 'int'>, class_names is: <class 'list'>, image is: <class 'modules.ai.Image'>
+2021-09-19 15:50:15,781 [INFO] [ai.py] [remove_negatives] detections is: <class 'modules.ai.LP_Detection'>, class_names is: <class 'list'>, num is: <class 'int'>
+2021-09-19 15:50:15,785 [INFO] [ai.py] [decode_detection] detections is: <class 'list'>
+2021-09-19 15:50:15,786 [INFO] [ai.py] [draw_boxes] detections is: <class 'list'>, image is: <class 'numpy.ndarray'>, colors is: <class 'dict'>
+2021-09-19 15:50:15,787 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-19 15:50:15,789 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-19 15:50:15,790 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-19 15:50:15,791 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-19 15:50:15,793 [DEBUG] [gtts.tts] text: ileri
+2021-09-19 15:50:15,794 [DEBUG] [gtts.tts] tld: com
+2021-09-19 15:50:15,795 [DEBUG] [gtts.tts] lang: tr
+2021-09-19 15:50:15,796 [DEBUG] [gtts.tts] slow: False
+2021-09-19 15:50:15,797 [DEBUG] [gtts.tts] lang_check: True
+2021-09-19 15:50:15,798 [DEBUG] [gtts.tts] pre_processor_funcs: [<function tone_marks at 0x7f6b997d08>, <function end_of_line at 0x7f6b9a57b8>, <function abbreviations at 0x7f6b9a5840>, <function word_sub at 0x7f6b9a58c8>]
+2021-09-19 15:50:15,799 [DEBUG] [gtts.tts] tokenizer_func: <bound method Tokenizer.run of re.compile('(?<=\\?).|(?<=!).|(?<=？).|(?<=！).|(?<!\\.[a-z])\\. |(?<!\\.[a-z]), |(?<!\\d):|—|\\\n|‥|、|\\[|،|\\(|;|\\)|\\]|：|，|¿|。|¡|…', re.IGNORECASE) from: [<function tone_marks at 0x7f6b9a5950>, <function period_comma at 0x7f6b9a59d8>, <function colon at 0x7f6b9a5a60>, <function other_punctuation at 0x7f6b9a5ae8>]>
+2021-09-19 15:50:15,800 [DEBUG] [gtts.lang] langs: {'af': 'Afrikaans', 'ar': 'Arabic', 'bg': 'Bulgarian', 'bn': 'Bengali', 'bs': 'Bosnian', 'ca': 'Catalan', 'cs': 'Czech', 'cy': 'Welsh', 'da': 'Danish', 'de': 'German', 'el': 'Greek', 'en': 'English', 'eo': 'Esperanto', 'es': 'Spanish', 'et': 'Estonian', 'fi': 'Finnish', 'fr': 'French', 'gu': 'Gujarati', 'hi': 'Hindi', 'hr': 'Croatian', 'hu': 'Hungarian', 'hy': 'Armenian', 'id': 'Indonesian', 'is': 'Icelandic', 'it': 'Italian', 'ja': 'Japanese', 'jw': 'Javanese', 'km': 'Khmer', 'kn': 'Kannada', 'ko': 'Korean', 'la': 'Latin', 'lv': 'Latvian', 'mk': 'Macedonian', 'ml': 'Malayalam', 'mr': 'Marathi', 'my': 'Myanmar (Burmese)', 'ne': 'Nepali', 'nl': 'Dutch', 'no': 'Norwegian', 'pl': 'Polish', 'pt': 'Portuguese', 'ro': 'Romanian', 'ru': 'Russian', 'si': 'Sinhala', 'sk': 'Slovak', 'sq': 'Albanian', 'sr': 'Serbian', 'su': 'Sundanese', 'sv': 'Swedish', 'sw': 'Swahili', 'ta': 'Tamil', 'te': 'Telugu', 'th': 'Thai', 'tl': 'Filipino', 'tr': 'Turkish', 'uk': 'Ukrainian', 'ur': 'Urdu', 'vi': 'Vietnamese', 'zh-CN': 'Chinese', 'zh-TW': 'Chinese (Mandarin/Taiwan)', 'zh': 'Chinese (Mandarin)'}
+2021-09-19 15:50:15,802 [DEBUG] [gtts.tts] pre-processing: <function tone_marks at 0x7f6b997d08>
+2021-09-19 15:50:15,803 [DEBUG] [gtts.tts] pre-processing: <function end_of_line at 0x7f6b9a57b8>
+2021-09-19 15:50:15,804 [DEBUG] [gtts.tts] pre-processing: <function abbreviations at 0x7f6b9a5840>
+2021-09-19 15:50:15,807 [DEBUG] [gtts.tts] pre-processing: <function word_sub at 0x7f6b9a58c8>
+2021-09-19 15:50:15,812 [DEBUG] [gtts.tts] text_parts: ['ileri']
+2021-09-19 15:50:15,815 [DEBUG] [gtts.tts] text_parts: 1
+2021-09-19 15:50:15,817 [DEBUG] [gtts.tts] data-0: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22ileri%5C%22%2C%5C%22tr%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2021-09-19 15:50:15,827 [DEBUG] [urllib3.connectionpool] Starting new HTTPS connection (1): translate.google.com:443
+2021-09-19 15:50:16,667 [DEBUG] [urllib3.connectionpool] https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2021-09-19 15:50:16,674 [DEBUG] [gtts.tts] headers-0: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '135'}
+2021-09-19 15:50:16,677 [DEBUG] [gtts.tts] url-0: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2021-09-19 15:50:16,678 [DEBUG] [gtts.tts] status-0: 200
+2021-09-19 15:50:16,680 [DEBUG] [gtts.tts] part-0 written to <_io.BufferedWriter name='temp.mp3'>
+2021-09-19 15:50:16,682 [DEBUG] [gtts.tts] Saved to temp.mp3
+2021-09-19 15:50:16,847 [INFO] [ai.py] Updating AI.
+2021-09-19 15:50:16,849 [INFO] [ai.py] [image_detection] image is: <class 'numpy.ndarray'>, network is: <class 'int'>, class_names is: <class 'list'> class_colors is: <class 'dict'>, thresh is: <class 'float'>
+2021-09-19 15:50:16,850 [INFO] [ai.py] [network_width] net is: <class 'int'>
+2021-09-19 15:50:16,851 [INFO] [ai.py] [network_height] net is: <class 'int'>
+2021-09-19 15:50:16,859 [INFO] [ai.py] [detect_image] network is: <class 'int'>, class_names is: <class 'list'>, image is: <class 'modules.ai.Image'>
+2021-09-19 15:50:20,163 [INFO] [ai.py] [remove_negatives] detections is: <class 'modules.ai.LP_Detection'>, class_names is: <class 'list'>, num is: <class 'int'>
+2021-09-19 15:50:20,165 [INFO] [ai.py] [decode_detection] detections is: <class 'list'>
+2021-09-19 15:50:20,167 [INFO] [ai.py] [draw_boxes] detections is: <class 'list'>, image is: <class 'numpy.ndarray'>, colors is: <class 'dict'>
+2021-09-19 15:50:20,168 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-19 15:50:20,170 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-19 15:50:20,172 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-19 15:50:20,174 [INFO] [ai.py] [bbox2points] bbox is: <class 'tuple'>
+2021-09-19 15:50:20,176 [DEBUG] [gtts.tts] text: ileri
+2021-09-19 15:50:20,177 [DEBUG] [gtts.tts] tld: com
+2021-09-19 15:50:20,178 [DEBUG] [gtts.tts] lang: tr
+2021-09-19 15:50:20,179 [DEBUG] [gtts.tts] slow: False
+2021-09-19 15:50:20,180 [DEBUG] [gtts.tts] lang_check: True
+2021-09-19 15:50:20,182 [DEBUG] [gtts.tts] pre_processor_funcs: [<function tone_marks at 0x7f6b997d08>, <function end_of_line at 0x7f6b9a57b8>, <function abbreviations at 0x7f6b9a5840>, <function word_sub at 0x7f6b9a58c8>]
+2021-09-19 15:50:20,183 [DEBUG] [gtts.tts] tokenizer_func: <bound method Tokenizer.run of re.compile('(?<=\\?).|(?<=!).|(?<=？).|(?<=！).|(?<!\\.[a-z])\\. |(?<!\\.[a-z]), |(?<!\\d):|—|\\\n|‥|、|\\[|،|\\(|;|\\)|\\]|：|，|¿|。|¡|…', re.IGNORECASE) from: [<function tone_marks at 0x7f6b9a5950>, <function period_comma at 0x7f6b9a59d8>, <function colon at 0x7f6b9a5a60>, <function other_punctuation at 0x7f6b9a5ae8>]>
+2021-09-19 15:50:20,184 [DEBUG] [gtts.lang] langs: {'af': 'Afrikaans', 'ar': 'Arabic', 'bg': 'Bulgarian', 'bn': 'Bengali', 'bs': 'Bosnian', 'ca': 'Catalan', 'cs': 'Czech', 'cy': 'Welsh', 'da': 'Danish', 'de': 'German', 'el': 'Greek', 'en': 'English', 'eo': 'Esperanto', 'es': 'Spanish', 'et': 'Estonian', 'fi': 'Finnish', 'fr': 'French', 'gu': 'Gujarati', 'hi': 'Hindi', 'hr': 'Croatian', 'hu': 'Hungarian', 'hy': 'Armenian', 'id': 'Indonesian', 'is': 'Icelandic', 'it': 'Italian', 'ja': 'Japanese', 'jw': 'Javanese', 'km': 'Khmer', 'kn': 'Kannada', 'ko': 'Korean', 'la': 'Latin', 'lv': 'Latvian', 'mk': 'Macedonian', 'ml': 'Malayalam', 'mr': 'Marathi', 'my': 'Myanmar (Burmese)', 'ne': 'Nepali', 'nl': 'Dutch', 'no': 'Norwegian', 'pl': 'Polish', 'pt': 'Portuguese', 'ro': 'Romanian', 'ru': 'Russian', 'si': 'Sinhala', 'sk': 'Slovak', 'sq': 'Albanian', 'sr': 'Serbian', 'su': 'Sundanese', 'sv': 'Swedish', 'sw': 'Swahili', 'ta': 'Tamil', 'te': 'Telugu', 'th': 'Thai', 'tl': 'Filipino', 'tr': 'Turkish', 'uk': 'Ukrainian', 'ur': 'Urdu', 'vi': 'Vietnamese', 'zh-CN': 'Chinese', 'zh-TW': 'Chinese (Mandarin/Taiwan)', 'zh': 'Chinese (Mandarin)'}
+2021-09-19 15:50:20,186 [DEBUG] [gtts.tts] pre-processing: <function tone_marks at 0x7f6b997d08>
+2021-09-19 15:50:20,189 [DEBUG] [gtts.tts] pre-processing: <function end_of_line at 0x7f6b9a57b8>
+2021-09-19 15:50:20,194 [DEBUG] [gtts.tts] pre-processing: <function abbreviations at 0x7f6b9a5840>
+2021-09-19 15:50:20,197 [DEBUG] [gtts.tts] pre-processing: <function word_sub at 0x7f6b9a58c8>
+2021-09-19 15:50:20,199 [DEBUG] [gtts.tts] text_parts: ['ileri']
+2021-09-19 15:50:20,199 [DEBUG] [gtts.tts] text_parts: 1
+2021-09-19 15:50:20,200 [DEBUG] [gtts.tts] data-0: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22ileri%5C%22%2C%5C%22tr%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2021-09-19 15:50:20,206 [DEBUG] [urllib3.connectionpool] Starting new HTTPS connection (1): translate.google.com:443

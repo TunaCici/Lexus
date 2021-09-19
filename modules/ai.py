@@ -309,7 +309,6 @@ class Lexus_AI():
         return self.is_running
 
     def network_width(self, net: int):
-        custom_logger.log_info(f"[network_width] net is: {type(net)}")
         """
         uses C function network_width().\n
         args:
@@ -320,7 +319,6 @@ class Lexus_AI():
         return self.lib.network_width(net)
 
     def network_height(self, net: int):
-        custom_logger.log_info(f"[network_height] net is: {type(net)}")
         """
         uses C function network_height().\n
         args:
@@ -331,7 +329,6 @@ class Lexus_AI():
         return self.lib.network_height(net)
 
     def bbox2points(self, bbox: tuple):
-        custom_logger.log_info(f"[bbox2points] bbox is: {type(bbox)}")
         """
         converts yolo type bounding box 
         to cv2 rectangle.\n
@@ -349,7 +346,6 @@ class Lexus_AI():
         return x_min, y_min, x_max, y_max
     
     def class_colors(self, names: list):
-        custom_logger.log_info(f"[class_colors] names is: {type(names)}")
         """
         creates random color for each class name.
         colorformat is BGR.\n
@@ -386,7 +382,6 @@ class Lexus_AI():
         return network, class_names, colors
 
     def print_detections(self, detections: list, coordinates : bool = False):
-        custom_logger.log_info(f"[print_detections] detections is: {type(detections)}")
         """
         prints the detections onto the terminal.\n
         args:
@@ -404,8 +399,6 @@ class Lexus_AI():
                 print("{}: {}%".format(label, confidence))
     
     def draw_boxes(self, detections: list, image: numpy.ndarray, colors: dict):
-        custom_logger.log_info(
-            f"[draw_boxes] detections is: {type(detections)}, image is: {type(image)}, colors is: {type(colors)}")
         """
         draws the detections onto image using cv2.\n
         args:
@@ -435,8 +428,6 @@ class Lexus_AI():
         return image
     
     def decode_detection(self, detections: list):
-        custom_logger.log_info(
-            f"[decode_detection] detections is: {type(detections)}")
         """
         turns 0-1 value range to 0-100 for confidence level.\n
         args:
@@ -453,8 +444,6 @@ class Lexus_AI():
         return decoded
     
     def remove_negatives(self, detections: Detection, class_names: list, num: int):
-        custom_logger.log_info(
-            f"[remove_negatives] detections is: {type(detections)}, class_names is: {type(class_names)}, num is: {type(num)}")
         """
         removes all classes with 0 percent confidence level.\n
         args:
@@ -485,8 +474,6 @@ class Lexus_AI():
         thresh: float= .5,
         hier_thresh: float = .5,
         nms: float = .45):
-        custom_logger.log_info(
-            f"[detect_image] network is: {type(network)}, class_names is: {type(class_names)}, image is: {type(image)}")
         """
         runs the image throught the model and returns a list
         with highest confidence class and their bounding box\n
@@ -527,8 +514,6 @@ class Lexus_AI():
         return sorted(predictions, key=lambda x: x[1])
     
     def load_images(self, images_path: str):
-        custom_logger.log_info(
-            f"[load_images] images_path is: {type(images_path)}")
         """
         If image path is given, return it directly
         For txt file, read it and return each line as image path
@@ -548,8 +533,6 @@ class Lexus_AI():
                 glob.glob(os.path.join(images_path, "*.jpeg"))
     
     def prepare_batch(self, images, network, channels=3):
-        custom_logger.log_info(
-            f"[prepare_batch] images is: {type(images)}, network is: {type(network)}, channels is: {type(channels)}")
         """
         prepares list of images to be proccessed.\n
         args:
@@ -578,8 +561,6 @@ class Lexus_AI():
         return Image(width, height, channels, darknet_images)
     
     def image_detection(self, image: None, network: int, class_names: list, class_colors: dict, thresh: float):
-        custom_logger.log_info(
-            f"[image_detection] image is: {type(image)}, network is: {type(network)}, class_names is: {type(class_names)} class_colors is: {type(class_colors)}, thresh is: {type(thresh)}")
         """
         runs the image through the model to make predictions.\n
         args:
@@ -611,9 +592,7 @@ class Lexus_AI():
         return cv2.cvtColor(image, cv2.COLOR_BGR2RGB), detections
 
     def batch_detection(self, network, images, class_names, class_colors,
-                    thresh=0.25, hier_thresh=0.5, nms=0.45, batch_size=4):
-        custom_logger.log_info(
-            f"[batch_detection] network is: {type(network)}, images is: {type(images)}, class_names is: {type(class_names)} class_colors is: {type(class_colors)}")                
+                    thresh=0.25, hier_thresh=0.5, nms=0.45, batch_size=4):         
         """
         runs batch of images through the model to make predictions.\n
         args:
@@ -648,8 +627,6 @@ class Lexus_AI():
         return images, batch_predictions
 
     def image_classification(self, image, network, class_names):
-        custom_logger.log_info(
-            f"[image_classification] image is: {type(image)}, network is: {type(network)}, class_names is: {type(class_names)}")
         """
         runs the image through the model for classification.\n
         args:
@@ -673,8 +650,6 @@ class Lexus_AI():
         return sorted(predictions, key=lambda x: -x[-1])
 
     def convert2relative(self, image, bbox):
-        custom_logger.log_info(
-            f"[convert2relative] image is: {type(image)}, bbox is: {type(bbox)}")
         """
         converts to relative coordinates for the annotions
         YOLO only uses this format\n
@@ -690,8 +665,6 @@ class Lexus_AI():
         return x/width, y/height, w/width, h/height
     
     def save_annotions(self, name, image, detections, class_names):
-        custom_logger.log_info(
-            f"[save_annotions] name is: {type(name)}, image is: {type(image)}, detections is: {type(detections)} class_names is: {type(class_names)}")
         """
         saves the detection result to a text file.\n
         args:
@@ -730,8 +703,7 @@ class Lexus_AI():
         fps = int(1/(time.time() - prev_time))
         print("FPS: {}".format(fps))
         cv2.imshow('Inference', image)
-        if cv2.waitKey() & 0xFF == ord('q'):
-            return
+        cv2.waitKey(1)
     
     def update(self, image):
         """
@@ -745,7 +717,8 @@ class Lexus_AI():
             self.last_image, self.last_detections = self.image_detection(
                 image, self.network, self.class_names, self.class_colors, self.thresh
             )
-            return self.last_image,self.last_detections
+            custom_logger.log_info("Update complete.")
+            return self.last_image, self.last_detections
         except Exception as e:
             custom_logger.log_warning("Something went wrong while updating.")
             custom_logger.log_warning(e)
