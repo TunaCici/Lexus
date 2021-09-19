@@ -42,6 +42,14 @@ class DebugScreen(object):
     is_ultrasonic_open = False
     is_controller_open = False
     is_logger_open = False
+    camera_obj = None
+    ai_obj = None
+    log_obj = None
+
+    def __init__(self,c_o,ai_o,l_obj):
+        self.camera_obj = c_o
+        self.ai_obj = ai_o
+        self.log_obj = l_obj
 
     def ai_status(self,status):
         if status == 'Active':
@@ -106,10 +114,6 @@ class DebugScreen(object):
 
         elif status == 'Deactive':
             self.is_logger_open = False
-
-    def logger_start(self,log_obj):
-        self.logger_obj = log_obj
-        return self.logger_obj
     
     def vibration_status(self,status):
         if status == 'Active':
@@ -253,6 +257,8 @@ class DebugScreen(object):
         self.i = 0
         config.LINE_NUMBER = 0
 
+        self.logger.clear()
+
         try:
             self.files = glob.glob(config.PROJECT_DIR + "/photos/")
 
@@ -268,9 +274,9 @@ class DebugScreen(object):
         self.picture_list[-1] = cv2.resize(self.picture_list[-1],dim)
         return self.picture_list[-1]
 
-    def update(self,camera_obj,ai_obj):
-        while(self.is_camera_open == True and camera_obj.photo_no != config.PHOTO_NUMBER + 1):
-            camera_obj.update()
+    def update(self):
+        while(self.is_camera_open == True and self.camera_obj.photo_no != config.PHOTO_NUMBER + 1):
+            self.camera_obj.update()
             QtTest.QTest.qWait(100)
 
             self.ambulance = 0
@@ -289,9 +295,9 @@ class DebugScreen(object):
             self.traffic_light = 0
             self.traffic_sign = 0
 
-            self.picture = camera_obj.get_frame()
+            self.picture = self.camera_obj.get_frame()
 
-            self.picture,self.detection_list = ai_obj.update(self.picture)
+            self.picture,self.detection_list = self.ai_obj.update(self.picture)
 
             self.picture_list = list()
             self.picture_list.append(self.picture)
@@ -402,15 +408,14 @@ class DebugScreen(object):
             QtTest.QTest.qWait(100)
             
             if self.is_camera_open == True:
-                camera_obj.photo_no = camera_obj.photo_no + 1
+                self.camera_obj.photo_no = self.camera_obj.photo_no + 1
 
-                if camera_obj.photo_no == config.PHOTO_NUMBER:
-                    camera_obj.photo_no = 0
-                    camera_obj.frame_list.clear()
+                if self.camera_obj.photo_no == config.PHOTO_NUMBER:
+                    self.camera_obj.photo_no = 0
+                    self.camera_obj.frame_list.clear()
 
                 QtTest.QTest.qWait(100)
 
-                self.log_object = self.logger_start()
                 self.file_log = open(config.PROJECT_DIR + "/logs/lexuslogfile.txt","r")
                 self.list_Lines = self.file_log.readlines()
                 config.LINE_NUMBER = len(self.list_Lines)
